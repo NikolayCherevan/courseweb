@@ -1,0 +1,21 @@
+@import './variables.scss';
+@import './normalize.scss';
+@import './components/header.scss';
+@import './homepage/home.scss';
+body * {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000000;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}

@@ -1,0 +1,75 @@
+var tag = document.createElement('script');
+tag.src = 'https://www.youtube.com/player_api';
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var tv,
+    playerDefaults = { autoplay: 1, border: 0, autohide: 1, modestbranding: 0, rel: 0, showinfo: 0, controls: 1, disablekb: 0, enablejsapi: 0, iv_load_policy: 3, host: 'https://www.youtube.com' };
+var vid = [
+        { 'videoId': 'LGGugeMolFw', 'startSeconds': 0, 'endSeconds': 105, 'suggestedQuality': 'hd720' }
+    ],
+    randomvid = Math.floor(Math.random() * (vid.length - 1 + 1));
+
+function onYouTubePlayerAPIReady() {
+    tv = new YT.Player('tv', { events: { 'onStateChange': onPlayerStateChange }, playerVars: playerDefaults });
+}
+
+function onPlayerReady() {
+    if (tv.loadVideoById(vid[randomvid])) {
+        tv.loadVideoById(vid[randomvid]);
+    }
+}
+
+function stopVideo() {
+    tv.stopVideo();
+}
+window.onload = function() {
+    if (tv) {
+        let trailer = document.querySelector(".trailer");
+        document.querySelector('.video__button').addEventListener('click', function(event) {
+            event.preventDefault();
+            toggle()
+            document.querySelector('.bg-overlay').style.cssText = "opacity: 1; z-index: 11111"
+            onPlayerReady();
+            trailer.classList.add("active");
+        });
+        document.querySelector('.video-iframe--banner').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.querySelector('.bg-overlay').style.cssText = "opacity: 1; z-index: 11111"
+            onPlayerReady();
+            trailer.classList.add("active");
+        });
+        $(window).scroll(function() {
+            if (($(window).scrollTop()) > 1000) {
+                stopVideo()
+                trailer.classList.remove("active");
+                document.querySelector('.bg-overlay').style.cssText = "display: none"
+                document.querySelector('.video-iframe--banner').style.cssText = "display: block";
+            }
+        });
+        document.querySelector('.bg-overlay').addEventListener('click', function() {
+            stopVideo();
+            trailer.classList.remove("active");
+            document.querySelector('.bg-overlay').style.cssText = "display: none"
+            document.querySelector('.video-iframe--banner').style.cssText = "display: block";
+        });
+    }
+}
+
+function onPlayerStateChange(e) {
+    if (e.data === 1) {
+        $('#tv').addClass('active');
+    } else if (e.data === 0) {
+        tv.seekTo(vid[randomvid].startSeconds)
+    }
+}
+
+function toggle() {
+
+    video = document.querySelector("video"),
+        home = document.querySelector('html'),
+        banner = document.querySelector('.video-iframe--banner'),
+        header = document.querySelector('.header');
+    header.classList.toggle('active');
+    home.classList.toggle('bg');
+
+};
