@@ -1,4 +1,6 @@
 var tag = document.createElement('script');
+let bgOverlay = document.getElementById('bg-overlay');
+let body = document.querySelector('body');
 tag.src = 'https://www.youtube.com/player_api';
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
@@ -22,34 +24,46 @@ function onPlayerReady() {
 function stopVideo() {
     tv.stopVideo();
 }
+function cancelScrollCheck() {
+    if(bgOverlay.classList.contains('active')) {
+        body.style.overflow = 'hidden'
+    }
+    else  {
+        body.style.overflow = 'auto'
+    }
+}
 window.onload = function() {
     if (tv) {
         let trailer = document.querySelector(".trailer");
         document.querySelector('.video__button').addEventListener('click', function(event) {
             event.preventDefault();
             toggle()
-            document.querySelector('.bg-overlay').style.cssText = "opacity: 1; z-index: 11111"
+            bgOverlay.classList.add('active')
+            cancelScrollCheck()
             onPlayerReady();
             trailer.classList.add("active");
         });
         document.querySelector('.video-iframe--banner').addEventListener('click', function(event) {
             event.preventDefault();
-            document.querySelector('.bg-overlay').style.cssText = "opacity: 1; z-index: 11111"
+            bgOverlay.classList.add('active')
+            cancelScrollCheck()
             onPlayerReady();
             trailer.classList.add("active");
         });
-        $(window).scroll(function() {
-            if (($(window).scrollTop()) > 1000) {
-                stopVideo()
-                trailer.classList.remove("active");
-                document.querySelector('.bg-overlay').style.cssText = "display: none"
-                document.querySelector('.video-iframe--banner').style.cssText = "display: block";
-            }
-        });
-        document.querySelector('.bg-overlay').addEventListener('click', function() {
+        // $(window).scroll(function() {
+        //     if (($(window).scrollTop()) > 1000) {
+        //         stopVideo()
+        //         trailer.classList.remove("active");
+        //         bgOverlay.classList.remove('active');
+             
+        //         document.querySelector('.video-iframe--banner').style.cssText = "display: block";
+        //     }
+        // });
+        bgOverlay.addEventListener('click', function() {
             stopVideo();
             trailer.classList.remove("active");
-            document.querySelector('.bg-overlay').style.cssText = "display: none"
+            bgOverlay.classList.remove('active')
+            cancelScrollCheck()
             document.querySelector('.video-iframe--banner').style.cssText = "display: block";
         });
     }
