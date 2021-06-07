@@ -1,3 +1,4 @@
+@import './uikit.scss';
 @import './variables.scss';
 @import './normalize.scss';
 @import './components/header.scss';
@@ -18,4 +19,14 @@ body * {
 
 .skip-link:focus {
     top: 0;
+}
+
+.main-button {
+    padding: 15px 35px;
+    border: 1.5px solid $main-color;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 12px;
+    color: $main-color;
 }

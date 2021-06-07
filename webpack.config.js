@@ -1,13 +1,24 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const glob = require('glob')
+const PurgeCSSPlugin = require('purgecss-webpack-plugin')
 
+const PATHS = {
+    src: path.join(__dirname, 'src')
+}
 module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'main.js'
     },
-    plugins: [new MiniCssExtractPlugin()],
+
+    plugins: [new MiniCssExtractPlugin(),
+        new PurgeCSSPlugin({
+            paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
+        }),
+    ],
     module: {
         rules: [{
                 test: /\.scss$/i,
@@ -35,6 +46,24 @@ module.exports = {
                 }, ]
             }
         ]
+    },
+    optimization: {
+        minimize: true,
+        minimizer: [
+            // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+            // `...`,
+            new CssMinimizerPlugin(),
+        ],
+        splitChunks: {
+            cacheGroups: {
+                styles: {
+                    name: 'styles',
+                    test: /\.css$/,
+                    chunks: 'all',
+                    enforce: true
+                }
+            }
+        }
     },
     stats: {
         children: true,

@@ -6,12 +6,9 @@
     <meta name="description" content="Courses site">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Site</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css" as="style"
-        crossorigin />
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" as="font" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" as="font" crossorigin>
     <link rel="icon" href="#">
     <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
@@ -24,8 +21,7 @@
     <header class="header" style="z-index: 980;" uk-sticky="top: 150; ">
         <div>
             <a href="#" class="header--logo"> <img width="52" height="48" src="./img/logo.svg" alt="logo"> </a>
-            <a href="#" class="header--logo__nav-active"> <img width="52" height="48" src="./img/logo_nav.svg"
-                    alt="logo"> </a>
+            <a href="#" class="header--logo__nav-active"> <img width="52" height="48" src="./img/logo_nav.svg" alt="logo"> </a>
         </div>
 
         <ul class="header--lang">
@@ -35,14 +31,13 @@
         </ul>
         <div class="header--burger">
             Меню
-            <a class="burger--btn"> <img width="24" height="18" class="header--burger__open" src="./img/menu_icon.svg"
-                    alt="menu">
+            <a class="burger--btn"> <img width="24" height="18" class="header--burger__open" src="./img/menu_icon.svg" alt="menu">
                 <img class="header--burger__close" width="18" height="16" src="./img/close_menu.svg" alt="close menu">
             </a>
         </div>
     </header>
     <div class="header--dropdown">
-        <a class="header--dropdown--title">Курси</a>
+        <a class="header--dropdown--title main-button">Курси</a>
         <div class="header--dropdown--body" uk-dropdown="mode: click">
             <ul>
                 <li>
@@ -151,8 +146,7 @@
     <section id="video-represent">
         <div class="uk-container">
             <h2>Трансформуйся! Вибери нову професію і ми тобі допоможемо</h2>
-            <p>Ми вчимо вас на власному досвіді. Наші курси зосереджені на цінних навичках і перевірених процесах, які
-                поліпшать вашу роботу, вразять ваших клієнтів і допоможуть вам побудувати свій кар'єрний шлях.</p>
+            <p>Ми вчимо вас на власному досвіді. Наші курси зосереджені на цінних навичках і перевірених процесах, які поліпшать вашу роботу, вразять ваших клієнтів і допоможуть вам побудувати свій кар'єрний шлях.</p>
             <div class="video-iframe">
                 <div class="video-iframe--banner">
                     <div class="video-iframe--content">
@@ -201,7 +195,10 @@
                             <li class="uk-width-4-5">
                                 <div class="uk-panel">
                                     <div class="uk-panel--card-overlay"> </div>
-                                    <img src="img/courses1.png" alt="">
+                                    <picture>
+                                        <source srcset="img/courses1.webp" type="image/webp">
+                                        <img src="img/courses1.png" alt="">
+                                    </picture>
                                     <div class="uk-position-center uk-text-center">
                                         <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
                                             <span class="courses--free-space">Вільних місць: 10<span></p>
@@ -213,7 +210,10 @@
                             <li class="uk-width-4-5">
                                 <div class="uk-panel">
                                     <div class="uk-panel--card-overlay"> </div>
-                                    <img src="img/courses2.png" alt="">
+                                    <picture>
+                                        <source srcset="img/courses2.webp" type="image/webp">
+                                        <img src="img/courses2.png" alt="">
+                                    </picture>
                                     <div class="uk-position-center uk-text-center">
                                         <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
                                             <span class="courses--free-space">Вільних місць: 10<span></p>
@@ -225,7 +225,10 @@
                             <li class="uk-width-4-5">
                                 <div class="uk-panel">
                                     <div class="uk-panel--card-overlay"> </div>
-                                    <img src="img/courses3.png" alt="">
+                                    <picture>
+                                        <source srcset="img/courses3.webp" type="image/webp">
+                                        <img src="img/courses3.png" alt="">
+                                    </picture>
                                     <div class="uk-position-center uk-text-center">
                                         <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
                                             <span class="courses--free-space">Вільних місць: 10<span></p>
@@ -237,7 +240,10 @@
                             <li class="uk-width-4-5">
                                 <div class="uk-panel">
                                     <div class="uk-panel--card-overlay"> </div>
-                                    <img src="img/courses1.png" alt="">
+                                    <picture>
+                                        <source srcset="img/courses1.webp" type="image/webp">
+                                        <img src="img/courses1.png" alt="">
+                                    </picture>
                                     <div class="uk-position-center uk-text-center">
                                         <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
                                             <span class="courses--free-space">Вільних місць: 10<span></p>
@@ -249,7 +255,10 @@
                             <li class="uk-width-4-5">
                                 <div class="uk-panel">
                                     <div class="uk-panel--card-overlay"> </div>
-                                    <img src="img/courses2.png" alt="">
+                                    <picture>
+                                        <source srcset="img/courses2.webp" type="image/webp">
+                                        <img src="img/courses2.png" alt="">
+                                    </picture>
                                     <div class="uk-position-center uk-text-center">
                                         <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
                                             <span class="courses--free-space">Вільних місць: 10<span></p>
@@ -273,7 +282,10 @@
                             <li class="uk-width-4-5">
                                 <div class="uk-panel">
                                     <div class="uk-panel--card-overlay"> </div>
-                                    <img src="img/courses1.png" alt="">
+                                    <picture>
+                                        <source srcset="img/courses3.webp" type="image/webp">
+                                        <img src="img/courses3.png" alt="">
+                                    </picture>
                                     <div class="uk-position-center uk-text-center">
                                         <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
                                             <span class="courses--free-space">Вільних місць: 10<span></p>
@@ -285,7 +297,10 @@
                             <li class="uk-width-4-5">
                                 <div class="uk-panel">
                                     <div class="uk-panel--card-overlay"> </div>
-                                    <img src="img/courses2.png" alt="">
+                                    <picture>
+                                        <source srcset="img/courses1.webp" type="image/webp">
+                                        <img src="img/courses1.png" alt="">
+                                    </picture>
                                     <div class="uk-position-center uk-text-center">
                                         <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
                                             <span class="courses--free-space">Вільних місць: 10<span></p>
@@ -297,7 +312,10 @@
                             <li class="uk-width-4-5">
                                 <div class="uk-panel">
                                     <div class="uk-panel--card-overlay"> </div>
-                                    <img src="img/courses3.png" alt="">
+                                    <picture>
+                                        <source srcset="img/courses2.webp" type="image/webp">
+                                        <img src="img/courses2.png" alt="">
+                                    </picture>
                                     <div class="uk-position-center uk-text-center">
                                         <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
                                             <span class="courses--free-space">Вільних місць: 10<span></p>
@@ -309,7 +327,10 @@
                             <li class="uk-width-4-5">
                                 <div class="uk-panel">
                                     <div class="uk-panel--card-overlay"> </div>
-                                    <img src="img/courses1.png" alt="">
+                                    <picture>
+                                        <source srcset="img/courses3.webp" type="image/webp">
+                                        <img src="img/courses3.png" alt="">
+                                    </picture>
                                     <div class="uk-position-center uk-text-center">
                                         <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
                                             <span class="courses--free-space">Вільних місць: 10<span></p>
@@ -321,7 +342,10 @@
                             <li class="uk-width-4-5">
                                 <div class="uk-panel">
                                     <div class="uk-panel--card-overlay"> </div>
-                                    <img src="img/courses2.png" alt="">
+                                    <picture>
+                                        <source srcset="img/courses1.webp" type="image/webp">
+                                        <img src="img/courses1.png" alt="">
+                                    </picture>
                                     <div class="uk-position-center uk-text-center">
                                         <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
                                             <span class="courses--free-space">Вільних місць: 10<span></p>
@@ -345,7 +369,10 @@
                             <li class="uk-width-4-5">
                                 <div class="uk-panel">
                                     <div class="uk-panel--card-overlay"> </div>
-                                    <img src="img/courses1.png" alt="">
+                                    <picture>
+                                        <source srcset="img/courses2.webp" type="image/webp">
+                                        <img src="img/courses2.png" alt="">
+                                    </picture>
                                     <div class="uk-position-center uk-text-center">
                                         <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
                                             <span class="courses--free-space">Вільних місць: 10<span></p>
@@ -357,7 +384,10 @@
                             <li class="uk-width-4-5">
                                 <div class="uk-panel">
                                     <div class="uk-panel--card-overlay"> </div>
-                                    <img src="img/courses2.png" alt="">
+                                    <picture>
+                                        <source srcset="img/courses3.webp" type="image/webp">
+                                        <img src="img/courses3.png" alt="">
+                                    </picture>
                                     <div class="uk-position-center uk-text-center">
                                         <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
                                             <span class="courses--free-space">Вільних місць: 10<span></p>
@@ -369,7 +399,10 @@
                             <li class="uk-width-4-5">
                                 <div class="uk-panel">
                                     <div class="uk-panel--card-overlay"> </div>
-                                    <img src="img/courses3.png" alt="">
+                                    <picture>
+                                        <source srcset="img/courses1.webp" type="image/webp">
+                                        <img src="img/courses1.png" alt="">
+                                    </picture>
                                     <div class="uk-position-center uk-text-center">
                                         <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
                                             <span class="courses--free-space">Вільних місць: 10<span></p>
@@ -381,7 +414,10 @@
                             <li class="uk-width-4-5">
                                 <div class="uk-panel">
                                     <div class="uk-panel--card-overlay"> </div>
-                                    <img src="img/courses1.png" alt="">
+                                    <picture>
+                                        <source srcset="img/courses2.webp" type="image/webp">
+                                        <img src="img/courses2.png" alt="">
+                                    </picture>
                                     <div class="uk-position-center uk-text-center">
                                         <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
                                             <span class="courses--free-space">Вільних місць: 10<span></p>
@@ -393,7 +429,10 @@
                             <li class="uk-width-4-5">
                                 <div class="uk-panel">
                                     <div class="uk-panel--card-overlay"> </div>
-                                    <img src="img/courses2.png" alt="">
+                                    <picture>
+                                        <source srcset="img/courses3.webp" type="image/webp">
+                                        <img src="img/courses3.png" alt="">
+                                    </picture>
                                     <div class="uk-position-center uk-text-center">
                                         <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
                                             <span class="courses--free-space">Вільних місць: 10<span></p>
@@ -415,7 +454,10 @@
                             <li class="uk-width-4-5">
                                 <div class="uk-panel">
                                     <div class="uk-panel--card-overlay"> </div>
-                                    <img src="img/courses1.png" alt="">
+                                    <picture>
+                                        <source srcset="img/courses1.webp" type="image/webp">
+                                        <img src="img/courses1.png" alt="">
+                                    </picture>
                                     <div class="uk-position-center uk-text-center">
                                         <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
                                             <span class="courses--free-space">Вільних місць: 10<span></p>
@@ -427,7 +469,10 @@
                             <li class="uk-width-4-5">
                                 <div class="uk-panel">
                                     <div class="uk-panel--card-overlay"> </div>
-                                    <img src="img/courses2.png" alt="">
+                                    <picture>
+                                        <source srcset="img/courses2.webp" type="image/webp">
+                                        <img src="img/courses2.png" alt="">
+                                    </picture>
                                     <div class="uk-position-center uk-text-center">
                                         <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
                                             <span class="courses--free-space">Вільних місць: 10<span></p>
@@ -439,7 +484,10 @@
                             <li class="uk-width-4-5">
                                 <div class="uk-panel">
                                     <div class="uk-panel--card-overlay"> </div>
-                                    <img src="img/courses3.png" alt="">
+                                    <picture>
+                                        <source srcset="img/courses3.webp" type="image/webp">
+                                        <img src="img/courses3.png" alt="">
+                                    </picture>
                                     <div class="uk-position-center uk-text-center">
                                         <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
                                             <span class="courses--free-space">Вільних місць: 10<span></p>
@@ -451,7 +499,10 @@
                             <li class="uk-width-4-5">
                                 <div class="uk-panel">
                                     <div class="uk-panel--card-overlay"> </div>
-                                    <img src="img/courses1.png" alt="">
+                                    <picture>
+                                        <source srcset="img/courses1.webp" type="image/webp">
+                                        <img src="img/courses1.png" alt="">
+                                    </picture>
                                     <div class="uk-position-center uk-text-center">
                                         <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
                                             <span class="courses--free-space">Вільних місць: 10<span></p>
@@ -463,7 +514,10 @@
                             <li class="uk-width-4-5">
                                 <div class="uk-panel">
                                     <div class="uk-panel--card-overlay"> </div>
-                                    <img src="img/courses2.png" alt="">
+                                    <picture>
+                                        <source srcset="img/courses2.webp" type="image/webp">
+                                        <img src="img/courses2.png" alt="">
+                                    </picture>
                                     <div class="uk-position-center uk-text-center">
                                         <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
                                             <span class="courses--free-space">Вільних місць: 10<span></p>
@@ -488,7 +542,12 @@
         </div>
         <div class="owl-carousel owl-theme">
             <div class="item">
-                <h4><img src="./img/team/team1.png" alt=""></h4>
+                <h4>
+                    <picture>
+                        <source srcset="./img/team/team1.webp" type="image/webp">
+                        <img src="./img/team/team1.png" alt="">
+                      </picture>
+                </h4>
                 <div>
                     <h3 class="teammate--name">Юлия Житник</h3>
                     <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
@@ -496,63 +555,90 @@
             </div>
 
             <div class="item">
-                <h4><img src="./img/team/team2.png" alt=""></h4>
+                <h4><picture>
+                    <source srcset="./img/team/team2.webp" type="image/webp">
+                    <img src="./img/team/team2.png" alt="">
+                  </picture></h4>
                 <div>
                     <h3 class="teammate--name">Юлия Житник</h3>
                     <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
                 </div>
             </div>
             <div class="item">
-                <h4><img src="./img/team/team3.png" alt=""></h4>
+                <h4><picture>
+                    <source srcset="./img/team/team3.webp" type="image/webp">
+                    <img src="./img/team/team3.png" alt="">
+                  </picture></h4>
                 <div>
                     <h3 class="teammate--name">Юлия Житник</h3>
                     <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
                 </div>
             </div>
             <div class="item">
-                <h4><img src="./img/team/team4.png" alt=""></h4>
+                <h4><picture>
+                    <source srcset="./img/team/team4.webp" type="image/webp">
+                    <img src="./img/team/team4.png" alt="">
+                  </picture></h4>
                 <div>
                     <h3 class="teammate--name">Юлия Житник</h3>
                     <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
                 </div>
             </div>
             <div class="item">
-                <h4><img src="./img/team/team5.png" alt=""></h4>
+                <h4><picture>
+                    <source srcset="./img/team/team5.webp" type="image/webp">
+                    <img src="./img/team/team5.png" alt="">
+                  </picture></h4>
                 <div>
                     <h3 class="teammate--name">Юлия Житник</h3>
                     <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
                 </div>
             </div>
             <div class="item">
-                <h4><img src="./img/team/team6.png" alt=""></h4>
+                <h4><picture>
+                    <source srcset="./img/team/team6.webp" type="image/webp">
+                    <img src="./img/team/team6.png" alt="">
+                  </picture></h4>
                 <div>
                     <h3 class="teammate--name">Юлия Житник</h3>
                     <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
                 </div>
             </div>
             <div class="item">
-                <h4><img src="./img/team/team7.png" alt=""></h4>
+                <h4><picture>
+                    <source srcset="./img/team/team7.webp" type="image/webp">
+                    <img src="./img/team/team7.png" alt="">
+                  </picture></h4>
                 <div>
                     <h3 class="teammate--name"></h3>
                     <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
                 </div>
             </div>
             <div class="item">
-                <h4><img src="./img/team/team8.png" alt=""></h4>
+                <h4><picture>
+                    <source srcset="./img/team/team8.webp" type="image/webp">
+                    <img src="./img/team/team8.png" alt="">
+                  </picture></h4>
                 <div>
                     <h3 class="teammate--name">Юлия Житник</h3>
                     <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
                 </div>
             </div>
             <div class="item">
-                <h4><img src="./img/team/team9.png" alt=""></h4>
+                <h4><picture>
+                    <source srcset="./img/team/team9.webp" type="image/webp">
+                    <img src="./img/team/team9.png" alt="">
+                  </picture></h4>
                 <div>
                     <h3 class="teammate--name">Юлия Житник</h3>
                     <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
                 </div>
             </div>
             <div class="item">
-                <h4><img src="./img/team/team10.png" alt=""></h4>
+                <h4><picture>
+                    <source srcset="./img/team/team10.webp" type="image/webp">
+                    <img src="./img/team/team10.png" alt="">
+                  </picture></h4>
                 <div>
                     <h3 class="teammate--name">Юлия Житник</h3>
                     <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
@@ -561,11 +647,18 @@
 
         </div>
         <div class="uk-container">
-            <p>Ми вчимо вас на власному досвіді. Наші курси зосереджені на цінних навичках і перевірених процесах, які
+            <p class="team--description">Ми вчимо вас на власному досвіді. Наші курси зосереджені на цінних навичках і перевірених процесах, які
                 поліпшать вашу роботу, вразять ваших клієнтів і допоможуть вам побудувати свій кар'єрний шлях. </p>
+               <div class="team--watch-all-team"> <a class="main-button  team--action" href="#">Всі викладачі</a></div>
         </div>
         </div>
         <div class="team--background-overlay"> </div>
+    </section>
+    <section id="registration">
+        <div class="uk-container">
+            <h2 class="registration--description"> Реєструйся на онлайн навчання та отримай <span>15%</span> знижку!</h2>
+
+                                    </div>
     </section>
     <div id="bg-overlay">
         <div class="bg-overlay--VideoHead-popup-video-exit">
@@ -573,8 +666,7 @@
             <div class="bg-overlay--VideoHead-popup-video-exit line-2"></div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=" anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=" anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/js/uikit-icons.min.js"></script>
