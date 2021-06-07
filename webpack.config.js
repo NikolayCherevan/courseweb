@@ -15,9 +15,9 @@ module.exports = {
     },
 
     plugins: [new MiniCssExtractPlugin(),
-        new PurgeCSSPlugin({
-            paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
-        }),
+        // new PurgeCSSPlugin({
+        //     paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
+        // }),
     ],
     module: {
         rules: [{
@@ -54,16 +54,16 @@ module.exports = {
             // `...`,
             new CssMinimizerPlugin(),
         ],
-        splitChunks: {
-            cacheGroups: {
-                styles: {
-                    name: 'styles',
-                    test: /\.css$/,
-                    chunks: 'all',
-                    enforce: true
-                }
-            }
-        }
+        // splitChunks: {
+        //     cacheGroups: {
+        //         styles: {
+        //             name: 'styles',
+        //             test: /\.css$/,
+        //             chunks: 'all',
+        //             enforce: true
+        //         }
+        //     }
+        // }
     },
     stats: {
         children: true,
