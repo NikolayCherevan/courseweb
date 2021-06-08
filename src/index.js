@@ -141,8 +141,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
         stagePadding: 50,
         autoplay:true,
         slideTransition: 'linear',
-
-        autoplaySpeed: 10000,
+        autoplayTimeout: 6000,
+        autoplaySpeed: 6000,
         loop: true,
         margin: 50,
         nav: true,
@@ -161,10 +161,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
             }
         }
     })
-
-    const myElement = document.getElementById('hero');
+    function getRandomInt(max) {
+        var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
+        return Math.floor(Math.random() * max)*plusOrMinus;
+      }
+  
+    const myElement = document.querySelector('.owl-stage');
     for (let i = 0; i < myElement.children.length; i++) {
-      console.log(myElement.children[i].children[0].children[0]);
+      if(!myElement.children[i].classList.contains('cloned')) {
+        myElement.children[i].children[0].children[0].children[1].style.transform = `rotate(${getRandomInt(25)}deg)`
+      }
     }
     function addDotButtonText() {
         $('.owl-dot').each(function() {
