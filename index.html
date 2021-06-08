@@ -35,10 +35,18 @@
         </ul>
         <div class="header--burger">
             Меню
-            <a class="burger--btn"> <img width="24" height="18" class="header--burger__open" src="./img/menu_icon.svg"
-                    alt="menu">
-                <img class="header--burger__close" width="18" height="16" src="./img/close_menu.svg" alt="close menu">
-            </a>
+            <div id="menu-toggle" class="burger--btn">
+                <div id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="cross">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
         </div>
     </header>
     <div class="header--dropdown">
@@ -147,7 +155,51 @@
 
     </div>
     <div class="menu-bg"> </div>
-    <section class="hero"> </section>
+
+    <section id="hero">
+        <div class="uk-container">
+            <h1 class="hero--site-slogan uk-text-center">Навчимо заробляти інтелектом!</h1>
+        </div>
+        <div class="owl-theme  owl-carousel owl-carousel--hero">
+            <div>
+                <picture>
+                    <source srcset="img/courses1.webp" type="image/webp">
+                    <img src="img/courses1.png" alt="">
+                </picture>
+            </div>
+            <div>
+                <picture>
+                    <source srcset="img/courses2.webp" type="image/webp">
+                    <img src="img/courses2.png" alt="">
+                </picture>
+            </div>
+            <div>
+                <picture>
+                    <source srcset="img/courses3.webp" type="image/webp">
+                    <img src="img/courses3.png" alt="">
+                </picture>
+            </div>
+            <div>
+                <picture>
+                    <source srcset="img/courses1.webp" type="image/webp">
+                    <img src="img/courses1.png" alt="">
+                </picture>
+            </div>
+            <div>
+                <picture>
+                    <source srcset="img/courses2.webp" type="image/webp">
+                    <img src="img/courses2.png" alt="">
+                </picture>
+            </div>
+            <div>
+                <picture>
+                    <source srcset="img/courses3.webp" type="image/webp">
+                    <img src="img/courses3.png" alt="">
+                </picture>
+            </div>
+
+        </div>
+    </section>
     <section id="video-represent">
         <div class="uk-container">
             <h2>Трансформуйся! Вибери нову професію і ми тобі допоможемо</h2>
@@ -171,7 +223,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="video-iframe--logo-overlay">
+                <div class="video-iframe--logo-overlay" uk-parallax="y: 100; easing: -0.5">
                     <img src="./img/logo_nav.svg" alt="logo over video">
                 </div>
             </div>
@@ -546,7 +598,7 @@
         <div class="uk-container">
             <h2 class="uk-text-center">Познайомся з нашою командою</h2>
         </div>
-        <div class="owl-carousel owl-theme">
+        <div class="owl-carousel--team  owl-carousel  owl-theme">
             <div class="item">
                 <h4>
                     <picture>
@@ -704,8 +756,7 @@
     <footer id="footer">
         <section>
             <div class="uk-container">
-                <a class="footer--logo" href=""><img width="52" height="48" src="./img/logo_nav.svg"
-                    alt="logo"> </a>
+                <a class="footer--logo" href=""><img width="52" height="48" src="./img/logo_nav.svg" alt="logo"> </a>
                 <ul class="footer--links">
                     <li><a href="#"> Договір оферти</a></li>
                     <li><a href="#"> Умови користування</a></li>

@@ -31,7 +31,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     //burger logic
-    burger.addEventListener('click', () => {
+    burger.addEventListener('click', function() { 
+        this.classList.toggle('open');
         body.classList.toggle('__nav-open');
         cancelScrollCheck()
         if (header.classList.contains('orange-sticky')) {
@@ -114,7 +115,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     })
 
     //owlinit
-    $('.owl-carousel').owlCarousel({
+    $('.owl-carousel--team').owlCarousel({
         onInitialized: addDotButtonText,
         onResized: addDotButtonText,
         stagePadding: 50,
@@ -134,7 +135,37 @@ window.addEventListener('DOMContentLoaded', (event) => {
             }
         }
     })
+    $('.owl-carousel--hero').owlCarousel({
+        onInitialized: addDotButtonText,
+        onResized: addDotButtonText,
+        stagePadding: 50,
+        autoplay:true,
+        slideTransition: 'linear',
 
+        autoplaySpeed: 10000,
+        loop: true,
+        margin: 50,
+        nav: true,
+        dots:false,
+        center:true,
+        lazyLoad: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 5
+            }
+        }
+    })
+
+    const myElement = document.getElementById('hero');
+    for (let i = 0; i < myElement.children.length; i++) {
+      console.log(myElement.children[i].children[0].children[0]);
+    }
     function addDotButtonText() {
         $('.owl-dot').each(function() {
             $(this).find('.offscreen').remove();

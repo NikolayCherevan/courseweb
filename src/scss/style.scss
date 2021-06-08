@@ -5,8 +5,12 @@
 @import './components/header.scss';
 @import './components/footer.scss';
 @import './homepage/home.scss';
-body * {
-    font-family: 'Montserrat', sans-serif;
+body {
+    z-index: -1;
+    position: relative;
+    * {
+        font-family: 'Montserrat', sans-serif;
+    }
 }
 
 .skip-link {
@@ -31,4 +35,8 @@ body * {
     font-weight: 600;
     line-height: 12px;
     color: $main-color;
+}
+.offscreen {
+    position: absolute;
+    left: -999em;
 }
