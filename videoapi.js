@@ -1,7 +1,8 @@
-window.addEventListener('DOMContentLoaded', (event) => {
+
 var tag = document.createElement('script');
 let bgOverlay = document.getElementById('bg-overlay');
 let body = document.querySelector('body');
+
 tag.src = 'https://www.youtube.com/player_api';
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
@@ -87,4 +88,4 @@ function toggle() {
     header.classList.toggle('active');
     home.classList.toggle('bg');
 
-}});
+}

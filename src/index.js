@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let modileMenuDropdown = document.querySelector('.header--dropdown');
     let header = document.querySelector('.header');
     let mobileMenu = document.querySelector('.mobile-menu');
-
+    let modileMenuDropdownTitle = document.querySelector('.header--dropdown--title');
     //init niceselect
 
     $('.nice-select').niceSelect();
@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     //add overlay for dropdown header
-    addOverlay(modileMenuDropdown)
+    addOverlay(modileMenuDropdownTitle)
 
 
 
@@ -97,7 +97,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
     var prevEl = null;
     $(".courses--tabs--title").each(function(index) {
         $(this).on('click', function() {
-            if (index === 0) return
+            if (index === 0) {
+                console.log(index)
+                $(".uk-tab-bottom").animate({ scrollLeft: '-1000'}, 300);
+                return
+            } 
             if (prevEl < index) {
                 $(".uk-tab-bottom").animate({ scrollLeft: '+=130' }, 300);
             } else if (prevEl - 1 < index) {
