@@ -48,7 +48,7 @@ module.exports = {
         ]
     },
     optimization: {
-        minimize: true,
+        //minimize: true,
         minimizer: [
             // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
             // `...`,

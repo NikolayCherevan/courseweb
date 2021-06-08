@@ -1,7 +1,9 @@
 @import './uikit.scss';
+@import './nice-select.scss';
 @import './variables.scss';
 @import './normalize.scss';
 @import './components/header.scss';
+@import './components/footer.scss';
 @import './homepage/home.scss';
 body * {
     font-family: 'Montserrat', sans-serif;

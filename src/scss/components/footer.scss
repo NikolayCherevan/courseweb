@@ -1,0 +1,34 @@
+#footer {
+   section {
+    background-color: $secondary-bg-gray;
+    color: $main-color-white;
+    margin-top: 0;
+    padding-top: 50px;
+    font-weight: 600;
+    .uk-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .footer--links {
+            margin: 40px 0 60px 0;
+            li {
+                margin: 25px 0;
+                text-align: center;
+                a {
+                    color: $main-color-white;  
+                    text-decoration: none;
+                }
+            }
+        }
+        .footer--socials
+        {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            li {
+                margin: 0 23px;
+            }
+        }
+    }
+   }
+}

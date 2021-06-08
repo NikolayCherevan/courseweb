@@ -7,8 +7,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let header = document.querySelector('.header');
     let mobileMenu = document.querySelector('.mobile-menu');
 
+    //init niceselect
 
-
+    $('.nice-select').niceSelect();
 
     //add orange bg to mobile menu
     mobileMenu.addEventListener("scroll", addOrangeFixedHeader);
@@ -19,6 +20,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     //add overlay for dropdown header
     addOverlay(modileMenuDropdown)
+
+
+
 
     //first tab active
     if (document.getElementById("courses")) {
@@ -66,7 +70,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
         elem.addEventListener('click', () => {
             bgOverlay.classList.toggle('active');
             cancelScrollCheck()
+
         })
+
     }
 
 

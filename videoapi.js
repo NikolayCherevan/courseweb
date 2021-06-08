@@ -1,3 +1,4 @@
+window.addEventListener('DOMContentLoaded', (event) => {
 var tag = document.createElement('script');
 let bgOverlay = document.getElementById('bg-overlay');
 let body = document.querySelector('body');
@@ -86,4 +87,4 @@ function toggle() {
     header.classList.toggle('active');
     home.classList.toggle('bg');
 
-};
+}});
