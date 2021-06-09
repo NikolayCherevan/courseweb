@@ -5,7 +5,11 @@
 @import './components/header.scss';
 @import './components/footer.scss';
 @import './homepage/home.scss';
+html {
+    scroll-behavior: smooth;
+}
 body {
+
     z-index: -1;
     position: relative;
     * {

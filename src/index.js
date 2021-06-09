@@ -115,36 +115,40 @@ window.addEventListener('DOMContentLoaded', (event) => {
     })
 
     //owlinit
-    $('.owl-carousel--team').owlCarousel({
-        onInitialized: addDotButtonText,
-        onResized: addDotButtonText,
-        stagePadding: 50,
-        loop: true,
-        margin: 10,
-        nav: false,
-        lazyLoad: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 3
-            },
-            1000: {
-                items: 5
+    initTeamSlider()
+    function initTeamSlider () {
+        $('.owl-carousel--team').owlCarousel({
+            onInitialized: addDotButtonText,
+            onResized: addDotButtonText,
+            stagePadding: 50,
+            loop: true,
+            margin: 10,
+            nav: false,
+            lazyLoad: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
             }
-        }
-    })
+        })
+    }
+    
     $('.owl-carousel--hero').owlCarousel({
         onInitialized: addDotButtonText,
         onResized: addDotButtonText,
-        stagePadding: 50,
+       // stagePadding: 50,
         autoplay:true,
         slideTransition: 'linear',
-        autoplayTimeout: 6000,
-        autoplaySpeed: 6000,
+        autoplayTimeout: 7000,
+        autoplaySpeed: 7000,
         loop: true,
-        margin: 50,
+        margin: 60,
         nav: true,
         dots:false,
         center:true,
@@ -154,10 +158,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 items: 1
             },
             600: {
-                items: 3
+                items: 3,
+                margin: 150,
             },
             1000: {
-                items: 5
+                items: 5,
+                margin: 0,
+                
             }
         }
     })
@@ -168,9 +175,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
   
     const myElement = document.querySelector('.owl-stage');
     for (let i = 0; i < myElement.children.length; i++) {
-      if(!myElement.children[i].classList.contains('cloned')) {
-        myElement.children[i].children[0].children[0].children[1].style.transform = `rotate(${getRandomInt(25)}deg)`
-      }
+      //if(!myElement.children[i].classList.contains('cloned')) {
+        myElement.children[i].children[0].children[0].children[1].style.transform = `rotate(${getRandomInt(15)}deg)`
+     // }
     }
     function addDotButtonText() {
         $('.owl-dot').each(function() {
@@ -178,5 +185,45 @@ window.addEventListener('DOMContentLoaded', (event) => {
             let idx = $(this).index() + 1;
             $(this).append('<span class="offscreen">Go to slide ' + idx + '</span>');
         });
+    }
+    $('.hero---scroll-to-courses a').click(function (e) { 
+        $('html, body').animate({
+            scrollTop: $('#registration').offset().top - 30
+        }, 'slow');
+    });
+
+
+    var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    if (viewportWidth >= 992) {
+        destroyUiKitSlider();
+        $('.owl-carousel--team').trigger('destroy.owl.carousel')
+    } else {
+        document.querySelectorAll('.uk-slider').forEach((item, index) => {
+            UIkit.slider(item);
+         })  
+         initTeamSlider()
+    }
+    
+    window.addEventListener('resize', function () {
+        viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+        if (viewportWidth >= 992) {
+            destroyUiKitSlider();
+            $('.owl-carousel--team').trigger('destroy.owl.carousel')
+        }
+        else {
+            document.querySelectorAll('.uk-slider').forEach((item, index) => {
+               UIkit.slider(item);
+            })
+            initTeamSlider()
+        }
+    }, false);
+
+    
+    function destroyUiKitSlider() {
+
+        document.querySelectorAll('.uk-slider').forEach((item, index) => {
+            let slider = UIkit.slider(item);
+            slider.$destroy();
+        })
     }
 });

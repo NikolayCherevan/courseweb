@@ -12,6 +12,11 @@
         font-weight: bold;
         line-height: 38px;
         margin-bottom: 32px;
+
+        @media (min-width: $tablet) {
+            font-size: 70px;
+            line-height: 75px;
+        }
     }
 
     .owl-carousel--hero {
@@ -19,23 +24,62 @@
         overflow: hidden;
         display: flex;
         align-items: center;
+
         .owl-item {
             text-align: center;
+
             img {
-                width: 221px;
-                height: 221px;
+                width: 241px;
+                height: 211px;
                 margin: 0 auto;
                 object-fit: cover;
             }
+            &:hover {
+                @media (min-width: $note_desk) {
+                    .hero--item-description {
+                        padding: 15px 35px 15px 35px;
+                        width: 260px;
+                        transition: opacity  .3s,width .3s;
+                        opacity: 1;
+                    }
+                }
+            }
+            .hero--item-description {
+                position: absolute;
+                z-index: 11;
+                padding: 15px 35px 15px 35px;
+                font-size: $main-font-mobile;
+                line-height: 24px;
+                top: 80%;
+                background-color: $base-bg-orange;
+                color: $main-color-white;
+                border-radius: 40px;
+                min-width: 260px;
+                box-sizing: border-box;
+                left: 50%;
+                height: 78px;
+                transform: translate(-50%, 0);
+                @media (min-width: $note_desk) {
+                    padding: 0;
+                    width: 0;
+                    min-width: 0;
+                    opacity: 0;
+                    overflow: hidden;
+                    transition: opacity  .3s,width .3s;
+                }
+            }
         }
+
         .owl-stage {
             background-image: url('./img/new_line.svg');
             background-size: contain;
             background-position-x: -100px;
         }
-        .owl-stage-outer{
+
+        .owl-stage-outer {
             overflow: visible;
         }
+
         .owl-nav {
             margin-top: -165px;
 
@@ -46,6 +90,7 @@
                 outline: none;
                 background-color: $secondary-bg-gray;
                 position: absolute;
+
                 &:hover {
                     background-color: $secondary-bg-gray;
                 }
@@ -74,10 +119,43 @@
                         left: 10px;
 
                     }
+
                     right: 0;
                     transform: translate(80%, 0);
                 }
             }
+        }
+    }
+
+    .hero---scroll-to-courses {
+        margin-top: 35.5px;
+        padding-bottom: 47.5px;
+        display: flex;
+        justify-content: center;
+        @media (min-width: $tablet) {
+            padding-bottom: 80px;
+        }
+        a {
+            position: relative;
+            animation: moveUpDown 1.2s infinite cubic-bezier(0.61, 0.29, 0, 1.5);
+        }
+
+        img {
+            min-width: 20px;
+        }
+    }
+
+    @keyframes moveUpDown {
+        0% {
+            top: 0;
+        }
+
+        50% {
+            top: 10px;
+        }
+
+        100% {
+            top: 0;
         }
     }
 }
@@ -90,10 +168,17 @@ section {
         font-weight: bold;
         margin-bottom: 20px;
         line-height: 34px;
+
+        @media (min-width: $tablet) {
+            font-size: 30px;
+            line-height: 40px;
+        }
     }
 }
 
 #video-represent {
+    margin-top: 0;
+
     iframe {
         width: 90.5vw !important;
         height: calc(90vw/1.77) !important;
@@ -103,15 +188,40 @@ section {
         color: $main-color;
     }
 
+    h2 {
+        max-width: 420px;
+
+        @media (min-width: $tablet) {
+            margin-bottom: 40px;
+        }
+    }
+
     p {
         line-height: 24px;
+        max-width: 489px;
+        margin-left: auto;
+
+        @media (min-width: $tablet) {
+            line-height: 28px;
+        }
     }
 
     .video-iframe {
         position: relative;
+        margin-left: auto;
+        max-width: 750px;
 
         .video-iframe--content {
             margin-top: 50px;
+            background-image: url('./img/video_overlay.png');
+            background-repeat: no-repeat;
+            height: 49.1vw;
+            background-size: cover;
+            border-radius: 20px;
+
+            @media (min-width: $tablet) {
+                margin-top: 60px;
+            }
         }
 
         .video-iframe--banner {
@@ -122,6 +232,7 @@ section {
 
             .video-iframe--content {
                 min-width: 280px;
+                max-height: 400px;
 
                 .video-iframe--content--img {
                     max-width: 100%;
@@ -139,8 +250,11 @@ section {
                     transform: translate(-50%, -50%);
 
                     img {
-                        min-width: 180px;
-                        height: 50px;
+                        width: 15vw;
+                        height: 15vw;
+                        max-width: 111px;
+                        position: relative;
+                        top: -15px;
                     }
                 }
             }
@@ -235,14 +349,33 @@ section {
         .video-iframe--logo-overlay {
             position: absolute;
             left: -15px;
-            top: -25px;
+            top: -15%;
             z-index: 11;
             background-color: $base-bg-orange;
-            width: 63px;
-            height: 63px;
             padding: 17px 16px;
             box-sizing: border-box;
             border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 10vw;
+                height: 10vw;
+            }
+
+            @media (min-width: $tablet) {
+                width: 20vw;
+                height: 20vw;
+                left: -45px;
+                top: initial;
+                bottom: -10%;
+            }
+
+            @media (min-width: $note_desk) {
+                left: -10vw;
+                bottom: -25%;
+            }
         }
     }
 }
@@ -290,8 +423,21 @@ section {
 #courses {
     overflow-x: hidden;
 
+    @media (min-width: $tablet) {
+        margin-top: 166px;
+    }
+
     .uk-container {
         padding-right: 0;
+        @media (min-width: $note_desk) {
+            padding-right: 40px;
+        }
+    }
+
+    .uk-text-center {
+        @media (min-width: $tablet) {
+            margin-bottom: 40px;
+        }
     }
 
     .uk-tab-bottom {
@@ -304,6 +450,7 @@ section {
     }
 
     .courses--tabs {
+
         .courses--tabs--title {
             padding: 15px 35px;
 
@@ -330,15 +477,28 @@ section {
         .courses--tabs--content {
             display: none;
 
+            .uk-width-4-5 {
+                max-width: 388px;
+                max-height: 239px;
+            }
+
             &.active {
                 display: block;
             }
 
             margin-top: 34px;
+
+            @media (min-width: $tablet) {
+                margin-top: 60px;
+            }
         }
 
         .uk-tab-bottom {
             margin-left: 0;
+
+            @media (min-width: $tablet) {
+                justify-content: center;
+            }
 
             &::before {
                 display: none;
@@ -346,8 +506,22 @@ section {
         }
 
         .uk-slider {
+         
             .uk-slider-items {
                 max-height: 46.38vw;
+                @media (min-width: $note_desk) {
+                    flex-wrap: wrap;
+                    margin-left: 0;
+                    max-height: initial;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-gap: 16px;
+                    .uk-width-4-5 {
+                        padding: 0;
+                        width: auto;
+                        height: auto;
+                    }
+                }
             }
 
             .uk-panel {
@@ -376,12 +550,14 @@ section {
                     z-index: 2;
                 }
             }
-
+      
             .uk-slider-nav {
                 margin-top: 23px;
                 display: flex;
                 justify-content: center;
-
+                @media (min-width: $note_desk) {
+                    display: none;
+                }
                 li {
                     a {
                         width: 12px;
@@ -411,7 +587,7 @@ section {
                     align-self: flex-end;
                     margin: 20px 20px 0 20px;
                     font-weight: 600;
-                    font-size: 14px;
+                    font-size: $main-font-mobile;
                     width: inherit;
                     display: flex;
                     justify-content: space-between;
@@ -441,12 +617,20 @@ section {
 #team {
     position: relative;
     margin-top: 65px;
-
+    .uk-text-center {
+        @media (min-width: $tablet) {
+            margin-bottom: 40px;
+        }    
+    }
+ 
     .owl-carousel {
         margin-top: 34px;
 
         .owl-stage {
             display: flex;
+            background-image: url('./img/new_line_team.svg');
+            background-size: contain;
+            background-position-x: -100px;
         }
 
         .owl-item.active {
@@ -477,7 +661,21 @@ section {
             display: flex;
             justify-content: flex-end;
             align-items: center;
-
+            .item {
+                position: relative;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: black;
+                    opacity: 0;
+                    border-radius: 50%;
+                    transition: opacity .3s;
+                }
+            }
             h4 {
                 display: flex;
                 justify-content: flex-end;
@@ -486,6 +684,21 @@ section {
             img {
                 width: 128px;
                 height: 128px;
+            }
+            &:hover {
+                @media (min-width: $note_desk) {
+                    .team--role {
+                        opacity: 1;
+                        transition: opacity .3s;
+                    }
+                    .item {
+                        &:after {
+                            content: '';
+                            transition: opacity .3s;
+                            opacity: .4;
+                        }
+                    }
+                }
             }
         }
 
@@ -512,7 +725,7 @@ section {
         .teammate--name {
             margin: 15px 0 10px 0;
             font-weight: 600;
-            font-size: 14px;
+            font-size: $main-font-mobile;
             text-align: center;
             display: none;
         }
@@ -522,12 +735,27 @@ section {
             font-size: 12px;
             text-align: center;
         }
+        @media (min-width: $note_desk) {
+            .team--role {
+                position: absolute;
+                z-index: 11;
+                top: 47%;
+                left: 50%;
+                transform: translate(-50%, 0);
+                color: $main-color-white;
+                opacity: 0;
+                transition: opacity .3s;
+                .teammate--name {
+                    color: $main-color-white;
+                }
+            }
+        }
     }
 
     .uk-container {
         p.team--description {
             margin-top: 56px;
-            font-size: 14px;
+            font-size: $main-font-mobile;
             line-height: 24px;
             text-align: center;
             margin-bottom: 40px;
@@ -565,23 +793,35 @@ section {
     padding-top: 60px;
     background-color: $secondary-bg-gray;
 
+    @media (min-width: $tablet) {
+        margin-top: 120px;
+        padding-top: 120px;
+    }
+
     .registration--description {
         font-size: 25px;
         margin-bottom: 40px;
         color: $main-color-white;
         text-align: center;
-        align-items: 34px;
-
+        line-height: 34px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        @media (min-width: $tablet) {
+            font-size: 30px;
+            line-height: 40px;
+        }
         span {
             color: $main-color-orange;
         }
     }
 
     .nice-select {
+        max-width: 387px;
         margin-bottom: 20px;
         background-color: $base-bg-orange;
         color: $main-color-white;
-        font-size: 14px;
+        font-size: $main-font-mobile;
         border: none;
         border-radius: 40px;
         font-weight: 600;
@@ -608,13 +848,21 @@ section {
         }
     }
 
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .registration--registration-on-course {
         padding: 16px 0;
         background-color: $base-bg-white;
         border: none;
         color: $main-color;
         font-weight: 600;
+        font-size: $main-font-mobile;
         width: 100%;
         border-radius: 40px;
+        max-width: 387px;
     }
 }

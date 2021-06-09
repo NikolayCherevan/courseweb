@@ -4,19 +4,71 @@
     color: $main-color-white;
     margin-top: 0;
     padding-top: 50px;
+    @media (min-width: $tablet) {
+        padding-top: 70px;
+    }
     font-weight: 600;
     .uk-container {
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media (min-width: $tablet) {
+            flex-direction: row;
+            align-items: center;
+            padding-bottom: 34px;
+        }
+        @media (min-width: $note_desk) {
+         justify-content: space-between;
+        }
+        .footer--logo-links-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @media (min-width: $tablet) {
+                flex-direction: row;
+            } 
+        }
+        .footer--logo {
+            min-width: 52px;
+            min-height: 48px;
+            @media (min-width: $tablet) {
+                margin-right: 50px;
+            } 
+
+        }
         .footer--links {
             margin: 40px 0 60px 0;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            @media (min-width: $tablet) {
+                flex-direction: row;
+                margin: 0;
+            }
             li {
-                margin: 25px 0;
+                margin-bottom: 25px;
                 text-align: center;
+                @media (min-width: $tablet) {
+                    margin: 0 15px;
+                    margin-bottom: 10px;
+                    &:last-child {
+                        margin-bottom: 10px;
+                    }
+                }
+                @media (min-width: $large_desk) {
+                    margin: 0 15px;
+                    margin-bottom: 0;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
                 a {
                     color: $main-color-white;  
                     text-decoration: none;
+                    font-size: 14px;
+                }
+                &:last-child {
+                    margin-bottom: 0;
                 }
             }
         }
@@ -25,8 +77,20 @@
             display: flex;
             align-items: center;
             margin-bottom: 40px;
+            @media (min-width: $tablet) {
+                flex-direction: row;
+                margin-bottom: 0;
+            }
+
             li {
                 margin: 0 23px;
+                a {
+                    img {
+                        height: 24px;
+                        object-fit: contain;
+                        min-width: 24px;
+                    }
+                }
             }
         }
     }
