@@ -3,10 +3,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let body = document.querySelector('body');
     let burger = document.querySelector('.burger--btn')
     let bgOverlay = document.getElementById('bg-overlay');
-    let modileMenuDropdown = document.querySelector('.header--dropdown');
+    let modileMenuDropdown = document.querySelector('.header--dropdown--modile');
     let header = document.querySelector('.header');
     let mobileMenu = document.querySelector('.mobile-menu');
     let modileMenuDropdownTitle = document.querySelector('.header--dropdown--title');
+    let carierDropdown = document.querySelector('.carier-action');
+    let trailer = document.querySelector(".trailer");
+
+
     //init niceselect
 
     $('.nice-select').niceSelect();
@@ -15,13 +19,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
     mobileMenu.addEventListener("scroll", addOrangeFixedHeader);
 
     //fixed  dropdown while scrolling
-    window.addEventListener("scroll", doHeaderDropdownFixed);
+    window.addEventListener("scroll", ()=> {
+        
+        doHeaderDropdownFixed(modileMenuDropdown)
+        doHeaderDropdownFixed(header)
+   
+        header.style.top = `${document.querySelector('html').scrollTop}px`
+    });
 
 
     //add overlay for dropdown header
     addOverlay(modileMenuDropdownTitle)
-
-
+    addOverlay(modileMenuDropdown)
+    addOverlay(carierDropdown)
+   
 
 
     //first tab active
@@ -31,7 +42,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     //burger logic
-    burger.addEventListener('click', function() { 
+    burger.addEventListener('click', function () {
         this.classList.toggle('open');
         body.classList.toggle('__nav-open');
         cancelScrollCheck()
@@ -42,12 +53,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     })
 
 
-    function doHeaderDropdownFixed() {
+    function doHeaderDropdownFixed(element) {
         let scroll = window.pageYOffset;
         if (scroll >= 150) {
-            modileMenuDropdown.classList.add('sticky')
+            element.classList.add('sticky');
         } else {
-            modileMenuDropdown.classList.remove('sticky')
+            element.classList.remove('sticky')
         }
     }
 
@@ -59,9 +70,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     //check if scroll on body needed
     function cancelScrollCheck() {
         if (bgOverlay.classList.contains('active') || body.classList.contains('__nav-open')) {
-            body.style.overflow = 'hidden'
+            body.style.overflow = 'hidden';
         } else {
-            body.style.overflow = 'auto'
+            body.style.overflow = 'auto';
         }
     }
 
@@ -71,18 +82,23 @@ window.addEventListener('DOMContentLoaded', (event) => {
         elem.addEventListener('click', () => {
             bgOverlay.classList.toggle('active');
             cancelScrollCheck()
-
         })
 
     }
-
-
+    //bgoverlayclick
+    bgOverlay.addEventListener('click', function () {
+        stopVideo();
+        trailer.classList.remove("active");
+        bgOverlay.classList.remove('active')
+        cancelScrollCheck()
+        document.querySelector('.video-iframe--banner').style.cssText = "display: block";
+    });
 
     //tabs logic
 
     document.querySelectorAll('.courses--tabs--title').forEach((item, index) => {
 
-        item.addEventListener('click', function(event) {
+        item.addEventListener('click', function (event) {
             document.querySelectorAll('.courses--tabs--title').forEach((item) => {
                 item.classList.remove('active-title')
             })
@@ -96,13 +112,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     //tabs contains items
     var prevEl = null;
-    $(".courses--tabs--title").each(function(index) {
-        $(this).on('click', function() {
+    $(".courses--tabs--title").each(function (index) {
+        $(this).on('click', function () {
             if (index === 0) {
                 console.log(index)
-                $(".uk-tab-bottom").animate({ scrollLeft: '-1000'}, 300);
+                $(".uk-tab-bottom").animate({ scrollLeft: '-1000' }, 300);
                 return
-            } 
+            }
             if (prevEl < index) {
                 $(".uk-tab-bottom").animate({ scrollLeft: '+=130' }, 300);
             } else if (prevEl - 1 < index) {
@@ -116,7 +132,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     //owlinit
     initTeamSlider()
-    function initTeamSlider () {
+    function initTeamSlider() {
         $('.owl-carousel--team').owlCarousel({
             onInitialized: addDotButtonText,
             onResized: addDotButtonText,
@@ -138,20 +154,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
             }
         })
     }
-    
+
     $('.owl-carousel--hero').owlCarousel({
         onInitialized: addDotButtonText,
         onResized: addDotButtonText,
-       // stagePadding: 50,
-        autoplay:true,
+        // stagePadding: 50,
+        autoplay: true,
         slideTransition: 'linear',
         autoplayTimeout: 7000,
         autoplaySpeed: 7000,
         loop: true,
         margin: 60,
         nav: true,
-        dots:false,
-        center:true,
+        dots: false,
+        center: true,
         lazyLoad: true,
         responsive: {
             0: {
@@ -164,29 +180,29 @@ window.addEventListener('DOMContentLoaded', (event) => {
             1000: {
                 items: 5,
                 margin: 0,
-                
+
             }
         }
     })
     function getRandomInt(max) {
         var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
-        return Math.floor(Math.random() * max)*plusOrMinus;
-      }
-  
+        return Math.floor(Math.random() * max) * plusOrMinus;
+    }
+
     const myElement = document.querySelector('.owl-stage');
     for (let i = 0; i < myElement.children.length; i++) {
-      //if(!myElement.children[i].classList.contains('cloned')) {
+        //if(!myElement.children[i].classList.contains('cloned')) {
         myElement.children[i].children[0].children[0].children[1].style.transform = `rotate(${getRandomInt(15)}deg)`
-     // }
+        // }
     }
     function addDotButtonText() {
-        $('.owl-dot').each(function() {
+        $('.owl-dot').each(function () {
             $(this).find('.offscreen').remove();
             let idx = $(this).index() + 1;
             $(this).append('<span class="offscreen">Go to slide ' + idx + '</span>');
         });
     }
-    $('.hero---scroll-to-courses a').click(function (e) { 
+    $('.hero---scroll-to-courses a').click(function (e) {
         $('html, body').animate({
             scrollTop: $('#registration').offset().top - 30
         }, 'slow');
@@ -200,10 +216,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     } else {
         document.querySelectorAll('.uk-slider').forEach((item, index) => {
             UIkit.slider(item);
-         })  
-         initTeamSlider()
+        })
+        initTeamSlider()
     }
-    
+
     window.addEventListener('resize', function () {
         viewportWidth = window.innerWidth || document.documentElement.clientWidth;
         if (viewportWidth >= 992) {
@@ -212,13 +228,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
         else {
             document.querySelectorAll('.uk-slider').forEach((item, index) => {
-               UIkit.slider(item);
+                UIkit.slider(item);
             })
             initTeamSlider()
         }
     }, false);
 
-    
+
     function destroyUiKitSlider() {
 
         document.querySelectorAll('.uk-slider').forEach((item, index) => {

@@ -2,7 +2,7 @@
 var tag = document.createElement('script');
 let bgOverlay = document.getElementById('bg-overlay');
 let body = document.querySelector('body');
-
+let trailer = document.querySelector(".trailer");
 tag.src = 'https://www.youtube.com/player_api';
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
@@ -36,7 +36,6 @@ function cancelScrollCheck() {
 }
 window.onload = function() {
     if (tv) {
-        let trailer = document.querySelector(".trailer");
         document.querySelector('.video__button').addEventListener('click', function(event) {
             event.preventDefault();
             toggle()
@@ -51,22 +50,6 @@ window.onload = function() {
             cancelScrollCheck()
             onPlayerReady();
             trailer.classList.add("active");
-        });
-        // $(window).scroll(function() {
-        //     if (($(window).scrollTop()) > 1000) {
-        //         stopVideo()
-        //         trailer.classList.remove("active");
-        //         bgOverlay.classList.remove('active');
-             
-        //         document.querySelector('.video-iframe--banner').style.cssText = "display: block";
-        //     }
-        // });
-        bgOverlay.addEventListener('click', function() {
-            stopVideo();
-            trailer.classList.remove("active");
-            bgOverlay.classList.remove('active')
-            cancelScrollCheck()
-            document.querySelector('.video-iframe--banner').style.cssText = "display: block";
         });
     }
 }

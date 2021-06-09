@@ -396,7 +396,11 @@ section {
         opacity: 0.3;
         z-index: 982;
         display: block !important;
+        @media (min-width: $note_desk) {
+            z-index: 982;
+        }
     }
+
 }
 
 .bg-overlay--VideoHead-popup-video-exit {
