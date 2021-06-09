@@ -6,12 +6,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let modileMenuDropdown = document.querySelector('.header--dropdown--modile');
     let header = document.querySelector('.header');
     let mobileMenu = document.querySelector('.mobile-menu');
-    let modileMenuDropdownTitle = document.querySelector('.header--dropdown--title');
-    let carierDropdown = document.querySelector('.carier-action');
+    let dropdowns = document.querySelectorAll('.dropdown');
     let trailer = document.querySelector(".trailer");
     let headerDeskMenu = document.querySelector(".header--desk-menu");
+    let openDropdownAreas = document.querySelectorAll(".uk-dropdown");
 
 
+    let counter = 0;
 
     //init niceselect
 
@@ -30,9 +31,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     //add overlay for dropdown header
-    addOverlay(modileMenuDropdownTitle)
-    addOverlay(modileMenuDropdown)
-    addOverlay(carierDropdown)
+    dropdowns.forEach((item) => {
+        addOverlay(item)
+    })
 
 
 
@@ -80,11 +81,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     //add overlay function
     function addOverlay(elem) {
-        elem.addEventListener('click', () => {
-            bgOverlay.classList.toggle('active');
-
-
-            cancelScrollCheck()
+        elem.addEventListener('click', function() {
+            bgOverlay.classList.add('active');
+            if (this.nextSibling.nextElementSibling.classList.contains('uk-open')) {
+                bgOverlay.classList.remove('active');
+            }
+            // cancelScrollCheck()
         })
 
     }
@@ -227,6 +229,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
     window.addEventListener('resize', function() {
+        bgOverlay.classList.remove('active');
         viewportWidth = window.innerWidth || document.documentElement.clientWidth;
         if (viewportWidth >= 992) {
             destroyUiKitSlider();
