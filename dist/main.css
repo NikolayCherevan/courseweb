@@ -12505,6 +12505,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+body .header--desk-menu {
+  display: none; }
+
 body #menu-toggle {
   width: 30px;
   height: 30px;
@@ -12575,8 +12578,9 @@ body #menu-toggle {
       width: 80%;
       transition-delay: .375s; }
 
-body .header--desk-menu {
-  display: none; }
+@media (min-width: 992px) {
+  body .header--dropdown--modile {
+    display: none; } }
 
 body .header--dropdown {
   z-index: 983;
@@ -12585,9 +12589,6 @@ body .header--dropdown {
   transform: translate(-50%);
   width: initial;
   top: 33px; }
-  @media (min-width: 992px) {
-    body .header--dropdown {
-      display: none; } }
   body .header--dropdown a {
     text-decoration: none;
     color: #2B2E30; }
@@ -12646,7 +12647,8 @@ body .header {
   body .header.sticky {
     position: fixed;
     width: -webkit-fill-available;
-    background-color: #FFFFFF; }
+    background-color: #FFFFFF;
+    z-index: 111; }
   body .header a {
     text-decoration: none;
     color: #2B2E30; }
@@ -12807,9 +12809,10 @@ body.__nav-open {
     z-index: 40; }
     body.__nav-open .mobile-menu * {
       opacity: 1; }
-  body.__nav-open .header--dropdown {
+  body.__nav-open .header--dropdown--modile {
     display: none; }
   body.__nav-open .header {
+    position: relative;
     background-color: transparent;
     color: #FFFFFF;
     z-index: 111; }
@@ -12831,17 +12834,17 @@ body.__nav-open {
         display: inline-block; }
 
 @media (min-width: 992px) {
-  body .header {
-    justify-content: initial; }
-    body .header .header--desk-menu {
+  body .header--desk-menu {
+    display: flex;
+    position: absolute;
+    top: 15px;
+    left: 10%;
+    transform: translate(0); }
+    body .header--desk-menu ul.header--main-links {
       display: flex;
-      top: 0;
-      position: relative; }
-      body .header .header--desk-menu ul.header--main-links {
-        display: flex;
-        align-items: center; }
-        body .header .header--desk-menu ul.header--main-links .header--nav-item {
-          margin: 0 15px; } }
+      align-items: center; }
+      body .header--desk-menu ul.header--main-links .header--nav-item {
+        margin: 0 15px; } }
 
 #footer section {
   background-color: #2B2E30;

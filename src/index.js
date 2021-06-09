@@ -9,6 +9,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let modileMenuDropdownTitle = document.querySelector('.header--dropdown--title');
     let carierDropdown = document.querySelector('.carier-action');
     let trailer = document.querySelector(".trailer");
+    let headerDeskMenu = document.querySelector(".header--desk-menu");
+
 
 
     //init niceselect
@@ -19,12 +21,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
     mobileMenu.addEventListener("scroll", addOrangeFixedHeader);
 
     //fixed  dropdown while scrolling
-    window.addEventListener("scroll", ()=> {
-        
+    window.addEventListener("scroll", () => {
+
         doHeaderDropdownFixed(modileMenuDropdown)
         doHeaderDropdownFixed(header)
-   
-        header.style.top = `${document.querySelector('html').scrollTop}px`
+        doHeaderDropdownFixed(headerDeskMenu)
     });
 
 
@@ -32,7 +33,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     addOverlay(modileMenuDropdownTitle)
     addOverlay(modileMenuDropdown)
     addOverlay(carierDropdown)
-   
+
 
 
     //first tab active
@@ -42,7 +43,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     //burger logic
-    burger.addEventListener('click', function () {
+    burger.addEventListener('click', function() {
         this.classList.toggle('open');
         body.classList.toggle('__nav-open');
         cancelScrollCheck()
@@ -81,12 +82,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
     function addOverlay(elem) {
         elem.addEventListener('click', () => {
             bgOverlay.classList.toggle('active');
+
+
             cancelScrollCheck()
         })
 
     }
     //bgoverlayclick
-    bgOverlay.addEventListener('click', function () {
+    bgOverlay.addEventListener('click', function() {
         stopVideo();
         trailer.classList.remove("active");
         bgOverlay.classList.remove('active')
@@ -98,7 +101,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     document.querySelectorAll('.courses--tabs--title').forEach((item, index) => {
 
-        item.addEventListener('click', function (event) {
+        item.addEventListener('click', function(event) {
             document.querySelectorAll('.courses--tabs--title').forEach((item) => {
                 item.classList.remove('active-title')
             })
@@ -112,8 +115,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     //tabs contains items
     var prevEl = null;
-    $(".courses--tabs--title").each(function (index) {
-        $(this).on('click', function () {
+    $(".courses--tabs--title").each(function(index) {
+        $(this).on('click', function() {
             if (index === 0) {
                 console.log(index)
                 $(".uk-tab-bottom").animate({ scrollLeft: '-1000' }, 300);
@@ -132,6 +135,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     //owlinit
     initTeamSlider()
+
     function initTeamSlider() {
         $('.owl-carousel--team').owlCarousel({
             onInitialized: addDotButtonText,
@@ -177,13 +181,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 items: 3,
                 margin: 150,
             },
-            1000: {
+            1500: {
                 items: 5,
                 margin: 0,
 
             }
         }
     })
+
     function getRandomInt(max) {
         var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
         return Math.floor(Math.random() * max) * plusOrMinus;
@@ -193,16 +198,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
     for (let i = 0; i < myElement.children.length; i++) {
         //if(!myElement.children[i].classList.contains('cloned')) {
         myElement.children[i].children[0].children[0].children[1].style.transform = `rotate(${getRandomInt(15)}deg)`
-        // }
+            // }
     }
+
     function addDotButtonText() {
-        $('.owl-dot').each(function () {
+        $('.owl-dot').each(function() {
             $(this).find('.offscreen').remove();
             let idx = $(this).index() + 1;
             $(this).append('<span class="offscreen">Go to slide ' + idx + '</span>');
         });
     }
-    $('.hero---scroll-to-courses a').click(function (e) {
+    $('.hero---scroll-to-courses a').click(function(e) {
         $('html, body').animate({
             scrollTop: $('#registration').offset().top - 30
         }, 'slow');
@@ -220,13 +226,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
         initTeamSlider()
     }
 
-    window.addEventListener('resize', function () {
+    window.addEventListener('resize', function() {
         viewportWidth = window.innerWidth || document.documentElement.clientWidth;
         if (viewportWidth >= 992) {
             destroyUiKitSlider();
             $('.owl-carousel--team').trigger('destroy.owl.carousel')
-        }
-        else {
+        } else {
             document.querySelectorAll('.uk-slider').forEach((item, index) => {
                 UIkit.slider(item);
             })
