@@ -249,7 +249,7 @@
                 background-color: $base-bg-orange;
                 z-index: -10;
                 font-weight: 600;
-                height: -webkit-fill-available;
+                height: calc(100vh - calc(100vh - 100%));
                 overflow-y: auto;
                 & * {
                     opacity: 0;
