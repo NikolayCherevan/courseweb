@@ -20,7 +20,8 @@ module.exports = {
         // }),
     ],
     module: {
-        rules: [{
+        rules: [
+            {
                 test: /\.scss$/i,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             }, {

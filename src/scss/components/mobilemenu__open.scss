@@ -152,6 +152,8 @@ body {
             z-index: 111;
             position: fixed;
             width: -webkit-fill-available;
+            width: -moz-available;
+            width: fill-available;
             animation: slidefromTop .3s forwards;
             @media (min-width: $large_desk) {
                 animation: slidefromTopDeskClose 3s forwards;

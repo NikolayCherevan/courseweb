@@ -25,6 +25,8 @@ body {
             position: fixed;
             animation: slidefromTop .3s forwards;
             width: -webkit-fill-available;
+            width: -moz-available;
+            width: fill-available;
             background-color: $base-bg-white;
             z-index: 111;
 
@@ -125,7 +127,7 @@ body {
         @media (min-width: $large_desk) {
             display: flex;
             left: 50%;
-            width: fit-content;
+            width: max-content;
             position: absolute;
             top: 20px;
             transform: translate(-50%);

@@ -11,8 +11,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let headerDeskMenu = document.querySelector(".header--desk-menu");
     let openDropdownAreas = document.querySelectorAll(".uk-dropdown");
     let headerPadding = document.querySelector(".header-padding");
+    let coordinates = document.querySelectorAll(".item-coords");
 
-    let counter = 0;
+
 
     //init niceselect
 
@@ -80,21 +81,29 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
 
+    coordinates.forEach(item=> {
+        let centerX = item.offsetLeft + item.offsetWidth / 2;
+        console.log(centerX)
+    })
+
+    onmousemove = function(e){console.log("mouse location:", e.clientX, e.clientY)}
+
+   
     //add overlay function
     function addOverlay(elem) {
         elem.addEventListener('click', function() {
-            bgOverlay.classList.add('active')
-            let dropdown = UIkit.dropdown('dropdown');
-            if(!this.classList.contains('uk-accordion-title')) {
+            bgOverlay.classList.toggle('active')
+           // let dropdown = UIkit.dropdown('dropdown');
+            //if(!this.classList.contains('uk-accordion-title')) {
                 //UIkit.util.on(document, 'beforeshow', dropdown, callback)
                 //function callback () {
                 //    bgOverlay.classList.add('active')
                 //}
-                UIkit.util.on(document, 'beforehide', dropdown, callback2)
-                function callback2 () {
-                    bgOverlay.classList.remove('active')
-                }
-            }
+               // UIkit.util.on(document, 'beforehide', dropdown, callback2)
+               // function callback2 () {
+                //    bgOverlay.classList.remove('active')
+                //}
+           // }
         })
 
     }
