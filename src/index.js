@@ -81,29 +81,92 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
 
-    coordinates.forEach(item=> {
-        let centerX = item.offsetLeft + item.offsetWidth / 2;
-        console.log(centerX)
+
+
+
+    //slidercustom
+
+    let howManyElementsWillBeChanges = coordinates.length;
+    let defaultWidthImage = `100px`;
+    let mainImageScaleSize = 30;
+    let siblingImageScaleSize = 15;
+
+
+
+    let centerCoordinatesOfItem = [];
+
+    coordinates.forEach(item => {
+        centerCoordinatesOfItem.push(item.offsetLeft + item.offsetWidth / 2)
     })
 
-    onmousemove = function(e){console.log("mouse location:", e.clientX, e.clientY)}
+    let arrayOfElement = centerCoordinatesOfItem.slice()
 
-   
+    onmousemove = function(e) {
+        let closest = centerCoordinatesOfItem.sort((a, b) => Math.abs(e.clientX - a) - Math.abs(e.clientX - b))[0]
+        let indexOfGotScale = arrayOfElement.indexOf(closest);
+        let arrOfFutureScaling1 = []
+        let arrOfFutureScaling2 = []
+
+        coordinates.forEach((item, index) => {
+            item.classList.remove('active')
+            if (index === indexOfGotScale) {
+                doScaleMainEl(index)
+            } else if (index > indexOfGotScale) {
+                arrOfFutureScaling1.push(index)
+            } else {
+                arrOfFutureScaling2.push(index)
+            }
+        })
+        doScaleNextEl(arrOfFutureScaling1)
+        doScalePrevEl(arrOfFutureScaling2)
+    }
+
+
+    let counterMain = null;
+
+    function doScaleMainEl(arrayOfElements) {
+        counterMain = howManyElementsWillBeChanges
+        coordinates[arrayOfElements].style.width = `${mainImageScaleSize*counterMain}px`;
+        coordinates[arrayOfElements].classList.add('active')
+    }
+
+    let counterNext = null;
+
+    function doScaleNextEl(arrayOfElements) {
+        console.log(arrayOfElements)
+        counterNext = howManyElementsWillBeChanges
+        arrayOfElements.forEach((item, index) => {
+            if (counterNext > 2) {
+                counterNext--;
+                siblingImageScaleSize * counterNext > 100 ? coordinates[item].style.width = `${siblingImageScaleSize*counterNext}px` : coordinates[item].style.width = defaultWidthImage
+            }
+        })
+
+    }
+
+
+    let counterPrev = null;
+
+    function doScalePrevEl(arrayOfElements) {
+        counterPrev = howManyElementsWillBeChanges;
+        arrayOfElements.reverse().forEach((item, index) => {
+            if (counterPrev > 2) {
+                counterPrev--;
+                siblingImageScaleSize * counterPrev > 100 ? coordinates[item].style.width = `${siblingImageScaleSize*counterPrev}px` : coordinates[item].style.width = defaultWidthImage
+            }
+
+        })
+    }
+
+
+
+
+
+
     //add overlay function
     function addOverlay(elem) {
         elem.addEventListener('click', function() {
             bgOverlay.classList.toggle('active')
-           // let dropdown = UIkit.dropdown('dropdown');
-            //if(!this.classList.contains('uk-accordion-title')) {
-                //UIkit.util.on(document, 'beforeshow', dropdown, callback)
-                //function callback () {
-                //    bgOverlay.classList.add('active')
-                //}
-               // UIkit.util.on(document, 'beforehide', dropdown, callback2)
-               // function callback2 () {
-                //    bgOverlay.classList.remove('active')
-                //}
-           // }
         })
 
     }
@@ -215,9 +278,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     const myElement = document.querySelector('.owl-stage');
     for (let i = 0; i < myElement.children.length; i++) {
-        //if(!myElement.children[i].classList.contains('cloned')) {
         myElement.children[i].children[0].children[0].children[1].style.transform = `rotate(${getRandomInt(15)}deg)`
-            // }
     }
 
     function addDotButtonText() {
