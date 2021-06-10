@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let trailer = document.querySelector(".trailer");
     let headerDeskMenu = document.querySelector(".header--desk-menu");
     let openDropdownAreas = document.querySelectorAll(".uk-dropdown");
-
+    let headerPadding = document.querySelector(".header-padding");
 
     let counter = 0;
 
@@ -59,8 +59,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
         let scroll = window.pageYOffset;
         if (scroll >= 150) {
             element.classList.add('sticky');
+            headerPadding.classList.add('active');
         } else {
             element.classList.remove('sticky')
+            headerPadding.classList.remove('active');
         }
     }
 
@@ -82,11 +84,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
     //add overlay function
     function addOverlay(elem) {
         elem.addEventListener('click', function() {
-            bgOverlay.classList.add('active');
-            if (this.nextSibling.nextElementSibling.classList.contains('uk-open')) {
-                bgOverlay.classList.remove('active');
+            let item2 = UIkit.dropdown('#dropdown');
+            if(!this.classList.contains('uk-accordion-title')) {
+                UIkit.util.on(document, 'beforeshow', item2, callback)
+                function callback () {
+                    bgOverlay.classList.add('active')
+                }
+                UIkit.util.on(document, 'beforehide', item2, callback2)
+                function callback2 () {
+                    bgOverlay.classList.remove('active')
+                }
             }
-            // cancelScrollCheck()
+  
         })
 
     }
@@ -229,7 +238,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
     window.addEventListener('resize', function() {
-        bgOverlay.classList.remove('active');
         viewportWidth = window.innerWidth || document.documentElement.clientWidth;
         if (viewportWidth >= 992) {
             destroyUiKitSlider();
