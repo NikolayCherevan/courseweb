@@ -83,7 +83,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     //add overlay function
     function addOverlay(elem) {
         elem.addEventListener('click', function() {
-            bgOverlay.classList.toggle('active')
+            bgOverlay.classList.add('active')
             let dropdown = UIkit.dropdown('dropdown');
             if(!this.classList.contains('uk-accordion-title')) {
                 //UIkit.util.on(document, 'beforeshow', dropdown, callback)
@@ -95,8 +95,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     bgOverlay.classList.remove('active')
                 }
             }
-   
-            
         })
 
     }

@@ -26,28 +26,19 @@ function onPlayerReady() {
 function stopVideo() {
     tv.stopVideo();
 }
-function cancelScrollCheck() {
-    if(bgOverlay.classList.contains('active')) {
-        body.style.overflow = 'hidden'
-    }
-    else  {
-        body.style.overflow = 'auto'
-    }
-}
+
 window.onload = function() {
     if (tv) {
         document.querySelector('.video__button').addEventListener('click', function(event) {
             event.preventDefault();
             toggle()
             bgOverlay.classList.add('active')
-            cancelScrollCheck()
             onPlayerReady();
             trailer.classList.add("active");
         });
         document.querySelector('.video-iframe--banner').addEventListener('click', function(event) {
             event.preventDefault();
             bgOverlay.classList.add('active')
-            cancelScrollCheck()
             onPlayerReady();
             trailer.classList.add("active");
         });
