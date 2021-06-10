@@ -47,7 +47,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     burger.addEventListener('click', function() {
         this.classList.toggle('open');
         body.classList.toggle('__nav-open');
-        cancelScrollCheck()
         if (header.classList.contains('orange-sticky')) {
             header.classList.remove('orange-sticky')
             mobileMenu.scrollTo(0, 0)
@@ -84,27 +83,29 @@ window.addEventListener('DOMContentLoaded', (event) => {
     //add overlay function
     function addOverlay(elem) {
         elem.addEventListener('click', function() {
-            let item2 = UIkit.dropdown('#dropdown');
+            bgOverlay.classList.toggle('active')
+            let dropdown = UIkit.dropdown('dropdown');
             if(!this.classList.contains('uk-accordion-title')) {
-                UIkit.util.on(document, 'beforeshow', item2, callback)
-                function callback () {
-                    bgOverlay.classList.add('active')
-                }
-                UIkit.util.on(document, 'beforehide', item2, callback2)
+                //UIkit.util.on(document, 'beforeshow', dropdown, callback)
+                //function callback () {
+                //    bgOverlay.classList.add('active')
+                //}
+                UIkit.util.on(document, 'beforehide', dropdown, callback2)
                 function callback2 () {
                     bgOverlay.classList.remove('active')
                 }
             }
-  
+   
+            
         })
 
     }
+
     //bgoverlayclick
     bgOverlay.addEventListener('click', function() {
         stopVideo();
         trailer.classList.remove("active");
         bgOverlay.classList.remove('active')
-        cancelScrollCheck()
         document.querySelector('.video-iframe--banner').style.cssText = "display: block";
     });
 
