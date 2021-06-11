@@ -18,6 +18,8 @@ body {
     position: relative;
     * {
         font-family: 'Montserrat', sans-serif;
+        -webkit-font-smoothing: subpixel-antialiased;
+        text-rendering: optimizeLegibility;
     }
 }
 
