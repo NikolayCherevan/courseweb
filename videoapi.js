@@ -1,4 +1,3 @@
-
 var tag = document.createElement('script');
 let bgOverlay = document.getElementById('bg-overlay');
 let body = document.querySelector('body');

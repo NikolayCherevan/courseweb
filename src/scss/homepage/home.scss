@@ -687,6 +687,7 @@ section {
             -webkit-align-items: center;
             -ms-flex-align: center;
             align-items: center;
+            background-image: url('./img/new_line_team.svg');
             .item-coords {
                 transition: all .1s linear;
                 margin: 0 15px;
@@ -698,11 +699,9 @@ section {
             .item {
                 position: relative;
                 &.active {
-                    @media (min-width: $note_desk) {
-                        .team--role {
-                            opacity: 1;
-                            transition: opacity .3s;
-                        }
+                    .team--role {
+                        opacity: 1;
+                        transition: opacity .3s;
                     }
                     &:before {
                         content: '';
@@ -719,9 +718,13 @@ section {
                 .team--role {
                     position: absolute;
                     z-index: 11;
-                    top: 70%;
+                    top: 10%;
+                    @media (min-width: $large_desk) {
+                        top: 70%;
+                    }
                     left: 50%;
-                    transform: translate(-50%, 0);
+                    transform: translate(-50%,
+                    0);
                     color: $main-color-white;
                     opacity: 0;
                     transition: opacity .3s;

@@ -9,35 +9,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let dropdowns = document.querySelectorAll('.dropdown');
     let trailer = document.querySelector(".trailer");
     let headerDeskMenu = document.querySelector(".header--desk-menu");
-    let openDropdownAreas = document.querySelectorAll(".uk-dropdown");
     let headerPadding = document.querySelector(".header-padding");
     let coordinates = document.querySelectorAll(".item-coords");
-
-
-
-    //passive events seo
-
-    jQuery.event.special.touchstart = {
-        setup: function(_, ns, handle) {
-            this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
-        }
-    };
-    jQuery.event.special.touchmove = {
-        setup: function(_, ns, handle) {
-            this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
-        }
-    };
-    jQuery.event.special.wheel = {
-        setup: function(_, ns, handle) {
-            this.addEventListener("wheel", handle, { passive: true });
-        }
-    };
-    jQuery.event.special.mousewheel = {
-        setup: function(_, ns, handle) {
-            this.addEventListener("mousewheel", handle, { passive: true });
-        }
-    };
-
+    let anchor = document.querySelector(".hero---scroll-to-courses a");
+    let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
     //init niceselect
 
@@ -55,11 +30,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
 
 
-    //add overlay for dropdown header
+    //add overlay for all dropdowns header
     dropdowns.forEach((item) => {
         addOverlay(item)
     })
-
 
 
     //add overlay function
@@ -70,8 +44,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     }
 
-
-    //first tab active
+    //first tab active #courses section
     if (document.getElementById("courses")) {
         document.querySelectorAll('.courses--tabs--title')[0].classList.add('active-title')
     }
@@ -88,6 +61,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     })
 
 
+
+    //sticky header logic
     function doHeaderDropdownFixed(element) {
         let scroll = window.pageYOffset;
         if (scroll >= 150) {
@@ -104,91 +79,79 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
 
-    //check if scroll on body needed
-    function cancelScrollCheck() {
-        if (bgOverlay.classList.contains('active') || body.classList.contains('__nav-open')) {
-            body.style.overflow = 'hidden';
-        } else {
-            body.style.overflow = 'auto';
+    //slidercustom
+
+    let howManyElementsWillBeChanges = coordinates.length; //how manu items take effect
+    let defaultWidthImage = `100px`; //size of default iamge 
+    let mainImageScaleSize = 30; //k-number main image size(more-larger)
+    let siblingImageScaleSize = 16; //k-number sibling image size(more-larger)
+    let counterMain = null;
+    let counterNext = null;
+    let counterPrev = null;
+    let centerCoordinatesOfItem = [];
+
+    function initBubleSlider() {
+        let teemSection = document.getElementById("team");
+        if (teemSection.classList.contains('slider_inited')) return;
+        teemSection.classList.add('slider_inited');
+        coordinates.forEach(item => {
+            centerCoordinatesOfItem.push(item.offsetLeft + item.offsetWidth / 2)
+        })
+
+        let arrayOfElement = centerCoordinatesOfItem.slice()
+        onmousemove = function(e) {
+            let closest = centerCoordinatesOfItem.sort((a, b) => Math.abs(e.clientX - a) - Math.abs(e.clientX - b))[0]
+            let indexOfGotScale = arrayOfElement.indexOf(closest);
+            let arrOfFutureScaling1 = []
+            let arrOfFutureScaling2 = []
+
+            coordinates.forEach((item, index) => {
+                item.classList.remove('active')
+                if (index === indexOfGotScale) {
+                    doScaleMainEl(index)
+                } else if (index > indexOfGotScale) {
+                    arrOfFutureScaling1.push(index)
+                } else {
+                    arrOfFutureScaling2.push(index)
+                }
+            })
+            doScaleNextEl(arrOfFutureScaling1)
+            doScalePrevEl(arrOfFutureScaling2)
+        }
+
+
+
+        function doScaleMainEl(arrayOfElements) {
+            counterMain = howManyElementsWillBeChanges
+            coordinates[arrayOfElements].style.width = `${mainImageScaleSize * counterMain}px`;
+            coordinates[arrayOfElements].classList.add('active')
+        }
+
+
+        function doScaleNextEl(arrayOfElements) {
+            counterNext = howManyElementsWillBeChanges
+            arrayOfElements.forEach((item, index) => {
+                if (counterNext > 2) {
+                    counterNext--;
+                    siblingImageScaleSize * counterNext > 100 ? coordinates[item].style.width = `${siblingImageScaleSize * counterNext}px` : coordinates[item].style.width = defaultWidthImage
+                }
+            })
+
+        }
+
+
+        function doScalePrevEl(arrayOfElements) {
+            counterPrev = howManyElementsWillBeChanges;
+            arrayOfElements.reverse().forEach((item, index) => {
+                if (counterPrev > 2) {
+                    counterPrev--;
+                    siblingImageScaleSize * counterPrev > 100 ? coordinates[item].style.width = `${siblingImageScaleSize * counterPrev}px` : coordinates[item].style.width = defaultWidthImage
+                }
+
+            })
         }
     }
 
-
-
-
-
-    //slidercustom
-
-    let howManyElementsWillBeChanges = coordinates.length;
-    let defaultWidthImage = `100px`;
-    let mainImageScaleSize = 30;
-    let siblingImageScaleSize = 16;
-
-
-
-    let centerCoordinatesOfItem = [];
-
-    coordinates.forEach(item => {
-        centerCoordinatesOfItem.push(item.offsetLeft + item.offsetWidth / 2)
-    })
-
-    let arrayOfElement = centerCoordinatesOfItem.slice()
-
-    onmousemove = function(e) {
-        let closest = centerCoordinatesOfItem.sort((a, b) => Math.abs(e.clientX - a) - Math.abs(e.clientX - b))[0]
-        let indexOfGotScale = arrayOfElement.indexOf(closest);
-        let arrOfFutureScaling1 = []
-        let arrOfFutureScaling2 = []
-
-        coordinates.forEach((item, index) => {
-            item.classList.remove('active')
-            if (index === indexOfGotScale) {
-                doScaleMainEl(index)
-            } else if (index > indexOfGotScale) {
-                arrOfFutureScaling1.push(index)
-            } else {
-                arrOfFutureScaling2.push(index)
-            }
-        })
-        doScaleNextEl(arrOfFutureScaling1)
-        doScalePrevEl(arrOfFutureScaling2)
-    }
-
-
-    let counterMain = null;
-
-    function doScaleMainEl(arrayOfElements) {
-        counterMain = howManyElementsWillBeChanges
-        coordinates[arrayOfElements].style.width = `${mainImageScaleSize * counterMain}px`;
-        coordinates[arrayOfElements].classList.add('active')
-    }
-
-    let counterNext = null;
-
-    function doScaleNextEl(arrayOfElements) {
-        counterNext = howManyElementsWillBeChanges
-        arrayOfElements.forEach((item, index) => {
-            if (counterNext > 2) {
-                counterNext--;
-                siblingImageScaleSize * counterNext > 100 ? coordinates[item].style.width = `${siblingImageScaleSize * counterNext}px` : coordinates[item].style.width = defaultWidthImage
-            }
-        })
-
-    }
-
-
-    let counterPrev = null;
-
-    function doScalePrevEl(arrayOfElements) {
-        counterPrev = howManyElementsWillBeChanges;
-        arrayOfElements.reverse().forEach((item, index) => {
-            if (counterPrev > 2) {
-                counterPrev--;
-                siblingImageScaleSize * counterPrev > 100 ? coordinates[item].style.width = `${siblingImageScaleSize * counterPrev}px` : coordinates[item].style.width = defaultWidthImage
-            }
-
-        })
-    }
 
 
 
@@ -301,36 +264,50 @@ window.addEventListener('DOMContentLoaded', (event) => {
         myElement.children[i].children[0].children[0].children[1].style.transform = `rotate(${getRandomInt(15)}deg)`
     }
 
-    function addDotButtonText() {
-        $('.owl-dot').each(function() {
-            $(this).find('.offscreen').remove();
-            let idx = $(this).index() + 1;
-            $(this).append('<span class="offscreen">Go to slide ' + idx + '</span>');
+
+    //add event for anchor home
+    function smoothScrollingTo(elem) {
+        elem.addEventListener("click", clickHandler);
+    }
+
+    function clickHandler(e) {
+        e.preventDefault();
+        const href = this.getAttribute("href");
+        const offsetTop = document.querySelector(href).offsetTop;
+        scroll({
+            top: offsetTop,
+            behavior: "smooth"
         });
     }
-    $('.hero---scroll-to-courses a').click(function(e) {
-        $('html, body').animate({
-            scrollTop: $('#registration').offset().top - 30
-        }, 'slow');
-    });
+    smoothScrollingTo(anchor)
 
 
-    var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    //check sliders vith viewport width and destroy or init it
+
+    function destroyUiKitSlider() {
+        document.querySelectorAll('.uk-slider').forEach((item, index) => {
+            let slider = UIkit.slider(item);
+            slider.$destroy();
+        })
+    }
     if (viewportWidth >= 992) {
+
         destroyUiKitSlider();
-        $('.owl-carousel--team').trigger('destroy.owl.carousel')
+        $('.owl-carousel--team').trigger('destroy.owl.carousel');
+        initBubleSlider();
+
     } else {
         document.querySelectorAll('.uk-slider').forEach((item, index) => {
             UIkit.slider(item);
         })
         initTeamSlider()
     }
-
     window.addEventListener('resize', function() {
         viewportWidth = window.innerWidth || document.documentElement.clientWidth;
         if (viewportWidth >= 992) {
             destroyUiKitSlider();
-            $('.owl-carousel--team').trigger('destroy.owl.carousel')
+            $('.owl-carousel--team').trigger('destroy.owl.carousel');
+            initBubleSlider();
         } else {
             document.querySelectorAll('.uk-slider').forEach((item, index) => {
                 UIkit.slider(item);
@@ -340,14 +317,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }, false);
 
 
-    function destroyUiKitSlider() {
 
-        document.querySelectorAll('.uk-slider').forEach((item, index) => {
-            let slider = UIkit.slider(item);
-            slider.$destroy();
-        })
-    }
 
+    //TweenMax lib init
     //play button magnetic on team section
     const element = document.querySelector(".cursor");
     const target = document.querySelector(".target");
@@ -411,5 +383,41 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
     }
     const cursor = new Cursor(element, target);
+
+
+    //passive events seo
+
+    jQuery.event.special.touchstart = {
+        setup: function(_, ns, handle) {
+            this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
+        }
+    };
+    jQuery.event.special.touchmove = {
+        setup: function(_, ns, handle) {
+            this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
+        }
+    };
+    jQuery.event.special.wheel = {
+        setup: function(_, ns, handle) {
+            this.addEventListener("wheel", handle, { passive: true });
+        }
+    };
+    jQuery.event.special.mousewheel = {
+        setup: function(_, ns, handle) {
+            this.addEventListener("mousewheel", handle, { passive: true });
+        }
+    };
+
+    //owl dots btn fix seo 
+
+
+    function addDotButtonText() {
+        $('.owl-dot').each(function() {
+            $(this).find('.offscreen').remove();
+            let idx = $(this).index() + 1;
+            $(this).append('<span class="offscreen">Go to slide ' + idx + '</span>');
+        });
+    }
+
 
 });
