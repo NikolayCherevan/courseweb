@@ -89,6 +89,10 @@
                         height: 24px;
                         object-fit: contain;
                         min-width: 24px;
+                        @media (min-width: $tablet) {
+                            min-width: 16px;
+                            min-height: 16px;
+                        }
                     }
                 }
             }

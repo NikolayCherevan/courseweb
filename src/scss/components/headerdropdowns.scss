@@ -4,7 +4,7 @@
     left: 45%;
     transform: translate(-50%);
     width: initial;
-    top: 33px;
+    top: 30px;
     a {
         text-decoration: none;
         color: $main-color;
@@ -20,9 +20,11 @@
             background-repeat: no-repeat;
             transition: transform 0.3s;
         }
+        outline: none;
         &[aria-expanded="true"].header--nav-item {
             border: 1.5px solid transparent;
             color: $main-color-white;
+            outline: none;
             background-color: $base-bg-orange;
             &::after {
                 background-image: url('./img/arrow_down_white.svg');
@@ -32,6 +34,7 @@
             &.without-border-content {
                 &[aria-expanded="true"].header--nav-item {
                     border: 1.5px solid transparent;
+                    outline: none;
                     color: $main-color;
                     background-color: $base-bg-white;
                     &::after {

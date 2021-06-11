@@ -17,7 +17,7 @@ body {
         }
 
         @media (min-width: $large_desk) {
-            padding: 20px 50px 15px 43px;
+            padding: 36px 50px 15px 43px;
             top: -80px;
         }
 
@@ -29,7 +29,7 @@ body {
             width: fill-available;
             background-color: $base-bg-white;
             z-index: 111;
-
+            padding: 15px 18px 15px 15px;
             @media (min-width: $large_desk) {
                 animation: slidefromTopDesk .3s forwards;
             }
@@ -129,7 +129,7 @@ body {
             left: 50%;
             width: max-content;
             position: absolute;
-            top: 20px;
+            top: 35px;
             transform: translate(-50%);
 
             ul.header--main-links {
@@ -182,6 +182,8 @@ body {
             position: fixed;
 
             .header--main-links {
+
+                margin-top: -5px;
                 position: relative;
                 top: -10px;
                 animation: slidefromTopMenuDesk 0.4s forwards;

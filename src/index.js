@@ -38,6 +38,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 
+    //add overlay function
+    function addOverlay(elem) {
+        elem.addEventListener('click', function () {
+            bgOverlay.classList.toggle('active')
+        })
+
+    }
+
+
     //first tab active
     if (document.getElementById("courses")) {
         document.querySelectorAll('.courses--tabs--title')[0].classList.add('active-title')
@@ -89,7 +98,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let howManyElementsWillBeChanges = coordinates.length;
     let defaultWidthImage = `100px`;
     let mainImageScaleSize = 30;
-    let siblingImageScaleSize = 20;
+    let siblingImageScaleSize = 16;
 
 
 
@@ -158,17 +167,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
 
-
-
-
-
-    //add overlay function
-    function addOverlay(elem) {
-        elem.addEventListener('click', function () {
-            bgOverlay.classList.toggle('active')
-        })
-
-    }
 
     //bgoverlayclick
     bgOverlay.addEventListener('click', function () {
@@ -370,7 +368,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     TweenMax.to(this.el, 0.2, {
                         left: targetPosition.left - (Math.sin(angle) * hypotenuse) / 2,
                         top: targetPosition.top - (Math.cos(angle) * hypotenuse) / 2,
-                     
+
                     });
                     TweenMax.to(single.querySelector(".text"), 0.2, {
                         x: -((Math.sin(angle) * hypotenuse) / 2),

@@ -6,7 +6,10 @@
     padding-top: 130px;
     margin: 0;
     @media (min-width: $large_desk) {
-        top: -85px;
+        top: -101px;
+        .uk-container {
+            margin-top: 40px;
+        }
     }
     .hero--site-slogan {
         color: $main-color;
@@ -14,6 +17,9 @@
         font-weight: bold;
         line-height: 38px;
         margin-bottom: 32px;
+        @media (min-width: $large_desk) {
+            margin-bottom: 60px;
+        }
         @media (min-width: $tablet) {
             font-size: 70px;
             line-height: 75px;
@@ -84,6 +90,13 @@
                 outline: none;
                 background-color: $secondary-bg-gray;
                 position: absolute;
+                @media (min-width: $note_desk) {
+                    border-radius: 50%;
+                    min-height: 230px;
+                    min-width: 115px;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                }
                 &:hover {
                     background-color: $secondary-bg-gray;
                 }
@@ -96,19 +109,31 @@
                     color: $main-color-white;
                 }
                 &.owl-prev {
-                    transform: translate(-80%, 0);
+                    @media (min-width: $note_desk) {
+                        transform: translate(-35%,-50%);
+                        border-radius: 100% 0 0 100% / 50% 0 0 50%;
+                    }
                     left: 0;
+                    transform: translate(-80%,
+                    0);
                     span {
                         right: 10px;
                     }
                 }
                 &.owl-next {
-                    span {
-                        left: 10px;
-                    }
                     right: 0;
                     transform: translate(80%,
                     0);
+                    @media (min-width: $note_desk) {
+                        transform: translate(35%,-50%);
+                        border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+                    }
+                
+                    span {
+                        left: 10px;
+                        
+                    }
+               
                 }
             }
         }
@@ -324,15 +349,16 @@ section {
                 height: 10vw;
             }
             @media (min-width: $tablet) {
-                width: 20vw;
-                height: 20vw;
-                left: -45px;
+                width: 17.17vw;
+                height: 17.17vw;
+                left: -30px;
                 top: initial;
                 bottom: -10%;
+                bottom: -23%;
             }
             @media (min-width: $note_desk) {
-                left: -10vw;
-                bottom: -25%;
+                bottom: -23%;
+                left: -8.5vw;
             }
         }
     }
@@ -549,6 +575,8 @@ section {
     position: relative;
     margin-top: 65px;
     @media (min-width: $tablet) {
+
+        margin-top: 120px;
         padding-bottom: 120px;
     }
     .uk-text-center {
