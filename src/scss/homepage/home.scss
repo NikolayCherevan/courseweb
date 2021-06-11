@@ -212,7 +212,6 @@ section {
             justify-content: center;
             align-items: center;
             margin-top: 50px;
-            background-image: url('./img/video_overlay.png');
             background-repeat: no-repeat;
             height: 49.1vw;
             background-size: cover;
@@ -606,7 +605,7 @@ section {
                     transition: opacity .3s;
                 }
             }
-            h4 {
+            .picture-wrapper {
                 display: flex;
                 justify-content: flex-end;
             }
