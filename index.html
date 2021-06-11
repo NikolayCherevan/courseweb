@@ -8,9 +8,6 @@
     <title>Site</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
     <link rel="icon" href="#">
     <link rel="apple-touch-icon" href="#">
     <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
@@ -26,8 +23,7 @@
     <header class="header">
         <div>
             <a href="#" class="header--logo"> <img width="52" height="48" src="./img/logo.svg" alt="logo"> </a>
-            <a href="#" class="header--logo__nav-active"> <img width="52" height="48" src="./img/logo_nav.svg"
-                    alt="logo"> </a>
+            <a href="#" class="header--logo__nav-active"> <img width="52" height="48" src="./img/logo_nav.svg" alt="logo"> </a>
         </div>
 
         <ul class="header--lang">
@@ -300,14 +296,13 @@
     <section id="video-represent">
         <div class="uk-container">
             <h2>Трансформуйся! Вибери нову професію і ми тобі допоможемо</h2>
-            <p>Ми вчимо вас на власному досвіді. Наші курси зосереджені на цінних навичках і перевірених процесах, які
-                поліпшать вашу роботу, вразять ваших клієнтів і допоможуть вам побудувати свій кар'єрний шлях.</p>
+            <p>Ми вчимо вас на власному досвіді. Наші курси зосереджені на цінних навичках і перевірених процесах, які поліпшать вашу роботу, вразять ваших клієнтів і допоможуть вам побудувати свій кар'єрний шлях.</p>
             <div class="video-iframe">
                 <div class="video-iframe--banner">
-                    <div class="video-iframe--content" style="background-image: url('/img/video_overlay.webp')"
-                        data-bg="/video_overlay/image.jpg" data-bg-webp="/video_overlay/image.webp">
-                        <div class="target"><a href="#" class="video__button text"><img src="./img/icon_video.svg"
-                                    alt="play video" uk-parallax="y: 60, -100"> </a></div>
+                    <div class="video-iframe--content" style="background-image: url('/img/video_overlay.webp')" data-bg="/img/video_overlay.jpg" data-bg-webp="/img/video_overlay.webp">
+                        <div class="target">
+                            <a href="#" class="video__button text"><img src="./img/icon_video.svg" alt="play video" uk-parallax="y: 60, -100"> </a>
+                        </div>
                     </div>
                 </div>
                 <div class="trailer">
@@ -954,18 +949,18 @@
     <section id="registration">
         <div class="uk-container">
             <h2 class="registration--description"> Реєструйся на онлайн навчання та отримай <span>15%</span> знижку!
-            </h2>
-            <form>
-                <select class="nice-select wide">
+                                            </h2>
+                                            <form>
+                                                <select class="nice-select wide">
                     <option value="1">Вибери курс</option>
                     <option value="2">Another option</option>
                     <option value="3">A disabled option</option>
                     <option value="4">Potato</option>
                 </select>
 
-                <button class="registration--registration-on-course" type="submit">Зареєструйся</button>
-            </form>
-        </div>
+                                                <button class="registration--registration-on-course" type="submit">Зареєструйся</button>
+                                            </form>
+                                    </div>
     </section>
     <div id="bg-overlay">
         <div class="bg-overlay--VideoHead-popup-video-exit">
@@ -1011,17 +1006,16 @@
     </div>
     </div>
     <div class="cursor"></div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=" anonymous"></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=" anonymous"></script>
 
-    <script defer src="./uikit.min.js"></script>
+    <script async src="./uikit.min.js"></script>
 
-    <script defer src="./TweenMax.min.js"></script>
-    <script defer type="text/javascript" async src="./videoapi.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/gsap"></script>
+    <script async type="text/javascript" async src="./videoapi.js"></script>
     <script defer src="owlcarousel/owl.carousel.min.js"></script>
     <script defer src="./jquery.nice-select.min.js"></script>
 
-    <script type="text/javascript" defer src="./dist/main.js"></script>
+    <script defer type="text/javascript" src="./dist/main.js"></script>
 </body>
 
 </html>

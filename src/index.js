@@ -15,6 +15,30 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 
+    //passive events seo
+
+    jQuery.event.special.touchstart = {
+        setup: function(_, ns, handle) {
+            this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
+        }
+    };
+    jQuery.event.special.touchmove = {
+        setup: function(_, ns, handle) {
+            this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
+        }
+    };
+    jQuery.event.special.wheel = {
+        setup: function(_, ns, handle) {
+            this.addEventListener("wheel", handle, { passive: true });
+        }
+    };
+    jQuery.event.special.mousewheel = {
+        setup: function(_, ns, handle) {
+            this.addEventListener("mousewheel", handle, { passive: true });
+        }
+    };
+
+
     //init niceselect
 
     $('.nice-select').niceSelect();
@@ -40,7 +64,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     //add overlay function
     function addOverlay(elem) {
-        elem.addEventListener('click', function () {
+        elem.addEventListener('click', function() {
             bgOverlay.classList.toggle('active')
         })
 
@@ -54,7 +78,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     //burger logic
-    burger.addEventListener('click', function () {
+    burger.addEventListener('click', function() {
         this.classList.toggle('open');
         body.classList.toggle('__nav-open');
         if (header.classList.contains('orange-sticky')) {
@@ -110,7 +134,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     let arrayOfElement = centerCoordinatesOfItem.slice()
 
-    onmousemove = function (e) {
+    onmousemove = function(e) {
         let closest = centerCoordinatesOfItem.sort((a, b) => Math.abs(e.clientX - a) - Math.abs(e.clientX - b))[0]
         let indexOfGotScale = arrayOfElement.indexOf(closest);
         let arrOfFutureScaling1 = []
@@ -169,7 +193,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     //bgoverlayclick
-    bgOverlay.addEventListener('click', function () {
+    bgOverlay.addEventListener('click', function() {
         stopVideo();
         trailer.classList.remove("active");
         bgOverlay.classList.remove('active')
@@ -180,7 +204,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     document.querySelectorAll('.courses--tabs--title').forEach((item, index) => {
 
-        item.addEventListener('click', function (event) {
+        item.addEventListener('click', function(event) {
             document.querySelectorAll('.courses--tabs--title').forEach((item) => {
                 item.classList.remove('active-title')
             })
@@ -194,8 +218,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     //tabs contains items
     var prevEl = null;
-    $(".courses--tabs--title").each(function (index) {
-        $(this).on('click', function () {
+    $(".courses--tabs--title").each(function(index) {
+        $(this).on('click', function() {
             if (index === 0) {
                 $(".uk-tab-bottom").animate({ scrollLeft: '-1000' }, 300);
                 return
@@ -278,13 +302,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
     function addDotButtonText() {
-        $('.owl-dot').each(function () {
+        $('.owl-dot').each(function() {
             $(this).find('.offscreen').remove();
             let idx = $(this).index() + 1;
             $(this).append('<span class="offscreen">Go to slide ' + idx + '</span>');
         });
     }
-    $('.hero---scroll-to-courses a').click(function (e) {
+    $('.hero---scroll-to-courses a').click(function(e) {
         $('html, body').animate({
             scrollTop: $('#registration').offset().top - 30
         }, 'slow');
@@ -302,7 +326,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         initTeamSlider()
     }
 
-    window.addEventListener('resize', function () {
+    window.addEventListener('resize', function() {
         viewportWidth = window.innerWidth || document.documentElement.clientWidth;
         if (viewportWidth >= 992) {
             destroyUiKitSlider();
@@ -347,11 +371,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 const triggerDistance = single.getBoundingClientRect().width;
 
                 const targetPosition = {
-                    left:
-                        single.getBoundingClientRect().left +
+                    left: single.getBoundingClientRect().left +
                         single.getBoundingClientRect().width / 2,
-                    top:
-                        single.getBoundingClientRect().top +
+                    top: single.getBoundingClientRect().top +
                         single.getBoundingClientRect().height / 2
                 };
                 const distance = {
