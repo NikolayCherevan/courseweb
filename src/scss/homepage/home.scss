@@ -231,6 +231,7 @@ section {
             height: 49.1vw;
             background-size: cover;
             border-radius: 20px;
+            background-image: url('./img/video_overlay.png');
             @media (min-width: $tablet) {
                 margin-top: 60px;
             }
