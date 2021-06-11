@@ -1,9 +1,9 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const glob = require('glob')
-const PurgeCSSPlugin = require('purgecss-webpack-plugin')
-
+const CompressionPlugin = require("compression-webpack-plugin");
+var ImageminPlugin = require('imagemin-webpack-plugin').default
+const glob =  require('glob');
 const PATHS = {
     src: path.join(__dirname, 'src')
 }
@@ -15,7 +15,19 @@ module.exports = {
     },
 
     plugins: [new MiniCssExtractPlugin(),
-
+        new CompressionPlugin({
+            test: /\.js(\?.*)?$/i,
+            algorithm: "gzip"
+          }),
+          new ImageminPlugin({
+            externalImages: {
+              context: 'src', // Important! This tells the plugin where to "base" the paths at
+              sources: glob.sync('img/**/*.jpg'),
+              destination: 'src/public/images',
+              fileName: '[path][name].[ext]' // (filePath) => filePath.replace('jpg', 'webp') is also possible
+            }
+          }),
+          new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i })
     ],
     module: {
         rules: [

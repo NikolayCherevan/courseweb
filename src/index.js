@@ -370,8 +370,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     TweenMax.to(this.el, 0.2, {
                         left: targetPosition.left - (Math.sin(angle) * hypotenuse) / 2,
                         top: targetPosition.top - (Math.cos(angle) * hypotenuse) / 2,
-                        height: single.clientHeight,
-                        width: single.clientWidth
+                     
                     });
                     TweenMax.to(single.querySelector(".text"), 0.2, {
                         x: -((Math.sin(angle) * hypotenuse) / 2),
@@ -381,8 +380,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     TweenMax.to(this.el, 0.2, {
                         left: cursorPosition.left,
                         top: cursorPosition.top,
-                        height: "12px",
-                        width: "12px"
                     });
 
                     TweenMax.to(single.querySelector(".text"), 0.2, {
