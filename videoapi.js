@@ -31,13 +31,15 @@ window.onload = function() {
         document.querySelector('.video__button').addEventListener('click', function(event) {
             event.preventDefault();
             toggle()
-            bgOverlay.classList.add('active')
+            bgOverlay.classList.add('active');
+            bgOverlay.classList.add('video')
             onPlayerReady();
             trailer.classList.add("active");
         });
         document.querySelector('.video-iframe--banner').addEventListener('click', function(event) {
             event.preventDefault();
-            bgOverlay.classList.add('active')
+            bgOverlay.classList.add('active');
+            bgOverlay.classList.add('video')
             onPlayerReady();
             trailer.classList.add("active");
         });

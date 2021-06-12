@@ -227,7 +227,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     bgOverlay.addEventListener('click', function() {
         stopVideo();
         trailer.classList.remove("active");
-        bgOverlay.classList.remove('active')
+        bgOverlay.classList.remove('active');
+        bgOverlay.classList.remove('video')
         document.querySelector('.video-iframe--banner').style.cssText = "display: block";
     });
 

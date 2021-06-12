@@ -381,33 +381,34 @@ section {
             z-index: 982;
         }
     }
-}
-
-.bg-overlay--VideoHead-popup-video-exit {
-    position: absolute;
-    top: 19px;
-    right: 26px;
-    width: 24px;
-    cursor: pointer;
-    height: 24px;
-    transition: opacity 0.2s;
-    @media screen and (min-width: 1200px) {
-        right: 41px !important;
-    }
-    .line-1,
-    .line-2 {
-        top: 11px;
-        left: 2px;
-        position: absolute;
-        width: 20px;
-        height: 2px;
-        background-color: #ffffff;
-    }
-    .line-1 {
-        transform: rotate(-45deg);
-    }
-    .line-2 {
-        transform: rotate(45deg);
+    &.video {
+        .bg-overlay--VideoHead-popup-video-exit {
+            position: absolute;
+            top: 19px;
+            right: 26px;
+            width: 24px;
+            cursor: pointer;
+            height: 24px;
+            transition: opacity 0.2s;
+            @media screen and (min-width: 1200px) {
+                right: 41px !important;
+            }
+            .line-1,
+            .line-2 {
+                top: 11px;
+                left: 2px;
+                position: absolute;
+                width: 20px;
+                height: 2px;
+                background-color: #ffffff;
+            }
+            .line-1 {
+                transform: rotate(-45deg);
+            }
+            .line-2 {
+                transform: rotate(45deg);
+            }
+        }
     }
 }
 
