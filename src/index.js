@@ -14,6 +14,74 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let anchor = document.querySelector(".hero---scroll-to-courses a");
     let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
+
+
+
+    //TweenMax lib init
+    //play button magnetic on team section
+    const element = document.querySelector(".cursor");
+    const target = document.querySelector(".target");
+
+
+    class Cursor {
+        constructor(el, target, text) {
+            this.el = el;
+            this.bind();
+        }
+
+        bind() {
+            document.addEventListener("mousemove", this.move.bind(this), false);
+        }
+
+        move(e) {
+            const cursorPosition = {
+                left: e.clientX,
+                top: e.clientY
+            };
+            document.querySelectorAll(".target").forEach((single) => {
+                const triggerDistance = single.getBoundingClientRect().width;
+
+                const targetPosition = {
+                    left: single.getBoundingClientRect().left +
+                        single.getBoundingClientRect().width / 2,
+                    top: single.getBoundingClientRect().top +
+                        single.getBoundingClientRect().height / 2
+                };
+                const distance = {
+                    x: targetPosition.left - cursorPosition.left,
+                    y: targetPosition.top - cursorPosition.top
+                };
+
+                const angle = Math.atan2(distance.x, distance.y);
+                const hypotenuse = Math.sqrt(
+                    distance.x * distance.x + distance.y * distance.y
+                );
+                if (hypotenuse < triggerDistance) {
+                    // Nikhil - look at this code to adjust the round cursor area sizing
+                    TweenMax.to(this.el, 0.2, {
+                        left: targetPosition.left - (Math.sin(angle) * hypotenuse) / 2,
+                        top: targetPosition.top - (Math.cos(angle) * hypotenuse) / 2,
+
+                    });
+                    TweenMax.to(single.querySelector(".text"), 0.2, {
+                        x: -((Math.sin(angle) * hypotenuse) / 2),
+                        y: -((Math.cos(angle) * hypotenuse) / 2)
+                    });
+                } else {
+                    TweenMax.to(this.el, 0.2, {
+                        left: cursorPosition.left,
+                        top: cursorPosition.top,
+                    });
+
+                    TweenMax.to(single.querySelector(".text"), 0.2, {
+                        x: 0,
+                        y: 0
+                    });
+                }
+            });
+        }
+    }
+
     //init niceselect
 
     $('.nice-select').niceSelect();
@@ -198,7 +266,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         })
     })
 
-    //owlinit
+    //owlinit on team
     initTeamSlider()
 
     function initTeamSlider() {
@@ -224,6 +292,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         })
     }
 
+    //init owl on hero
     $('.owl-carousel--hero').owlCarousel({
         onInitialized: addDotButtonText,
         onResized: addDotButtonText,
@@ -243,8 +312,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 items: 1
             },
             600: {
+                items: 2,
+                margin: 0,
+            },
+            800: {
                 items: 3,
-                margin: 150,
+                margin: 0,
+            },
+            1100: {
+                items: 4,
+                margin: 0,
+
             },
             1500: {
                 items: 5,
@@ -254,15 +332,42 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
     })
 
+
+
+    //random rotate image
     function getRandomInt(max) {
         var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
         return Math.floor(Math.random() * max) * plusOrMinus;
     }
 
+
     const myElement = document.querySelector('.owl-stage');
     for (let i = 0; i < myElement.children.length; i++) {
         myElement.children[i].children[0].children[0].children[1].style.transform = `rotate(${getRandomInt(15)}deg)`
     }
+
+    //random tooltip show
+    function getRandomItemShow(max) {
+        return Math.floor(Math.random() * max);
+    }
+
+    function showTooltipHero() {
+        setInterval(() => {
+            const myElementsActive = document.querySelectorAll('.owl-stage .owl-item.active')
+            let index = null;
+            if (getRandomItemShow(myElementsActive.length) < 4) {
+                myElementsActive[getRandomItemShow(myElementsActive.length)].classList.add('show-hover')
+            }
+        }, 6000);
+        setInterval(() => {
+            const myElementsActive = document.querySelectorAll('.owl-stage .owl-item.show-hover')
+            myElementsActive.forEach(item => {
+                item.classList.remove('show-hover')
+            })
+
+        }, 7000);
+    }
+
 
 
     //add event for anchor home
@@ -295,7 +400,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
         destroyUiKitSlider();
         $('.owl-carousel--team').trigger('destroy.owl.carousel');
         initBubleSlider();
-
+        if (TweenMax) {
+            const cursor = new Cursor(element, target);
+        }
+        showTooltipHero()
     } else {
         document.querySelectorAll('.uk-slider').forEach((item, index) => {
             UIkit.slider(item);
@@ -306,8 +414,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
         viewportWidth = window.innerWidth || document.documentElement.clientWidth;
         if (viewportWidth >= 992) {
             destroyUiKitSlider();
+            if (TweenMax) {
+                const cursor = new Cursor(element, target);
+            }
             $('.owl-carousel--team').trigger('destroy.owl.carousel');
             initBubleSlider();
+            showTooltipHero()
         } else {
             document.querySelectorAll('.uk-slider').forEach((item, index) => {
                 UIkit.slider(item);
@@ -318,71 +430,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 
-
-    //TweenMax lib init
-    //play button magnetic on team section
-    const element = document.querySelector(".cursor");
-    const target = document.querySelector(".target");
-    const text = document.querySelector(".text");
-    class Cursor {
-        constructor(el, target, text) {
-            this.el = el;
-            this.bind();
-        }
-
-        bind() {
-            document.addEventListener("mousemove", this.move.bind(this), false);
-        }
-
-        move(e) {
-            const cursorPosition = {
-                left: e.clientX,
-                top: e.clientY
-            };
-            document.querySelectorAll(".target").forEach((single) => {
-                const triggerDistance = single.getBoundingClientRect().width;
-
-                const targetPosition = {
-                    left: single.getBoundingClientRect().left +
-                        single.getBoundingClientRect().width / 2,
-                    top: single.getBoundingClientRect().top +
-                        single.getBoundingClientRect().height / 2
-                };
-                const distance = {
-                    x: targetPosition.left - cursorPosition.left,
-                    y: targetPosition.top - cursorPosition.top
-                };
-
-                const angle = Math.atan2(distance.x, distance.y);
-                const hypotenuse = Math.sqrt(
-                    distance.x * distance.x + distance.y * distance.y
-                );
-                if (hypotenuse < triggerDistance) {
-                    // Nikhil - look at this code to adjust the round cursor area sizing
-                    TweenMax.to(this.el, 0.2, {
-                        left: targetPosition.left - (Math.sin(angle) * hypotenuse) / 2,
-                        top: targetPosition.top - (Math.cos(angle) * hypotenuse) / 2,
-
-                    });
-                    TweenMax.to(single.querySelector(".text"), 0.2, {
-                        x: -((Math.sin(angle) * hypotenuse) / 2),
-                        y: -((Math.cos(angle) * hypotenuse) / 2)
-                    });
-                } else {
-                    TweenMax.to(this.el, 0.2, {
-                        left: cursorPosition.left,
-                        top: cursorPosition.top,
-                    });
-
-                    TweenMax.to(single.querySelector(".text"), 0.2, {
-                        x: 0,
-                        y: 0
-                    });
-                }
-            });
-        }
-    }
-    const cursor = new Cursor(element, target);
 
 
     //passive events seo

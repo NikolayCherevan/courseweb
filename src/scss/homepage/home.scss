@@ -38,7 +38,8 @@
                 margin: 0 auto;
                 object-fit: cover;
             }
-            &:hover {
+            &:hover,
+            &.show-hover {
                 @media (min-width: $note_desk) {
                     .hero--item-description {
                         padding: 15px 35px 15px 35px;
