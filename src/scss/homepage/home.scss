@@ -871,6 +871,8 @@ section {
         .list {
             border-radius: 15px;
             padding: 34px;
+            position: absolute;
+            max-height: 205px;
         }
     }
     form {
