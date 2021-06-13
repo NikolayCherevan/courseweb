@@ -14,9 +14,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let anchor = document.querySelector(".hero---scroll-to-courses a");
     let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
-
-
-
     //TweenMax lib init
     //play button magnetic on team section
     const element = document.querySelector(".cursor");
