@@ -21,67 +21,37 @@
 <body>
     <a class="skip-link" href="#maincontent">Skip to main</a>
     <div class="header-padding"> </div>
-    <header class="header">
-        <div>
-            <a href="#" class="header--logo"> <img width="52" height="48" src="./img/logo.svg" alt="logo"> </a>
-            <a href="#" class="header--logo__nav-active"> <img width="52" height="48" src="./img/logo_nav.svg" alt="logo"> </a>
-        </div>
+    <div class="header-wrapper">
+        <header class="header">
+            <div>
+                <a href="#" class="header--logo"> <img width="52" height="48" src="./img/logo.svg" alt="logo"> </a>
+                <a href="#" class="header--logo__nav-active"> <img width="52" height="48" src="./img/logo_nav.svg" alt="logo"> </a>
+            </div>
 
-        <ul class="header--lang">
-            <li class="header--lang__active"><a href="#"> Ua </a></li>
-            <li><a href="#"> Ru</a></li>
-            <li><a href="#"> En</a></li>
-        </ul>
-        <div class="header--burger">
-            Меню
-            <div id="menu-toggle" class="burger--btn">
-                <div id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div id="cross">
-                    <span></span>
-                    <span></span>
+            <ul class="header--lang">
+                <li class="header--lang__active"><a href="#"> Ua </a></li>
+                <li><a href="#"> Ru</a></li>
+                <li><a href="#"> En</a></li>
+            </ul>
+            <div class="header--burger">
+                Меню
+                <div id="menu-toggle" class="burger--btn">
+                    <div id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div id="cross">
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
-        </div>
-        </div>
-    </header>
-    <div class="header--dropdown header--dropdown--modile">
-        <a class="header--dropdown--title main-button dropdown">Курси</a>
-        <div class="header--dropdown--body" uk-dropdown="mode: click">
-            <ul>
-                <li>
-                    <small>ІТ-курси </small>
-                    <a href="#">Front-End-Developer </a>
-                    <a href="#">Fullstack Вечерний </a>
-                </li>
-                <li>
-                    <small>Підприємництво </small>
-                    <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
-                    <a href="#">Back-End-Developer </a>
-                </li>
-                <li>
-                    <small>Soft skills </small>
-                    <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
-                    <a href="#">Back-End-Developer </a>
-                </li>
-                <li>
-                    <small>Online </small>
-                    <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
-                    <a href="#">Back-End-Developer </a>
-                </li>
-            </ul>
 
-
-        </div>
-    </div>
-    <div class="header--desk-menu header--dropdown">
-        <ul class="header--main-links">
-            <li class="header--nav-item">Про нас</li>
-            <li class="header--dropdown--title main-button header--nav-item dropdown">Курси</li>
-            <li class="header--dropdown--body" uk-dropdown="mode: click">
+        </header>
+        <div class="header--dropdown header--dropdown--modile">
+            <a class="header--dropdown--title main-button dropdown">Курси</a>
+            <div class="header--dropdown--body" uk-dropdown="pos: bottom-justify">
                 <ul>
                     <li>
                         <small>ІТ-курси </small>
@@ -106,62 +76,95 @@
                 </ul>
 
 
-            </li>
-            <li class="header--dropdown--title main-button header--nav-item dropdown other">Кар’єрні можливості</li>
-            <li class="header--dropdown--body" uk-dropdown="mode: click">
-                <ul>
-                    <li>
+            </div>
+        </div>
+        <div class="header--desk-menu header--dropdown">
+            <ul class="header--main-links">
+                <li class="header--nav-item">Про нас</li>
+                <li class="header--dropdown--title main-button header--nav-item dropdown">Курси</li>
+                <li class="header--dropdown--body" uk-dropdown="mode: click">
+                    <ul>
+                        <li>
+                            <small>ІТ-курси </small>
+                            <a href="#">Front-End-Developer </a>
+                            <a href="#">Fullstack Вечерний </a>
+                        </li>
+                        <li>
+                            <small>Підприємництво </small>
+                            <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
+                            <a href="#">Back-End-Developer </a>
+                        </li>
+                        <li>
+                            <small>Soft skills </small>
+                            <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
+                            <a href="#">Back-End-Developer </a>
+                        </li>
+                        <li>
+                            <small>Online </small>
+                            <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
+                            <a href="#">Back-End-Developer </a>
+                        </li>
+                    </ul>
 
-                        <a href="#"> Вакансії </a>
-                    </li>
-                    <li>
 
-                        <a href="#"> Стажування </a>
-                    </li>
-                    <li>
+                </li>
+                <li class="header--dropdown--title main-button header--nav-item dropdown other">Кар’єрні можливості</li>
+                <li class="header--dropdown--body" uk-dropdown="mode: click">
+                    <ul>
+                        <li>
 
-                        <a href="#"> Професійне тестування </a>
-                    </li>
-                    <li>
-                        <a href="#"> Корисні матеріали </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="header--nav-item">Соціальна освіта</li>
-            <li class="header--nav-item">Контакти</li>
-            <li class="header--dropdown--title main-button header--nav-item dropdown without-border-content"> Київ</li>
-            <li class="header--dropdown--body" uk-dropdown="mode: click">
-                <ul>
-                    <li>
+                            <a href="#"> Вакансії </a>
+                        </li>
+                        <li>
 
-                        <a href="#"> Київ </a>
-                    </li>
-                    <li>
+                            <a href="#"> Стажування </a>
+                        </li>
+                        <li>
 
-                        <a href="#"> Харків </a>
-                    </li>
-                    <li>
+                            <a href="#"> Професійне тестування </a>
+                        </li>
+                        <li>
+                            <a href="#"> Корисні матеріали </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header--nav-item">Соціальна освіта</li>
+                <li class="header--nav-item">Контакти</li>
+                <li class="header--dropdown--title main-button header--nav-item dropdown without-border-content"> Київ
+                </li>
+                <li class="header--dropdown--body small-body" uk-dropdown="mode: click">
+                    <ul>
+                        <li>
 
-                        <a href="#"> Львів </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="header--app-status"> Online</li>
-            <li class="header--dropdown--title main-button header--nav-item dropdown other"> Укр</li>
-            <li class="header--dropdown--body" uk-dropdown="mode: click">
-                <ul>
-                    <li>
+                            <a href="#"> Київ </a>
+                        </li>
+                        <li>
 
-                        <a href="#"> Ru </a>
-                    </li>
-                    <li>
+                            <a href="#"> Харків </a>
+                        </li>
+                        <li>
 
-                        <a href="#"> En </a>
-                    </li>
+                            <a href="#"> Львів </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header--app-status"> Online</li>
+                <li class="header--dropdown--title main-button header--nav-item dropdown other"> Укр</li>
+                <li class="header--dropdown--body small-body" uk-dropdown="mode: click">
+                    <ul>
+                        <li>
 
-                </ul>
-            </li>
-        </ul>
+                            <a href="#"> Ru </a>
+                        </li>
+                        <li>
+
+                            <a href="#"> En </a>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="mobile-menu">
         <div class="mobile-menu--content">
@@ -251,42 +254,54 @@
                     <source srcset="img/courses1.webp" type="image/webp">
                     <img data-src="img/courses1.png" class="lazyload" alt="">
                 </picture>
-                <div class="hero--item-description"> Бізнес в аграрній сфері Grow up: Agro </div>
+                <div class="hero--item-description">
+                    <div class="hero--item-description-text"> Бізнес в аграрній сфері Grow up: Agro </div>
+                </div>
             </div>
             <div>
                 <picture>
                     <source srcset="img/courses2.webp" type="image/webp">
                     <img data-src="img/courses2.png" class="lazyload" alt="">
                 </picture>
-                <div class="hero--item-description"> Бізнес в аграрній сфері Grow up: Agro </div>
+                <div class="hero--item-description">
+                    <div class="hero--item-description-text"> Бізнес в аграрній сфері Grow up: Agro </div>
+                </div>
             </div>
             <div>
                 <picture>
                     <source srcset="img/courses3.webp" type="image/webp">
                     <img data-src="img/courses3.png" class="lazyload" alt="">
                 </picture>
-                <div class="hero--item-description"> Бізнес в аграрній сфері Grow up: Agro </div>
+                <div class="hero--item-description">
+                    <div class="hero--item-description-text"> Бізнес в аграрній сфері Grow up: Agro </div>
+                </div>
             </div>
             <div>
                 <picture>
                     <source srcset="img/courses1.webp" type="image/webp">
                     <img data-src="img/courses1.png" class="lazyload" alt="">
                 </picture>
-                <div class="hero--item-description"> Бізнес в аграрній сфері Grow up: Agro </div>
+                <div class="hero--item-description">
+                    <div class="hero--item-description-text"> Бізнес в аграрній сфері Grow up: Agro </div>
+                </div>
             </div>
             <div>
                 <picture>
                     <source srcset="img/courses2.webp" type="image/webp">
                     <img data-src="img/courses2.png" class="lazyload" alt="">
                 </picture>
-                <div class="hero--item-description"> Бізнес в аграрній сфері Grow up: Agro </div>
+                <div class="hero--item-description">
+                    <div class="hero--item-description-text"> Бізнес в аграрній сфері Grow up: Agro </div>
+                </div>
             </div>
             <div>
                 <picture>
                     <source srcset="img/courses3.webp" type="image/webp">
                     <img data-src="img/courses3.png" class="lazyload" alt="">
                 </picture>
-                <div class="hero--item-description"> Бізнес в аграрній сфері Grow up: Agro </div>
+                <div class="hero--item-description">
+                    <div class="hero--item-description-text"> Бізнес в аграрній сфері Grow up: Agro </div>
+                </div>
             </div>
 
         </div>
@@ -332,7 +347,9 @@
                     </li>
                     <li class="courses--tabs--title"><a href="#">Підприємництво</a>
                     </li>
-                    <li class="courses--tabs--title"><a href="#">Left</a>
+                    <li class="courses--tabs--title"><a href="#">Soft skills</a>
+                    </li>
+                    <li class="courses--tabs--title"><a href="#">Online</a>
                     </li>
                 </ul>
                 <div class="courses--tabs--content active">
@@ -610,6 +627,97 @@
                         <ul class="uk-slider-nav uk-dotnav"></ul>
 
                     </div>
+                </div>
+                <div class="courses--tabs--content">
+                    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+                        <ul class="uk-slider-items uk-grid">
+                            <li class="uk-width-4-5">
+                                <div class="uk-panel">
+                                    <div class="uk-panel--card-overlay"> </div>
+                                    <picture>
+                                        <source srcset="img/courses1.webp" type="image/webp">
+                                        <img data-src="img/courses1.png" class="lazyload" alt="">
+                                    </picture>
+                                    <div class="uk-position-center uk-text-center">
+                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                                            <span class="courses--free-space">Вільних місць: 10<span>
+                                        </p>
+                                        <h2 uk-slider-parallax="x: 100,-100">Heading15</h2>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="uk-width-4-5">
+                                <div class="uk-panel">
+                                    <div class="uk-panel--card-overlay"> </div>
+                                    <picture>
+                                        <source srcset="img/courses2.webp" type="image/webp">
+                                        <img data-src="img/courses2.png" class="lazyload" alt="">
+                                    </picture>
+                                    <div class="uk-position-center uk-text-center">
+                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                                            <span class="courses--free-space">Вільних місць: 10<span>
+                                        </p>
+                                        <h2 uk-slider-parallax="x: 100,-100">Heading16</h2>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="uk-width-4-5">
+                                <div class="uk-panel">
+                                    <div class="uk-panel--card-overlay"> </div>
+                                    <picture>
+                                        <source srcset="img/courses3.webp" type="image/webp">
+                                        <img data-src="img/courses3.png" class="lazyload" alt="">
+                                    </picture>
+                                    <div class="uk-position-center uk-text-center">
+                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                                            <span class="courses--free-space">Вільних місць: 10<span>
+                                        </p>
+                                        <h2 uk-slider-parallax="x: 100,-100">Heading17</h2>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="uk-width-4-5">
+                                <div class="uk-panel">
+                                    <div class="uk-panel--card-overlay"> </div>
+                                    <picture>
+                                        <source srcset="img/courses1.webp" type="image/webp">
+                                        <img data-src="img/courses1.png" class="lazyload" alt="">
+                                    </picture>
+                                    <div class="uk-position-center uk-text-center">
+                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                                            <span class="courses--free-space">Вільних місць: 10<span>
+                                        </p>
+                                        <h2 uk-slider-parallax="x: 100,-100">Heading18</h2>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="uk-width-4-5">
+                                <div class="uk-panel">
+                                    <div class="uk-panel--card-overlay"> </div>
+                                    <picture>
+                                        <source srcset="img/courses2.webp" type="image/webp">
+                                        <img data-src="img/courses2.png" class="lazyload" alt="">
+                                    </picture>
+                                    <div class="uk-position-center uk-text-center">
+                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                                            <span class="courses--free-space">Вільних місць: 10<span>
+                                        </p>
+                                        <h2 uk-slider-parallax="x: 100,-100">Heading19</h2>
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul class="uk-slider-nav uk-dotnav"></ul>
+
+                    </div>
+
                 </div>
                 <div class="courses--tabs--content">
                     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
@@ -992,7 +1100,7 @@
 
     <footer id="footer">
         <section>
-            <div class="uk-container">
+            <div>
                 <div class="footer--logo-links-wrapper">
                     <a class="footer--logo" href="#"><img width="52" height="48" src="./img/logo_nav.svg" alt="logo">
                     </a>

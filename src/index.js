@@ -149,10 +149,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     //slidercustom
 
-    let howManyElementsWillBeChanges = coordinates.length; //how manu items take effect
-    let defaultWidthImage = `100px`; //size of default iamge 
-    let mainImageScaleSize = 30; //k-number main image size(more-larger)
-    let siblingImageScaleSize = 16; //k-number sibling image size(more-larger)
+    let howManyElementsWillBeChanges = 5; //k-number how manu elements will be change
+    let defaultWidthImage = `60px`;
+    let mainImageScaleSize = 27; //k-number main image size(more-larger)
+    let siblingImageScaleSize = 32; //k-number sibling image size(more-larger)
     let counterMain = null;
     let counterNext = null;
     let counterPrev = null;
@@ -163,17 +163,25 @@ window.addEventListener('DOMContentLoaded', (event) => {
         if (teemSection.classList.contains('slider_inited')) return;
         teemSection.classList.add('slider_inited');
         coordinates.forEach(item => {
-            centerCoordinatesOfItem.push(item.offsetLeft + item.offsetWidth / 2)
+            centerCoordinatesOfItem.push(item.offsetLeft + item.offsetWidth / 2);
+            item.style.width = defaultWidthImage;
+
+
         })
 
         let arrayOfElement = centerCoordinatesOfItem.slice()
         onmousemove = function(e) {
-            let closest = centerCoordinatesOfItem.sort((a, b) => Math.abs(e.clientX - a) - Math.abs(e.clientX - b))[0]
+            let x = window.innerWidth;
+            e.clientX - window.innerWidth / 2 > 0 ? x = e.clientX - 60 : x = e.clientX - 200
+
+
+            let closest = centerCoordinatesOfItem.sort((a, b) => Math.abs(x - a) - Math.abs(x - b))[0]
             let indexOfGotScale = arrayOfElement.indexOf(closest);
             let arrOfFutureScaling1 = []
             let arrOfFutureScaling2 = []
 
             coordinates.forEach((item, index) => {
+
                 item.classList.remove('active')
                 if (index === indexOfGotScale) {
                     doScaleMainEl(index)
@@ -190,7 +198,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
         function doScaleMainEl(arrayOfElements) {
-            counterMain = howManyElementsWillBeChanges
+            counterMain = 10
             coordinates[arrayOfElements].style.width = `${mainImageScaleSize * counterMain}px`;
             coordinates[arrayOfElements].classList.add('active')
         }
@@ -310,7 +318,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
         lazyLoad: true,
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                autoplay: false
             },
             600: {
                 items: 2,

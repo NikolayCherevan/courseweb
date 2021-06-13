@@ -30,47 +30,72 @@
         overflow: hidden;
         display: flex;
         align-items: center;
-        .owl-item {
-            text-align: center;
-            img {
-                width: 241px;
-                height: 211px;
-                margin: 0 auto;
-                object-fit: cover;
-            }
-            &:hover,
-            &.center {
+        .owl-stage {
+            .owl-item.center {
                 @media (min-width: $note_desk) {
                     .hero--item-description {
                         padding: 15px 35px 15px 35px;
                         width: 260px;
-                        transition: opacity .3s, width .3s;
+                        transition: opacity .3s, width .3s, padding .3s;
                         opacity: 1;
                     }
                 }
             }
-            .hero--item-description {
-                position: absolute;
-                z-index: 11;
-                padding: 15px 35px 15px 35px;
-                font-size: $main-font-mobile;
-                line-height: 24px;
-                top: 80%;
-                background-color: $base-bg-orange;
-                color: $main-color-white;
-                border-radius: 40px;
-                min-width: 260px;
-                box-sizing: border-box;
-                left: 50%;
-                height: 78px;
-                transform: translate(-50%, 0);
-                @media (min-width: $note_desk) {
-                    padding: 0;
-                    width: 0;
-                    min-width: 0;
-                    opacity: 0;
-                    overflow: hidden;
-                    transition: opacity .3s, width .3s;
+            &:hover {
+                .owl-item {
+                    @media (min-width: $note_desk) {
+                        .hero--item-description {
+                            padding: 0;
+                            width: 0;
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+            .owl-item {
+                text-align: center;
+                img {
+                    width: 241px;
+                    height: 211px;
+                    margin: 0 auto;
+                    object-fit: cover;
+                }
+                &:hover {
+                    @media (min-width: $note_desk) {
+                        .hero--item-description {
+                            padding: 15px 35px 15px 35px;
+                            width: 260px;
+                            transition: opacity .3s, width .3s, padding .3s;
+                            opacity: 1;
+                        }
+                    }
+                }
+                .hero--item-description {
+                    position: absolute;
+                    z-index: 11;
+                    padding: 15px 35px 15px 35px;
+                    font-size: $main-font-mobile;
+                    line-height: 24px;
+                    top: 80%;
+                    background-color: $base-bg-orange;
+                    color: $main-color-white;
+                    border-radius: 40px;
+                    min-width: 260px;
+                    box-sizing: border-box;
+                    left: 50%;
+                    height: 78px;
+                    transform: translate(-50%, 0);
+                    @media (min-width: $note_desk) {
+                        padding: 0;
+                        width: 0;
+                        min-width: 0;
+                        opacity: 0;
+                        overflow: hidden;
+                        transition: opacity .3s, width .3s, padding .3s;
+                        .hero--item-description-text {
+                            min-width: 190px;
+                        }
+                    }
                 }
             }
         }
@@ -346,13 +371,20 @@ section {
                 width: 10vw;
                 height: 10vw;
             }
-            @media (min-width: $tablet) {
+            @media (min-width: $note_desk) {
                 width: 17.17vw;
                 height: 17.17vw;
                 left: -30px;
                 top: initial;
                 bottom: -10%;
                 bottom: -23%;
+                width: 287px;
+                height: 287px;
+                img {
+                    width: 140px;
+                    height: 128px;
+                    object-fit: contain;
+                }
             }
             @media (min-width: $note_desk) {
                 bottom: -23%;
@@ -833,7 +865,12 @@ section {
         ul {
             li {
                 color: $main-color;
+                padding: 0;
             }
+        }
+        .list {
+            border-radius: 15px;
+            padding: 34px;
         }
     }
     form {
@@ -856,7 +893,7 @@ section {
 
 .customer-support {
     position: fixed;
-    top: 88vh;
+    top: 82vh;
     left: 78vw;
     min-height: 65px;
     min-width: 65px;

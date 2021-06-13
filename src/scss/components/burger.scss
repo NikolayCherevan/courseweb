@@ -1,10 +1,14 @@
 #menu-toggle {
-    width: 30px;
-    height: 30px;
+    width: 22px;
+    height: 16px;
     position: relative;
     position: relative;
     cursor: pointer;
     border-radius: 5px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     span {
         display: inline-block;
         background: $main-color;
@@ -15,46 +19,51 @@
         position: absolute;
         height: 100%;
         width: 100%;
-        left: 10px;
-        top: -2px;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        justify-content: space-between;
+        left: 0;
         span {
-            width: 22px;
             height: 2px;
             position: relative;
             &:nth-child(1) {
                 transition-delay: .5s;
+                width: 100%;
             }
             &:nth-child(2) {
                 transition-delay: .625s;
-                top: -7px;
+                width: 17px;
             }
             &:nth-child(3) {
                 transition-delay: .75s;
-                top: -14px;
+                width: 10px;
             }
         }
     }
     #cross {
+        width: 30px;
+        height: 30px;
         position: absolute;
-        height: 100%;
-        width: 100%;
         transform: rotate(45deg);
-        left: 6px;
+        left: 0;
         span {
             &:nth-child(1) {
                 height: 0%;
                 width: 2px;
                 position: absolute;
-                top: 13%;
-                left: 15px;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                left: 50%;
                 transition-delay: 0s;
             }
             &:nth-child(2) {
                 width: 0%;
                 height: 2px;
                 position: absolute;
-                left: 13%;
-                top: 15px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
                 transition-delay: .25s;
             }
         }
@@ -76,7 +85,6 @@
             }
         }
         #cross {
-            left: 6px;
             span {
                 background-color: $main-color-white;
                 &:nth-child(1) {

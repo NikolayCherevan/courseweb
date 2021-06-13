@@ -22,7 +22,7 @@
         }
         outline: none;
         &[aria-expanded="true"].header--nav-item {
-            border: 1.5px solid transparent;
+            border: 2px solid transparent;
             color: $main-color-white;
             outline: none;
             background-color: $base-bg-orange;
@@ -33,7 +33,7 @@
             }
             &.without-border-content {
                 &[aria-expanded="true"].header--nav-item {
-                    border: 1.5px solid transparent;
+                    border: 2px solid transparent;
                     outline: none;
                     color: $main-color;
                     background-color: $base-bg-white;
@@ -85,10 +85,16 @@
         padding: 34px;
         box-shadow: 0px 0px 24px #00000029;
         border-radius: 15px;
-        max-width: 66vw;
+        max-width: 72vw;
+        @media (min-width: $large_desk) {
+            max-width: 318px;
+        }
         width: max-content;
         max-height: 80vh;
         overflow: auto;
+        &.small-body {
+            min-width: 148px;
+        }
         small {
             margin-bottom: 10px;
             display: inline-block;
@@ -106,6 +112,10 @@
             a {
                 display: block;
                 margin-bottom: 15px;
+                font-weight: 600;
+            }
+            &:last-child {
+                border-bottom: none;
             }
         }
     }
@@ -117,4 +127,4 @@
             top: -10px;
         }
     }
-}  
+}

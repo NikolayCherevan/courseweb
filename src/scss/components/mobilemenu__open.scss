@@ -95,6 +95,9 @@ body {
                 }
             }
             .footer--dropdown--content {
+                &.uk-open {
+                    display: block
+                }
                 border-radius: 15px;
                 ul {
                     li {
@@ -154,13 +157,18 @@ body {
             width: -webkit-fill-available;
             width: -moz-available;
             width: fill-available;
-            animation: slidefromTop .3s forwards;
+            // animation: slidefromTop .3s forwards;
+            padding: 15px 18px 15px 18px;
+            left: 0;
+            top: 0;
             @media (min-width: $large_desk) {
                 animation: slidefromTopDeskClose 3s forwards;
             }
+            &.sticky {
+                background-color: $base-bg-orange;
+            }
             &.orange-sticky {
                 background-color: $base-bg-orange;
-                
             }
             .header--logo {
                 display: none;

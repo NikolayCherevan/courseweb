@@ -1,91 +1,99 @@
 body {
-    .header {
-        color: $main-color;
-        font-size: $main-font-mobile;
-        display: flex;
-        justify-content: space-between;
-        padding: 15px 18px 15px 15px;
-        align-items: center;
-        font-weight: 600;
-        top: -50px;
-        a {
-            text-decoration: none;
-            color: $main-color;
-        }
+    .header-wrapper {
+        padding: 15px 18px 15px 18px;
+        position: relative;
         @media (min-width: $large_desk) {
-            padding: 36px 50px 15px 43px;
-            top: -80px;
+            padding: 36px 42px 15px 42px;
+            // top: -80px;
         }
-        &.sticky {
-            position: fixed;
-            animation: slidefromTop .3s forwards;
-            width: -webkit-fill-available;
-            width: -moz-available;
-            width: fill-available;
-            background-color: $base-bg-white;
-            z-index: 111;
-            padding: 15px 18px 15px 15px;
-            @media (min-width: $large_desk) {
-                animation: slidefromTopDesk .3s forwards;
-            }
-        }
-        .header--logo {
-            img {
-                min-width: 52px;
-                min-height: 48px;
-            }
-        }
-        .header--lang {
-            position: relative;
-            z-index: 0;
-            display: none;
-            li {
-                margin-left: 0;
-                a {
-                    padding: 9px 8px;
-                    margin: 0 2px;
-                    color: $main-color-white;
-                    &:hover {
-                        background: rgba(255, 255, 255, 0.5);
-                        color: $main-color;
-                        padding: 9px 8px;
-                        border-radius: 50%;
-                    }
-                }
-                @media(min-width: $more_than_iphone5) {
-                    a {
-                        margin: 0 5px;
-                    }
-                }
-                &.header--lang__active {
-                    a {
-                        background: rgba(255, 255, 255, 0.5);
-                        color: $main-color;
-                        padding: 9px 8px;
-                        border-radius: 50%;
-                    }
-                }
-            }
-        }
-        .header--logo__nav-active {
-            display: none;
-            position: relative;
-            z-index: 0;
-        }
-        .header--burger {
+        .header {
+            color: $main-color;
+            font-size: $main-font-mobile;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            position: relative;
-            z-index: 0;
-            @media (min-width: $large_desk) {
-                display: none;
-            }
+            font-weight: 600;
+            top: -50px;
             a {
-                display: inline-block;
-                margin-left: 15px;
-                min-width: 24px;
-                .header--burger__close {
+                text-decoration: none;
+                color: $main-color;
+            }
+            &.sticky {
+                position: fixed;
+                left: 0;
+                animation: slidefromTop .3s forwards;
+                width: -webkit-fill-available;
+                width: -moz-available;
+                width: fill-available;
+                background-color: $base-bg-white;
+                z-index: 111;
+                padding: 15px 18px 15px 15px;
+                @media (min-width: $large_desk) {
+                    padding: 18px 42px 18px 42px;
+                    // top: -80px;
+                }
+                @media (min-width: $large_desk) {
+                    animation: slidefromTopDesk .3s forwards;
+                }
+            }
+            .header--logo {
+                img {
+                    min-width: 52px;
+                    min-height: 48px;
+                }
+            }
+            .header--lang {
+                position: relative;
+                z-index: 0;
+                display: none;
+                li {
+                    margin-left: 0;
+                    a {
+                        padding: 9px 8px;
+                        margin: 0 2px;
+                        color: $main-color-white;
+                        &:hover {
+                            background: rgba(255, 255, 255, 0.5);
+                            color: $main-color;
+                            padding: 9px 8px;
+                            border-radius: 50%;
+                        }
+                    }
+                    @media(min-width: $more_than_iphone5) {
+                        a {
+                            margin: 0 5px;
+                        }
+                    }
+                    &.header--lang__active {
+                        a {
+                            background: rgba(255, 255, 255, 0.5);
+                            color: $main-color;
+                            padding: 9px 8px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+            .header--logo__nav-active {
+                display: none;
+                position: relative;
+                z-index: 0;
+            }
+            .header--burger {
+                display: flex;
+                align-items: center;
+                position: relative;
+                z-index: 0;
+                @media (min-width: $large_desk) {
                     display: none;
+                }
+                a {
+                    display: inline-block;
+                    margin-left: 15px;
+                    min-width: 24px;
+                    .header--burger__close {
+                        display: none;
+                    }
                 }
             }
         }
@@ -104,11 +112,12 @@ body {
         display: none;
         @media (min-width: $large_desk) {
             display: flex;
-            left: 50%;
+            left: initial;
             width: max-content;
             position: absolute;
-            top: 35px;
-            transform: translate(-50%);
+            top: 38.5px;
+            transform: none;
+            right: 42px;
             ul.header--main-links {
                 display: flex;
                 align-items: center;
@@ -118,6 +127,10 @@ body {
                 li {
                     a {
                         cursor: pointer;
+                    }
+                    &:nth-last-child(2) {
+                        margin-right: 0;
+                        padding-right: 0;
                     }
                 }
                 .header--app-status {
@@ -161,7 +174,6 @@ body {
             background-color: $base-bg-orange;
             color: $main-color-white;
             border: solid 2px $base-bg-orange;
-            border: 1.5px solid transparent;
             &::after {
                 background-image: url('./img/arrow_down_white.svg');
                 transform: rotate(180deg);
