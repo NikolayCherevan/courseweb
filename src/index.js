@@ -347,27 +347,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         myElement.children[i].children[0].children[0].children[1].style.transform = `rotate(${getRandomInt(15)}deg)`
     }
 
-    //random tooltip show
-    function getRandomItemShow(max) {
-        return Math.floor(Math.random() * max);
-    }
 
-    function showTooltipHero() {
-        setInterval(() => {
-            const myElementsActive = document.querySelectorAll('.owl-stage .owl-item.active')
-            let index = null;
-            if (getRandomItemShow(myElementsActive.length) < 4) {
-                myElementsActive[getRandomItemShow(myElementsActive.length)].classList.add('show-hover')
-            }
-        }, 6000);
-        setInterval(() => {
-            const myElementsActive = document.querySelectorAll('.owl-stage .owl-item.show-hover')
-            myElementsActive.forEach(item => {
-                item.classList.remove('show-hover')
-            })
-
-        }, 7000);
-    }
 
 
 
@@ -401,10 +381,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         destroyUiKitSlider();
         $('.owl-carousel--team').trigger('destroy.owl.carousel');
         initBubleSlider();
-        if (TweenMax) {
-            const cursor = new Cursor(element, target);
-        }
-        showTooltipHero()
+        const cursor = new Cursor(element, target);
     } else {
         document.querySelectorAll('.uk-slider').forEach((item, index) => {
             UIkit.slider(item);
@@ -415,12 +392,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
         viewportWidth = window.innerWidth || document.documentElement.clientWidth;
         if (viewportWidth >= 992) {
             destroyUiKitSlider();
-            if (TweenMax) {
-                const cursor = new Cursor(element, target);
-            }
             $('.owl-carousel--team').trigger('destroy.owl.carousel');
             initBubleSlider();
-            showTooltipHero()
+            const cursor = new Cursor(element, target);
         } else {
             document.querySelectorAll('.uk-slider').forEach((item, index) => {
                 UIkit.slider(item);
