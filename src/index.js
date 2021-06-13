@@ -172,7 +172,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         let arrayOfElement = centerCoordinatesOfItem.slice()
         onmousemove = function(e) {
             let x = window.innerWidth;
-            console.log(window.innerWidth)
             if (window.innerWidth != 1562) {
                 e.clientX - window.innerWidth / 2 > 0 ? x = e.clientX - 60 : x = e.clientX - 200
             } else {
