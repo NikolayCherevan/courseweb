@@ -172,8 +172,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
         let arrayOfElement = centerCoordinatesOfItem.slice()
         onmousemove = function(e) {
             let x = window.innerWidth;
-            e.clientX - window.innerWidth / 2 > 0 ? x = e.clientX - 60 : x = e.clientX - 200
-
+            console.log(window.innerWidth)
+            if (window.innerWidth != 1562) {
+                e.clientX - window.innerWidth / 2 > 0 ? x = e.clientX - 60 : x = e.clientX - 200
+            } else {
+                x = e.clientX
+            }
 
             let closest = centerCoordinatesOfItem.sort((a, b) => Math.abs(x - a) - Math.abs(x - b))[0]
             let indexOfGotScale = arrayOfElement.indexOf(closest);
