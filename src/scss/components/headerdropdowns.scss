@@ -1,7 +1,10 @@
 .header--dropdown {
     z-index: 983;
     position: absolute;
-    left: 45%;
+    left: 47%;
+    @media (min-width: $more_than_iphone5) {
+        left: 50%;
+    }
     transform: translate(-50%);
     width: initial;
     top: 31px;
