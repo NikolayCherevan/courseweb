@@ -9,6 +9,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    .header--burger-text {
+        position: absolute;
+        left: -50px;
+    }
     span {
         display: inline-block;
         background: $main-color;

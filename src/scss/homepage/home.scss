@@ -5,6 +5,8 @@
     z-index: -1;
     padding-top: 130px;
     margin: 0;
+    min-height: calc(100vh);
+    box-sizing: border-box;
     @media (min-width: $large_desk) {
         top: -101px;
         .uk-container {
