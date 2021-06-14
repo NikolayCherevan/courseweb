@@ -119,6 +119,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     burger.addEventListener('click', function() {
         this.classList.toggle('open');
         body.classList.toggle('__nav-open');
+        if (!header.classList.contains('sticky')) {
+            headerPadding.classList.toggle('active');
+        }
         if (header.classList.contains('orange-sticky')) {
             header.classList.remove('orange-sticky')
             mobileMenu.scrollTo(0, 0)
@@ -134,7 +137,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             element.classList.add('sticky');
             headerPadding.classList.add('active');
         } else {
-            element.classList.remove('sticky')
+            element.classList.remove('sticky');
             headerPadding.classList.remove('active');
         }
     }
@@ -170,8 +173,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
         onmousemove = function(e) {
             let x = window.innerWidth;
 
-                e.clientX - window.innerWidth / 2 > 0 ? x = e.clientX - 100 : x = e.clientX - 200
-        
+            e.clientX - window.innerWidth / 2 > 0 ? x = e.clientX - 100 : x = e.clientX - 200
+
             let closest = centerCoordinatesOfItem.sort((a, b) => Math.abs(x - a) - Math.abs(x - b))[0]
             let indexOfGotScale = arrayOfElement.indexOf(closest);
             let arrOfFutureScaling1 = []
