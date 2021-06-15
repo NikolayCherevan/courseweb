@@ -7,10 +7,13 @@
     margin: 0;
 
     .uk-container {
-        margin-top: 30px;
+        position: relative;
+        top: 37px;
     }
 
     @media (min-width: $tablet) {
+        position: relative;
+        top: 0;
         min-height: calc(100vh);
     }
 
@@ -213,8 +216,12 @@
     }
 
     .hero---scroll-to-courses {
-        margin-top: 35.5px;
-        padding-bottom: 47.5px;
+        margin-top: 10px;
+    padding-bottom: 24.5px;
+        @media (min-width: $tablet) {
+            margin-top: 35.5px;
+            padding-bottom: 47.5px;
+        }
         display: flex;
         justify-content: center;
 
