@@ -304,6 +304,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
    
     }
     function getMatrix(element) {
+        if(!element) return false
         const values = element.style.transform.split(/\w+\(|\);?/);
         const transform = values[1].split(/,\s?/g).map(numStr => parseInt(numStr));
 
@@ -314,6 +315,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         };
     }
     $('.owl-carousel--team').on('changed.owl.carousel', function (e) {
+        if(!getMatrix) return 
         $('.owl-carousel--team').css('background-position-x', getMatrix(document.querySelector(".owl-carousel--team .owl-stage")).x / 6);
 
     });
