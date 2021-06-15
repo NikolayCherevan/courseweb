@@ -635,6 +635,7 @@ section {
             background-image: url('./img/new_line_team.svg');
             background-size: contain;
             background-position-x: -100px;
+            min-height: 266px;
         }
         .owl-item.active {
             display: flex;
@@ -644,6 +645,7 @@ section {
                 width: 210px !important;
                 height: 210px;
                 object-fit: contain;
+                transition: all .3s;
             }
             &+.owl-item {
                 display: flex;
@@ -682,6 +684,7 @@ section {
             img {
                 width: 128px;
                 height: 128px;
+                transition: all .3s;
             }
         }
         .owl-dots {
