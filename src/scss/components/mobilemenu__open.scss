@@ -127,6 +127,7 @@ body {
     }
     &.__nav-open {
         overflow: hidden;
+        padding-right: 10px;
         .menu-bg {
             // background-color: $base-bg-orange;
             position: absolute;
@@ -161,6 +162,7 @@ body {
             padding: 15px 18px 15px 18px;
             left: 0;
             top: 0;
+            padding-right: 30px;
             @media (min-width: $large_desk) {
                 animation: slidefromTopDeskClose 3s forwards;
             }
