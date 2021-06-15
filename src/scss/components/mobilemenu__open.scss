@@ -153,10 +153,7 @@ body {
 
     &.__nav-open {
         overflow: hidden;
-
-        @media (min-width: $note_desk) {
-            padding-right: 10px;
-        }
+        padding-right: 15px;
 
         .menu-bg {
             // background-color: $base-bg-orange;
@@ -201,9 +198,7 @@ body {
                 animation: slidefromTopDeskClose 3s forwards;
             }
 
-            @media (min-width: $note_desk) {
-                padding-right: 30px;
-            }
+            padding-right: 32px;
 
             &.sticky {
                 background-color: $base-bg-orange;
