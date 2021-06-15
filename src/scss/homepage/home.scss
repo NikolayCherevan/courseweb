@@ -629,12 +629,19 @@ section {
         display: none;
     }
     .owl-carousel {
-        margin-top: 34px;
+        @media (max-width: $note_desk) {
+            background-image: url('./img/new_line_team.svg');
+            background-size: inherit;
+            background-position-x: -100px;
+            margin-top: 34px;
+            -webkit-transition:background-position 3s ease;
+            -moz-transition:background-position 3s ease;
+            -o-transition:background-position 3s ease;
+            transition:background-position 3s ease;
+        }
         .owl-stage {
             display: flex;
-            background-image: url('./img/new_line_team.svg');
-            background-size: contain;
-            background-position-x: -100px;
+        
             min-height: 266px;
         }
         .owl-item.active {
