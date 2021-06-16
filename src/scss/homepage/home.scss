@@ -782,7 +782,7 @@ section {
 
         .owl-stage {
             display: flex;
-
+            transition: all 1s linear 0s!important;
             min-height: 266px;
         }
 
@@ -795,7 +795,7 @@ section {
                 width: 210px !important;
                 height: 210px;
                 object-fit: contain;
-                transition: all .3s;
+                transition: all 1s;
             }
 
             &+.owl-item {
@@ -842,7 +842,7 @@ section {
             img {
                 width: 128px;
                 height: 128px;
-                transition: all .3s;
+                transition: all 1s;
             }
         }
 
