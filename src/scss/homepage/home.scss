@@ -782,8 +782,8 @@ section {
 
         .owl-stage {
             display: flex;
-            transition: all 1s linear 0s!important;
-            min-height: 266px;
+            transition: all 1s linear!important;
+            min-height: 280px;
         }
 
         .owl-item.active {
@@ -795,14 +795,20 @@ section {
                 width: 210px !important;
                 height: 210px;
                 object-fit: contain;
-                transition: all 1s;
+                transition: all  ease-in-out 1.5s;
             }
 
             &+.owl-item {
                 display: flex;
                 justify-content: flex-start;
             }
-
+            .team--role {
+                position: relative;
+                opacity: 1;
+                top: 0;
+                transition: all 1.2s;
+                transition-delay: 1s;
+            }
             .teammate--name {
                 display: block;
             }
@@ -816,7 +822,15 @@ section {
             display: flex;
             justify-content: flex-end;
             align-items: center;
+            .team--role {
+                position: relative;
+                top: -10px;
+                opacity: 0;
+                max-width: 110px;
+                margin: 0 auto;
+                transition: all 1.2s;
 
+            }
             .item {
                 position: relative;
 
@@ -842,7 +856,7 @@ section {
             img {
                 width: 128px;
                 height: 128px;
-                transition: all 1s;
+                transition: all ease-in-out 1.5s;
             }
         }
 
@@ -871,11 +885,11 @@ section {
             font-weight: 600;
             font-size: $main-font-mobile;
             text-align: center;
-            display: none;
+      
         }
 
         .teammate--rank {
-            display: none;
+       
             font-size: 12px;
             text-align: center;
         }
@@ -1092,7 +1106,7 @@ section {
 
 .customer-support {
     position: fixed;
-    top: 82vh;
+    bottom: 10vh;
     left: 78vw;
     min-height: 65px;
     min-width: 65px;

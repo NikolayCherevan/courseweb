@@ -89,6 +89,7 @@
         box-shadow: 0px 0px 24px #00000029;
         border-radius: 15px;
         max-width: 72vw;
+        width: max-content!important;
         @media (min-width: $large_desk) {
             max-width: 318px;
         }

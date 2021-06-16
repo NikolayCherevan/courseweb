@@ -338,7 +338,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
         responsive: {
             0: {
                 items: 1,
-                autoplay: false
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 5000,
             },
             600: {
                 items: 2,
