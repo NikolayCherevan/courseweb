@@ -1,0 +1,52 @@
+.courses {
+   #hero {
+        background: none;
+       top: 0;
+       padding-top: 0;
+       .uk-container {
+           padding: 0;
+           top: 0;
+           min-height: 600px;
+       }
+    .hero--site-slogan {
+        font-size: 40px;
+        color: $main-color-white;
+        line-height: 38px;
+        margin-bottom: 15px;
+    }
+    .hero--description {
+        font-weight: 600;
+        line-height: 28px;
+        color: $main-color-white;
+    }
+    .hero--right-side {
+        border-radius: 15px 15px 0px 0px;
+        min-height: 533px;
+        background-image: url('./img/course_frontend/EwhCd8nWQAIOIJy.jpg');
+        top: 0;
+        position: absolute;
+        left: 0;
+        width: 100%;
+    }
+    .hero--left-side {
+        position: relative;
+        z-index: 1;
+        padding: 0 15px;
+    }
+    .hero--courses-mark {
+        min-width: 33px;
+        min-height: 28px;
+        font-size: $main-font-mobile;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: $main-color;
+        border-radius: 3px;
+        opacity: 0.8;
+        background-color: #F9F9F9;
+    
+        margin-bottom: 10px;
+        display: inline-block;
+        text-align: center;
+    }
+   }
+}

@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let coordinates = document.querySelectorAll(".item-coords");
     let anchor = document.querySelector(".hero---scroll-to-courses a");
     let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-
+    let homePage = document.querySelector('html').classList.contains('homepage')
     //TweenMax lib init
     //play button magnetic on team section
     const element = document.querySelector(".cursor");
@@ -371,20 +371,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
         return Math.floor(Math.random() * max) * plusOrMinus;
     }
 
+    if(homePage) {
+        const myElement = document.querySelector('.owl-stage');
 
-    const myElement = document.querySelector('.owl-stage');
-    for (let i = 0; i < myElement.children.length; i++) {
-        myElement.children[i].children[0].children[0].children[1].style.transform = `rotate(${getRandomInt(15)}deg)`
+        for (let i = 0; i < myElement.children.length; i++) {
+            myElement.children[i].children[0].children[0].children[1].style.transform = `rotate(${getRandomInt(15)}deg)`
+        }
+        //add event for anchor home
+        function smoothScrollingTo(elem) {
+            elem.addEventListener("click", clickHandler);
+        }
+        smoothScrollingTo(anchor)
     }
 
-
-
-
-
-    //add event for anchor home
-    function smoothScrollingTo(elem) {
-        elem.addEventListener("click", clickHandler);
-    }
 
     function clickHandler(e) {
         e.preventDefault();
@@ -395,7 +394,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             behavior: "smooth"
         });
     }
-    smoothScrollingTo(anchor)
+
 
 
     //check sliders vith viewport width and destroy or init it
