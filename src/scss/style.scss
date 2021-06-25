@@ -40,13 +40,16 @@ body {
 }
 
 .main-button {
-    padding: 15px 35px;
+    padding: 15px 20px;
     border: 2px solid $main-color;
     border-radius: 40px;
     font-size: 14px;
     font-weight: 600;
     line-height: 12px;
     color: $main-color;
+    @media (min-width: $more_than_iphone5) {
+        padding: 15px 35px;
+    }
 }
 
 .offscreen {

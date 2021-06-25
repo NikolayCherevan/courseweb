@@ -350,7 +350,7 @@ section {
             z-index: 5;
 
             .video-iframe--content {
-                min-width: 280px;
+                min-width: auto;
                 max-height: 400px;
 
                 .video-iframe--content--img {

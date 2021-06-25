@@ -11,7 +11,10 @@
     align-items: center;
     .header--burger-text {
         position: absolute;
-        left: -50px;
+        left: -42px;
+        @media (min-width: $more_than_iphone5) {
+            left: -50px;
+        }
     }
     span {
         display: inline-block;

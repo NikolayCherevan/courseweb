@@ -13,7 +13,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let coordinates = document.querySelectorAll(".item-coords");
     let anchor = document.querySelector(".hero---scroll-to-courses a");
     let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-    let homePage = document.querySelector('html').classList.contains('homepage')
+    let homePage = document.querySelector('html').classList.contains('homepage');
+    let coursesPage = document.querySelector('html').classList.contains('courses')
     //TweenMax lib init
     //play button magnetic on team section
     const element = document.querySelector(".cursor");
@@ -301,10 +302,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
             }
         })
 
-   
+
     }
     function getMatrix(element) {
-        if(!element) return false
+        if (!element) return false
         const values = element.style.transform.split(/\w+\(|\);?/);
         const transform = values[1].split(/,\s?/g).map(numStr => parseInt(numStr));
 
@@ -315,7 +316,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         };
     }
     $('.owl-carousel--team').on('changed.owl.carousel', function (e) {
-        if(!getMatrix) return 
+        if (!getMatrix) return
         $('.owl-carousel--team').css('background-position-x', getMatrix(document.querySelector(".owl-carousel--team .owl-stage")).x / 6);
 
     });
@@ -371,7 +372,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         return Math.floor(Math.random() * max) * plusOrMinus;
     }
 
-    if(homePage) {
+    if (homePage) {
         const myElement = document.querySelector('.owl-stage');
 
         for (let i = 0; i < myElement.children.length; i++) {
@@ -383,7 +384,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
         smoothScrollingTo(anchor)
     }
-
 
     function clickHandler(e) {
         e.preventDefault();
@@ -409,26 +409,40 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         destroyUiKitSlider();
         $('.owl-carousel--team').trigger('destroy.owl.carousel');
-        initBubleSlider();
+        if (homePage) {
+            initBubleSlider();
+        }
         const cursor = new Cursor(element, target);
     } else {
         document.querySelectorAll('.uk-slider').forEach((item, index) => {
             UIkit.slider(item);
         })
-        initTeamSlider()
+        initTeamSlider();
+
+        if (coursesPage) {
+            let intElemOffsetHeightHero = document.querySelector('.hero--left-side').offsetHeight;
+            document.querySelector('.hero--right-side').style.height = `${intElemOffsetHeightHero - 151}px`
+        }
     }
     window.addEventListener('resize', function () {
         viewportWidth = window.innerWidth || document.documentElement.clientWidth;
         if (viewportWidth >= 992) {
             destroyUiKitSlider();
             $('.owl-carousel--team').trigger('destroy.owl.carousel');
-            initBubleSlider();
+            if (homePage) {
+                initBubleSlider();
+            }
             const cursor = new Cursor(element, target);
         } else {
             document.querySelectorAll('.uk-slider').forEach((item, index) => {
                 UIkit.slider(item);
             })
-            initTeamSlider()
+            initTeamSlider();
+
+            if (coursesPage) {
+                let intElemOffsetHeightHero = document.querySelector('.hero--left-side').offsetHeight;
+                document.querySelector('.hero--right-side').style.height = `${intElemOffsetHeightHero - 151}px`
+            }
         }
     }, false);
 
@@ -469,6 +483,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
             $(this).append('<span class="offscreen">Go to slide ' + idx + '</span>');
         });
     }
-
-
 });
