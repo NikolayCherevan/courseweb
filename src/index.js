@@ -483,4 +483,34 @@ window.addEventListener('DOMContentLoaded', (event) => {
             $(this).append('<span class="offscreen">Go to slide ' + idx + '</span>');
         });
     }
+
+
+
+    //courses page 
+
+
+    if (coursesPage) {
+        let owl = $('.students-review--owl');
+        owl.owlCarousel({
+            autoplay: false,
+            items: 1,
+            loop: true,
+            onDragged: dragged,
+            onInitialized: init,
+            margin: 50
+        });
+        function init(event) {
+            let items = event.item.count;
+            $('.counter--all-items').text(`${items}`)
+        }
+      
+        function dragged(event) {
+
+            let owlActive = $('.owl-item.active').children().attr('data-count');
+            $('.counter--current-item').text(`${owlActive}`)
+        }
+
+    }
 });
+
+

@@ -268,7 +268,7 @@
     #course-program {
         background-color: $base-bg-secondary;
         padding: 60px 0;
-
+        margin-top: 0;
         h2 {
             margin-bottom: 25px;
         }
@@ -469,6 +469,86 @@
             }
 
         }
-
+    }
+    #students-review {
+        margin-top: 0;
+        background-color: $secondary-bg-gray;
+        .students-review--counter {
+            text-align: center;
+            span {
+                font-size: 20px;
+                display: inline-block;
+                line-height: 28px;
+                font-weight: 600;
+                color: $main-color-white;
+                min-width: 15px;
+            }
+            .counter--border-progress {
+                width: 60px;
+                margin: 0 16px;
+                position: relative;
+                top: 14px;
+                height: 2px;
+                background-color: $base-bg-white;
+            }
+        }
+        .owl-carousel {
+            position: relative;
+            top: -60px;.owl-item {
+                .students-review--owl-card {
+                    width: 90vw;
+                    margin: 0 auto;
+                    background-color: $secondary-bg-white;
+                    padding: 20px;
+                    box-sizing: border-box;
+                    border-radius: 15px;
+                    .owl-card--header {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        .owl-card--header-avatar {
+                            width: 60px;
+                            height: 60px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                        }
+                        .owl-card--header-student {
+                            font-size: 18px;
+                            line-height: 24px;
+                            font-weight: bold;
+                            color: $main-color;
+                            opacity: 0.8;
+                        }
+                        .owl-card--header-icon {
+                            width: 41px;
+                            height: 41px;
+                        }
+                    }
+                    .owl-card--body {
+                       line-height: 28px;
+                       color: $main-color;
+                       margin-bottom: 34px;
+                       .hided {
+                           display: none;
+                       }
+                       .show-more {
+                           font-size: 30px;
+                           color: $main-color-orange;
+                       }
+                    }
+                    .owl-card--footer--wrapper {
+                        display: flex;
+                        .owl-card--footer--wrapper-profession {
+                            font-size: $main-font-mobile;
+                            color: $main-color;
+                            font-weight: bold;
+                            margin-left: 20px;
+                            max-width: 200px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
