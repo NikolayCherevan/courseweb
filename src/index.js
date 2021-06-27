@@ -15,8 +15,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
     let homePage = document.querySelector('html').classList.contains('homepage');
     let coursesPage = document.querySelector('html').classList.contains('courses')
-    //TweenMax lib init
-    //play button magnetic on team section
+        //TweenMax lib init
+        //play button magnetic on team section
     const element = document.querySelector(".cursor");
     const target = document.querySelector(".target");
 
@@ -104,7 +104,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     //add overlay function
     function addOverlay(elem) {
-        elem.addEventListener('click', function () {
+        elem.addEventListener('click', function() {
             bgOverlay.classList.toggle('active')
         })
 
@@ -117,7 +117,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     //burger logic
-    burger.addEventListener('click', function () {
+    burger.addEventListener('click', function() {
         this.classList.toggle('open');
         body.classList.toggle('__nav-open');
         if (!header.classList.contains('sticky')) {
@@ -171,7 +171,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         })
 
         let arrayOfElement = centerCoordinatesOfItem.slice()
-        onmousemove = function (e) {
+        onmousemove = function(e) {
             let x = window.innerWidth;
 
             e.clientX - window.innerWidth / 2 > 0 ? x = e.clientX - 100 : x = e.clientX - 200
@@ -233,7 +233,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     //bgoverlayclick
-    bgOverlay.addEventListener('click', function () {
+    bgOverlay.addEventListener('click', function() {
         stopVideo();
         trailer.classList.remove("active");
         bgOverlay.classList.remove('active');
@@ -245,7 +245,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     document.querySelectorAll('.courses--tabs--title').forEach((item, index) => {
 
-        item.addEventListener('click', function (event) {
+        item.addEventListener('click', function(event) {
             document.querySelectorAll('.courses--tabs--title').forEach((item) => {
                 item.classList.remove('active-title')
             })
@@ -259,8 +259,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     //tabs contains items
     var prevEl = null;
-    $(".courses--tabs--title").each(function (index) {
-        $(this).on('click', function () {
+    $(".courses--tabs--title").each(function(index) {
+        $(this).on('click', function() {
             if (index === 0) {
                 $(".uk-tab-bottom").animate({ scrollLeft: '-1000' }, 300);
                 return
@@ -304,6 +304,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     }
+
     function getMatrix(element) {
         if (!element) return false
         const values = element.style.transform.split(/\w+\(|\);?/);
@@ -315,7 +316,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             z: transform[2]
         };
     }
-    $('.owl-carousel--team').on('changed.owl.carousel', function (e) {
+    $('.owl-carousel--team').on('changed.owl.carousel', function(e) {
         if (!getMatrix) return
         $('.owl-carousel--team').css('background-position-x', getMatrix(document.querySelector(".owl-carousel--team .owl-stage")).x / 6);
 
@@ -420,11 +421,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
         initTeamSlider();
 
         if (coursesPage) {
-            let intElemOffsetHeightHero = document.querySelector('.hero--left-side').offsetHeight;
-            document.querySelector('.hero--right-side').style.height = `${intElemOffsetHeightHero - 151}px`
+            if (!document.getElementById('hero').classList.contains('course-stoped')) {
+                let intElemOffsetHeightHero = document.querySelector('.hero--left-side').offsetHeight;
+                document.querySelector('.hero--right-side').style.height = `${intElemOffsetHeightHero - 151}px`
+            }
         }
     }
-    window.addEventListener('resize', function () {
+    window.addEventListener('resize', function() {
         viewportWidth = window.innerWidth || document.documentElement.clientWidth;
         if (viewportWidth >= 992) {
             destroyUiKitSlider();
@@ -438,11 +441,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 UIkit.slider(item);
             })
             initTeamSlider();
-
-            if (coursesPage) {
+            if (!document.getElementById('hero').classList.contains('course-stoped')) {
                 let intElemOffsetHeightHero = document.querySelector('.hero--left-side').offsetHeight;
                 document.querySelector('.hero--right-side').style.height = `${intElemOffsetHeightHero - 151}px`
             }
+
         }
     }, false);
 
@@ -453,22 +456,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
     //passive events seo
 
     jQuery.event.special.touchstart = {
-        setup: function (_, ns, handle) {
+        setup: function(_, ns, handle) {
             this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
         }
     };
     jQuery.event.special.touchmove = {
-        setup: function (_, ns, handle) {
+        setup: function(_, ns, handle) {
             this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
         }
     };
     jQuery.event.special.wheel = {
-        setup: function (_, ns, handle) {
+        setup: function(_, ns, handle) {
             this.addEventListener("wheel", handle, { passive: true });
         }
     };
     jQuery.event.special.mousewheel = {
-        setup: function (_, ns, handle) {
+        setup: function(_, ns, handle) {
             this.addEventListener("mousewheel", handle, { passive: true });
         }
     };
@@ -477,7 +480,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     function addDotButtonText() {
-        $('.owl-dot').each(function () {
+        $('.owl-dot').each(function() {
             $(this).find('.offscreen').remove();
             let idx = $(this).index() + 1;
             $(this).append('<span class="offscreen">Go to slide ' + idx + '</span>');
@@ -491,6 +494,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     if (coursesPage) {
         let owl = $('.students-review--owl');
+
+
         owl.owlCarousel({
             autoplay: false,
             items: 1,
@@ -499,18 +504,92 @@ window.addEventListener('DOMContentLoaded', (event) => {
             onInitialized: init,
             margin: 50
         });
+
         function init(event) {
             let items = event.item.count;
             $('.counter--all-items').text(`${items}`)
+            let showMore = document.querySelectorAll('.show-more');
+            showMore.forEach(item => {
+                item.addEventListener('click', function(event) {
+                    event.target.classList.add('hided');
+                    event.target.nextElementSibling.classList.remove('hided')
+                })
+            })
         }
-      
+
         function dragged(event) {
 
             let owlActive = $('.owl-item.active').children().attr('data-count');
             $('.counter--current-item').text(`${owlActive}`)
         }
 
+
+        //time to course 
+        let daysText = document.querySelector(".days.time-wrapper--number");
+        let hoursText = document.querySelector(".hours.time-wrapper--number");
+        let minutesText = document.querySelector(".minutes.time-wrapper--number");
+        let secondText = document.querySelector(".seconds.time-wrapper--number");
+        let timeWrapperCourse = document.querySelector("#hero");
+        let courseEnd = document.querySelector(".end-course");
+
+        // Массив данных о времени
+        let end_date = {
+            "full_year": "2021", // Год
+            "month": "06", // Номер месяца
+            "day": "28", // День
+            "hours": "13", // Час
+            "minutes": "14", // Минуты
+            "seconds": "46" // Секунды
+        }
+
+        function diffSubtract(date1, date2) {
+            return date2 - date1;
+        }
+
+        let end_date_str = `${end_date.full_year}-${end_date.month}-${end_date.day}T${end_date.hours}:${end_date.minutes}:${end_date.seconds}`;
+        let timer = setInterval(function() {
+            let now = new Date();
+            let date = new Date(end_date_str);
+            let ms_left = diffSubtract(now, date);
+            if (ms_left <= 0) { // То
+                clearInterval(timer);
+                timeWrapperCourse.classList.add('course-stoped');
+                courseEnd.innerHTML = "Набор окончен";
+                let intElemOffsetHeightHero = document.querySelector('.hero--left-side').offsetHeight;
+                document.querySelector('.hero--right-side').style.height = `${intElemOffsetHeightHero +30}px`
+            } else {
+                let res = new Date(ms_left);
+                daysText.innerHTML = res.getUTCDate() - 1;
+                hoursText.innerHTML = res.getUTCHours();
+                minutesText.innerHTML = res.getUTCMinutes();
+                secondText.innerHTML = res.getUTCSeconds();
+                timeWrapperCourse.classList.remove('course-stoped');
+                // checkTimeText()
+            }
+        }, 1000)
+
+        // function checkTimeText() {
+        //     document.querySelectorAll('.time-wrapper--number').forEach(item => {
+        //         if (!item.classList.contains('days')) {
+        //             console.log(item.innerHTML == 1)
+        //             if (item.innerHTML == 1) {
+        //                 if (item.nextElementSibling.innerHTML.split('')[item.nextElementSibling.innerHTML.split('').length - 1] == 'н' ||
+        //                     item.nextElementSibling.innerHTML.split('')[item.nextElementSibling.innerHTML.split('').length - 1] == 'д') {
+        //                     let itemText = item.nextElementSibling
+        //                     itemText.innerHTML = itemText.innerHTML + "у";
+        //                 }
+        //             }
+        //             if (item.innerHTML == 2 || item.innerHTML == 3 || item.innerHTML == 4) {
+        //                 if (item.nextElementSibling.innerHTML.split('')[item.nextElementSibling.innerHTML.split('').length - 1] == 'н' ||
+        //                     item.nextElementSibling.innerHTML.split('')[item.nextElementSibling.innerHTML.split('').length - 1] == 'д') {
+        //                     let itemText = item.nextElementSibling
+        //                     itemText.innerHTML = itemText.innerHTML + "и";
+        //                 }
+        //             }
+        //         }
+        //     })
+        // }
+
+
     }
 });
-
-

@@ -8,7 +8,7 @@
             display: inline-block;
             padding: 5px 10px;
             border-radius: 3px;
-            background-color:rgba(255,129,16,0.8);
+            background-color: rgba(255, 129, 16, 0.8);
         }
     }
     .main-button-action {
@@ -28,7 +28,6 @@
         margin-bottom: 25px;
         line-height: 40px;
     }
-
     .orange-attention {
         display: flex;
         justify-content: center;
@@ -36,11 +35,10 @@
         min-width: 35px;
         height: 35px;
         max-width: 35px;
-        background-color:rgba(255,129,16,0.8);
+        background-color: rgba(255, 129, 16, 0.8);
         border-radius: 50%;
         color: $main-color-white;
     }
-
     section p {
         font-size: $main-font-mobile;
         line-height: 24px;
@@ -48,12 +46,10 @@
         max-width: 489px;
         color: $main-color;
     }
-
     #hero {
         background: none;
         top: 0;
         padding-top: 0;
-
         .uk-container {
             padding: 0;
             top: 0;
@@ -61,14 +57,12 @@
             height: -webkit-fill-available;
             height: fill-available;
         }
-
         .hero--site-slogan {
             font-size: 40px;
             color: $main-color-white;
             line-height: 38px;
             margin-bottom: 15px;
         }
-
         .hero--description {
             font-weight: 600;
             line-height: 28px;
@@ -76,7 +70,6 @@
             margin-bottom: 30px;
             font-size: 16px;
         }
-
         .hero--right-side {
             border-radius: 15px 15px 0px 0px;
             background-image: url('./img/course_frontend/EwhCd8nWQAIOIJy.jpg');
@@ -88,7 +81,6 @@
             left: 0;
             width: 100%;
         }
-
         .hero--left-side {
             position: relative;
             z-index: 1;
@@ -97,19 +89,16 @@
             line-height: 23px;
             font-weight: 600;
             color: #2B2E30;
-
             .hero--regisration-gray-bg {
                 background-color: $base-bg-secondary;
                 padding: 30px 20px 20px;
                 border-radius: 15px 15px 0 0;
             }
-
             .registration--footer {
                 text-align: center;
                 background-color: $base-bg-orange;
                 padding: 25px 0;
                 border-radius: 0 0 15px 15px;
-
                 a {
                     color: $main-color-white;
                     font-size: 16px;
@@ -117,24 +106,19 @@
                     text-decoration: none;
                 }
             }
-
             .hero--left-side--regisration {
                 p {
                     font-size: $main-font-mobile;
                     margin-bottom: 10px;
                     opacity: 0.8;
                 }
-
                 .left-side--regisration-time-wrapper {
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
-
                     @media (min-width: $more_than_iphone5) {
                         grid-template-columns: 1fr 1fr 1fr 1fr;
                     }
-
                     grid-gap: 10px;
-
                     .regisration-time-wrapper--blocks {
                         width: 68px;
                         height: 67px;
@@ -145,52 +129,41 @@
                         align-items: center;
                         flex-direction: column;
                     }
-
                     .time-wrapper--number {
                         font-size: 20px;
                         text-align: center;
                     }
-
                     .time-wrapper--text {
                         font-size: $main-font-mobile;
                         text-align: center;
                     }
                 }
-
                 .registration--free-space {
                     margin: 20px 0;
                 }
-
                 .registration--number-of-free-space {
                     color: $main-color-orange;
                     font-size: 54px;
-
                     padding-bottom: 17px;
                 }
             }
-
             .hero--post-description {
                 display: flex;
                 padding: 15px 20px;
-
                 .hero--post-description--attention {
-
                     font-size: 25px;
                     line-height: 28px;
                     margin-right: 13px;
                 }
-
                 p {
                     font-size: $main-font-mobile;
                     line-height: 24px;
-
                     span {
                         color: $main-color-orange;
                     }
                 }
             }
         }
-
         .hero--courses-mark {
             min-width: 33px;
             min-height: 28px;
@@ -204,7 +177,6 @@
             position: relative;
             margin-bottom: 10px;
             display: inline-block;
-
             span {
                 position: absolute;
                 top: 50%;
@@ -212,8 +184,30 @@
                 transform: translate(-50%, -50%);
             }
         }
+        &.course-stoped {
+            .registration--footer {
+                display: none;
+            }
+            .hero--post-description {
+                display: none;
+            }
+            .left-side--regisration-time-wrapper {
+                display: none;
+            }
+            .hero--regisration-gray-bg {
+                border-radius: 15px;
+            }
+            .registration--free-space {
+                display: none;
+            }
+            .registration--number-of-free-space {
+                display: none;
+            }
+            .left-side--regisration-time-wrapper {
+                display: none!important;
+            }
+        }
     }
-
     #course-for {
         .course-for--numbers-achievement {
             display: grid;
@@ -228,7 +222,6 @@
                 font-size: $main-font-mobile;
                 line-height: 22px;
                 font-weight: 600;
-
                 .numbers-achievement--wrapper-number {
                     color: $main-color-orange;
                     font-size: 50px;
@@ -236,7 +229,6 @@
                     font-weight: bold;
                     margin-bottom: 10px;
                 }
-
                 &:first-child {
                     .numbers-achievement--wrapper-number {
                         font-size: 80px;
@@ -245,10 +237,8 @@
             }
         }
     }
-
     #video-represent {
         margin-top: 60px;
-
         .video-iframe .video-iframe--banner {
             .video-iframe--content {
                 margin-top: 35px;
@@ -259,12 +249,10 @@
                 }
             }
         }
-
         .target {
             height: auto;
         }
     }
-
     #course-program {
         background-color: $base-bg-secondary;
         padding: 60px 0;
@@ -272,15 +260,12 @@
         h2 {
             margin-bottom: 25px;
         }
-
         .uk-accordion>:nth-child(n+2) {
             margin-top: 30px;
         }
-
         .uk-accordion {
             font-size: $main-font-mobile;
             color: $main-color;
-
             .uk-open {
                 .uk-accordion-title {
                     &::before {
@@ -289,7 +274,6 @@
                     }
                 }
             }
-
             .uk-accordion-title {
                 border-radius: 50px;
                 background-color: $base-bg-white;
@@ -297,41 +281,32 @@
                 padding: 25px 30px;
                 font-weight: 600;
                 text-transform: initial;
-
                 &:hover {
                     color: $main-color;
                 }
-
                 &::before {
                     transition: transform .3s;
                     background-image: url('./img/arrow_down.svg')
                 }
             }
-
             .uk-accordion-content {
                 p {
                     font-weight: 600;
                     padding: 0 30px;
                 }
-
             }
         }
-
     }
-
     #course-technology {
         padding-bottom: 50px;
-
         .course-technology--title {
             margin-bottom: 42px;
         }
-
         .course-technology--grid {
             grid-template-columns: 1fr 1fr;
             display: grid;
             grid-gap: 15px;
             margin-bottom: 28px;
-
             .course-technology--grid-item {
                 display: flex;
                 justify-content: center;
@@ -339,14 +314,12 @@
                 padding: 22px;
                 border-radius: 15px;
                 background-color: $secondary-bg-white;
-
                 img {
                     object-fit: contain;
                     margin: 0 auto;
                     width: 81px;
                     height: 70px;
                 }
-
                 p {
                     margin: 0 auto;
                     color: $main-color;
@@ -358,14 +331,12 @@
                 }
             }
         }
-
         .course-technology--follow-us {
             margin-bottom: 20px;
             font-size: 16px;
             line-height: 24px;
             font-weight: 600;
         }
-
         .course-technology--get-all {
             display: flex;
             align-items: center;
@@ -374,25 +345,20 @@
             font-weight: 600;
             justify-content: center;
             text-decoration: none;
-
             span {
                 font-weight: 400;
                 font-size: 28px;
             }
-
             .orange-attention {
                 margin-left: 19px;
             }
         }
     }
-
     #course-price {
         margin: 0;
-
         h2 {
             margin-bottom: 24px;
         }
-
         .course-price--price-wrapper {
             background-color: $secondary-bg-white;
             border-radius: 15px;
@@ -406,7 +372,6 @@
                 text-align: center;
                 position: relative;
                 top: -15px;
-
                 &::before {
                     content: '';
                     width: 0;
@@ -417,7 +382,6 @@
                     top: 0;
                     left: -15px;
                 }
-
                 &::after {
                     border-left: 86.5px solid transparent;
                     border-right: 86.5px solid transparent;
@@ -429,18 +393,14 @@
                     left: 0;
                     bottom: -23px;
                 }
-
                 span {
                     line-height: 70px;
                     font-weight: bold;
                     color: $main-color-white;
                 }
-
                 .main-price--price--cost {
                     font-size: 30px;
-
                 }
-
                 .main-price--currency {
                     font-size: 16px;
                 }
@@ -467,7 +427,6 @@
                     margin-bottom: 34px;
                 }
             }
-
         }
     }
     #students-review {
@@ -494,7 +453,8 @@
         }
         .owl-carousel {
             position: relative;
-            top: -60px;.owl-item {
+            top: -60px;
+            .owl-item {
                 .students-review--owl-card {
                     width: 90vw;
                     margin: 0 auto;
@@ -526,16 +486,16 @@
                         }
                     }
                     .owl-card--body {
-                       line-height: 28px;
-                       color: $main-color;
-                       margin-bottom: 34px;
-                       .hided {
-                           display: none;
-                       }
-                       .show-more {
-                           font-size: 30px;
-                           color: $main-color-orange;
-                       }
+                        line-height: 28px;
+                        color: $main-color;
+                        margin-bottom: 34px;
+                        .hided {
+                            display: none;
+                        }
+                        .show-more {
+                            font-size: 30px;
+                            color: $main-color-orange;
+                        }
                     }
                     .owl-card--footer--wrapper {
                         display: flex;
