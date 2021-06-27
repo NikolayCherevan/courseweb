@@ -509,6 +509,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             let items = event.item.count;
             $('.counter--all-items').text(`${items}`)
             let showMore = document.querySelectorAll('.show-more');
+            addDotButtonText();
             showMore.forEach(item => {
                 item.addEventListener('click', function(event) {
                     event.target.classList.add('hided');
