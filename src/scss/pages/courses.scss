@@ -3,12 +3,24 @@
         // .header--main-links {
         //     display: none;
         // }
+        @media (min-width: $note_desk) {
+            .header--dropdown--modile:not(.sticky) {
+                .main-button.dropdown {
+                    border: solid 2px $main-color-white;
+                    color: $main-color-white;
+                    &:after {
+                        background-image: url('img/arrow_down_white.svg');
+                    }
+                }
+            }
+        }
         @media (min-width: $large_desk) {
             max-width: 1196px;
             margin: 0 auto;
             .header--desk-menu:not(.sticky) {
                 width: 100%;
                 right: 0;
+                right: 65px;
                 display: flex;
                 justify-content: flex-end;
                 .without-border-content {
@@ -25,7 +37,7 @@
                     justify-content: flex-end;
                     .header--dropdown--title:nth-child(2) {
                         position: absolute;
-                        left: 143px;
+                        left: 222px;
                     }
                 }
             }
@@ -116,9 +128,10 @@
                     &:before {
                         content: '';
                         position: absolute;
-                        top: -500px;
+                        height: 490px;
+                        position: absolute;
+                        top: -485px;
                         width: 100%;
-                        height: 100vh;
                         background-image: url('./img/course_frontend/EwhCd8nWQAIOIJy.jpg');
                     }
                 }

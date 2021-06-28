@@ -556,7 +556,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         let end_date = {
             "full_year": "2021", // Год
             "month": "06", // Номер месяца
-            "day": "29", // День
+            "day": "30", // День
             "hours": "13", // Час
             "minutes": "14", // Минуты
             "seconds": "46" // Секунды
