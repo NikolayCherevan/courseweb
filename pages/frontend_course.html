@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="courses">
+<html lang="en" class="courses front">
 
 <head>
     <meta charset="utf-8">
@@ -246,10 +246,11 @@
     <div class="menu-bg"> </div>
 
     <section id="hero">
-        <div class="uk-container">
+        <div class="uk-container uk-container-small ">
             <div class="hero--left-side">
                 <span class="hero--courses-mark"> <span>IT</span> </span>
-                <h1 class="hero--site-slogan uk-text-left">Frontend</h1>
+                <h1 class="hero--site-slogan uk-text-left  hided-on-mobile"><span class="hero--site-slogan-padding">Профeсія Front-End</span> програміст</h1>
+                <h1 class="hero--site-slogan uk-text-left hided-on-pc">Frontend</h1>
                 <p class="hero--description">Ми вчимо вас на власному досвіді. Наші курси зосереджені на цінних навичках і перевірених процесах, які поліпшать вашу роботу, вразять ваших клієнтів.</p>
                 <div class="hero--left-side--regisration ">
                     <div class="hero--regisration-gray-bg">
@@ -288,7 +289,7 @@
 
     </section>
     <section id="course-for">
-        <div class="uk-container">
+        <div class="uk-container uk-container-small ">
             <h2>Для кого курс</h2>
             <p>Ми вчимо вас на власному досвіді. Наші курси зосереджені на цінних навичках і перевірених процесах, які поліпшать вашу роботу, вразять ваших клієнтів і допоможуть вам побудувати свій кар'єрний шлях.</p>
             <div class="course-for--numbers-achievement">
@@ -314,53 +315,56 @@
 
     </section>
     <section id="video-represent">
-        <div class="uk-container">
+        <div class="uk-container uk-container-small ">
             <h2>Навіщо цей курс</h2>
             <p>Ми вчимо вас на власному досвіді. Наші курси зосереджені на цінних навичках і перевірених процесах, які поліпшать вашу роботу, вразять ваших клієнтів і допоможуть вам побудувати свій кар'єрний шлях.</p>
-            <div class="video-iframe">
-                <div class="video-iframe--banner">
-                    <div class="video-iframe--content">
-                        <div class="target">
-                            <a href="#" class="video__button text"> play_video <img data-src="../img/icon_video.svg" class="lazyload" alt="play video"> </a>
-                        </div>
+
+        </div>
+        <div class="video-iframe">
+            <div class="video-iframe--banner">
+                <div class="video-iframe--content">
+                    <div class="target">
+                        <a href="#" class="video__button text"> <span> Про курс</span> <img data-src="../img/icon_video.svg" class="lazyload" alt="play video"> </a>
                     </div>
                 </div>
-                <div class="trailer">
-                    <div class="cover">
-
-                        <div class="tv">
-                            <div class="screen" id="tv"></div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+            <div class="trailer">
+                <div class="cover">
 
-
+                    <div class="tv">
+                        <div class="screen" id="tv"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="course-program">
-        <div class="uk-container">
+        <div class="uk-container uk-container-small ">
             <h2>Програма курсів</h2>
             <ul uk-accordion>
                 <li class="uk-open">
-                    <a class="uk-accordion-title" href="#">Старт</a>
+                    <a href="#" class="registration-action">Реєструйся</a>
+                    <a class="uk-accordion-title" href="#">Старт </a>
                     <div class="uk-accordion-content">
                         <p>Це старт. Тут ми освоїмо базовий синтаксис мови JavaScript. Саме тут ми наб'ємо перші синці та познайомимося із змінними, циклами, функціями, логічними операторами та іншими базовими конструкціями JS.</p>
                     </div>
                 </li>
                 <li>
+                    <a href="#" class="registration-action">Реєструйся</a>
                     <a class="uk-accordion-title" href="#">HTML/CSS</a>
                     <div class="uk-accordion-content">
                         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.</p>
                     </div>
                 </li>
                 <li>
+                    <a href="#" class="registration-action">Реєструйся</a>
                     <a class="uk-accordion-title" href="#">Навчимося працювати з GitHub</a>
                     <div class="uk-accordion-content">
                         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
                     </div>
                 </li>
                 <li>
+                    <a href="#" class="registration-action">Реєструйся</a>
                     <a class="uk-accordion-title" href="#">Реактивненько вриваємось в світ фреймворків та
                         UI-бібліотек</a>
                     <div class="uk-accordion-content">
@@ -368,6 +372,7 @@
                     </div>
                 </li>
                 <li>
+                    <a href="#" class="registration-action">Реєструйся</a>
                     <a class="uk-accordion-title" href="#">HTML/CSS</a>
                     <div class="uk-accordion-content">
                         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
@@ -377,7 +382,7 @@
             </ul>
     </section>
     <section id="course-technology">
-        <div class="uk-container">
+        <div class="uk-container uk-container-small ">
             <h2 class="uk-text-center course-technology--title">Технології</h2>
             <div class="course-technology--grid">
                 <div class="course-technology--grid-item">
@@ -396,6 +401,30 @@
                     <img src="../img/courses/react.svg" alt="React">
                     <p class="course-technology--grid-item--description">React</p>
                 </div>
+                <div class="course-technology--grid-item">
+                    <img src="../img/courses/react.svg" alt="React">
+                    <p class="course-technology--grid-item--description">React</p>
+                </div>
+                <div class="course-technology--grid-item">
+                    <img src="../img/courses/react.svg" alt="React">
+                    <p class="course-technology--grid-item--description">React</p>
+                </div>
+                <div class="course-technology--grid-item">
+                    <img src="../img/courses/react.svg" alt="React">
+                    <p class="course-technology--grid-item--description">React</p>
+                </div>
+                <div class="course-technology--grid-item">
+                    <img src="../img/courses/react.svg" alt="React">
+                    <p class="course-technology--grid-item--description">React</p>
+                </div>
+                <div class="course-technology--grid-item">
+                    <img src="../img/courses/react.svg" alt="React">
+                    <p class="course-technology--grid-item--description">React</p>
+                </div>
+                <div class="course-technology--grid-item">
+                    <img src="../img/courses/react.svg" alt="React">
+                    <p class="course-technology--grid-item--description">React</p>
+                </div>
             </div>
             <p class="uk-text-center course-technology--follow-us">Приєднуйся до нас та отримай доступ до всіх технологій
             </p>
@@ -404,7 +433,7 @@
         </div>
     </section>
     <section id="course-price">
-        <div class="uk-container">
+        <div class="uk-container uk-container-small ">
             <h2 class="uk-text-center course-technology--title">Ціна за курс</h2>
             <div class="course-price--price-wrapper">
                 <p class="price-wrapper--main-price">
@@ -422,12 +451,14 @@
                             <li>+380 97 123 33 44</li>
                         </ul>
                     </div>
+                    <a href="#" class="main-button-action hided-on-mobile"> Зареєструйся </a>
                 </div>
-                <a href="#" class="main-button-action"> Зареєструйся </a>
+                <a href="#" class="main-button-action "> Зареєструйся </a>
             </div>
         </div>
     </section>
     <section id="students-review">
+        <h2 class="uk-text-center students-review--title">Про нас кажуть</h2>
         <div class="owl-carousel students-review--owl">
             <div class="slides" data-count='1'>
                 <div class="students-review--owl-card">
@@ -527,12 +558,22 @@
             <span class="counter--border-progress"><span class="pulse"></span></span>
             <span class="counter--all-items"></span>
         </div>
+        <a class="students-review--get-all" href="#"> Додати відгук <span class="students-review--plus-wrapper"> <span class="orange-attention"> +
+                    </span></span> </a>
     </section>
     <section id="registration">
-        <div class="uk-container">
+        <div class="uk-container uk-container-small ">
             <h2 class="registration--description"> Реєструйся на онлайн навчання та отримай <span>15%</span> знижку!
             </h2>
-
+            <form>
+                <select class="nice-select wide">
+                    <option value="1">Вибери курс</option>
+                    <option value="2">Another option</option>
+                    <option value="3">A disabled option</option>
+                    <option value="4">Potato</option>
+                </select>
+                <button class="registration--registration-on-course" type="submit">Зареєструйся</button>
+            </form>
         </div>
     </section>
     <div id="bg-overlay">

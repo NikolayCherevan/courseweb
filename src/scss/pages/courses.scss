@@ -1,4 +1,7 @@
 .courses {
+    .uk-container-small {
+        max-width: 990px;
+    }
     .course-category {
         display: block;
         span {
@@ -23,6 +26,9 @@
         position: relative;
         left: 50%;
         transform: translate(-50%, 0);
+        &.hided-on-mobile {
+            display: none;
+        }
     }
     section h2 {
         margin-bottom: 25px;
@@ -41,27 +47,125 @@
     }
     section p {
         font-size: $main-font-mobile;
+        @media (min-width: $note_desk) {
+            font-size: 16px;
+        }
         line-height: 24px;
         margin-left: auto;
-        max-width: 489px;
+        // max-width: 590px;
         color: $main-color;
     }
     #hero {
         background: none;
         top: 0;
         padding-top: 0;
+        min-height: initial;
         .uk-container {
             padding: 0;
             top: 0;
             height: -moz-available;
             height: -webkit-fill-available;
             height: fill-available;
+            @media (min-width: $note_desk) {
+                max-height: 100vh;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                .hero--right-side {
+                    min-height: 130vh;
+                    min-width: 600px;
+                    position: initial;
+                    border-radius: 0 0 15px 15px;
+                    position: relative;
+                    left: -137px;
+                    top: -200px;
+                }
+                .hero--site-slogan {
+                    font-size: 45px;
+                    line-height: 39px;
+                    position: relative;
+                    left: 0;
+                    .hero--site-slogan-padding {
+                        border-radius: 15px;
+                        display: inline-block;
+                        padding: 15px 20px 15px 0;
+                        background-color: $base-bg-white;
+                        white-space: pre;
+                    }
+                }
+                .hero--site-slogan,
+                .hero--description {
+                    color: $main-color;
+                }
+                .hero--description {
+                    font-size: $main-font-mobile;
+                    font-weight: 400;
+                    max-width: 388px;
+                    margin-left: 0;
+                    position: relative;
+                    border-radius: 15px;
+                    padding: 15px 20px 15px 0;
+                    background-color: $base-bg-white;
+                    left: 0;
+                }
+                .hero--courses-mark {
+                    background-color: transparent;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 28px;
+                    opacity: 1;
+                    position: relative;
+                    left: 0;
+                }
+                .hero--left-side {
+                    padding-right: 0;
+                    .hero--post-description {
+                        margin-left: 0;
+                        position: relative;
+                        left: 0;
+                        padding-left: 0;
+                    }
+                    .hero--regisration-gray-bg {
+                        border-radius: 30px 0px 0 30px;
+                        padding: 41px 42px;
+                        padding-right: 86px;
+                    }
+                    .hero--left-side--regisration {
+                        max-width: initial;
+                        position: relative;
+                        left: -45px;
+                        p {
+                            font-size: 16px;
+                        }
+                        display: flex;
+                    }
+                    .registration--footer {
+                        border-radius: 0px 30px 30px 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        max-width: 92px;
+                        a {
+                            transform: rotate( -90deg);
+                            font-size: 22px;
+                            line-height: 12px;
+                        }
+                    }
+                }
+            }
         }
         .hero--site-slogan {
             font-size: 40px;
             color: $main-color-white;
             line-height: 38px;
             margin-bottom: 15px;
+            @media (min-width: $tablet) {
+                &.hided-on-pc {
+                    display: none;
+                }
+                &.hided-on-mobile {
+                    display: block;
+                }
+            }
         }
         .hero--description {
             font-weight: 600;
@@ -88,7 +192,7 @@
             padding-top: 30px;
             line-height: 23px;
             font-weight: 600;
-            color: #2B2E30;
+            color: $main-color;
             .hero--regisration-gray-bg {
                 background-color: $base-bg-secondary;
                 padding: 30px 20px 20px;
@@ -107,16 +211,20 @@
                 }
             }
             .hero--left-side--regisration {
+                max-width: 535px;
+                margin: 0 auto;
                 p {
                     font-size: $main-font-mobile;
                     margin-bottom: 10px;
                     opacity: 0.8;
+                    margin-left: 0;
                 }
                 .left-side--regisration-time-wrapper {
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
                     @media (min-width: $more_than_iphone5) {
                         grid-template-columns: 1fr 1fr 1fr 1fr;
+                        max-width: 324px;
                     }
                     grid-gap: 10px;
                     .regisration-time-wrapper--blocks {
@@ -139,7 +247,7 @@
                     }
                 }
                 .registration--free-space {
-                    margin: 20px 0;
+                    margin: 30px 0;
                 }
                 .registration--number-of-free-space {
                     color: $main-color-orange;
@@ -150,6 +258,8 @@
             .hero--post-description {
                 display: flex;
                 padding: 15px 20px;
+                max-width: 351px;
+                margin: 0 auto;
                 .hero--post-description--attention {
                     font-size: 25px;
                     line-height: 28px;
@@ -209,6 +319,13 @@
         }
     }
     #course-for {
+        @media (min-width: $note_desk) {
+            margin-top: 120px;
+        }
+        p {
+            max-width: 590px;
+            margin-right: 67px;
+        }
         .course-for--numbers-achievement {
             display: grid;
             grid-template-columns: 1fr;
@@ -216,6 +333,14 @@
             margin-top: 30px;
             @media (min-width: $more_than_iphone5) {
                 grid-template-columns: 1fr 1fr;
+            }
+            @media (min-width: $note_desk) {
+                grid-gap: 100px;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+            .numbers-achievement--wrapper-description {
+                max-width: 181px;
+                line-height: 24px;
             }
             .numbers-achievement--wrapper {
                 color: $main-color;
@@ -228,25 +353,76 @@
                     line-height: 70px;
                     font-weight: bold;
                     margin-bottom: 10px;
+                    @media (min-width: $note_desk) {
+                        margin-bottom: 20px;
+                        position: relative;
+                        top: 17px;
+                    }
                 }
                 &:first-child {
                     .numbers-achievement--wrapper-number {
                         font-size: 80px;
+                        @media (min-width: $note_desk) {
+                            font-size: 100px;
+                            top: 0;
+                        }
                     }
                 }
+                // @media (min-width: $note_desk) {
+                //     position: relative;
+                //     .numbers-achievement--wrapper-description,
+                //     .numbers-achievement--wrapper-number {
+                //         width: 90%;
+                //         left: 50%;
+                //         transform: translate(-50%, 0);
+                //         position: absolute;
+                //     }
+                // }
             }
         }
     }
     #video-represent {
         margin-top: 60px;
         font-size: 0;
-        .video-iframe .video-iframe--banner {
-            .video-iframe--content {
-                margin-top: 35px;
-                margin-bottom: 60px;
-                min-width: auto;
-                .video__button img {
-                    top: 0;
+        @media (min-width: $note_desk) {
+            margin-top: 80px;
+        }
+        p {
+            margin-left: 0;
+            max-width: 691px;
+        }
+        h2 {
+            margin-left: auto;
+            max-width: 280px;
+        }
+        .video-iframe {
+            max-width: 1196px;
+            margin: 0 auto;
+            .video-iframe--banner {
+                .video-iframe--content {
+                    margin-top: 35px;
+                    margin-bottom: 60px;
+                    min-width: auto;
+                    @media (min-width: $note_desk) {
+                        margin-top: 70px;
+                        margin-bottom: 0;
+                        max-height: 644px;
+                    }
+                    .video__button img {
+                        top: 0;
+                    }
+                    .video__button.text {
+                        font-size: 16px;
+                        display: flex;
+                        flex-direction: column-reverse;
+                        align-items: center;
+                        text-decoration: none;
+                        span {
+                            display: inline-block;
+                            margin-top: 20px;
+                            color: $main-color-white;
+                        }
+                    }
                 }
             }
         }
@@ -258,16 +434,42 @@
         background-color: $base-bg-secondary;
         padding: 60px 0;
         margin-top: 0;
+        @media (min-width: $note_desk) {
+            padding: 120px 0;
+            h2 {
+                text-align: center;
+                margin-bottom: 40px!important;
+            }
+        }
         h2 {
             margin-bottom: 25px;
         }
         .uk-accordion>:nth-child(n+2) {
             margin-top: 30px;
         }
+        .uk-container {
+            max-width: 792px;
+        }
         .uk-accordion {
             font-size: $main-font-mobile;
             color: $main-color;
+            .registration-action {
+                display: none;
+            }
             .uk-open {
+                position: relative;
+                @media (min-width: $note_desk) {
+                    .registration-action {
+                        display: inline-block;
+                        position: absolute;
+                        padding: 15px 35px;
+                        right: 66px;
+                        top: 14px;
+                        background-color: $main-color-orange;
+                        color: $main-color-white;
+                        border-radius: 50px;
+                    }
+                }
                 .uk-accordion-title {
                     &::before {
                         transform: rotate(180deg);
@@ -289,6 +491,9 @@
                     transition: transform .3s;
                     background-image: url('./img/arrow_down.svg')
                 }
+                @media (min-width: $note_desk) {
+                    font-size: 16px;
+                }
             }
             .uk-accordion-content {
                 p {
@@ -300,14 +505,29 @@
     }
     #course-technology {
         padding-bottom: 50px;
+        @media (min-width: $note_desk) {
+            margin-top: 110px;
+            padding-bottom: 123px;
+        }
         .course-technology--title {
-            margin-bottom: 42px;
+            margin-bottom: 40px;
         }
         .course-technology--grid {
             grid-template-columns: 1fr 1fr;
             display: grid;
             grid-gap: 15px;
             margin-bottom: 28px;
+            .course-technology--grid-item:nth-of-type(4)~.course-technology--grid-item {
+                display: none;
+            }
+            @media (min-width: $note_desk) {
+                grid-gap: 20px;
+                margin-bottom: 0;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                .course-technology--grid-item:nth-of-type(4)~.course-technology--grid-item {
+                    display: flex;
+                }
+            }
             .course-technology--grid-item {
                 display: flex;
                 justify-content: center;
@@ -337,6 +557,9 @@
             font-size: 16px;
             line-height: 24px;
             font-weight: 600;
+            @media (min-width: $note_desk) {
+                display: none;
+            }
         }
         .course-technology--get-all {
             display: flex;
@@ -346,6 +569,9 @@
             font-weight: 600;
             justify-content: center;
             text-decoration: none;
+            @media (min-width: $note_desk) {
+                display: none;
+            }
             span {
                 font-weight: 400;
                 font-size: 28px;
@@ -359,12 +585,19 @@
         margin: 0;
         h2 {
             margin-bottom: 24px;
+            @media (min-width: $note_desk) {
+                text-align: left!important;
+                margin-bottom: 40px;
+            }
         }
         .course-price--price-wrapper {
             background-color: $secondary-bg-white;
             border-radius: 15px;
             padding-bottom: 38.5px;
             margin-bottom: 113px;
+            @media (min-width: $note_desk) {
+                margin-bottom: 0;
+            }
             .price-wrapper--main-price {
                 background-color: $base-bg-orange;
                 width: 173px;
@@ -373,6 +606,10 @@
                 text-align: center;
                 position: relative;
                 top: -15px;
+                @media (min-width: $note_desk) {
+                    right: 120px;
+                    margin-right: 0;
+                }
                 &::before {
                     content: '';
                     width: 0;
@@ -397,6 +634,8 @@
                 span {
                     line-height: 70px;
                     font-weight: bold;
+                    top: 30px;
+                    position: relative;
                     color: $main-color-white;
                 }
                 .main-price--price--cost {
@@ -411,6 +650,23 @@
             display: grid;
             margin-top: 40px;
             grid-template-columns: 1fr 4fr;
+            @media (min-width: $note_desk) {
+                grid-template-columns: 1fr 4fr 1fr;
+                .main-button-action {
+                    max-height: 68px;
+                    box-sizing: border-box;
+                    min-width: 341px;
+                    text-align: center;
+                    background-color: transparent;
+                    border: 2px solid #EFEFEF;
+                    color: $main-color;
+                    align-self: center;
+                    margin-right: 50px;
+                    &.hided-on-mobile {
+                        display: inline-block;
+                    }
+                }
+            }
             .course-price--vacancies {
                 font-weight: bold;
                 font-size: 20px;
@@ -429,12 +685,43 @@
                 }
             }
         }
+        @media (min-width: $note_desk) {
+            .main-button-action {
+                display: none;
+            }
+        }
     }
     #students-review {
         margin-top: 0;
-        background-color: $secondary-bg-gray;
+        position: relative;
+        @media (min-width: $note_desk) {
+            padding-top: 10px;
+            background-image: url('./img/new_line_team.svg');
+            background-size: inherit;
+            background-position-x: -100px;
+            background-repeat-y: no-repeat;
+            margin-top: 34px;
+            -webkit-transition: background-position 3s ease;
+            -moz-transition: background-position 3s ease;
+            -o-transition: background-position 3s ease;
+            transition: background-position 3s ease;
+            margin-top: 127px;
+        }
+        &::before {
+            content: '';
+            background-color: $secondary-bg-gray;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            top: 55%;
+        }
+        // background-color: $secondary-bg-gray;
         .students-review--counter {
             text-align: center;
+            margin-top: 22px;
             span {
                 font-size: 20px;
                 display: inline-block;
@@ -442,6 +729,7 @@
                 font-weight: 600;
                 color: $main-color-white;
                 min-width: 15px;
+                position: relative;
             }
             .counter--border-progress {
                 width: 60px;
@@ -452,9 +740,32 @@
                 background-color: $base-bg-white;
             }
         }
-        .owl-carousel {
+        .students-review--get-all {
+            color: $main-color-white;
             position: relative;
-            top: -60px;
+            align-items: center;
+            margin-top: 40px;
+            font-size: $main-font-mobile;
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            display: none;
+            @media (min-width: $tablet) {
+                display: flex;
+            }
+            .students-review--plus-wrapper {
+                margin-left: 30px;
+                font-size: 28px;
+                font-weight: 400;
+            }
+        }
+        .students-review--title {
+            color: $main-color;
+        }
+        .owl-carousel {
+            .owl-dots {
+                display: none;
+            }
             .owl-item {
                 .students-review--owl-card {
                     width: 90vw;
@@ -463,6 +774,9 @@
                     padding: 20px;
                     box-sizing: border-box;
                     border-radius: 15px;
+                    @media (min-width: $tablet) {
+                        width: initial;
+                    }
                     .owl-card--header {
                         display: flex;
                         justify-content: space-between;
@@ -511,5 +825,9 @@
                 }
             }
         }
+    }
+    #registration {
+        z-index: 1;
+        position: relative;
     }
 }

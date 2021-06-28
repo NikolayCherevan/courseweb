@@ -502,7 +502,26 @@ window.addEventListener('DOMContentLoaded', (event) => {
             loop: true,
             onDragged: dragged,
             onInitialized: init,
-            margin: 50
+            margin: 50,
+
+            lazyLoad: true,
+            responsive: {
+                768: {
+                    items: 1,
+                    margin: 50,
+                    stagePadding: 150,
+                },
+                1100: {
+                    items: 1,
+                    margin: 40,
+                    stagePadding: 204,
+                },
+                1400: {
+                    items: 2,
+                    margin: 40,
+                    stagePadding: 204,
+                }
+            }
         });
 
         function init(event) {
@@ -537,7 +556,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         let end_date = {
             "full_year": "2021", // Год
             "month": "06", // Номер месяца
-            "day": "28", // День
+            "day": "29", // День
             "hours": "13", // Час
             "minutes": "14", // Минуты
             "seconds": "46" // Секунды
@@ -568,29 +587,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 // checkTimeText()
             }
         }, 1000)
+        $('.students-review--owl').on('changed.owl.carousel', function(e) {
+            if (!getMatrix) return
+            $('#students-review').css('background-position-x', getMatrix(document.querySelector(".students-review--owl .owl-stage")).x / 6);
 
-        // function checkTimeText() {
-        //     document.querySelectorAll('.time-wrapper--number').forEach(item => {
-        //         if (!item.classList.contains('days')) {
-        //             console.log(item.innerHTML == 1)
-        //             if (item.innerHTML == 1) {
-        //                 if (item.nextElementSibling.innerHTML.split('')[item.nextElementSibling.innerHTML.split('').length - 1] == 'н' ||
-        //                     item.nextElementSibling.innerHTML.split('')[item.nextElementSibling.innerHTML.split('').length - 1] == 'д') {
-        //                     let itemText = item.nextElementSibling
-        //                     itemText.innerHTML = itemText.innerHTML + "у";
-        //                 }
-        //             }
-        //             if (item.innerHTML == 2 || item.innerHTML == 3 || item.innerHTML == 4) {
-        //                 if (item.nextElementSibling.innerHTML.split('')[item.nextElementSibling.innerHTML.split('').length - 1] == 'н' ||
-        //                     item.nextElementSibling.innerHTML.split('')[item.nextElementSibling.innerHTML.split('').length - 1] == 'д') {
-        //                     let itemText = item.nextElementSibling
-        //                     itemText.innerHTML = itemText.innerHTML + "и";
-        //                 }
-        //             }
-        //         }
-        //     })
-        // }
-
-
+        });
     }
 });

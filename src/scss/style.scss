@@ -56,3 +56,13 @@ body {
     position: absolute;
     left: -999em;
 }
+
+button {
+    cursor: pointer;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
