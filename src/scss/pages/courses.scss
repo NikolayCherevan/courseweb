@@ -111,9 +111,7 @@
         .uk-container {
             padding: 0;
             top: 0;
-            height: -moz-available;
-            height: -webkit-fill-available;
-            height: fill-available;
+            height: auto;
             @media (min-width: $note_desk) {
                 // max-height: 100vh;
                 display: grid;
