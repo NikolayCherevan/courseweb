@@ -89,10 +89,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     //fixed  dropdown while scrolling
     window.addEventListener("scroll", () => {
-
-        doHeaderDropdownFixed(modileMenuDropdown)
-        doHeaderDropdownFixed(header)
-        doHeaderDropdownFixed(headerDeskMenu)
+        if (!coursesPage) {
+            doHeaderDropdownFixed(modileMenuDropdown)
+            doHeaderDropdownFixed(header)
+            doHeaderDropdownFixed(headerDeskMenu)
+        }
     });
 
 
@@ -132,6 +133,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     //sticky header logic
+
     function doHeaderDropdownFixed(element) {
         let scroll = window.pageYOffset;
         if (scroll >= 150) {
@@ -441,9 +443,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 UIkit.slider(item);
             })
             initTeamSlider();
-            if (!document.getElementById('hero').classList.contains('course-stoped')) {
-                let intElemOffsetHeightHero = document.querySelector('.hero--left-side').offsetHeight;
-                document.querySelector('.hero--right-side').style.height = `${intElemOffsetHeightHero - 151}px`
+            if (coursesPage) {
+                if (!document.getElementById('hero').classList.contains('course-stoped')) {
+                    let intElemOffsetHeightHero = document.querySelector('.hero--left-side').offsetHeight;
+                    document.querySelector('.hero--right-side').style.height = `${intElemOffsetHeightHero - 151}px`
+                }
             }
 
         }

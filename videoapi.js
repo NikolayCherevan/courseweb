@@ -10,9 +10,11 @@ var videoId = null;
 
 switch (true) {
     case document.querySelector('html').classList.contains('homepage'):
-        videoId = 'LGGugeMolFw'
+        videoId = 'LGGugeMolFw';
+        break
     case document.querySelector('html').classList.contains('front'):
         videoId = 'J7UwSVsiwzI'
+        break
 }
 var tv,
     playerDefaults = { autoplay: 1, border: 0, autohide: 1, modestbranding: 0, rel: 0, showinfo: 0, controls: 1, disablekb: 0, enablejsapi: 0, iv_load_policy: 3, host: 'https://www.youtube.com' };

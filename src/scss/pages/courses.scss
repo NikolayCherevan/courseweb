@@ -1,52 +1,52 @@
 .courses {
-    .header-wrapper {
-        // .header--main-links {
-        //     display: none;
-        // }
-        @media (min-width: $note_desk) {
-            .header--dropdown--modile:not(.sticky) {
-                .main-button.dropdown {
-                    border: solid 2px $main-color-white;
-                    color: $main-color-white;
-                    &:after {
-                        background-image: url('img/arrow_down_white.svg');
-                    }
-                }
-            }
-        }
-        @media (min-width: $large_desk) {
-            max-width: 1196px;
-            margin: 0 auto;
-            .header--desk-menu:not(.sticky) {
-                width: 100%;
-                right: 0;
-                right: 65px;
-                display: flex;
-                justify-content: flex-end;
-                .without-border-content {
-                    border: solid 2px $main-color-white;
-                    color: $main-color-white;
-                    &:after {
-                        background-image: url('img/arrow_down_white.svg');
-                    }
-                }
-                .header--main-links {
-                    width: 100%;
-                    right: 0;
-                    display: flex;
-                    justify-content: flex-end;
-                    .header--dropdown--title:nth-child(2) {
-                        position: absolute;
-                        left: 222px;
-                    }
-                }
-            }
-        }
-        .hided-menu {
-            display: none;
-        }
-        .header.sticky {}
-    }
+    // .header-wrapper {
+    //     // .header--main-links {
+    //     //     display: none;
+    //     // }
+    //     @media (min-width: $note_desk) {
+    //         .header--dropdown--modile:not(.sticky) {
+    //             .main-button.dropdown {
+    //                 border: solid 2px $main-color-white;
+    //                 color: $main-color-white;
+    //                 &:after {
+    //                     background-image: url('img/arrow_down_white.svg');
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     @media (min-width: $large_desk) {
+    //         max-width: 1196px;
+    //         margin: 0 auto;
+    //         .header--desk-menu:not(.sticky) {
+    //             width: 100%;
+    //             right: 0;
+    //             right: 65px;
+    //             display: flex;
+    //             justify-content: flex-end;
+    //             .without-border-content {
+    //                 border: solid 2px $main-color-white;
+    //                 color: $main-color-white;
+    //                 &:after {
+    //                     background-image: url('img/arrow_down_white.svg');
+    //                 }
+    //             }
+    //             .header--main-links {
+    //                 width: 100%;
+    //                 right: 0;
+    //                 display: flex;
+    //                 justify-content: flex-end;
+    //                 .header--dropdown--title:nth-child(2) {
+    //                     position: absolute;
+    //                     left: 222px;
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     .hided-menu {
+    //         display: none;
+    //     }
+    //     .header.sticky {}
+    // }
     .uk-container-small {
         max-width: 990px;
     }
@@ -64,7 +64,13 @@
     }
     .main-button-action {
         display: inline-block;
-        padding: 25px 98px;
+        padding: 25px 60px;
+        @media (min-width: $more_than_iphone5) {
+            padding: 25px 70px;
+        }
+        @media (min-width: $tablet) {
+            padding: 25px 98px;
+        }
         font-size: $main-font-mobile;
         line-height: 12px;
         border-radius: 50px;
@@ -120,18 +126,18 @@
                     min-height: 130vh;
                     min-width: 600px;
                     position: initial;
-                    border-radius: 0 0 15px 15px;
+                    border-radius: 15px;
                     position: relative;
                     left: -137px;
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        height: 490px;
-                        position: absolute;
-                        top: -485px;
-                        width: 100%;
-                        background-image: url('./img/course_frontend/EwhCd8nWQAIOIJy.jpg');
-                    }
+                    // &:before {
+                    //     content: '';
+                    //     position: absolute;
+                    //     height: 490px;
+                    //     position: absolute;
+                    //     top: -485px;
+                    //     width: 100%;
+                    //     background-image: url('./img/course_frontend/EwhCd8nWQAIOIJy.jpg');
+                    // }
                 }
                 .hero--site-slogan {
                     font-size: 45px;
@@ -593,8 +599,25 @@
                 img {
                     object-fit: contain;
                     margin: 0 auto;
-                    width: 81px;
+                    width: 100%;
                     height: 70px;
+                    &.hide-mob {
+                        display: none;
+                    }
+                    @media (min-width: $note_desk) {
+                        height: 52px;
+                        &.hide-pc {
+                            display: none;
+                        }
+                        &.hide-mob {
+                            display: block;
+                        }
+                        &.pc-view {
+                            width: 100%;
+                            height: 107px;
+                            object-fit: cover;
+                        }
+                    }
                 }
                 p {
                     margin: 0 auto;
@@ -605,6 +628,11 @@
                     font-weight: bold;
                     margin-top: 15px;
                 }
+            }
+        }
+        @media (min-width: $note_desk) {
+            .course-technology--grid-item--description {
+                display: none;
             }
         }
         .course-technology--follow-us {
@@ -639,7 +667,7 @@
     #course-price {
         margin: 0;
         h2 {
-            margin-bottom: 24px;
+            margin-bottom: 39px;
             @media (min-width: $note_desk) {
                 text-align: left!important;
                 margin-bottom: 40px;
