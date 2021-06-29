@@ -219,6 +219,9 @@
             color: $main-color-white;
             line-height: 38px;
             margin-bottom: 15px;
+            &.hided-on-mobile {
+                display: none;
+            }
             @media (min-width: $tablet) {
                 &.hided-on-pc {
                     display: none;
@@ -445,6 +448,16 @@
     #video-represent {
         margin-top: 60px;
         font-size: 0;
+        position: relative;
+        &::after {
+            background-color: $base-bg-secondary;
+            content: "";
+            height: 35%;
+            left: 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
         @media (min-width: $note_desk) {
             margin-top: 80px;
         }
@@ -459,6 +472,10 @@
         .video-iframe {
             max-width: 1196px;
             margin: 0 auto;
+            padding: 0 15px;
+            @media (min-width: $note_desk) {
+                padding: 0;
+            }
             .video-iframe--banner {
                 .video-iframe--content {
                     margin-top: 35px;
@@ -471,6 +488,8 @@
                     }
                     .video__button img {
                         top: 0;
+                        width: 30vw;
+                        height: 30vw;
                     }
                     .video__button.text {
                         font-size: 16px;
@@ -479,9 +498,12 @@
                         align-items: center;
                         text-decoration: none;
                         span {
-                            display: inline-block;
+                            display: none;
                             margin-top: 20px;
                             color: $main-color-white;
+                            @media (min-width: $note_desk) {
+                                display: inline-block;
+                            }
                         }
                     }
                 }
