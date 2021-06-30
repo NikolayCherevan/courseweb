@@ -1,52 +1,9 @@
 .courses {
-    // .header-wrapper {
-    //     // .header--main-links {
-    //     //     display: none;
-    //     // }
-    //     @media (min-width: $note_desk) {
-    //         .header--dropdown--modile:not(.sticky) {
-    //             .main-button.dropdown {
-    //                 border: solid 2px $main-color-white;
-    //                 color: $main-color-white;
-    //                 &:after {
-    //                     background-image: url('img/arrow_down_white.svg');
-    //                 }
-    //             }
-    //         }
-    //     }
-    //     @media (min-width: $large_desk) {
-    //         max-width: 1196px;
-    //         margin: 0 auto;
-    //         .header--desk-menu:not(.sticky) {
-    //             width: 100%;
-    //             right: 0;
-    //             right: 65px;
-    //             display: flex;
-    //             justify-content: flex-end;
-    //             .without-border-content {
-    //                 border: solid 2px $main-color-white;
-    //                 color: $main-color-white;
-    //                 &:after {
-    //                     background-image: url('img/arrow_down_white.svg');
-    //                 }
-    //             }
-    //             .header--main-links {
-    //                 width: 100%;
-    //                 right: 0;
-    //                 display: flex;
-    //                 justify-content: flex-end;
-    //                 .header--dropdown--title:nth-child(2) {
-    //                     position: absolute;
-    //                     left: 222px;
-    //                 }
-    //             }
-    //         }
-    //     }
-    //     .hided-menu {
-    //         display: none;
-    //     }
-    //     .header.sticky {}
-    // }
+    body {
+        &.swipe {
+            overflow: hidden;
+        }
+    }
     .uk-container-small {
         max-width: 990px;
     }
@@ -952,10 +909,16 @@
         position: fixed;
         left: 0;
         border-radius: 15px 30px 0 0;
-        bottom: -110px;
+        bottom: -140px;
         z-index: 5;
         background-color: $secondary-bg-gray;
         padding: 30px;
+        li {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
         a {
             font-size: 14px;
             color: $main-color-white;

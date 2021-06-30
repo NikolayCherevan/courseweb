@@ -640,20 +640,32 @@ window.addEventListener('DOMContentLoaded', (event) => {
             $('#students-review').css('background-position-x', getMatrix(document.querySelector(".students-review--owl .owl-stage")).x / 6);
 
         });
-        if ($(window).width() <= 600) {
-            // show menu on swipe to right
-            $('#courses-mobile-menu-advanced').on('swipetop', function(e) {
-                e.preventDefault();
-                $(this).animate({
-                    bottom: '0'
-                });
-            });  // hide menu on swipe to left
-            $('#courses-mobile-menu-advanced').on('swipebottom', function(e) {
-                e.preventDefault();
-                $(this).animate({
-                    bottom: '-110px'
-                });
+
+
+        $(function() {
+            $("#courses-mobile-menu-advanced").swipe({
+                swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+                    if (direction == 'down') {
+                        $(this).animate({
+                            bottom: '-140px'
+                        });
+                        body.classList.remove('swipe')
+                    }
+                    if (direction == 'up') {
+                        $(this).animate({
+                            bottom: '0'
+                        });
+                        body.classList.add('swipe')
+                    }
+                },
+                threshold: 0
             });
-        }
+
+        });
+        // document.querySelectorAll('#courses-mobile-menu-advanced li').forEach(item => {
+        //     item.addEventListener('click', function() {
+        //         alert(1)
+        //     })
+        // })
     }
 });
