@@ -96,7 +96,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 
-
     //add overlay for all dropdowns header
     dropdowns.forEach((item) => {
         addOverlay(item)
@@ -423,8 +422,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
         initTeamSlider();
 
         if (coursesPage) {
+            let intElemOffsetHeightHero = document.querySelector('.hero--left-side').offsetHeight;
             if (!document.getElementById('hero').classList.contains('course-stoped')) {
-                let intElemOffsetHeightHero = document.querySelector('.hero--left-side').offsetHeight;
                 document.querySelector('.hero--right-side').style.height = `${intElemOffsetHeightHero - 151}px`
             }
         }
@@ -444,9 +443,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
             })
             initTeamSlider();
             if (coursesPage) {
+                let intElemOffsetHeightHero = document.querySelector('.hero--left-side').offsetHeight;
                 if (!document.getElementById('hero').classList.contains('course-stoped')) {
-                    let intElemOffsetHeightHero = document.querySelector('.hero--left-side').offsetHeight;
                     document.querySelector('.hero--right-side').style.height = `${intElemOffsetHeightHero - 151}px`
+                } else {
+                    document.querySelector('.hero--right-side').style.height = `${intElemOffsetHeightHero + 151}px`
                 }
             }
 
@@ -494,12 +495,52 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     //courses page 
+    function addStickyscrollToTop() {
+        const scrollUp = "sticky";
+        const scrollDown = "not-sticky";
+        let lastScroll = 0;
 
+        window.addEventListener("scroll", () => {
+            if (viewportWidth <= 1400) return
+            const currentScroll = window.pageYOffset;
+            if (currentScroll <= 0) {
+                header.classList.remove(scrollUp);
+                headerDeskMenu.classList.remove(scrollUp);
+                headerPadding.classList.remove('active');
+                return;
+            }
+
+            if (currentScroll > lastScroll && !header.classList.contains(scrollDown)) {
+                // down
+                header.classList.remove(scrollUp);
+                headerDeskMenu.classList.remove(scrollUp);
+                headerPadding.classList.remove('active');
+                header.classList.add(scrollDown);
+            } else if (
+                currentScroll < lastScroll &&
+                header.classList.contains(scrollDown)
+            ) {
+                // up
+                header.classList.remove(scrollDown);
+                header.classList.add(scrollUp);
+                headerDeskMenu.classList.add(scrollUp);
+                headerPadding.classList.add('active');
+            }
+            lastScroll = currentScroll;
+
+        });
+    }
 
     if (coursesPage) {
+        const scrollUp = "sticky";
+        addStickyscrollToTop()
+        window.addEventListener('resize', function() {
+
+            header.classList.remove(scrollUp);
+            headerDeskMenu.classList.remove(scrollUp);
+            headerPadding.classList.remove('active');
+        }, false)
         let owl = $('.students-review--owl');
-
-
         owl.owlCarousel({
             autoplay: false,
             items: 1,
@@ -579,8 +620,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 clearInterval(timer);
                 timeWrapperCourse.classList.add('course-stoped');
                 courseEnd.innerHTML = "Набор окончен";
+
                 let intElemOffsetHeightHero = document.querySelector('.hero--left-side').offsetHeight;
-                document.querySelector('.hero--right-side').style.height = `${intElemOffsetHeightHero +30}px`
+                if (viewportWidth <= 992) {
+                    document.querySelector('.hero--right-side').style.height = `${intElemOffsetHeightHero + 151}px`;
+                }
             } else {
                 let res = new Date(ms_left);
                 daysText.innerHTML = res.getUTCDate() - 1;
@@ -596,5 +640,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
             $('#students-review').css('background-position-x', getMatrix(document.querySelector(".students-review--owl .owl-stage")).x / 6);
 
         });
+        if ($(window).width() <= 600) {
+            // show menu on swipe to right
+            $('#courses-mobile-menu-advanced').on('swipetop', function(e) {
+                e.preventDefault();
+                $(this).animate({
+                    bottom: '0'
+                });
+            });  // hide menu on swipe to left
+            $('#courses-mobile-menu-advanced').on('swipebottom', function(e) {
+                e.preventDefault();
+                $(this).animate({
+                    bottom: '-110px'
+                });
+            });
+        }
     }
 });
