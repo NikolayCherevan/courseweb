@@ -643,14 +643,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
         $(function() {
+
             $("#courses-mobile-menu-advanced").swipe({
                 swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+                    // console.log(event, distance, duration, fingerCount, fingerData)
                     body.classList.add('swipe')
                     if (direction == 'down') {
                         $(this).animate({
                             bottom: '-140px'
                         });
-                        body.classList.remove('swipe')
+
                     }
                     if (direction == 'up') {
                         $(this).animate({
@@ -669,9 +671,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
         document.querySelectorAll('#courses-mobile-menu-advanced a').forEach(item => {
             item.addEventListener('touchstart', function() {
-                body.classList.remove('swipe');
+                $('#courses-mobile-menu-advanced').animate({
+                    bottom: '-140px'
+                });
+                body.classList.remove('swipe')
                 scrollTo(item.getAttribute('href'))
             })
+        })
+        document.addEventListener('touchstart', function(event) {
+            if (!document.getElementById('courses-mobile-menu-advanced').contains(event.target)) {
+                $('#courses-mobile-menu-advanced').animate({
+                    bottom: '-140px'
+                });
+                body.classList.remove('swipe')
+            } else {
+                body.classList.add('swipe');
+            }
         })
     }
 });
