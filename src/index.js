@@ -596,27 +596,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
         let secondText = document.querySelector(".seconds.time-wrapper--number");
         let timeWrapperCourse = document.querySelector("#hero");
         let courseEnd = document.querySelector(".end-course");
-
-        // Массив данных о времени
-        let end_date = {
-            "full_year": "2021", // Год
-            "month": "06", // Номер месяца
-            "day": "30", // День
-            "hours": "13", // Час
-            "minutes": "14", // Минуты
-            "seconds": "46" // Секунды
-        }
+        let zeroFreeSpaces = document.querySelector(".registration--number-of-free-space");
 
         function diffSubtract(date1, date2) {
             return date2 - date1;
         }
 
-        let end_date_str = `${end_date.full_year}-${end_date.month}-${end_date.day}T${end_date.hours}:${end_date.minutes}:${end_date.seconds}`;
+        let end_date_str = `${courseEnd.dataset.years}-${courseEnd.dataset.month}-${courseEnd.dataset.days}T${courseEnd.dataset.hours}:${courseEnd.dataset.minutes}:${courseEnd.dataset.seconds}`;
         let timer = setInterval(function() {
             let now = new Date();
             let date = new Date(end_date_str);
             let ms_left = diffSubtract(now, date);
-            if (ms_left <= 0) { // То
+            if (ms_left <= 0 || zeroFreeSpaces.innerHTML == 0) { // То
                 clearInterval(timer);
                 timeWrapperCourse.classList.add('course-stoped');
                 courseEnd.innerHTML = "Набор окончен";
@@ -628,19 +619,102 @@ window.addEventListener('DOMContentLoaded', (event) => {
             } else {
                 let res = new Date(ms_left);
                 daysText.innerHTML = res.getUTCDate() - 1;
+                let lastNumberDays = String(res.getUTCDate() - 1).split('')[String(res.getUTCDate() - 1).split('').length - 1]
+                switch (true) {
+                    case lastNumberDays == 1:
+                        daysText.nextElementSibling.innerHTML = "день"
+                        break;
+                    case lastNumberDays == 2 || lastNumberDays == 3 || lastNumberDays == 4:
+                        daysText.nextElementSibling.innerHTML = "дня"
+                        break;
+                    default:
+                        daysText.nextElementSibling.innerHTML = "днів";
+                        break;
+                }
                 hoursText.innerHTML = res.getUTCHours();
+                let lastNumber = String(res.getUTCHours()).split('')[String(res.getUTCHours()).split('').length - 1]
+
+                switch (true) {
+                    case lastNumber == 1:
+                        hoursText.nextElementSibling.innerHTML = "годину"
+                        break;
+                    case lastNumber == 2 || lastNumber == 3 || lastNumber == 4:
+                        hoursText.nextElementSibling.innerHTML = "години"
+                        break;
+                    default:
+                        hoursText.nextElementSibling.innerHTML = "годин";
+                        break;
+                }
                 minutesText.innerHTML = res.getUTCMinutes();
+
+                let lastNumberMinutes = String(res.getUTCMinutes()).split('')[String(res.getUTCMinutes()).split('').length - 1];
+                let firstNumberMinutes = String(res.getUTCMinutes()).split('')[String(res.getUTCMinutes()).split('').length - 2];
+
+                switch (true) {
+                    case lastNumberMinutes == 1:
+                        minutesText.nextElementSibling.innerHTML = "хвилину"
+                        break;
+                    case (lastNumberMinutes == 2 || lastNumberMinutes == 3 || lastNumberMinutes == 4) && firstNumberMinutes != 1:
+                        minutesText.nextElementSibling.innerHTML = "хвилини"
+                        break;
+                    default:
+                        minutesText.nextElementSibling.innerHTML = "хвилин";
+                        break;
+                }
                 secondText.innerHTML = res.getUTCSeconds();
+                let lastNumberSeconds = String(res.getUTCSeconds()).split('')[String(res.getUTCSeconds()).split('').length - 1];
+                let firstNumberSeconds = String(res.getUTCSeconds()).split('')[String(res.getUTCSeconds()).split('').length - 2];
+
+                switch (true) {
+                    case lastNumberSeconds == 1:
+                        secondText.nextElementSibling.innerHTML = "секунду"
+                        break;
+                    case (lastNumberSeconds == 2 || lastNumberSeconds == 3 || lastNumberSeconds == 4) && firstNumberSeconds != 1:
+                        secondText.nextElementSibling.innerHTML = "секунди"
+                        break;
+                    default:
+                        secondText.nextElementSibling.innerHTML = "секунд";
+                        break;
+                }
                 timeWrapperCourse.classList.remove('course-stoped');
                 // checkTimeText()
             }
+
         }, 1000)
         $('.students-review--owl').on('changed.owl.carousel', function(e) {
             if (!getMatrix) return
             $('#students-review').css('background-position-x', getMatrix(document.querySelector(".students-review--owl .owl-stage")).x / 6);
 
         });
+        // document.querySelectorAll('.time-wrapper--number').forEach(item => {
+        //     let lastNumber = item.innerHTML.split('')[item.innerHTML.split('').length - 1]
+        //     let lastSymbol = item.nextElementSibling.innerHTML.split('')[item.nextElementSibling.innerHTML.split('').length - 1]
+        //     if (!item.classList.contains('days')) {
 
+        //         switch (true) {
+        //             case lastNumber == 1:
+        //                 if (lastSymbol == "н") {
+        //                     item.nextElementSibling.innerHTML = item.nextElementSibling.innerHTML + "а"
+        //                 } else {
+        //                     let defaultStr = item.nextElementSibling.innerHTML.split('');
+        //                     defaultStr.pop()
+        //                     item.nextElementSibling.innerHTML = defaultStr
+        //                 }
+
+        //                 break;
+        //             case lastNumber == 2 || lastNumber == 3 || lastNumber == 4:
+        //                 if (lastSymbol == "н" || lastSymbol == "д") {
+        //                     item.nextElementSibling.innerHTML = item.nextElementSibling.innerHTML + "и"
+        //                 } else {
+        //                     let defaultStr = item.nextElementSibling.innerHTML.split('');
+        //                     defaultStr.pop()
+        //                     item.nextElementSibling.innerHTML = defaultStr.join('')
+        //                 }
+        //                 break
+        //         }
+
+        //     }
+        // })
 
         $(function() {
 
