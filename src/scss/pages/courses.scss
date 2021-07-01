@@ -457,13 +457,18 @@
                         margin-bottom: 0;
                         max-height: 644px;
                     }
-                    .video__button img {
-                        top: 0;
-                        width: 30vw;
-                        height: 30vw;
+                    .video__button {
+                        font-size: 0;
+                        img {
+                            top: 0;
+                            width: 30vw;
+                            height: 30vw;
+                        }
+                        span {
+                            font-size: 16px;
+                        }
                     }
                     .video__button.text {
-                        font-size: 16px;
                         display: flex;
                         flex-direction: column-reverse;
                         align-items: center;
