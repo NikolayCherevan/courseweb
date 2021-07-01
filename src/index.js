@@ -548,7 +548,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             onDragged: dragged,
             onInitialized: init,
             margin: 50,
-
+            autoHeight: false,
             lazyLoad: true,
             responsive: {
                 768: {

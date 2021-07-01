@@ -28,6 +28,7 @@ body {
                 background-color: $base-bg-white;
                 z-index: 111;
                 padding: 15px 18px 15px 15px;
+                top: 0;
                 @media (min-width: $large_desk) {
                     padding: 18px 42px 18px 42px;
                     // top: -80px;
