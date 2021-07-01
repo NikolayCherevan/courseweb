@@ -547,6 +547,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             loop: true,
             onDragged: dragged,
             onInitialized: init,
+            onTranslated: translated,
             margin: 50,
             autoHeight: false,
             lazyLoad: true,
@@ -560,14 +561,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     items: 1,
                     margin: 40,
                     stagePadding: 204,
+                    nav: true,
                 },
                 1400: {
-                    items: 2,
+                    items: 1,
                     margin: 40,
                     stagePadding: 204,
                 }
             }
         });
+
+        function translated(event) {
+            let owlActive = $('.owl-item.active').children().attr('data-count');
+            $('.counter--current-item').text(`${owlActive}`)
+        }
 
         function init(event) {
             let items = event.item.count;
@@ -583,7 +590,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
 
         function dragged(event) {
-
             let owlActive = $('.owl-item.active').children().attr('data-count');
             $('.counter--current-item').text(`${owlActive}`)
         }
@@ -686,35 +692,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             $('#students-review').css('background-position-x', getMatrix(document.querySelector(".students-review--owl .owl-stage")).x / 6);
 
         });
-        // document.querySelectorAll('.time-wrapper--number').forEach(item => {
-        //     let lastNumber = item.innerHTML.split('')[item.innerHTML.split('').length - 1]
-        //     let lastSymbol = item.nextElementSibling.innerHTML.split('')[item.nextElementSibling.innerHTML.split('').length - 1]
-        //     if (!item.classList.contains('days')) {
-
-        //         switch (true) {
-        //             case lastNumber == 1:
-        //                 if (lastSymbol == "н") {
-        //                     item.nextElementSibling.innerHTML = item.nextElementSibling.innerHTML + "а"
-        //                 } else {
-        //                     let defaultStr = item.nextElementSibling.innerHTML.split('');
-        //                     defaultStr.pop()
-        //                     item.nextElementSibling.innerHTML = defaultStr
-        //                 }
-
-        //                 break;
-        //             case lastNumber == 2 || lastNumber == 3 || lastNumber == 4:
-        //                 if (lastSymbol == "н" || lastSymbol == "д") {
-        //                     item.nextElementSibling.innerHTML = item.nextElementSibling.innerHTML + "и"
-        //                 } else {
-        //                     let defaultStr = item.nextElementSibling.innerHTML.split('');
-        //                     defaultStr.pop()
-        //                     item.nextElementSibling.innerHTML = defaultStr.join('')
-        //                 }
-        //                 break
-        //         }
-
-        //     }
-        // })
 
         $(function() {
 

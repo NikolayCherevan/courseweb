@@ -842,6 +842,23 @@
             .owl-dots {
                 display: none;
             }
+            @media (min-width: $note_desk) {
+                .owl-nav {
+                    display: block!important;
+                    button {
+                        position: absolute;
+                        top: 0;
+                        min-width: 12vw;
+                        min-height: -webkit-fill-available;
+                        span {
+                            display: none;
+                        }
+                    }
+                    .owl-next {
+                        right: 0;
+                    }
+                }
+            }
             .owl-item {
                 .students-review--owl-card {
                     width: 90vw;
