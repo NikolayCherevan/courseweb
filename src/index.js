@@ -628,7 +628,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 let lastNumberDays = String(res.getUTCDate() - 1).split('')[String(res.getUTCDate() - 1).split('').length - 1];
                 let firstNumberDays = String(res.getUTCDate() - 1).split('')[String(res.getUTCDate() - 1).split('').length - 2]
                 switch (true) {
-                    case lastNumberDays == 1:
+                    case (lastNumberDays == 1) && firstNumberDays != 1:
                         daysText.nextElementSibling.innerHTML = "день"
                         break;
                     case (lastNumberDays == 2 || lastNumberDays == 3 || lastNumberDays == 4) && firstNumberDays != 1:
@@ -643,7 +643,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 let firstNumber = String(res.getUTCHours()).split('')[String(res.getUTCHours()).split('').length - 2];
 
                 switch (true) {
-                    case lastNumber == 1:
+                    case (lastNumber == 1) && firstNumber != 1:
                         hoursText.nextElementSibling.innerHTML = "годину"
                         break;
                     case (lastNumber == 2 || lastNumber == 3 || lastNumber == 4) && firstNumber != 1:
@@ -696,14 +696,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
         });
 
         $(function() {
-
+            $('#courses-mobile-menu-advanced').animate({
+                bottom: ($('.courses-mobile-menu-advanced--content').outerHeight() + 24) * -1 + 'px'
+            });
             $("#courses-mobile-menu-advanced").swipe({
                 swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
                     // console.log(event, distance, duration, fingerCount, fingerData)
 
                     if (direction == 'down') {
                         $(this).animate({
-                            bottom: '-275px'
+                            bottom: ($('.courses-mobile-menu-advanced--content').outerHeight() + 24) * -1 + 'px'
                         });
                         setTimeout(() => body.classList.remove('swipe'), 300)
                     }
@@ -725,7 +727,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         document.querySelectorAll('#courses-mobile-menu-advanced a').forEach(item => {
             item.addEventListener('touchstart', function() {
                 $('#courses-mobile-menu-advanced').animate({
-                    bottom: '-275px'
+                    bottom: ($('.courses-mobile-menu-advanced--content').outerHeight() + 24) * -1 + 'px'
                 });
                 body.classList.remove('swipe')
                 scrollTo(item.getAttribute('href'))
@@ -733,7 +735,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         })
 
         document.getElementById('courses-mobile-menu-advanced').addEventListener('touchstart', function(event) {
-            if (!body.classList.contains('swipe')) {
+            if (!body.classList.contains('swipe') && event.target.getBoundingClientRect().bottom > 503) {
                 body.classList.add('swipe');
                 $('#courses-mobile-menu-advanced').animate({
                     bottom: '0'
@@ -743,7 +745,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         document.addEventListener('touchstart', function(event) {
             if (!document.getElementById('courses-mobile-menu-advanced').contains(event.target)) {
                 $('#courses-mobile-menu-advanced').animate({
-                    bottom: '-275px'
+                    bottom: ($('.courses-mobile-menu-advanced--content').outerHeight() + 24) * -1 + 'px'
                 });
                 body.classList.remove('swipe')
             } else {
