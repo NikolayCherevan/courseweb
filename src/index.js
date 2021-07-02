@@ -698,7 +698,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             bottom: ($('.courses-mobile-menu-advanced--content').outerHeight() + 24) * -1 + 'px'
         });
 
-
         document.querySelector('#courses-mobile-menu-advanced').addEventListener('touchstart', function(event) {
             if (event.target.getAttribute('href') != null) return
             if (!body.classList.contains('swipe')) {
@@ -707,7 +706,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     bottom: '0'
                 });
             } else {
-                setTimeout(() => body.classList.remove('swipe'), 100)
+                body.classList.remove('swipe');
                 $('#courses-mobile-menu-advanced').animate({
                     bottom: ($('.courses-mobile-menu-advanced--content').outerHeight() + 24) * -1 + 'px'
                 });
