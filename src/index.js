@@ -719,9 +719,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     bottom: ($('.courses-mobile-menu-advanced--content').outerHeight() + 24) * -1 + 'px'
                 });
                 body.classList.remove('swipe')
-            } else {
-                // body.classList.add('swipe');
-                // alert(1)
             }
         })
 
