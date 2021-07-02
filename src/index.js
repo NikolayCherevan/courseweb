@@ -731,6 +731,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 scrollTo(item.getAttribute('href'))
             })
         })
+
+        document.getElementById('courses-mobile-menu-advanced').addEventListener('touchstart', function(event) {
+            if (!body.classList.contains('swipe')) {
+                body.classList.add('swipe');
+                $('#courses-mobile-menu-advanced').animate({
+                    bottom: '0'
+                });
+            }
+        })
         document.addEventListener('touchstart', function(event) {
             if (!document.getElementById('courses-mobile-menu-advanced').contains(event.target)) {
                 $('#courses-mobile-menu-advanced').animate({
