@@ -694,63 +694,48 @@ window.addEventListener('DOMContentLoaded', (event) => {
             $('#students-review').css('background-position-x', getMatrix(document.querySelector(".students-review--owl .owl-stage")).x / 6);
 
         });
-
-        $(function() {
-            $('#courses-mobile-menu-advanced').animate({
-                bottom: ($('.courses-mobile-menu-advanced--content').outerHeight() + 24) * -1 + 'px'
-            });
-            $("#courses-mobile-menu-advanced").swipe({
-                swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-                    // console.log(event, distance, duration, fingerCount, fingerData)
-
-                    if (direction == 'down') {
-                        $(this).animate({
-                            bottom: ($('.courses-mobile-menu-advanced--content').outerHeight() + 24) * -1 + 'px'
-                        });
-                        setTimeout(() => body.classList.remove('swipe'), 300)
-                    }
-                    if (direction == 'up') {
-                        $(this).animate({
-                            bottom: '0'
-                        });
-                        body.classList.add('swipe')
-                    }
-                },
-                threshold: 0
-            });
-
+        $('#courses-mobile-menu-advanced').animate({
+            bottom: ($('.courses-mobile-menu-advanced--content').outerHeight() + 24) * -1 + 'px'
         });
+
+
+        document.querySelector('#courses-mobile-menu-advanced').addEventListener('touchstart', function(event) {
+            if (event.target.getAttribute('href') != null) return
+            if (!body.classList.contains('swipe')) {
+                body.classList.add('swipe');
+                $('#courses-mobile-menu-advanced').animate({
+                    bottom: '0'
+                });
+            } else {
+                setTimeout(() => body.classList.remove('swipe'), 100)
+                $('#courses-mobile-menu-advanced').animate({
+                    bottom: ($('.courses-mobile-menu-advanced--content').outerHeight() + 24) * -1 + 'px'
+                });
+            }
+        })
+        document.addEventListener('click', function(event) {
+            if ((!document.getElementById('courses-mobile-menu-advanced').contains(event.target)) && event.target != document.getElementById('courses-mobile-menu-advanced')) {
+                $('#courses-mobile-menu-advanced').animate({
+                    bottom: ($('.courses-mobile-menu-advanced--content').outerHeight() + 24) * -1 + 'px'
+                });
+                body.classList.remove('swipe')
+            } else {
+                // body.classList.add('swipe');
+                // alert(1)
+            }
+        })
 
         function scrollTo(hash) {
             location.hash = hash;
         }
         document.querySelectorAll('#courses-mobile-menu-advanced a').forEach(item => {
-            item.addEventListener('touchstart', function() {
+            item.addEventListener('click', function() {
                 $('#courses-mobile-menu-advanced').animate({
                     bottom: ($('.courses-mobile-menu-advanced--content').outerHeight() + 24) * -1 + 'px'
                 });
                 body.classList.remove('swipe')
                 scrollTo(item.getAttribute('href'))
             })
-        })
-
-        // document.querySelector('.swipe-title').addEventListener('touchstart', function(event) {
-        //     if (!body.classList.contains('swipe') && event.target.getBoundingClientRect().bottom > 503) {
-        //         body.classList.add('swipe');
-        //         $('#courses-mobile-menu-advanced').animate({
-        //             bottom: '0'
-        //         });
-        //     }
-        // })
-        document.addEventListener('touchstart', function(event) {
-            if (!document.getElementById('courses-mobile-menu-advanced').contains(event.target)) {
-                $('#courses-mobile-menu-advanced').animate({
-                    bottom: ($('.courses-mobile-menu-advanced--content').outerHeight() + 24) * -1 + 'px'
-                });
-                body.classList.remove('swipe')
-            } else {
-                body.classList.add('swipe');
-            }
         })
     }
 });
