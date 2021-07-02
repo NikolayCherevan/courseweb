@@ -3,8 +3,10 @@
         &.swipe {
             overflow: hidden;
             #courses-mobile-menu-advanced {
-                transition: background-color .3s;
-                background-color: $secondary-bg-gray;
+                .courses-mobile-menu-advanced--wrapper {
+                    background-color: $base-bg-orange;
+                    box-shadow: 0px 12px 90px black;
+                }
             }
         }
     }
@@ -934,28 +936,55 @@
         width: fill-available;
         position: fixed;
         left: 0;
-        border-radius: 15px 30px 0 0;
-        bottom: -140px;
+        bottom: -275px;
         z-index: 5;
-        background-color: rgba(43, 46, 48, .3);
-        padding: 30px;
-        padding-top: 15px;
-        color: $main-color-white;
-        transition: background-color .3s;
-        li {
-            margin-bottom: 10px;
-            &:last-child {
-                margin-bottom: 0;
+        padding-top: 20px;
+        // background-color: rgba(255, 129, 16, .3);
+        .courses-mobile-menu-advanced--wrapper {
+            background-color: $base-bg-orange;
+            padding: 20px 0px 0;
+            color: $main-color-white;
+            box-shadow: none;
+            border-radius: 15px 15px 0 0;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            li {
+                margin-bottom: 30px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &.registration-action {
+                    a {
+                        font-size: 16px;
+                    }
+                    background-color: $base-bg-white;
+                    width: -webkit-fill-available;
+                    padding: 24px;
+                    text-align: center;
+                    border-radius: 15px 15px 0 0;
+                }
             }
         }
         a {
-            font-size: 14px;
-            color: $main-color-white;
+            font-size: $main-font-mobile;
+            color: $main-color;
             font-weight: 600;
         }
         .swipe-title {
-            opacity: 0.6;
             margin-bottom: 30px;
+        }
+        .courses-mobile-menu-advanced--swipe-border {
+            background-color: $secondary-bg-gray;
+            border-radius: 15px;
+            height: 4.4px;
+            left: 50%;
+            opacity: .8;
+            position: absolute;
+            transform: translate(-50%, -10px);
+            width: 50px;
         }
     }
     @media (min-width: $tablet) {

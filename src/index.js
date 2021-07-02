@@ -625,12 +625,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
             } else {
                 let res = new Date(ms_left);
                 daysText.innerHTML = res.getUTCDate() - 1;
-                let lastNumberDays = String(res.getUTCDate() - 1).split('')[String(res.getUTCDate() - 1).split('').length - 1]
+                let lastNumberDays = String(res.getUTCDate() - 1).split('')[String(res.getUTCDate() - 1).split('').length - 1];
+                let firstNumberDays = String(res.getUTCDate() - 1).split('')[String(res.getUTCDate() - 1).split('').length - 2]
                 switch (true) {
                     case lastNumberDays == 1:
                         daysText.nextElementSibling.innerHTML = "день"
                         break;
-                    case lastNumberDays == 2 || lastNumberDays == 3 || lastNumberDays == 4:
+                    case (lastNumberDays == 2 || lastNumberDays == 3 || lastNumberDays == 4) && firstNumberDays != 1:
                         daysText.nextElementSibling.innerHTML = "дня"
                         break;
                     default:
@@ -639,12 +640,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 }
                 hoursText.innerHTML = res.getUTCHours();
                 let lastNumber = String(res.getUTCHours()).split('')[String(res.getUTCHours()).split('').length - 1]
+                let firstNumber = String(res.getUTCHours()).split('')[String(res.getUTCHours()).split('').length - 2];
 
                 switch (true) {
                     case lastNumber == 1:
                         hoursText.nextElementSibling.innerHTML = "годину"
                         break;
-                    case lastNumber == 2 || lastNumber == 3 || lastNumber == 4:
+                    case (lastNumber == 2 || lastNumber == 3 || lastNumber == 4) && firstNumber != 1:
                         hoursText.nextElementSibling.innerHTML = "години"
                         break;
                     default:
@@ -657,7 +659,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 let firstNumberMinutes = String(res.getUTCMinutes()).split('')[String(res.getUTCMinutes()).split('').length - 2];
 
                 switch (true) {
-                    case lastNumberMinutes == 1:
+                    case (lastNumberMinutes == 1) && firstNumberMinutes != 1:
                         minutesText.nextElementSibling.innerHTML = "хвилину"
                         break;
                     case (lastNumberMinutes == 2 || lastNumberMinutes == 3 || lastNumberMinutes == 4) && firstNumberMinutes != 1:
@@ -672,7 +674,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 let firstNumberSeconds = String(res.getUTCSeconds()).split('')[String(res.getUTCSeconds()).split('').length - 2];
 
                 switch (true) {
-                    case lastNumberSeconds == 1:
+                    case (lastNumberSeconds == 1) && firstNumberSeconds != 1:
                         secondText.nextElementSibling.innerHTML = "секунду"
                         break;
                     case (lastNumberSeconds == 2 || lastNumberSeconds == 3 || lastNumberSeconds == 4) && firstNumberSeconds != 1:
@@ -698,18 +700,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
             $("#courses-mobile-menu-advanced").swipe({
                 swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
                     // console.log(event, distance, duration, fingerCount, fingerData)
-                    body.classList.add('swipe')
+
                     if (direction == 'down') {
                         $(this).animate({
-                            bottom: '-140px'
+                            bottom: '-275px'
                         });
-
+                        setTimeout(() => body.classList.remove('swipe'), 300)
                     }
                     if (direction == 'up') {
                         $(this).animate({
                             bottom: '0'
                         });
-
+                        body.classList.add('swipe')
                     }
                 },
                 threshold: 0
@@ -723,7 +725,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         document.querySelectorAll('#courses-mobile-menu-advanced a').forEach(item => {
             item.addEventListener('touchstart', function() {
                 $('#courses-mobile-menu-advanced').animate({
-                    bottom: '-140px'
+                    bottom: '-275px'
                 });
                 body.classList.remove('swipe')
                 scrollTo(item.getAttribute('href'))
@@ -732,7 +734,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         document.addEventListener('touchstart', function(event) {
             if (!document.getElementById('courses-mobile-menu-advanced').contains(event.target)) {
                 $('#courses-mobile-menu-advanced').animate({
-                    bottom: '-140px'
+                    bottom: '-275px'
                 });
                 body.classList.remove('swipe')
             } else {
