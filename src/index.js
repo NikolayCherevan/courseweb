@@ -699,8 +699,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         // });
         var swiper = new Swiper(".mySwiper", {
             direction: "vertical",
-            autoHeight: false,
-            calculateHeight: false,
+
         });
     }
 });
