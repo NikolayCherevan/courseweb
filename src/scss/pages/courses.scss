@@ -938,7 +938,7 @@
         z-index: 5!important;
         overflow: visible;
         padding-top: 20px;
-        bottom: -417px!important;
+        bottom: -49vh!important;
         // background-color: rgba(255, 129, 16, .3);
         .courses-mobile-menu-advanced--wrapper {
             background-color: $base-bg-orange;
@@ -998,8 +998,15 @@
             transform: translate(-50%, -70px);
             width: 50px;
         }
-        .swiper-wrapper.active {
-            transform: translate3d(0px, -398px, 0px)!important;
+        .swiper-wrapper {
+            &::before {
+                content: "";
+                height: 100vh;
+                position: absolute;
+                top: 96%;
+                width: 100%;
+                background-color: $base-bg-white;
+            }
         }
     }
     @media (min-width: $tablet) {
