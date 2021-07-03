@@ -557,6 +557,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             swiper = new Swiper(".mySwiper", {
                 direction: "vertical",
                 calculateHeight: true,
+
                 onAny(eventName, ...args) {
 
                     let height = ($('.courses-mobile-menu-advanced--wrapper').outerHeight() + 16) + 'px'
@@ -598,7 +599,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         const scrollUp = "sticky";
         addStickyscrollToTop()
         window.addEventListener('resize', function() {
-            swiperShow()
+            // swiperShow()
             addMarquee(marq1)
             header.classList.remove(scrollUp);
             headerDeskMenu.classList.remove(scrollUp);
@@ -770,7 +771,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         document.addEventListener('click', function(event) {
             if ((document.querySelector('.mySwiper') != event.target)) {
-                setTimeout(() => swiper.slideTo(0), 300)
+                swiper.slideTo(0)
             }
         })
     }
