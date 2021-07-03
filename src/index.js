@@ -701,11 +701,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
                 let height = ($('.courses-mobile-menu-advanced--wrapper').outerHeight() + 16) + 'px'
                 $('[aria-label="2 / 2"]').css('height', height)
-                if (eventName == "slideNextTransitionStart") {
+                if (eventName == "slideNextTransitionStart" || eventName == 'slideResetTransitionStart') {
                     $(".swiper-wrapper").addClass("active")
                 }
 
-                if (eventName == "slidePrevTransitionStart") {
+                if (eventName == "slidePrevTransitionStart" || eventName == 'fromEdge') {
                     $(".swiper-wrapper").removeClass("active")
                 }
             }
