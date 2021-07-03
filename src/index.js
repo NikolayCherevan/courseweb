@@ -763,12 +763,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         swiperShow()
 
-        function scrollTo(hash) {
-            location.hash = hash;
-        }
-        document.addEventListener('touchstart', function(event) {
-            if ((document.querySelector('.mySwiper').contains(event.target)) && event.target.getAttribute('href') != null) {
-                scrollTo(event.target.getAttribute('href'));
+        // function scrollTo(hash) {
+        //     location.hash = hash;
+        // }
+        // scrollTo(event.target.getAttribute('href'));
+
+        document.addEventListener('click', function(event) {
+            if ((document.querySelector('.mySwiper') != event.target)) {
                 setTimeout(() => swiper.slideTo(0), 300)
             }
         })
