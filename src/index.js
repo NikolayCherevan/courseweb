@@ -701,19 +701,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
                 let height = ($('.courses-mobile-menu-advanced--wrapper').outerHeight() + 16) + 'px'
                 $('[aria-label="2 / 2"]').css('height', height)
-                    // if (eventName == "slideNextTransitionStart" || eventName == 'slideResetTransitionStart') {
-                    //     $(".mySwiper").addClass("active")
-                    // }
+                if (eventName == "slideNextTransitionStart") {
+                    $(".swiper-wrapper").addClass("active")
+                }
 
                 // if (args[0].previousTranslate * -1 > ($('.courses-mobile-menu-advanced--wrapper').outerHeight() + 16)) {
                 //     $(".mySwiper").removeClass("active")
                 // }
 
 
-                // if (eventName == "slidePrevTransitionStart" || eventName == 'fromEdge') {
-                //     $(".mySwiper").removeClass("active")
+                if (eventName == "slidePrevTransitionStart") {
+                    $(".swiper-wrapper").removeClass("active")
 
-                // }
+                }
 
 
             }
