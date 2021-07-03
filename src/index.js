@@ -694,9 +694,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
             $('#students-review').css('background-position-x', getMatrix(document.querySelector(".students-review--owl .owl-stage")).x / 6);
 
         });
-        $('.mySwiper').animate({
-            bottom: ($('.courses-mobile-menu-advanced--wrapper').outerHeight() + 32) * -1 + 'px'
-        });
+        // $('.mySwiper').animate({
+        //     bottom: ($('.courses-mobile-menu-advanced--wrapper').outerHeight() + 32) * -1 + 'px'
+        // });
         var swiper = new Swiper(".mySwiper", {
             direction: "vertical",
             autoHeight: false,
