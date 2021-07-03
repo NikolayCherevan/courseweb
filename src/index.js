@@ -702,44 +702,5 @@ window.addEventListener('DOMContentLoaded', (event) => {
             autoHeight: false,
             calculateHeight: false,
         });
-        // document.addEventListener('swiped', function(e) {
-        //     console.log(e.target); // the element that was swiped
-        //     console.log(e.detail.dir); // swiped direction
-        // });
-        // document.querySelector('#courses-mobile-menu-advanced').addEventListener('touchstart', function(event) {
-        //     if (event.target.getAttribute('href') != null) return
-        //     if (!body.classList.contains('swipe')) {
-        //         body.classList.add('swipe');
-        //         $('#courses-mobile-menu-advanced').animate({
-        //             bottom: '0'
-        //         });
-        //     } else {
-        //         body.classList.remove('swipe');
-        //         $('#courses-mobile-menu-advanced').animate({
-        //             bottom: ($('.courses-mobile-menu-advanced--content').outerHeight() + 24) * -1 + 'px'
-        //         });
-        //     }
-        // })
-        // document.addEventListener('click', function(event) {
-        //     if ((!document.getElementById('courses-mobile-menu-advanced').contains(event.target)) && event.target != document.getElementById('courses-mobile-menu-advanced')) {
-        //         $('#courses-mobile-menu-advanced').animate({
-        //             bottom: ($('.courses-mobile-menu-advanced--content').outerHeight() + 24) * -1 + 'px'
-        //         });
-        //         body.classList.remove('swipe')
-        //     }
-        // })
-
-        // function scrollTo(hash) {
-        //     location.hash = hash;
-        // }
-        // document.querySelectorAll('#courses-mobile-menu-advanced a').forEach(item => {
-        //     item.addEventListener('click', function() {
-        //         $('#courses-mobile-menu-advanced').animate({
-        //             bottom: ($('.courses-mobile-menu-advanced--content').outerHeight() + 24) * -1 + 'px'
-        //         });
-        //         body.classList.remove('swipe')
-        //         scrollTo(item.getAttribute('href'))
-        //     })
-        // })
     }
 });
