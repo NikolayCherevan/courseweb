@@ -705,9 +705,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     $(".swiper-wrapper").addClass("active")
                 }
 
+                if (args[0].previousTranslate * -1 > ($('.courses-mobile-menu-advanced--wrapper').outerHeight() + 16)) {
+                    $(".swiper-wrapper").addClass("active")
+                }
+
                 if (eventName == "slidePrevTransitionStart" || eventName == 'fromEdge') {
                     $(".swiper-wrapper").removeClass("active")
                 }
+
+
             }
         });
 
