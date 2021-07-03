@@ -930,7 +930,7 @@
         z-index: 1;
         position: relative;
     }
-    .mySwiper {
+    .bottom-menu-wrapper {
         width: -webkit-fill-available!important;
         width: -moz-available!important;
         width: fill-available!important;
@@ -1001,7 +1001,7 @@
         }
     }
     @media (min-width: $tablet) {
-        .mySwiper {
+        .bottom-menu-wrapper {
             display: none;
         }
     }
