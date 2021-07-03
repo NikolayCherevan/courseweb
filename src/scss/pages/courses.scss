@@ -989,9 +989,6 @@
                 padding: 15px 0 18px;
             }
         }
-        [aria-label="2 / 2"] {
-            height: 398px!important;
-        }
         .courses-mobile-menu-advanced--swipe-border {
             background-color: $secondary-bg-gray;
             border-radius: 15px;
@@ -1001,6 +998,9 @@
             position: absolute;
             transform: translate(-50%, -57px);
             width: 50px;
+        }
+        .swiper-wrapper.active {
+            transform: translate3d(0px, -398px, 0px)!important;
         }
     }
     @media (min-width: $tablet) {

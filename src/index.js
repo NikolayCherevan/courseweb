@@ -694,13 +694,31 @@ window.addEventListener('DOMContentLoaded', (event) => {
             $('#students-review').css('background-position-x', getMatrix(document.querySelector(".students-review--owl .owl-stage")).x / 6);
 
         });
-        // $('.mySwiper').animate({
-        //     bottom: ($('.courses-mobile-menu-advanced--wrapper').outerHeight() + 32) * -1 + 'px'
-        // });
         var swiper = new Swiper(".mySwiper", {
             direction: "vertical",
-
             calculateHeight: true,
+            onAny(eventName, ...args) {
+
+                let height = ($('.courses-mobile-menu-advanced--wrapper').outerHeight() + 16) + 'px'
+                $('[aria-label="2 / 2"]').css('height', height)
+                if (eventName == "slideNextTransitionStart") {
+                    $(".swiper-wrapper").addClass("active")
+                }
+
+                if (eventName == "slidePrevTransitionStart") {
+                    $(".swiper-wrapper").removeClass("active")
+                }
+            }
         });
+
+        function scrollTo(hash) {
+            location.hash = hash;
+        }
+        document.addEventListener('touchstart', function(event) {
+            if ((!document.querySelector('.mySwiper').contains(event.target)) || event.target.getAttribute('href') != null) {
+                scrollTo(event.target.getAttribute('href'));
+                setTimeout(() => swiper.slideTo(0), 300)
+            }
+        })
     }
 });
