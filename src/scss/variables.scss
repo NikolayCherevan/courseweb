@@ -10,10 +10,20 @@ $base-bg-white:#FFFFFF;
 $base-bg-secondary:#EFEEEB;
 $secondary-bg-gray: #2B2E30;
 $secondary-bg-white: #F9F9F9;
-
 //breakpoints
 $more_than_iphone5: 375px;
 $tablet: 768px;
 $note_desk: 992px;
 $large_desk: 1400px;
 $full4k: 2560px;
+//mixins
+@mixin base-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: $main-color-orange;
+    color: $main-color-white;
+    border-radius: 50px;
+    a {
+        color: $main-color-white;
+    }
+}

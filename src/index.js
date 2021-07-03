@@ -8,14 +8,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let mobileMenu = document.querySelector('.mobile-menu');
     let dropdowns = document.querySelectorAll('.dropdown');
     let trailer = document.querySelector(".trailer");
+    let anchor = document.querySelector(".hero---scroll-to-courses a");
     let headerDeskMenu = document.querySelector(".header--desk-menu");
     let headerPadding = document.querySelector(".header-padding");
     let coordinates = document.querySelectorAll(".item-coords");
     let mySwiper = document.querySelector(".mySwiper");
+    let deskMenuFooter = document.querySelector(".desk-menu-courses");
+    let coursesAnchors = document.querySelectorAll('.desk-menu-courses--anchors li a')
     let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
     let homePage = document.querySelector('html').classList.contains('homepage');
     let coursesPage = document.querySelector('html').classList.contains('courses');
     let root = document.documentElement;
+    const marq1 = document.querySelector(".marquee");
 
     //TweenMax lib init
     //play button magnetic on team section
@@ -96,8 +100,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
             doHeaderDropdownFixed(header)
             doHeaderDropdownFixed(headerDeskMenu)
 
+        } else {
+            doFooterDropdownFixed(mySwiper)
+            doFooterDropdownFixed(deskMenuFooter)
         }
-        doFooterDropdownFixed(mySwiper)
+
     });
 
     //add overlay for all dropdowns header
@@ -151,7 +158,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     function doFooterDropdownFixed(element) {
         let scroll = window.pageYOffset;
-
         if (scroll <= 400) {
             element.classList.remove('shown')
         } else {
@@ -545,12 +551,55 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         });
     }
-
+    var swiper = null;
     if (coursesPage) {
+        function swiperShow() {
+            swiper = new Swiper(".mySwiper", {
+                direction: "vertical",
+                calculateHeight: true,
+                onAny(eventName, ...args) {
+
+                    let height = ($('.courses-mobile-menu-advanced--wrapper').outerHeight() + 16) + 'px'
+                    $('[aria-label="2 / 2"]').css('height', height)
+                    if (eventName == "slideNextTransitionStart") {
+                        $(".swiper-wrapper").addClass("active");
+                        root.style.setProperty('--transformProp', `translate3d(0px, ${($('.courses-mobile-menu-advanced--wrapper').outerHeight() + 16)*-1}px, 0px)`);
+                    }
+
+                    if (eventName == "slidePrevTransitionStart") {
+                        $(".swiper-wrapper").removeClass("active")
+
+                    }
+
+
+                }
+            });
+        }
+
+        function addMarquee(element) {
+            if (window.screen.width <= 1300) {
+                element.innerHTML = ''
+                element.insertAdjacentHTML('beforeend', "<marquee>" + element.dataset.text + "</marquee>");
+
+            } else {
+                element.innerHTML = ''
+                element.insertAdjacentHTML('beforeend', "<h2>" + element.dataset.text + "</h2>");
+            }
+        }
+        addMarquee(marq1)
+        coursesAnchors.forEach(item => {
+            item.addEventListener('click', function(event) {
+                $('.desk-menu-courses--anchors li a').removeClass('focus')
+                event.target.classList.add('focus')
+            })
+        })
+        doFooterDropdownFixed(mySwiper)
+        doFooterDropdownFixed(deskMenuFooter)
         const scrollUp = "sticky";
         addStickyscrollToTop()
         window.addEventListener('resize', function() {
-
+            swiperShow()
+            addMarquee(marq1)
             header.classList.remove(scrollUp);
             headerDeskMenu.classList.remove(scrollUp);
             headerPadding.classList.remove('active');
@@ -709,33 +758,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
             $('#students-review').css('background-position-x', getMatrix(document.querySelector(".students-review--owl .owl-stage")).x / 6);
 
         });
-        var swiper = new Swiper(".mySwiper", {
-            direction: "vertical",
-            calculateHeight: true,
-            onAny(eventName, ...args) {
-
-                let height = ($('.courses-mobile-menu-advanced--wrapper').outerHeight() + 16) + 'px'
-                $('[aria-label="2 / 2"]').css('height', height)
-                if (eventName == "slideNextTransitionStart") {
-                    $(".swiper-wrapper").addClass("active");
-                    root.style.setProperty('--transformProp', `translate3d(0px, ${($('.courses-mobile-menu-advanced--wrapper').outerHeight() + 16)*-1}px, 0px)`);
-                }
-
-                // if (args[0].previousTranslate * -1 > ($('.courses-mobile-menu-advanced--wrapper').outerHeight() + 16)) {
-                //     $(".mySwiper").removeClass("active")
-                // }
-                // if (eventName == 'slideNextTransitionEnd') {
-                //     setTimeout(() => $(".swiper-wrapper").css({ "transform": "translate3d(0px, " + height + "px, 0px)" }), 300);
-                // }
-
-                if (eventName == "slidePrevTransitionStart") {
-                    $(".swiper-wrapper").removeClass("active")
-
-                }
 
 
-            }
-        });
+
+        swiperShow()
 
         function scrollTo(hash) {
             location.hash = hash;
