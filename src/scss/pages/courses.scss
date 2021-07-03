@@ -930,13 +930,14 @@
         z-index: 1;
         position: relative;
     }
-    #courses-mobile-menu-advanced {
+    .mySwiper {
         width: -webkit-fill-available;
         width: -moz-available;
         width: fill-available;
         position: fixed;
         left: 0;
         z-index: 5;
+        overflow: visible;
         padding-top: 20px;
         // background-color: rgba(255, 129, 16, .3);
         .courses-mobile-menu-advanced--wrapper {
@@ -944,7 +945,6 @@
             padding: 20px 0px 0;
             color: $main-color-white;
             box-shadow: none;
-            border-radius: 15px 15px 0 0;
         }
         ul {
             display: flex;
@@ -960,11 +960,12 @@
                         font-size: 16px;
                         padding: 0;
                     }
+                    border-radius: 15px 15px 0 0;
                     background-color: $base-bg-white;
                     width: -webkit-fill-available;
                     padding: 24px;
                     text-align: center;
-                    border-radius: 15px 15px 0 0;
+                    margin-top: 34px;
                 }
             }
         }
@@ -973,8 +974,19 @@
             color: $main-color;
             font-weight: 600;
         }
-        .swipe-title {
-            margin-bottom: 30px;
+        [aria-label="1 / 2"] {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            max-height: none;
+            height: 70px!important;
+            .swipe-title {
+                background-color: $base-bg-orange;
+                margin-bottom: 0;
+                color: $main-color-white;
+                border-radius: 15px 15px 0 0;
+                padding: 15px 0 18px;
+            }
         }
         .courses-mobile-menu-advanced--swipe-border {
             background-color: $secondary-bg-gray;
@@ -983,7 +995,7 @@
             left: 50%;
             opacity: .8;
             position: absolute;
-            transform: translate(-50%, -10px);
+            transform: translate(-50%, -57px);
             width: 50px;
         }
     }

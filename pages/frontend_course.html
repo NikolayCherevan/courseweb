@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../src/css/index.css">
     <link rel='stylesheet' href="../dist/main.css">
 
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -636,38 +636,50 @@
     </div>
     </div>
     <div class="cursor"></div>
-    <div id="courses-mobile-menu-advanced">
-        <div class="courses-mobile-menu-advanced--swipe-border"></div>
-        <div class="courses-mobile-menu-advanced--wrapper">
+    <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="courses-mobile-menu-advanced--swipe-border"></div>
+                <div class="uk-text-center swipe-title"> Навігація </div>
+            </div>
+            <div class="swiper-slide">
+                <div id="courses-mobile-menu-advanced">
 
-            <div class="uk-text-center swipe-title"> Навігація </div>
-            <ul class="courses-mobile-menu-advanced--content">
-                <li>
-                    <a href="#course-for"> Для кого курс </a>
-                </li>
-                <li>
-                    <a href="#video-represent"> Навіщо курс </a>
-                </li>
-                <li>
-                    <a href="#course-program"> Програма курсів </a>
-                </li>
-                <li>
-                    <a href="#course-technology"> Технології </a>
-                </li>
-                <li>
-                    <a href="#course-price"> Ціна </a>
-                </li>
-                <li>
-                    <a href="#students-review"> Відгуки </a>
-                </li>
-                <li class="registration-action">
-                    <a href="#"> Реєструйся</a>
-                </li>
-            </ul>
+                    <div class="courses-mobile-menu-advanced--wrapper">
+
+                        <ul class="courses-mobile-menu-advanced--content">
+                            <li>
+                                <a href="#course-for"> Для кого курс </a>
+                            </li>
+                            <li>
+                                <a href="#video-represent"> Навіщо курс </a>
+                            </li>
+                            <li>
+                                <a href="#course-program"> Програма курсів </a>
+                            </li>
+                            <li>
+                                <a href="#course-technology"> Технології </a>
+                            </li>
+                            <li>
+                                <a href="#course-price"> Ціна </a>
+                            </li>
+                            <li>
+                                <a href="#students-review"> Відгуки </a>
+                            </li>
+                            <li class="registration-action">
+                                <a href="#"> Реєструйся</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=" anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script src="../lazy.min.js" async=""></script>
     <script async src="../uikit.min.js"></script>
 
