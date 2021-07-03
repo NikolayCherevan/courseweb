@@ -931,12 +931,12 @@
         position: relative;
     }
     .mySwiper {
-        width: -webkit-fill-available;
-        width: -moz-available;
-        width: fill-available;
-        position: fixed;
-        left: 0;
-        z-index: 5;
+        width: -webkit-fill-available!important;
+        width: -moz-available!important;
+        width: fill-available!important;
+        position: fixed!important;
+        left: 0!important;
+        z-index: 5!important;
         overflow: visible;
         padding-top: 20px;
         // background-color: rgba(255, 129, 16, .3);
