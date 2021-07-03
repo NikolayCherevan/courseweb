@@ -1,1091 +1,1107 @@
-                               :root {
-                                  --transformProp: none;
-                              }
-                              
-                              .courses {
-                                  body {
-                                      &.swipe {
-                                          overflow: hidden;
-                                          #courses-mobile-menu-advanced {
-                                              .courses-mobile-menu-advanced--wrapper {
-                                                  background-color: $base-bg-orange;
-                                                  box-shadow: 0px 12px 90px black;
-                                              }
-                                          }
-                                      }
-                                  }
-                                  .uk-container-small {
-                                      max-width: 990px;
-                                  }
-                                  .course-category {
-                                      display: block;
-                                      span {
-                                          font-size: $main-font-mobile;
-                                          color: $main-color;
-                                          font-weight: 600;
-                                          display: inline-block;
-                                          padding: 5px 10px;
-                                          border-radius: 3px;
-                                          background-color: rgba(255, 129, 16, 0.8);
-                                      }
-                                  }
-                                  .main-button-action {
-                                      display: inline-block;
-                                      padding: 25px 60px;
-                                      @media (min-width: $more_than_iphone5) {
-                                          padding: 25px 70px;
-                                      }
-                                      @media (min-width: $tablet) {
-                                          padding: 25px 98px;
-                                      }
-                                      font-size: $main-font-mobile;
-                                      line-height: 12px;
-                                      border-radius: 50px;
-                                      background-color: $base-bg-orange;
-                                      color: $main-color-white;
-                                      font-weight: 600;
-                                      position: relative;
-                                      left: 50%;
-                                      transform: translate(-50%, 0);
-                                      &.hided-on-mobile {
-                                          display: none;
-                                      }
-                                  }
-                                  section h2 {
-                                      margin-bottom: 25px;
-                                      line-height: 40px;
-                                  }
-                                  .orange-attention {
-                                      display: flex;
-                                      justify-content: center;
-                                      align-items: center;
-                                      min-width: 35px;
-                                      height: 35px;
-                                      max-width: 35px;
-                                      background-color: rgba(255, 129, 16, 0.8);
-                                      border-radius: 50%;
-                                      color: $main-color-white;
-                                  }
-                                  section p {
-                                      font-size: $main-font-mobile;
-                                      @media (min-width: $note_desk) {
-                                          font-size: 16px;
-                                      }
-                                      line-height: 24px;
-                                      margin-left: auto;
-                                      // max-width: 590px;
-                                      color: $main-color;
-                                  }
-                                  #hero {
-                                      background: none;
-                                      top: 0;
-                                      padding-top: 0;
-                                      min-height: initial;
-                                      .uk-container {
-                                          padding: 0;
-                                          top: 0;
-                                          height: auto;
-                                          @media (min-width: $note_desk) {
-                                              // max-height: 100vh;
-                                              display: grid;
-                                              grid-template-columns: 1fr 1fr;
-                                              .hero--right-side {
-                                                  min-height: 100vh;
-                                                  min-width: 600px;
-                                                  position: initial;
-                                                  border-radius: 15px;
-                                                  position: relative;
-                                                  left: -137px;
-                                                  // &:before {
-                                                  //     content: '';
-                                                  //     position: absolute;
-                                                  //     height: 490px;
-                                                  //     position: absolute;
-                                                  //     top: -485px;
-                                                  //     width: 100%;
-                                                  //     background-image: url('./img/course_frontend/EwhCd8nWQAIOIJy.jpg');
-                                                  // }
-                                              }
-                                              .hero--site-slogan {
-                                                  font-size: 45px;
-                                                  line-height: 39px;
-                                                  position: relative;
-                                                  left: 0;
-                                                  .hero--site-slogan-padding {
-                                                      border-radius: 15px;
-                                                      display: inline-block;
-                                                      padding: 15px 20px 15px 0;
-                                                      background-color: $base-bg-white;
-                                                      white-space: pre;
-                                                  }
-                                              }
-                                              .hero--site-slogan,
-                                              .hero--description {
-                                                  color: $main-color;
-                                              }
-                                              .hero--description {
-                                                  font-size: $main-font-mobile;
-                                                  font-weight: 400;
-                                                  max-width: 388px;
-                                                  margin-left: 0;
-                                                  position: relative;
-                                                  border-radius: 15px;
-                                                  padding: 15px 20px 15px 0;
-                                                  background-color: $base-bg-white;
-                                                  left: 0;
-                                              }
-                                              .hero--courses-mark {
-                                                  background-color: transparent;
-                                                  font-size: 20px;
-                                                  font-weight: 600;
-                                                  line-height: 28px;
-                                                  opacity: 1;
-                                                  position: relative;
-                                                  left: 0;
-                                              }
-                                              .hero--left-side {
-                                                  padding-right: 0;
-                                                  padding-top: 0;
-                                                  .hero--post-description {
-                                                      margin-left: 0;
-                                                      position: relative;
-                                                      left: 0;
-                                                      padding-left: 0;
-                                                  }
-                                                  .hero--regisration-gray-bg {
-                                                      border-radius: 30px 0px 0 30px;
-                                                      padding: 41px 42px;
-                                                      padding-right: 86px;
-                                                  }
-                                                  .hero--left-side--regisration {
-                                                      max-width: initial;
-                                                      position: relative;
-                                                      left: -45px;
-                                                      p {
-                                                          font-size: 16px;
-                                                      }
-                                                      display: flex;
-                                                  }
-                                                  .registration--footer {
-                                                      border-radius: 0px 30px 30px 0;
-                                                      display: flex;
-                                                      align-items: center;
-                                                      justify-content: center;
-                                                      max-width: 92px;
-                                                      a {
-                                                          transform: rotate( -90deg);
-                                                          font-size: 22px;
-                                                          line-height: 12px;
-                                                      }
-                                                  }
-                                              }
-                                          }
-                                      }
-                                      .hero--site-slogan {
-                                          font-size: 40px;
-                                          color: $main-color-white;
-                                          line-height: 38px;
-                                          margin-bottom: 15px;
-                                          &.hided-on-mobile {
-                                              display: none;
-                                          }
-                                          @media (min-width: $tablet) {
-                                              &.hided-on-pc {
-                                                  display: none;
-                                              }
-                                              &.hided-on-mobile {
-                                                  display: block;
-                                              }
-                                          }
-                                      }
-                                      .hero--description {
-                                          font-weight: 600;
-                                          line-height: 28px;
-                                          color: $main-color-white;
-                                          margin-bottom: 30px;
-                                          font-size: 16px;
-                                      }
-                                      .hero--right-side {
-                                          border-radius: 15px 15px 0px 0px;
-                                          background-image: url('./img/course_frontend/EwhCd8nWQAIOIJy.jpg');
-                                          top: 0;
-                                          position: absolute;
-                                          filter: brightness(0.5);
-                                          background-size: cover;
-                                          background-repeat: no-repeat;
-                                          left: 0;
-                                          width: 100%;
-                                      }
-                                      .hero--left-side {
-                                          position: relative;
-                                          z-index: 1;
-                                          padding: 0 15px;
-                                          padding-top: 30px;
-                                          line-height: 23px;
-                                          font-weight: 600;
-                                          color: $main-color;
-                                          .hero--regisration-gray-bg {
-                                              background-color: $base-bg-secondary;
-                                              padding: 30px 20px 20px;
-                                              border-radius: 15px 15px 0 0;
-                                          }
-                                          .registration--footer {
-                                              text-align: center;
-                                              background-color: $base-bg-orange;
-                                              padding: 25px 0;
-                                              border-radius: 0 0 15px 15px;
-                                              a {
-                                                  color: $main-color-white;
-                                                  font-size: 16px;
-                                                  text-align: center;
-                                                  text-decoration: none;
-                                              }
-                                          }
-                                          .hero--left-side--regisration {
-                                              max-width: 535px;
-                                              margin: 0 auto;
-                                              p {
-                                                  font-size: $main-font-mobile;
-                                                  margin-bottom: 10px;
-                                                  opacity: 0.8;
-                                                  margin-left: 0;
-                                              }
-                                              .left-side--regisration-time-wrapper {
-                                                  display: grid;
-                                                  grid-template-columns: 1fr 1fr 1fr;
-                                                  @media (min-width: $more_than_iphone5) {
-                                                      grid-template-columns: 1fr 1fr 1fr 1fr;
-                                                      max-width: 324px;
-                                                  }
-                                                  grid-gap: 10px;
-                                                  .regisration-time-wrapper--blocks {
-                                                      width: 68px;
-                                                      height: 67px;
-                                                      border-radius: 12px;
-                                                      background-color: $base-bg-white;
-                                                      display: flex;
-                                                      justify-content: center;
-                                                      align-items: center;
-                                                      flex-direction: column;
-                                                  }
-                                                  .time-wrapper--number {
-                                                      font-size: 20px;
-                                                      text-align: center;
-                                                  }
-                                                  .time-wrapper--text {
-                                                      font-size: $main-font-mobile;
-                                                      text-align: center;
-                                                  }
-                                              }
-                                              .registration--free-space {
-                                                  margin: 30px 0;
-                                              }
-                                              .registration--number-of-free-space {
-                                                  color: $main-color-orange;
-                                                  font-size: 54px;
-                                                  padding-bottom: 17px;
-                                              }
-                                          }
-                                          .hero--post-description {
-                                              display: flex;
-                                              padding: 15px 20px;
-                                              max-width: 351px;
-                                              margin: 0 auto;
-                                              .hero--post-description--attention {
-                                                  font-size: 25px;
-                                                  line-height: 28px;
-                                                  margin-right: 13px;
-                                              }
-                                              p {
-                                                  font-size: $main-font-mobile;
-                                                  line-height: 24px;
-                                                  span {
-                                                      color: $main-color-orange;
-                                                  }
-                                              }
-                                          }
-                                      }
-                                      .hero--courses-mark {
-                                          min-width: 33px;
-                                          min-height: 28px;
-                                          font-size: $main-font-mobile;
-                                          text-transform: uppercase;
-                                          font-weight: 600;
-                                          color: $main-color;
-                                          border-radius: 3px;
-                                          opacity: 0.8;
-                                          background-color: #F9F9F9;
-                                          position: relative;
-                                          margin-bottom: 10px;
-                                          display: inline-block;
-                                          span {
-                                              position: absolute;
-                                              top: 50%;
-                                              left: 50%;
-                                              transform: translate(-50%, -50%);
-                                          }
-                                      }
-                                      &.course-stoped {
-                                          .uk-container .hero--left-side {
-                                              .registration--footer {
-                                                  display: none;
-                                              }
-                                              .hero--left-side--regisration {
-                                                  left: 0;
-                                              }
-                                              .hero--post-description {
-                                                  display: none;
-                                              }
-                                              .hero--regisration-gray-bg {
-                                                  border-radius: 30px;
-                                              }
-                                              .left-side--regisration-time-wrapper {
-                                                  display: none;
-                                              }
-                                              .registration--free-space {
-                                                  display: none;
-                                              }
-                                              .registration--number-of-free-space {
-                                                  display: none;
-                                              }
-                                              .left-side--regisration-time-wrapper {
-                                                  display: none!important;
-                                              }
-                                          }
-                                          &+#course-for {
-                                              @media (max-width: $note_desk) {
-                                                  margin-top: 180px;
-                                              }
-                                          }
-                                      }
-                                  }
-                                  #course-for {
-                                      @media (min-width: $note_desk) {
-                                          margin-top: 120px;
-                                      }
-                                      p {
-                                          max-width: 590px;
-                                          margin-right: 67px;
-                                      }
-                                      .course-for--numbers-achievement {
-                                          display: grid;
-                                          grid-template-columns: 1fr;
-                                          grid-gap: 25px;
-                                          margin-top: 30px;
-                                          @media (min-width: $more_than_iphone5) {
-                                              grid-template-columns: 1fr 1fr;
-                                          }
-                                          @media (min-width: $note_desk) {
-                                              grid-gap: 100px;
-                                              grid-template-columns: 1fr 1fr 1fr 1fr;
-                                          }
-                                          .numbers-achievement--wrapper-description {
-                                              max-width: 181px;
-                                              line-height: 24px;
-                                          }
-                                          .numbers-achievement--wrapper {
-                                              color: $main-color;
-                                              font-size: $main-font-mobile;
-                                              line-height: 22px;
-                                              font-weight: 600;
-                                              .numbers-achievement--wrapper-number {
-                                                  color: $main-color-orange;
-                                                  font-size: 50px;
-                                                  line-height: 70px;
-                                                  font-weight: bold;
-                                                  margin-bottom: 10px;
-                                                  @media (min-width: $note_desk) {
-                                                      margin-bottom: 20px;
-                                                      position: relative;
-                                                      top: 17px;
-                                                  }
-                                              }
-                                              &:first-child {
-                                                  .numbers-achievement--wrapper-number {
-                                                      font-size: 80px;
-                                                      @media (min-width: $note_desk) {
-                                                          font-size: 100px;
-                                                          top: 0;
-                                                      }
-                                                  }
-                                              }
-                                              // @media (min-width: $note_desk) {
-                                              //     position: relative;
-                                              //     .numbers-achievement--wrapper-description,
-                                              //     .numbers-achievement--wrapper-number {
-                                              //         width: 90%;
-                                              //         left: 50%;
-                                              //         transform: translate(-50%, 0);
-                                              //         position: absolute;
-                                              //     }
-                                              // }
-                                          }
-                                      }
-                                  }
-                                  #video-represent {
-                                      margin-top: 60px;
-                                      font-size: 0;
-                                      position: relative;
-                                      &::after {
-                                          background-color: $base-bg-secondary;
-                                          content: "";
-                                          height: 35%;
-                                          left: 0;
-                                          position: absolute;
-                                          bottom: 0;
-                                          width: 100%;
-                                      }
-                                      @media (min-width: $note_desk) {
-                                          margin-top: 80px;
-                                      }
-                                      p {
-                                          margin-left: 0;
-                                          max-width: 691px;
-                                      }
-                                      h2 {
-                                          margin-left: auto;
-                                          max-width: 280px;
-                                      }
-                                      .video-iframe {
-                                          max-width: 1196px;
-                                          margin: 0 auto;
-                                          padding: 0 15px;
-                                          @media (min-width: $note_desk) {
-                                              padding: 0;
-                                          }
-                                          .video-iframe--banner {
-                                              .video-iframe--content {
-                                                  margin-top: 35px;
-                                                  min-width: auto;
-                                                  @media (min-width: $note_desk) {
-                                                      margin-top: 70px;
-                                                      margin-bottom: 0;
-                                                      max-height: 644px;
-                                                  }
-                                                  .video__button {
-                                                      font-size: 0;
-                                                      img {
-                                                          top: 0;
-                                                          width: 30vw;
-                                                          height: 30vw;
-                                                      }
-                                                      span {
-                                                          font-size: 16px;
-                                                      }
-                                                  }
-                                                  .video__button.text {
-                                                      display: flex;
-                                                      flex-direction: column-reverse;
-                                                      align-items: center;
-                                                      text-decoration: none;
-                                                      span {
-                                                          display: none;
-                                                          margin-top: 20px;
-                                                          color: $main-color-white;
-                                                          @media (min-width: $note_desk) {
-                                                              display: inline-block;
-                                                          }
-                                                      }
-                                                  }
-                                              }
-                                          }
-                                      }
-                                      .target {
-                                          height: auto;
-                                      }
-                                  }
-                                  #course-program {
-                                      background-color: $base-bg-secondary;
-                                      padding: 60px 0;
-                                      margin-top: 0;
-                                      @media (min-width: $note_desk) {
-                                          padding: 120px 0;
-                                          h2 {
-                                              text-align: center;
-                                              margin-bottom: 40px!important;
-                                          }
-                                      }
-                                      h2 {
-                                          margin-bottom: 25px;
-                                      }
-                                      .uk-accordion>:nth-child(n+2) {
-                                          margin-top: 30px;
-                                      }
-                                      .uk-container {
-                                          max-width: 792px;
-                                      }
-                                      .uk-accordion {
-                                          font-size: $main-font-mobile;
-                                          color: $main-color;
-                                          .registration-action {
-                                              display: none;
-                                          }
-                                          .uk-open {
-                                              position: relative;
-                                              @media (min-width: $note_desk) {
-                                                  .registration-action {
-                                                      @include base-btn;
-                                                      position: absolute;
-                                                      right: 66px;
-                                                      top: 14px;
-                                                  }
-                                              }
-                                              .uk-accordion-title {
-                                                  &::before {
-                                                      transform: rotate(180deg);
-                                                      transition: transform .3s;
-                                                  }
-                                              }
-                                          }
-                                          .uk-accordion-title {
-                                              border-radius: 50px;
-                                              background-color: $base-bg-white;
-                                              font-size: $main-font-mobile;
-                                              padding: 25px 30px;
-                                              font-weight: 600;
-                                              text-transform: initial;
-                                              &:hover {
-                                                  color: $main-color;
-                                              }
-                                              &::before {
-                                                  transition: transform .3s;
-                                                  background-image: url('./img/arrow_down.svg')
-                                              }
-                                              @media (min-width: $note_desk) {
-                                                  font-size: 16px;
-                                              }
-                                          }
-                                          .uk-accordion-content {
-                                              p {
-                                                  font-weight: 600;
-                                                  padding: 0 30px;
-                                              }
-                                          }
-                                      }
-                                  }
-                                  #course-technology {
-                                      padding-bottom: 50px;
-                                      @media (min-width: $note_desk) {
-                                          margin-top: 110px;
-                                          padding-bottom: 123px;
-                                      }
-                                      .course-technology--title {
-                                          margin-bottom: 40px;
-                                      }
-                                      .course-technology--grid {
-                                          grid-template-columns: 1fr 1fr;
-                                          display: grid;
-                                          grid-gap: 15px;
-                                          margin-bottom: 28px;
-                                          .course-technology--grid-item:nth-of-type(4)~.course-technology--grid-item {
-                                              display: none;
-                                          }
-                                          @media (min-width: $note_desk) {
-                                              grid-gap: 20px;
-                                              margin-bottom: 0;
-                                              grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-                                              .course-technology--grid-item:nth-of-type(4)~.course-technology--grid-item {
-                                                  display: flex;
-                                              }
-                                          }
-                                          .course-technology--grid-item {
-                                              display: flex;
-                                              justify-content: center;
-                                              flex-direction: column;
-                                              padding: 22px;
-                                              border-radius: 15px;
-                                              background-color: $secondary-bg-white;
-                                              img {
-                                                  object-fit: contain;
-                                                  margin: 0 auto;
-                                                  width: 100%;
-                                                  height: 70px;
-                                                  &.hide-mob {
-                                                      display: none;
-                                                  }
-                                                  @media (min-width: $note_desk) {
-                                                      height: 52px;
-                                                      &.hide-pc {
-                                                          display: none;
-                                                      }
-                                                      &.hide-mob {
-                                                          display: block;
-                                                      }
-                                                      &.pc-view {
-                                                          width: 100%;
-                                                          height: 107px;
-                                                          object-fit: cover;
-                                                      }
-                                                  }
-                                              }
-                                              p {
-                                                  margin: 0 auto;
-                                                  color: $main-color;
-                                                  opacity: 0.8;
-                                                  font-size: 16px;
-                                                  line-height: 21px;
-                                                  font-weight: bold;
-                                                  margin-top: 15px;
-                                              }
-                                          }
-                                      }
-                                      @media (min-width: $note_desk) {
-                                          .course-technology--grid-item--description {
-                                              display: none;
-                                          }
-                                      }
-                                      .course-technology--follow-us {
-                                          margin-bottom: 20px;
-                                          font-size: 16px;
-                                          line-height: 24px;
-                                          font-weight: 600;
-                                          @media (min-width: $note_desk) {
-                                              display: none;
-                                          }
-                                      }
-                                      .course-technology--get-all {
-                                          display: flex;
-                                          align-items: center;
-                                          font-size: $main-font-mobile;
-                                          color: $main-color;
-                                          font-weight: 600;
-                                          justify-content: center;
-                                          text-decoration: none;
-                                          @media (min-width: $note_desk) {
-                                              display: none;
-                                          }
-                                          span {
-                                              font-weight: 400;
-                                              font-size: 28px;
-                                          }
-                                          .orange-attention {
-                                              margin-left: 19px;
-                                          }
-                                      }
-                                  }
-                                  #course-price {
-                                      margin: 0;
-                                      h2 {
-                                          margin-bottom: 39px;
-                                          @media (min-width: $note_desk) {
-                                              text-align: left!important;
-                                              margin-bottom: 40px;
-                                          }
-                                      }
-                                      .course-price--price-wrapper {
-                                          background-color: $secondary-bg-white;
-                                          border-radius: 15px;
-                                          padding-bottom: 38.5px;
-                                          margin-bottom: 113px;
-                                          @media (min-width: $note_desk) {
-                                              margin-bottom: 0;
-                                          }
-                                          .price-wrapper--main-price {
-                                              background-color: $base-bg-orange;
-                                              width: 173px;
-                                              height: 80px;
-                                              margin: 0 auto;
-                                              text-align: center;
-                                              position: relative;
-                                              top: -15px;
-                                              @media (min-width: $note_desk) {
-                                                  right: 120px;
-                                                  margin-right: 0;
-                                              }
-                                              &::before {
-                                                  content: '';
-                                                  width: 0;
-                                                  height: 0;
-                                                  border-bottom: 15px solid $base-bg-orange;
-                                                  border-left: 15px solid transparent;
-                                                  position: absolute;
-                                                  top: 0;
-                                                  left: -15px;
-                                              }
-                                              &::after {
-                                                  border-left: 86.5px solid transparent;
-                                                  border-right: 86.5px solid transparent;
-                                                  border-top: 23px solid $base-bg-orange;
-                                                  content: "";
-                                                  height: 0;
-                                                  position: absolute;
-                                                  width: 0;
-                                                  left: 0;
-                                                  bottom: -23px;
-                                              }
-                                              span {
-                                                  line-height: 70px;
-                                                  font-weight: bold;
-                                                  top: 30px;
-                                                  position: relative;
-                                                  color: $main-color-white;
-                                              }
-                                              .main-price--price--cost {
-                                                  font-size: 30px;
-                                              }
-                                              .main-price--currency {
-                                                  font-size: 16px;
-                                              }
-                                          }
-                                      }
-                                      .course-price--course-description {
-                                          display: grid;
-                                          margin-top: 40px;
-                                          grid-template-columns: 1fr 4fr;
-                                          @media (min-width: $note_desk) {
-                                              grid-template-columns: 1fr 4fr 1fr;
-                                              .main-button-action {
-                                                  max-height: 68px;
-                                                  box-sizing: border-box;
-                                                  min-width: 341px;
-                                                  text-align: center;
-                                                  background-color: transparent;
-                                                  border: 2px solid #EFEFEF;
-                                                  color: $main-color;
-                                                  align-self: center;
-                                                  margin-right: 50px;
-                                                  &.hided-on-mobile {
-                                                      display: inline-block;
-                                                  }
-                                              }
-                                          }
-                                          .course-price--vacancies {
-                                              font-weight: bold;
-                                              font-size: 20px;
-                                              line-height: 28px;
-                                              margin-bottom: 20px;
-                                          }
-                                          ul li {
-                                              margin-bottom: 15px;
-                                              font-weight: 600;
-                                              color: $main-color;
-                                              span {
-                                                  color: $main-color-orange;
-                                              }
-                                              &:last-child {
-                                                  margin-bottom: 34px;
-                                              }
-                                          }
-                                      }
-                                      @media (min-width: $note_desk) {
-                                          .main-button-action {
-                                              display: none;
-                                          }
-                                      }
-                                  }
-                                  #students-review {
-                                      margin-top: 0;
-                                      position: relative;
-                                      @media (min-width: $note_desk) {
-                                          padding-top: 10px;
-                                          background-image: url('./img/new_line_team.svg');
-                                          background-size: inherit;
-                                          background-position-x: -100px;
-                                          background-repeat-y: no-repeat;
-                                          margin-top: 34px;
-                                          -webkit-transition: background-position 3s ease;
-                                          -moz-transition: background-position 3s ease;
-                                          -o-transition: background-position 3s ease;
-                                          transition: background-position 3s ease;
-                                          margin-top: 127px;
-                                      }
-                                      &::before {
-                                          content: '';
-                                          background-color: $secondary-bg-gray;
-                                          position: absolute;
-                                          left: 0;
-                                          top: 0;
-                                          width: 100%;
-                                          height: 100%;
-                                          z-index: 0;
-                                          top: 55%;
-                                      }
-                                      // background-color: $secondary-bg-gray;
-                                      .students-review--counter {
-                                          text-align: center;
-                                          margin-top: 22px;
-                                          span {
-                                              font-size: 20px;
-                                              display: inline-block;
-                                              line-height: 28px;
-                                              font-weight: 600;
-                                              color: $main-color-white;
-                                              min-width: 15px;
-                                              position: relative;
-                                          }
-                                          .counter--border-progress {
-                                              width: 60px;
-                                              margin: 0 16px;
-                                              position: relative;
-                                              top: 14px;
-                                              height: 2px;
-                                              background-color: $base-bg-white;
-                                          }
-                                      }
-                                      .students-review--get-all {
-                                          color: $main-color-white;
-                                          position: relative;
-                                          align-items: center;
-                                          margin-top: 40px;
-                                          font-size: $main-font-mobile;
-                                          display: flex;
-                                          justify-content: center;
-                                          text-decoration: none;
-                                          display: none;
-                                          @media (min-width: $tablet) {
-                                              display: flex;
-                                          }
-                                          .students-review--plus-wrapper {
-                                              margin-left: 30px;
-                                              font-size: 28px;
-                                              font-weight: 400;
-                                          }
-                                      }
-                                      .students-review--title {
-                                          color: $main-color;
-                                      }
-                                      .owl-carousel {
-                                          .owl-dots {
-                                              display: none;
-                                          }
-                                          @media (min-width: $note_desk) {
-                                              .owl-nav {
-                                                  display: block!important;
-                                                  button {
-                                                      position: absolute;
-                                                      top: 0;
-                                                      min-width: 12vw;
-                                                      min-height: -webkit-fill-available;
-                                                      span {
-                                                          display: none;
-                                                      }
-                                                  }
-                                                  .owl-next {
-                                                      right: 0;
-                                                  }
-                                              }
-                                          }
-                                          .owl-item {
-                                              .students-review--owl-card {
-                                                  width: 90vw;
-                                                  margin: 0 auto;
-                                                  background-color: $secondary-bg-white;
-                                                  padding: 20px;
-                                                  box-sizing: border-box;
-                                                  border-radius: 15px;
-                                                  @media (min-width: $tablet) {
-                                                      width: initial;
-                                                  }
-                                                  .owl-card--header {
-                                                      display: flex;
-                                                      justify-content: space-between;
-                                                      align-items: center;
-                                                      margin-bottom: 20px;
-                                                      .owl-card--header-avatar {
-                                                          width: 60px;
-                                                          height: 60px;
-                                                          object-fit: cover;
-                                                          border-radius: 50%;
-                                                      }
-                                                      .owl-card--header-student {
-                                                          font-size: 18px;
-                                                          line-height: 24px;
-                                                          font-weight: bold;
-                                                          color: $main-color;
-                                                          opacity: 0.8;
-                                                      }
-                                                      .owl-card--header-icon {
-                                                          width: 41px;
-                                                          height: 41px;
-                                                      }
-                                                  }
-                                                  .owl-card--body {
-                                                      line-height: 28px;
-                                                      color: $main-color;
-                                                      margin-bottom: 34px;
-                                                      .hided {
-                                                          display: none;
-                                                      }
-                                                      .show-more {
-                                                          font-size: 30px;
-                                                          color: $main-color-orange;
-                                                      }
-                                                  }
-                                                  .owl-card--footer--wrapper {
-                                                      display: flex;
-                                                      .owl-card--footer--wrapper-profession {
-                                                          font-size: $main-font-mobile;
-                                                          color: $main-color;
-                                                          font-weight: bold;
-                                                          margin-left: 20px;
-                                                          max-width: 200px;
-                                                      }
-                                                  }
-                                              }
-                                          }
-                                      }
-                                  }
-                                  #registration {
-                                      z-index: 1;
-                                      position: relative;
-                                  }
-                                  .mySwiper {
-                                      &.shown {
-                                          width: -webkit-fill-available!important;
-                                          width: -moz-available!important;
-                                          width: fill-available!important;
-                                          position: fixed!important;
-                                          left: 0!important;
-                                          z-index: 11!important;
-                                          overflow: visible;
-                                          padding-top: 20px;
-                                          bottom: -417px!important;
-                                      }
-                                      // background-color: rgba(255, 129, 16, .3);
-                                      .courses-mobile-menu-advanced--wrapper {
-                                          background-color: $base-bg-orange;
-                                          padding: 20px 0px 0;
-                                          color: $main-color-white;
-                                          box-shadow: none;
-                                      }
-                                      ul {
-                                          display: flex;
-                                          flex-direction: column;
-                                          align-items: center;
-                                          li {
-                                              a {
-                                                  padding: 15px;
-                                                  display: inline-block;
-                                              }
-                                              &.registration-action {
-                                                  a {
-                                                      font-size: 16px;
-                                                      padding: 0;
-                                                  }
-                                                  border-radius: 15px 15px 0 0;
-                                                  background-color: $base-bg-white;
-                                                  width: -webkit-fill-available;
-                                                  width: -moz-available!important;
-                                                  width: fill-available!important;
-                                                  padding: 24px;
-                                                  text-align: center;
-                                                  margin-top: 34px;
-                                              }
-                                          }
-                                      }
-                                      a {
-                                          font-size: $main-font-mobile;
-                                          color: $main-color;
-                                          font-weight: 600;
-                                      }
-                                      [aria-label="1 / 2"] {
-                                          display: flex!important;
-                                          flex-direction: column!important;
-                                          justify-content: flex-end!important;
-                                          max-height: none!important;
-                                          height: 70px!important;
-                                          .swipe-title {
-                                              background-color: $base-bg-orange;
-                                              margin-bottom: 0;
-                                              color: $main-color-white;
-                                              border-radius: 15px 15px 0 0;
-                                              padding: 15px 0 30px;
-                                          }
-                                      }
-                                      .courses-mobile-menu-advanced--swipe-border {
-                                          background-color: $secondary-bg-gray;
-                                          border-radius: 15px;
-                                          height: 4.4px;
-                                          left: 50%;
-                                          opacity: .8;
-                                          position: absolute;
-                                          transform: translate(-50%, -70px);
-                                          width: 50px;
-                                      }
-                                      .swiper-wrapper {
-                                          &::before {
-                                              content: "";
-                                              height: 100vh;
-                                              position: absolute;
-                                              top: 96%;
-                                              width: 100%;
-                                              background-color: $base-bg-white;
-                                          }
-                                          &.active {
-                                              transform: var(--transformProp)!important;
-                                          }
-                                      }
-                                  }
-                                  @media (min-width: $note_desk) {
-                                      .mySwiper {
-                                          display: none;
-                                      }
-                                  }
-                                  .desk-menu-courses {
-                                      .desk-menu-courses--content {
-                                          display: none;
-                                          justify-content: space-between;
-                                          align-items: center;
-                                          position: fixed;
-                                          background-color: $base-bg-white;
-                                          height: auto;
-                                          bottom: 0;
-                                          z-index: 11;
-                                          padding: 15px 42px 15px;
-                                          width: -webkit-fill-available;
-                                          width: -moz-available!important;
-                                          width: fill-available!important;
-                                          .desk-menu-courses--anchors {
-                                              display: flex;
-                                              align-items: center;
-                                              li {
-                                                  a {
-                                                      color: $main-color;
-                                                      font-size: $main-font-mobile;
-                                                      padding: 0 15px;
-                                                      font-weight: 600;
-                                                      display: inline-block;
-                                                      line-height: 16px;
-                                                      &.focus {
-                                                          color: $main-color-orange;
-                                                      }
-                                                  }
-                                              }
-                                          }
-                                          .registration-action {
-                                              @include base-btn;
-                                              a {
-                                                  font-size: $main-font-mobile;
-                                                  font-weight: 600;
-                                              }
-                                          }
-                                          .desk-menu-courses--content-fs {
-                                              display: flex;
-                                              align-items: center;
-                                              .course-category {
-                                                  margin-right: 30px;
-                                              }
-                                              h2,
-                                              marquee {
-                                                  overflow: hidden;
-                                                  padding: 5px;
-                                                  font-weight: bold;
-                                              }
-                                          }
-                                      }
-                                      &.shown {
-                                          .desk-menu-courses--content {
-                                              display: flex;
-                                          }
-                                      }
-                                      @media (max-width: $note_desk) {
-                                          display: none;
-                                      }
-                                  }
-                              }
-                              
-                              .courses {
-                                  #footer section {
-                                      padding-bottom: 100px;
-                                  }
-                              }
+                                                            :root {
+                                                               --transformProp: none;
+                                                           }
+                                                           
+                                                           .courses {
+                                                               body {
+                                                                   &.swipe {
+                                                                       overflow: hidden;
+                                                                       #courses-mobile-menu-advanced {
+                                                                           .courses-mobile-menu-advanced--wrapper {
+                                                                               background-color: $base-bg-orange;
+                                                                               box-shadow: 0px 12px 90px black;
+                                                                           }
+                                                                       }
+                                                                   }
+                                                               }
+                                                               .uk-container-small {
+                                                                   max-width: 990px;
+                                                               }
+                                                               .course-category {
+                                                                   display: block;
+                                                                   span {
+                                                                       font-size: $main-font-mobile;
+                                                                       color: $main-color;
+                                                                       font-weight: 600;
+                                                                       display: inline-block;
+                                                                       padding: 5px 10px;
+                                                                       border-radius: 3px;
+                                                                       background-color: rgba(255, 129, 16, 0.8);
+                                                                   }
+                                                               }
+                                                               .main-button-action {
+                                                                   display: inline-block;
+                                                                   padding: 25px 60px;
+                                                                   @media (min-width: $more_than_iphone5) {
+                                                                       padding: 25px 70px;
+                                                                   }
+                                                                   @media (min-width: $tablet) {
+                                                                       padding: 25px 98px;
+                                                                   }
+                                                                   font-size: $main-font-mobile;
+                                                                   line-height: 12px;
+                                                                   border-radius: 50px;
+                                                                   background-color: $base-bg-orange;
+                                                                   color: $main-color-white;
+                                                                   font-weight: 600;
+                                                                   position: relative;
+                                                                   left: 50%;
+                                                                   transform: translate(-50%, 0);
+                                                                   &.hided-on-mobile {
+                                                                       display: none;
+                                                                   }
+                                                               }
+                                                               section h2 {
+                                                                   margin-bottom: 25px;
+                                                                   line-height: 40px;
+                                                                   @media (min-width: $tablet) {
+                                                                       margin-bottom: 40px;
+                                                                   }
+                                                               }
+                                                               .orange-attention {
+                                                                   display: flex;
+                                                                   justify-content: center;
+                                                                   align-items: center;
+                                                                   min-width: 35px;
+                                                                   height: 35px;
+                                                                   max-width: 35px;
+                                                                   background-color: rgba(255, 129, 16, 0.8);
+                                                                   border-radius: 50%;
+                                                                   color: $main-color-white;
+                                                               }
+                                                               section p {
+                                                                   font-size: $main-font-mobile;
+                                                                   @media (min-width: $note_desk) {
+                                                                       font-size: 16px;
+                                                                   }
+                                                                   line-height: 24px;
+                                                                   margin-left: auto;
+                                                                   // max-width: 590px;
+                                                                   color: $main-color;
+                                                               }
+                                                               #hero {
+                                                                   background: none;
+                                                                   top: 0;
+                                                                   padding-top: 0;
+                                                                   min-height: initial;
+                                                                   .uk-container {
+                                                                       padding: 0;
+                                                                       top: 0;
+                                                                       height: auto;
+                                                                       @media (min-width: $note_desk) {
+                                                                           // max-height: 100vh;
+                                                                           display: grid;
+                                                                           grid-template-columns: 1fr 1fr;
+                                                                           .hero--right-side {
+                                                                               min-height: 100vh;
+                                                                               min-width: 600px;
+                                                                               position: initial;
+                                                                               border-radius: 15px;
+                                                                               position: relative;
+                                                                               left: -137px;
+                                                                           }
+                                                                           .hero--site-slogan {
+                                                                               font-size: 45px;
+                                                                               line-height: 39px;
+                                                                               position: relative;
+                                                                               left: 0;
+                                                                               .hero--site-slogan-padding {
+                                                                                   border-radius: 15px;
+                                                                                   display: inline-block;
+                                                                                   padding: 15px 20px 15px 0;
+                                                                                   background-color: $base-bg-white;
+                                                                                   white-space: pre;
+                                                                               }
+                                                                           }
+                                                                           .hero--site-slogan,
+                                                                           .hero--description {
+                                                                               color: $main-color;
+                                                                           }
+                                                                           .hero--description {
+                                                                               font-size: $main-font-mobile;
+                                                                               font-weight: 400;
+                                                                               max-width: 388px;
+                                                                               margin-left: 0;
+                                                                               position: relative;
+                                                                               border-radius: 15px;
+                                                                               padding: 15px 20px 15px 0;
+                                                                               background-color: $base-bg-white;
+                                                                               left: 0;
+                                                                               @media (min-width: $note_desk) {
+                                                                                   margin-bottom: 27px;
+                                                                               }
+                                                                           }
+                                                                           .hero--courses-mark {
+                                                                               background-color: transparent;
+                                                                               font-size: 20px;
+                                                                               font-weight: 600;
+                                                                               line-height: 28px;
+                                                                               opacity: 1;
+                                                                               position: relative;
+                                                                               left: 0;
+                                                                           }
+                                                                           .hero--left-side {
+                                                                               padding-right: 0;
+                                                                               padding-top: 0;
+                                                                               .hero--post-description {
+                                                                                   margin-left: 0;
+                                                                                   position: relative;
+                                                                                   left: 0;
+                                                                                   padding-left: 0;
+                                                                                   padding-top: 23px;
+                                                                               }
+                                                                               .hero--regisration-gray-bg {
+                                                                                   border-radius: 30px 0px 0 30px;
+                                                                                   padding: 41px 42px;
+                                                                                   padding-right: 86px;
+                                                                               }
+                                                                               .hero--left-side--regisration {
+                                                                                   max-width: initial;
+                                                                                   position: relative;
+                                                                                   left: -45px;
+                                                                                   p {
+                                                                                       font-size: 16px;
+                                                                                   }
+                                                                                   display: flex;
+                                                                               }
+                                                                               .registration--footer {
+                                                                                   border-radius: 0px 30px 30px 0;
+                                                                                   display: flex;
+                                                                                   align-items: center;
+                                                                                   justify-content: center;
+                                                                                   max-width: 92px;
+                                                                                   a {
+                                                                                       transform: rotate( -90deg);
+                                                                                       font-size: 22px;
+                                                                                       line-height: 12px;
+                                                                                   }
+                                                                               }
+                                                                           }
+                                                                       }
+                                                                   }
+                                                                   .hero--site-slogan {
+                                                                       font-size: 40px;
+                                                                       color: $main-color-white;
+                                                                       line-height: 38px;
+                                                                       margin-bottom: 15px;
+                                                                       &.hided-on-mobile {
+                                                                           display: none;
+                                                                       }
+                                                                       @media (min-width: $tablet) {
+                                                                           &.hided-on-pc {
+                                                                               display: none;
+                                                                           }
+                                                                           &.hided-on-mobile {
+                                                                               display: block;
+                                                                           }
+                                                                       }
+                                                                   }
+                                                                   .hero--description {
+                                                                       font-weight: 600;
+                                                                       line-height: 28px;
+                                                                       color: $main-color-white;
+                                                                       margin-bottom: 30px;
+                                                                       font-size: 16px;
+                                                                   }
+                                                                   .hero--right-side {
+                                                                       border-radius: 15px 15px 0px 0px;
+                                                                       background-image: url('./img/course_frontend/EwhCd8nWQAIOIJy.jpg');
+                                                                       top: 0;
+                                                                       position: absolute;
+                                                                       filter: brightness(0.5);
+                                                                       background-size: cover;
+                                                                       background-repeat: no-repeat;
+                                                                       left: 0;
+                                                                       width: 100%;
+                                                                   }
+                                                                   .hero--left-side {
+                                                                       position: relative;
+                                                                       z-index: 1;
+                                                                       padding: 0 15px;
+                                                                       padding-top: 30px;
+                                                                       line-height: 23px;
+                                                                       font-weight: 600;
+                                                                       color: $main-color;
+                                                                       .hero--regisration-gray-bg {
+                                                                           background-color: $base-bg-secondary;
+                                                                           padding: 30px 20px 20px;
+                                                                           border-radius: 15px 15px 0 0;
+                                                                       }
+                                                                       .registration--footer {
+                                                                           text-align: center;
+                                                                           background-color: $base-bg-orange;
+                                                                           padding: 25px 0;
+                                                                           border-radius: 0 0 15px 15px;
+                                                                           a {
+                                                                               color: $main-color-white;
+                                                                               font-size: 16px;
+                                                                               text-align: center;
+                                                                               text-decoration: none;
+                                                                           }
+                                                                       }
+                                                                       .hero--left-side--regisration {
+                                                                           max-width: 535px;
+                                                                           margin: 0 auto;
+                                                                           p {
+                                                                               font-size: $main-font-mobile;
+                                                                               margin-bottom: 10px;
+                                                                               opacity: 0.8;
+                                                                               margin-left: 0;
+                                                                           }
+                                                                           .left-side--regisration-time-wrapper {
+                                                                               display: grid;
+                                                                               grid-template-columns: 1fr 1fr 1fr;
+                                                                               @media (min-width: $more_than_iphone5) {
+                                                                                   grid-template-columns: 1fr 1fr 1fr 1fr;
+                                                                                   max-width: 324px;
+                                                                               }
+                                                                               grid-gap: 10px;
+                                                                               .regisration-time-wrapper--blocks {
+                                                                                   width: 68px;
+                                                                                   height: 67px;
+                                                                                   border-radius: 12px;
+                                                                                   background-color: $base-bg-white;
+                                                                                   display: flex;
+                                                                                   justify-content: center;
+                                                                                   align-items: center;
+                                                                                   flex-direction: column;
+                                                                               }
+                                                                               .time-wrapper--number {
+                                                                                   font-size: 20px;
+                                                                                   text-align: center;
+                                                                               }
+                                                                               .time-wrapper--text {
+                                                                                   font-size: $main-font-mobile;
+                                                                                   text-align: center;
+                                                                               }
+                                                                           }
+                                                                           .registration--free-space {
+                                                                               margin: 30px 0;
+                                                                           }
+                                                                           .registration--number-of-free-space {
+                                                                               color: $main-color-orange;
+                                                                               font-size: 54px;
+                                                                               padding-bottom: 17px;
+                                                                           }
+                                                                       }
+                                                                       .hero--post-description {
+                                                                           display: flex;
+                                                                           padding: 15px 20px;
+                                                                           max-width: 351px;
+                                                                           margin: 0 auto;
+                                                                           .hero--post-description--attention {
+                                                                               font-size: 25px;
+                                                                               line-height: 28px;
+                                                                               margin-right: 13px;
+                                                                           }
+                                                                           p {
+                                                                               font-size: $main-font-mobile;
+                                                                               line-height: 24px;
+                                                                               span {
+                                                                                   color: $main-color-orange;
+                                                                               }
+                                                                           }
+                                                                       }
+                                                                   }
+                                                                   .hero--courses-mark {
+                                                                       min-width: 33px;
+                                                                       min-height: 28px;
+                                                                       font-size: $main-font-mobile;
+                                                                       text-transform: uppercase;
+                                                                       font-weight: 600;
+                                                                       color: $main-color;
+                                                                       border-radius: 3px;
+                                                                       opacity: 0.8;
+                                                                       background-color: #F9F9F9;
+                                                                       position: relative;
+                                                                       margin-bottom: 10px;
+                                                                       display: inline-block;
+                                                                       span {
+                                                                           position: absolute;
+                                                                           top: 50%;
+                                                                           left: 50%;
+                                                                           transform: translate(-50%, -50%);
+                                                                       }
+                                                                   }
+                                                                   &.course-stoped {
+                                                                       .uk-container .hero--left-side {
+                                                                           .registration--footer {
+                                                                               display: none;
+                                                                           }
+                                                                           .hero--left-side--regisration {
+                                                                               left: 0;
+                                                                           }
+                                                                           .hero--post-description {
+                                                                               display: none;
+                                                                           }
+                                                                           .hero--regisration-gray-bg {
+                                                                               border-radius: 30px;
+                                                                           }
+                                                                           .left-side--regisration-time-wrapper {
+                                                                               display: none;
+                                                                           }
+                                                                           .registration--free-space {
+                                                                               display: none;
+                                                                           }
+                                                                           .registration--number-of-free-space {
+                                                                               display: none;
+                                                                           }
+                                                                           .left-side--regisration-time-wrapper {
+                                                                               display: none!important;
+                                                                           }
+                                                                       }
+                                                                       &+#course-for {
+                                                                           @media (max-width: $note_desk) {
+                                                                               margin-top: 180px;
+                                                                           }
+                                                                       }
+                                                                   }
+                                                               }
+                                                               #course-for {
+                                                                   @media (min-width: $note_desk) {
+                                                                       margin-top: 120px;
+                                                                   }
+                                                                   p {
+                                                                       max-width: 590px;
+                                                                       margin-right: 67px;
+                                                                   }
+                                                                   .course-for--numbers-achievement {
+                                                                       display: grid;
+                                                                       grid-template-columns: 1fr;
+                                                                       grid-gap: 25px;
+                                                                       margin-top: 30px;
+                                                                       @media (min-width: $more_than_iphone5) {
+                                                                           grid-template-columns: 1fr 1fr;
+                                                                       }
+                                                                       @media (min-width: $note_desk) {
+                                                                           grid-gap: 100px;
+                                                                           grid-template-columns: 1fr 1fr 1fr 1fr;
+                                                                       }
+                                                                       .numbers-achievement--wrapper-description {
+                                                                           max-width: 181px;
+                                                                           line-height: 24px;
+                                                                       }
+                                                                       .numbers-achievement--wrapper {
+                                                                           color: $main-color;
+                                                                           font-size: $main-font-mobile;
+                                                                           line-height: 22px;
+                                                                           font-weight: 600;
+                                                                           .numbers-achievement--wrapper-number {
+                                                                               color: $main-color-orange;
+                                                                               font-size: 50px;
+                                                                               line-height: 70px;
+                                                                               font-weight: bold;
+                                                                               margin-bottom: 10px;
+                                                                               @media (min-width: $note_desk) {
+                                                                                   margin-bottom: 20px;
+                                                                                   position: relative;
+                                                                                   top: 17px;
+                                                                               }
+                                                                           }
+                                                                           &:first-child {
+                                                                               .numbers-achievement--wrapper-number {
+                                                                                   font-size: 80px;
+                                                                                   @media (min-width: $note_desk) {
+                                                                                       font-size: 100px;
+                                                                                       top: 0;
+                                                                                   }
+                                                                               }
+                                                                           }
+                                                                           // @media (min-width: $note_desk) {
+                                                                           //     position: relative;
+                                                                           //     .numbers-achievement--wrapper-description,
+                                                                           //     .numbers-achievement--wrapper-number {
+                                                                           //         width: 90%;
+                                                                           //         left: 50%;
+                                                                           //         transform: translate(-50%, 0);
+                                                                           //         position: absolute;
+                                                                           //     }
+                                                                           // }
+                                                                       }
+                                                                   }
+                                                               }
+                                                               #video-represent {
+                                                                   margin-top: 60px;
+                                                                   font-size: 0;
+                                                                   position: relative;
+                                                                   @media (min-width: $note_desk) {
+                                                                       margin-top: 80px;
+                                                                       &::after {
+                                                                           background-color: $base-bg-secondary;
+                                                                           content: "";
+                                                                           height: 35%;
+                                                                           left: 0;
+                                                                           position: absolute;
+                                                                           bottom: 0;
+                                                                           width: 100%;
+                                                                       }
+                                                                   }
+                                                                   p {
+                                                                       margin-left: 0;
+                                                                       max-width: 691px;
+                                                                   }
+                                                                   h2 {
+                                                                       margin-left: 0;
+                                                                       @media (min-width: $note_desk) {
+                                                                           margin-left: auto;
+                                                                       }
+                                                                       max-width: 280px;
+                                                                   }
+                                                                   .video-iframe {
+                                                                       max-width: 1196px;
+                                                                       margin: 0 auto;
+                                                                       padding: 0 15px;
+                                                                       @media (min-width: $note_desk) {
+                                                                           padding: 0;
+                                                                       }
+                                                                       .video-iframe--banner {
+                                                                           .video-iframe--content {
+                                                                               margin-top: 35px;
+                                                                               min-width: auto;
+                                                                               @media (min-width: $note_desk) {
+                                                                                   margin-top: 70px;
+                                                                                   margin-bottom: 0;
+                                                                                   max-height: 644px;
+                                                                               }
+                                                                               .video__button {
+                                                                                   font-size: 0;
+                                                                                   img {
+                                                                                       top: 0;
+                                                                                       width: 30vw;
+                                                                                       height: 30vw;
+                                                                                   }
+                                                                                   span {
+                                                                                       font-size: 16px;
+                                                                                   }
+                                                                               }
+                                                                               .video__button.text {
+                                                                                   display: flex;
+                                                                                   flex-direction: column-reverse;
+                                                                                   align-items: center;
+                                                                                   text-decoration: none;
+                                                                                   span {
+                                                                                       display: none;
+                                                                                       margin-top: 20px;
+                                                                                       color: $main-color-white;
+                                                                                       @media (min-width: $note_desk) {
+                                                                                           display: inline-block;
+                                                                                       }
+                                                                                   }
+                                                                               }
+                                                                           }
+                                                                       }
+                                                                   }
+                                                                   .target {
+                                                                       height: auto;
+                                                                   }
+                                                               }
+                                                               #course-program {
+                                                                   background-color: $base-bg-secondary;
+                                                                   padding: 60px 0;
+                                                                   margin-top: 60px;
+                                                                   @media (min-width: $note_desk) {
+                                                                       padding: 120px 0;
+                                                                       margin-top: 0;
+                                                                       h2 {
+                                                                           text-align: center;
+                                                                           margin-bottom: 40px!important;
+                                                                       }
+                                                                   }
+                                                                   h2 {
+                                                                       margin-bottom: 25px;
+                                                                   }
+                                                                   .uk-accordion>:nth-child(n+2) {
+                                                                       margin-top: 30px;
+                                                                   }
+                                                                   .uk-container {
+                                                                       max-width: 792px;
+                                                                   }
+                                                                   .uk-accordion {
+                                                                       font-size: $main-font-mobile;
+                                                                       color: $main-color;
+                                                                       .registration-action {
+                                                                           display: none;
+                                                                       }
+                                                                       .uk-open {
+                                                                           position: relative;
+                                                                           @media (min-width: $note_desk) {
+                                                                               .registration-action {
+                                                                                   @include base-btn;
+                                                                                   position: absolute;
+                                                                                   right: 66px;
+                                                                                   top: 14px;
+                                                                               }
+                                                                           }
+                                                                           .uk-accordion-title {
+                                                                               &::before {
+                                                                                   transform: rotate(180deg);
+                                                                                   transition: transform .3s;
+                                                                               }
+                                                                           }
+                                                                       }
+                                                                       .uk-accordion-title {
+                                                                           border-radius: 50px;
+                                                                           background-color: $base-bg-white;
+                                                                           font-size: $main-font-mobile;
+                                                                           padding: 25px 30px;
+                                                                           font-weight: 600;
+                                                                           text-transform: initial;
+                                                                           &:hover {
+                                                                               color: $main-color;
+                                                                           }
+                                                                           &::before {
+                                                                               transition: transform .3s;
+                                                                               background-image: url('./img/arrow_down.svg')
+                                                                           }
+                                                                           @media (min-width: $note_desk) {
+                                                                               font-size: 16px;
+                                                                           }
+                                                                       }
+                                                                       .uk-accordion-content {
+                                                                           p {
+                                                                               font-weight: 600;
+                                                                               padding: 0 30px;
+                                                                           }
+                                                                       }
+                                                                   }
+                                                               }
+                                                               #course-technology {
+                                                                   padding-bottom: 50px;
+                                                                   margin-top: 57px;
+                                                                   @media (min-width: $note_desk) {
+                                                                       margin-top: 110px;
+                                                                       padding-bottom: 112px;
+                                                                   }
+                                                                   .course-technology--title {
+                                                                       margin-bottom: 40px;
+                                                                   }
+                                                                   .course-technology--grid {
+                                                                       grid-template-columns: 1fr 1fr;
+                                                                       display: grid;
+                                                                       grid-gap: 18px;
+                                                                       margin-bottom: 28px;
+                                                                       .course-technology--grid-item:nth-of-type(4)~.course-technology--grid-item {
+                                                                           display: none;
+                                                                       }
+                                                                       @media (min-width: $note_desk) {
+                                                                           grid-gap: 20px;
+                                                                           margin-bottom: 0;
+                                                                           grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                                                                           .course-technology--grid-item:nth-of-type(4)~.course-technology--grid-item {
+                                                                               display: flex;
+                                                                           }
+                                                                       }
+                                                                       .course-technology--grid-item {
+                                                                           display: flex;
+                                                                           justify-content: center;
+                                                                           flex-direction: column;
+                                                                           padding: 22px;
+                                                                           border-radius: 15px;
+                                                                           background-color: $secondary-bg-white;
+                                                                           img {
+                                                                               object-fit: contain;
+                                                                               margin: 0 auto;
+                                                                               width: 100%;
+                                                                               height: 70px;
+                                                                               &.hide-mob {
+                                                                                   display: none;
+                                                                               }
+                                                                               @media (min-width: $note_desk) {
+                                                                                   height: 52px;
+                                                                                   &.hide-pc {
+                                                                                       display: none;
+                                                                                   }
+                                                                                   &.hide-mob {
+                                                                                       display: block;
+                                                                                   }
+                                                                                   &.pc-view {
+                                                                                       width: 100%;
+                                                                                       height: 107px;
+                                                                                       object-fit: cover;
+                                                                                   }
+                                                                               }
+                                                                           }
+                                                                           p {
+                                                                               margin: 0 auto;
+                                                                               color: $main-color;
+                                                                               opacity: 0.8;
+                                                                               font-size: 16px;
+                                                                               line-height: 21px;
+                                                                               font-weight: bold;
+                                                                               margin-top: 15px;
+                                                                           }
+                                                                       }
+                                                                   }
+                                                                   @media (min-width: $note_desk) {
+                                                                       .course-technology--grid-item--description {
+                                                                           display: none;
+                                                                       }
+                                                                   }
+                                                                   .course-technology--follow-us {
+                                                                       margin-bottom: 20px;
+                                                                       font-size: 16px;
+                                                                       line-height: 24px;
+                                                                       font-weight: 600;
+                                                                       @media (min-width: $note_desk) {
+                                                                           display: none;
+                                                                       }
+                                                                   }
+                                                                   .course-technology--get-all {
+                                                                       display: flex;
+                                                                       align-items: center;
+                                                                       font-size: $main-font-mobile;
+                                                                       color: $main-color;
+                                                                       font-weight: 600;
+                                                                       justify-content: center;
+                                                                       text-decoration: none;
+                                                                       @media (min-width: $note_desk) {
+                                                                           display: none;
+                                                                       }
+                                                                       span {
+                                                                           font-weight: 400;
+                                                                           font-size: 28px;
+                                                                       }
+                                                                       .orange-attention {
+                                                                           margin-left: 19px;
+                                                                       }
+                                                                   }
+                                                               }
+                                                               #course-price {
+                                                                   margin: 0;
+                                                                   h2 {
+                                                                       margin-bottom: 39px;
+                                                                       @media (min-width: $note_desk) {
+                                                                           text-align: left!important;
+                                                                           margin-bottom: 40px;
+                                                                       }
+                                                                   }
+                                                                   .course-price--price-wrapper {
+                                                                       background-color: $secondary-bg-white;
+                                                                       border-radius: 15px;
+                                                                       padding-bottom: 40px;
+                                                                       margin-bottom: 50px;
+                                                                       @media (min-width: $note_desk) {
+                                                                           margin-bottom: 0;
+                                                                           padding-bottom: 33px;
+                                                                       }
+                                                                       .price-wrapper--main-price {
+                                                                           background-color: $base-bg-orange;
+                                                                           width: 173px;
+                                                                           height: 80px;
+                                                                           margin: 0 auto;
+                                                                           text-align: center;
+                                                                           position: relative;
+                                                                           top: -15px;
+                                                                           @media (min-width: $note_desk) {
+                                                                               right: 120px;
+                                                                               margin-right: 0;
+                                                                           }
+                                                                           &::before {
+                                                                               content: '';
+                                                                               width: 0;
+                                                                               height: 0;
+                                                                               border-bottom: 15px solid $base-bg-orange;
+                                                                               border-left: 15px solid transparent;
+                                                                               position: absolute;
+                                                                               top: 0;
+                                                                               left: -15px;
+                                                                           }
+                                                                           &::after {
+                                                                               border-left: 86.5px solid transparent;
+                                                                               border-right: 86.5px solid transparent;
+                                                                               border-top: 23px solid $base-bg-orange;
+                                                                               content: "";
+                                                                               height: 0;
+                                                                               position: absolute;
+                                                                               width: 0;
+                                                                               left: 0;
+                                                                               bottom: -23px;
+                                                                           }
+                                                                           span {
+                                                                               line-height: 70px;
+                                                                               font-weight: bold;
+                                                                               top: 30px;
+                                                                               position: relative;
+                                                                               color: $main-color-white;
+                                                                           }
+                                                                           .main-price--price--cost {
+                                                                               font-size: 30px;
+                                                                           }
+                                                                           .main-price--currency {
+                                                                               font-size: 16px;
+                                                                           }
+                                                                       }
+                                                                   }
+                                                                   .course-price--course-description {
+                                                                       display: grid;
+                                                                       margin-top: 40px;
+                                                                       grid-template-columns: 1fr 4fr;
+                                                                       @media (min-width: $note_desk) {
+                                                                           grid-template-columns: 1fr 4fr 1fr;
+                                                                           .main-button-action {
+                                                                               max-height: 68px;
+                                                                               box-sizing: border-box;
+                                                                               min-width: 341px;
+                                                                               text-align: center;
+                                                                               background-color: transparent;
+                                                                               border: 2px solid #EFEFEF;
+                                                                               color: $main-color;
+                                                                               align-self: center;
+                                                                               margin-right: 50px;
+                                                                               &.hided-on-mobile {
+                                                                                   display: inline-block;
+                                                                               }
+                                                                           }
+                                                                           margin-top: -30px;
+                                                                       }
+                                                                       .course-price--vacancies {
+                                                                           font-weight: bold;
+                                                                           font-size: 20px;
+                                                                           line-height: 28px;
+                                                                           margin-bottom: 20px;
+                                                                       }
+                                                                       ul li {
+                                                                           margin-bottom: 15px;
+                                                                           font-weight: 600;
+                                                                           color: $main-color;
+                                                                           span {
+                                                                               color: $main-color-orange;
+                                                                           }
+                                                                           &:last-child {
+                                                                               margin-bottom: 34px;
+                                                                               @media (min-width: $note_desk) {
+                                                                                   margin-bottom: 0;
+                                                                               }
+                                                                           }
+                                                                       }
+                                                                   }
+                                                                   @media (min-width: $note_desk) {
+                                                                       .main-button-action {
+                                                                           display: none;
+                                                                       }
+                                                                   }
+                                                               }
+                                                               #students-review {
+                                                                   margin-top: 0;
+                                                                   position: relative;
+                                                                   @media (min-width: $note_desk) {
+                                                                       padding-top: 10px;
+                                                                       background-image: url('./img/new_line_team.svg');
+                                                                       background-size: inherit;
+                                                                       background-position-x: -100px;
+                                                                       background-repeat-y: no-repeat;
+                                                                       margin-top: 34px;
+                                                                       -webkit-transition: background-position 3s ease;
+                                                                       -moz-transition: background-position 3s ease;
+                                                                       -o-transition: background-position 3s ease;
+                                                                       transition: background-position 3s ease;
+                                                                       margin-top: 127px;
+                                                                   }
+                                                                   &::before {
+                                                                       content: '';
+                                                                       background-color: $secondary-bg-gray;
+                                                                       position: absolute;
+                                                                       left: 0;
+                                                                       top: 0;
+                                                                       width: 100%;
+                                                                       height: 100%;
+                                                                       z-index: 0;
+                                                                       top: 55%;
+                                                                   }
+                                                                   // background-color: $secondary-bg-gray;
+                                                                   .students-review--counter {
+                                                                       text-align: center;
+                                                                       margin-top: 22px;
+                                                                       span {
+                                                                           font-size: 20px;
+                                                                           display: inline-block;
+                                                                           line-height: 28px;
+                                                                           font-weight: 600;
+                                                                           color: $main-color-white;
+                                                                           min-width: 15px;
+                                                                           position: relative;
+                                                                       }
+                                                                       .counter--border-progress {
+                                                                           width: 60px;
+                                                                           margin: 0 16px;
+                                                                           position: relative;
+                                                                           top: 14px;
+                                                                           height: 2px;
+                                                                           background-color: $base-bg-white;
+                                                                       }
+                                                                   }
+                                                                   .students-review--get-all {
+                                                                       color: $main-color-white;
+                                                                       position: relative;
+                                                                       align-items: center;
+                                                                       margin-top: 40px;
+                                                                       font-size: $main-font-mobile;
+                                                                       display: flex;
+                                                                       justify-content: center;
+                                                                       text-decoration: none;
+                                                                       display: none;
+                                                                       @media (min-width: $tablet) {
+                                                                           display: flex;
+                                                                       }
+                                                                       .students-review--plus-wrapper {
+                                                                           margin-left: 30px;
+                                                                           font-size: 28px;
+                                                                           font-weight: 400;
+                                                                       }
+                                                                   }
+                                                                   .students-review--title {
+                                                                       color: $main-color;
+                                                                   }
+                                                                   .owl-carousel {
+                                                                       .owl-dots {
+                                                                           display: none;
+                                                                       }
+                                                                       @media (min-width: $note_desk) {
+                                                                           .owl-nav {
+                                                                               display: block!important;
+                                                                               button {
+                                                                                   position: absolute;
+                                                                                   top: 0;
+                                                                                   min-width: 12vw;
+                                                                                   min-height: -webkit-fill-available;
+                                                                                   span {
+                                                                                       display: none;
+                                                                                   }
+                                                                               }
+                                                                               .owl-next {
+                                                                                   right: 0;
+                                                                               }
+                                                                           }
+                                                                       }
+                                                                       .owl-item {
+                                                                           .students-review--owl-card {
+                                                                               width: 90vw;
+                                                                               margin: 0 auto;
+                                                                               background-color: $secondary-bg-white;
+                                                                               padding: 20px;
+                                                                               box-sizing: border-box;
+                                                                               border-radius: 15px;
+                                                                               @media (min-width: $tablet) {
+                                                                                   width: initial;
+                                                                                   padding: 30px;
+                                                                               }
+                                                                               .owl-card--header {
+                                                                                   display: flex;
+                                                                                   align-items: center;
+                                                                                   position: relative;
+                                                                                   margin-bottom: 20px;
+                                                                                   .owl-card--header-avatar {
+                                                                                       width: 60px;
+                                                                                       height: 60px;
+                                                                                       margin-right: 20px;
+                                                                                       object-fit: cover;
+                                                                                       border-radius: 50%;
+                                                                                   }
+                                                                                   .owl-card--header-student {
+                                                                                       font-size: 18px;
+                                                                                       line-height: 24px;
+                                                                                       font-weight: bold;
+                                                                                       color: $main-color;
+                                                                                       opacity: 0.8;
+                                                                                   }
+                                                                                   .owl-card--header-icon {
+                                                                                       width: 41px;
+                                                                                       height: 41px;
+                                                                                       position: absolute;
+                                                                                       right: 0;
+                                                                                   }
+                                                                               }
+                                                                               .owl-card--body {
+                                                                                   line-height: 28px;
+                                                                                   color: $main-color;
+                                                                                   margin-bottom: 34px;
+                                                                                   max-width: 500px;
+                                                                                   .hided {
+                                                                                       display: none;
+                                                                                   }
+                                                                                   .show-more {
+                                                                                       font-size: 30px;
+                                                                                       color: $main-color-orange;
+                                                                                   }
+                                                                               }
+                                                                               .owl-card--footer--wrapper {
+                                                                                   display: flex;
+                                                                                   .owl-card--footer--wrapper-profession {
+                                                                                       font-size: $main-font-mobile;
+                                                                                       color: $main-color;
+                                                                                       font-weight: bold;
+                                                                                       margin-left: 20px;
+                                                                                       max-width: 200px;
+                                                                                   }
+                                                                               }
+                                                                           }
+                                                                       }
+                                                                   }
+                                                               }
+                                                               #registration {
+                                                                   z-index: 1;
+                                                                   position: relative;
+                                                                   @media (min-width: $note_desk) {
+                                                                       padding-top: 145px;
+                                                                   }
+                                                               }
+                                                               .mySwiper {
+                                                                   &.shown {
+                                                                       width: -webkit-fill-available!important;
+                                                                       width: -moz-available!important;
+                                                                       width: fill-available!important;
+                                                                       position: fixed!important;
+                                                                       left: 0!important;
+                                                                       z-index: 11!important;
+                                                                       overflow: visible;
+                                                                       padding-top: 20px;
+                                                                       bottom: -417px!important;
+                                                                   }
+                                                                   // background-color: rgba(255, 129, 16, .3);
+                                                                   .courses-mobile-menu-advanced--wrapper {
+                                                                       background-color: $base-bg-orange;
+                                                                       padding: 20px 0px 0;
+                                                                       color: $main-color-white;
+                                                                       box-shadow: none;
+                                                                   }
+                                                                   ul {
+                                                                       display: flex;
+                                                                       flex-direction: column;
+                                                                       align-items: center;
+                                                                       li {
+                                                                           a {
+                                                                               padding: 15px;
+                                                                               display: inline-block;
+                                                                           }
+                                                                           &.registration-action {
+                                                                               a {
+                                                                                   font-size: 16px;
+                                                                                   padding: 0;
+                                                                               }
+                                                                               border-radius: 15px 15px 0 0;
+                                                                               background-color: $base-bg-white;
+                                                                               width: -webkit-fill-available;
+                                                                               width: -moz-available!important;
+                                                                               width: fill-available!important;
+                                                                               padding: 24px;
+                                                                               text-align: center;
+                                                                               margin-top: 34px;
+                                                                           }
+                                                                       }
+                                                                   }
+                                                                   a {
+                                                                       font-size: $main-font-mobile;
+                                                                       color: $main-color;
+                                                                       font-weight: 600;
+                                                                   }
+                                                                   [aria-label="1 / 2"] {
+                                                                       display: flex!important;
+                                                                       flex-direction: column!important;
+                                                                       justify-content: flex-end!important;
+                                                                       max-height: none!important;
+                                                                       height: 70px!important;
+                                                                       .swipe-title {
+                                                                           background-color: $base-bg-orange;
+                                                                           margin-bottom: 0;
+                                                                           color: $main-color-white;
+                                                                           border-radius: 15px 15px 0 0;
+                                                                           padding: 15px 0 30px;
+                                                                       }
+                                                                   }
+                                                                   .courses-mobile-menu-advanced--swipe-border {
+                                                                       background-color: $secondary-bg-gray;
+                                                                       border-radius: 15px;
+                                                                       height: 4.4px;
+                                                                       left: 50%;
+                                                                       opacity: .8;
+                                                                       position: absolute;
+                                                                       transform: translate(-50%, -70px);
+                                                                       width: 50px;
+                                                                   }
+                                                                   .swiper-wrapper {
+                                                                       &::before {
+                                                                           content: "";
+                                                                           height: 100vh;
+                                                                           position: absolute;
+                                                                           top: 96%;
+                                                                           width: 100%;
+                                                                           background-color: $base-bg-white;
+                                                                       }
+                                                                       &.active {
+                                                                           transform: var(--transformProp)!important;
+                                                                       }
+                                                                   }
+                                                               }
+                                                               @media (min-width: $note_desk) {
+                                                                   .mySwiper {
+                                                                       display: none;
+                                                                   }
+                                                               }
+                                                               .desk-menu-courses {
+                                                                   .desk-menu-courses--content {
+                                                                       display: none;
+                                                                       justify-content: space-between;
+                                                                       align-items: center;
+                                                                       position: fixed;
+                                                                       background-color: $base-bg-white;
+                                                                       height: auto;
+                                                                       bottom: 0;
+                                                                       z-index: 11;
+                                                                       padding: 15px 42px 15px;
+                                                                       width: -webkit-fill-available;
+                                                                       width: -moz-available!important;
+                                                                       width: fill-available!important;
+                                                                       .desk-menu-courses--anchors {
+                                                                           display: flex;
+                                                                           align-items: center;
+                                                                           li {
+                                                                               a {
+                                                                                   color: $main-color;
+                                                                                   font-size: $main-font-mobile;
+                                                                                   padding: 0 15px;
+                                                                                   font-weight: 600;
+                                                                                   display: inline-block;
+                                                                                   line-height: 16px;
+                                                                                   &.focus {
+                                                                                       color: $main-color-orange;
+                                                                                   }
+                                                                               }
+                                                                           }
+                                                                       }
+                                                                       .registration-action {
+                                                                           @include base-btn;
+                                                                           a {
+                                                                               font-size: $main-font-mobile;
+                                                                               font-weight: 600;
+                                                                           }
+                                                                       }
+                                                                       .desk-menu-courses--content-fs {
+                                                                           display: flex;
+                                                                           align-items: center;
+                                                                           .course-category {
+                                                                               margin-right: 30px;
+                                                                           }
+                                                                           h2,
+                                                                           marquee {
+                                                                               overflow: hidden;
+                                                                               padding: 5px;
+                                                                               font-weight: bold;
+                                                                           }
+                                                                       }
+                                                                   }
+                                                                   &.shown {
+                                                                       .desk-menu-courses--content {
+                                                                           display: flex;
+                                                                       }
+                                                                   }
+                                                                   @media (max-width: $note_desk) {
+                                                                       display: none;
+                                                                   }
+                                                               }
+                                                           }
+                                                           
+                                                           .courses {
+                                                               #footer section {
+                                                                   padding-bottom: 100px;
+                                                               }
+                                                           }
