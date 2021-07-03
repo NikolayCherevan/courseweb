@@ -767,7 +767,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             location.hash = hash;
         }
         document.addEventListener('touchstart', function(event) {
-            if ((!document.querySelector('.mySwiper').contains(event.target)) || event.target.getAttribute('href') != null) {
+            if ((!document.querySelector('.mySwiper').contains(event.target)) && event.target.getAttribute('href') != null) {
                 scrollTo(event.target.getAttribute('href'));
                 setTimeout(() => swiper.slideTo(0), 300)
             }
