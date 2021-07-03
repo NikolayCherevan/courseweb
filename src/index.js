@@ -694,15 +694,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
             $('#students-review').css('background-position-x', getMatrix(document.querySelector(".students-review--owl .owl-stage")).x / 6);
 
         });
+        let heightMenu = ($('.courses-mobile-menu-advanced--wrapper').outerHeight() + 16) + 'px'
         var swiper = new Swiper(".mySwiper", {
             direction: "vertical",
             calculateHeight: true,
             onAny(eventName, ...args) {
 
-                let height = ($('.courses-mobile-menu-advanced--wrapper').outerHeight() + 16) + 'px'
-                $('[aria-label="2 / 2"]').css('height', height)
                 if (eventName == "slideNextTransitionStart" || eventName == 'slideResetTransitionStart') {
                     $(".swiper-wrapper").addClass("active")
+                    $('[aria-label="2 / 2"]').css('height', heightMenu)
                 }
 
                 if (args[0].previousTranslate * -1 > ($('.courses-mobile-menu-advanced--wrapper').outerHeight() + 16)) {
