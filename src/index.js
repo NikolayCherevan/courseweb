@@ -622,13 +622,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     stagePadding: 150,
                 },
                 1100: {
-                    items: 1,
+                    items: 2,
                     margin: 40,
                     stagePadding: 204,
                     nav: true,
                 },
                 1400: {
-                    items: 1,
+                    items: 2,
                     margin: 40,
                     stagePadding: 204,
                 }
