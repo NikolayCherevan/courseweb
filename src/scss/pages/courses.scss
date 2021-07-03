@@ -934,15 +934,17 @@
         position: relative;
     }
     .mySwiper {
-        width: -webkit-fill-available!important;
-        width: -moz-available!important;
-        width: fill-available!important;
-        position: fixed!important;
-        left: 0!important;
-        z-index: 5!important;
-        overflow: visible;
-        padding-top: 20px;
-        bottom: -417px!important;
+        &.shown {
+            width: -webkit-fill-available!important;
+            width: -moz-available!important;
+            width: fill-available!important;
+            position: fixed!important;
+            left: 0!important;
+            z-index: 5!important;
+            overflow: visible;
+            padding-top: 20px;
+            bottom: -417px!important;
+        }
         // background-color: rgba(255, 129, 16, .3);
         .courses-mobile-menu-advanced--wrapper {
             background-color: $base-bg-orange;

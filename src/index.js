@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let headerDeskMenu = document.querySelector(".header--desk-menu");
     let headerPadding = document.querySelector(".header-padding");
     let coordinates = document.querySelectorAll(".item-coords");
-    let anchor = document.querySelector(".hero---scroll-to-courses a");
+    let mySwiper = document.querySelector(".mySwiper");
     let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
     let homePage = document.querySelector('html').classList.contains('homepage');
     let coursesPage = document.querySelector('html').classList.contains('courses');
@@ -95,7 +95,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
             doHeaderDropdownFixed(modileMenuDropdown)
             doHeaderDropdownFixed(header)
             doHeaderDropdownFixed(headerDeskMenu)
+
         }
+        doFooterDropdownFixed(mySwiper)
     });
 
     //add overlay for all dropdowns header
@@ -143,6 +145,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
         } else {
             element.classList.remove('sticky');
             headerPadding.classList.remove('active');
+        }
+    }
+    //sticky footer logic
+
+    function doFooterDropdownFixed(element) {
+        let scroll = window.pageYOffset;
+
+        if (scroll <= 400) {
+            element.classList.remove('shown')
+        } else {
+            element.classList.add('shown')
         }
     }
 
