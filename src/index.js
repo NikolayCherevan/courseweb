@@ -14,9 +14,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let anchor = document.querySelector(".hero---scroll-to-courses a");
     let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
     let homePage = document.querySelector('html').classList.contains('homepage');
-    let coursesPage = document.querySelector('html').classList.contains('courses')
-        //TweenMax lib init
-        //play button magnetic on team section
+    let coursesPage = document.querySelector('html').classList.contains('courses');
+    let root = document.documentElement;
+
+    //TweenMax lib init
+    //play button magnetic on team section
     const element = document.querySelector(".cursor");
     const target = document.querySelector(".target");
 
@@ -702,13 +704,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 let height = ($('.courses-mobile-menu-advanced--wrapper').outerHeight() + 16) + 'px'
                 $('[aria-label="2 / 2"]').css('height', height)
                 if (eventName == "slideNextTransitionStart") {
-                    $(".swiper-wrapper").addClass("active")
+                    $(".swiper-wrapper").addClass("active");
+                    root.style.setProperty('--transformProp', `translate3d(0px, ${($('.courses-mobile-menu-advanced--wrapper').outerHeight() + 16)*-1}px, 0px)`);
                 }
 
                 // if (args[0].previousTranslate * -1 > ($('.courses-mobile-menu-advanced--wrapper').outerHeight() + 16)) {
                 //     $(".mySwiper").removeClass("active")
                 // }
-
+                // if (eventName == 'slideNextTransitionEnd') {
+                //     setTimeout(() => $(".swiper-wrapper").css({ "transform": "translate3d(0px, " + height + "px, 0px)" }), 300);
+                // }
 
                 if (eventName == "slidePrevTransitionStart") {
                     $(".swiper-wrapper").removeClass("active")

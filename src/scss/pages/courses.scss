@@ -1,3 +1,7 @@
+:root {
+    --transformProp: none;
+}
+
 .courses {
     body {
         &.swipe {
@@ -1008,7 +1012,7 @@
                 background-color: $base-bg-white;
             }
             &.active {
-                transform: translate3d(0px, -398px, 0px)!important;
+                transform: var(--transformProp)!important;
             }
         }
     }
