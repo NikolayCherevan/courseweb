@@ -623,13 +623,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     stagePadding: 150,
                 },
                 1100: {
-                    items: 2,
+                    items: 1,
                     margin: 40,
                     stagePadding: 204,
                     nav: true,
                 },
                 1400: {
-                    items: 2,
+                    items: 1,
                     margin: 40,
                     stagePadding: 204,
                 }
@@ -697,7 +697,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                         daysText.nextElementSibling.innerHTML = "день"
                         break;
                     case (lastNumberDays == 2 || lastNumberDays == 3 || lastNumberDays == 4) && firstNumberDays != 1:
-                        daysText.nextElementSibling.innerHTML = "дня"
+                        daysText.nextElementSibling.innerHTML = "дні"
                         break;
                     default:
                         daysText.nextElementSibling.innerHTML = "днів";
