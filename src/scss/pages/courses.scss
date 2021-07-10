@@ -888,7 +888,8 @@
                         position: absolute;
                         top: 0;
                         min-width: 12vw;
-                        min-height: -webkit-fill-available;
+                        min-height: 100%;
+                        outline: none;
                         span {
                             display: none;
                         }
