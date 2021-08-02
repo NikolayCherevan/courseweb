@@ -26,7 +26,6 @@
         outline: none;
         &[aria-expanded="true"].header--nav-item {
             border: 2px solid transparent;
-            color: $main-color-white;
             outline: none;
             background-color: $base-bg-orange;
             &::after {
@@ -38,7 +37,6 @@
                 &[aria-expanded="true"].header--nav-item {
                     border: 2px solid transparent;
                     outline: none;
-                    color: $main-color;
                     background-color: $base-bg-white;
                     &::after {
                         background-image: url('./img/arrow_down.svg');
@@ -61,7 +59,6 @@
             }
             &.other {
                 border: none;
-                background-color: transparent!important;
                 color: $main-color;
                 &+.header--dropdown--body {
                     ul li {

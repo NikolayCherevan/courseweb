@@ -41,14 +41,31 @@ body {
 
 .main-button {
     padding: 15px 20px;
-    border: 2px solid $main-color;
+    border: 2px solid $secondary-color-violet;
     border-radius: 40px;
     font-size: 14px;
     font-weight: 600;
     line-height: 12px;
     color: $main-color;
     @media (min-width: $more_than_iphone5) {
-        padding: 15px 35px;
+        padding: 16px 35px;
+    }
+}
+
+.btn-violet {
+    background-color: $base-bg-violet;
+    border-color: $main-color-violet;
+    color: $main-color-white!important;
+    &::after {
+        background-image: url('./img/arrow_down_white.svg')!important;
+    }
+    &[aria-expanded="true"] {
+        background-color: $base-bg-white!important;
+        border-color: $main-color-violet!important;
+        color: $main-color-violet!important;
+        &::after {
+            background-image: url('./img/arrow_down_violet.svg')!important;
+        }
     }
 }
 

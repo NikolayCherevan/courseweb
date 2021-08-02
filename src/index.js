@@ -101,7 +101,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             doHeaderDropdownFixed(headerDeskMenu)
 
         } else {
-            doFooterDropdownFixed(mySwiper)
+            // doFooterDropdownFixed(mySwiper)
             doFooterDropdownFixed(deskMenuFooter)
         }
 
@@ -589,12 +589,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
         addMarquee(marq1)
         coursesAnchors.forEach(item => {
-            item.addEventListener('click', function(event) {
-                $('.desk-menu-courses--anchors li a').removeClass('focus')
-                event.target.classList.add('focus')
+                item.addEventListener('click', function(event) {
+                    $('.desk-menu-courses--anchors li a').removeClass('focus')
+                    event.target.classList.add('focus')
+                })
             })
-        })
-        doFooterDropdownFixed(mySwiper)
+            // doFooterDropdownFixed(mySwiper)
         doFooterDropdownFixed(deskMenuFooter)
         const scrollUp = "sticky";
         addStickyscrollToTop()
@@ -762,17 +762,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 
-        swiperShow()
+        // swiperShow()
 
         // function scrollTo(hash) {
         //     location.hash = hash;
         // }
         // scrollTo(event.target.getAttribute('href'));
 
-        document.addEventListener('click', function(event) {
-            if ((document.querySelector('.mySwiper') != event.target)) {
-                swiper.slideTo(0)
-            }
-        })
+        // document.addEventListener('click', function(event) {
+        //     if ((document.querySelector('.mySwiper') != event.target)) {
+        //         swiper.slideTo(0)
+        //     }
+        // })
     }
 });

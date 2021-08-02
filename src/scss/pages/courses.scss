@@ -21,7 +21,7 @@
         display: block;
         span {
             font-size: $main-font-mobile;
-            color: $main-color;
+            color: $main-color-white;
             font-weight: 600;
             display: inline-block;
             padding: 6px 11px;
@@ -29,27 +29,30 @@
             height: 28px;
             box-sizing: border-box;
             border-radius: 3px;
-            background-color: rgba(255, 129, 16, 0.8);
+            background-color: $base-bg-violet;
         }
     }
     .main-button-action {
         display: inline-block;
-        padding: 25px 60px;
+        padding: 37px 0;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $base-bg-violet;
+        width: 90%;
+        text-align: center;
+        font-size: 22px;
+        line-height: 12px;
+        color: $main-color-white;
+        font-weight: bold;
+        border-radius: 30px 30px 0 0;
         @media (min-width: $more_than_iphone5) {
             padding: 25px 70px;
         }
         @media (min-width: $tablet) {
             padding: 25px 98px;
         }
-        font-size: $main-font-mobile;
-        line-height: 12px;
-        border-radius: 50px;
-        background-color: $base-bg-orange;
-        color: $main-color-white;
-        font-weight: 600;
-        position: relative;
-        left: 50%;
-        transform: translate(-50%, 0);
         &.hided-on-mobile {
             display: none;
         }
@@ -233,7 +236,7 @@
             }
             .registration--footer {
                 text-align: center;
-                background-color: $base-bg-orange;
+                background-color: $base-bg-violet;
                 padding: 25px 0;
                 border-radius: 0 0 15px 15px;
                 a {
@@ -509,7 +512,7 @@
         }
     }
     #course-program {
-        background-color: $base-bg-secondary;
+        background-color: $base-violet-lite-bg;
         padding: 60px 0;
         margin-top: 60px;
         @media (min-width: $note_desk) {
@@ -691,8 +694,9 @@
         .course-price--price-wrapper {
             background-color: $secondary-bg-white;
             border-radius: 15px;
-            padding-bottom: 40px;
+            padding-bottom: 133px;
             margin-bottom: 50px;
+            position: relative;
             @media (min-width: $note_desk) {
                 position: relative;
                 margin-bottom: 0;
@@ -824,7 +828,7 @@
         }
         &::before {
             content: '';
-            background-color: $secondary-bg-gray;
+            background-color: $base-bg-violet;
             position: absolute;
             left: 0;
             top: 0;

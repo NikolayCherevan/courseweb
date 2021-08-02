@@ -25,7 +25,8 @@
     <div class="header-wrapper">
         <header class="header">
             <div>
-                <a href="#" class="header--logo"> <img width="52" height="48" src="./img/logo.svg" alt="logo"> </a>
+                <a href="../index.html" class="header--logo"> <img width="52" height="48" src="../img/logo.svg" alt="logo"> <span> <span>школа</span> <span>креативної</span> <span>економіки</span></span>
+                </a>
                 <a href="#" class="header--logo__nav-active"> <img width="52" height="48" src="./img/logo_nav.svg" alt="logo"> </a>
             </div>
 
@@ -81,8 +82,27 @@
         </div>
         <div class="header--desk-menu header--dropdown">
             <ul class="header--main-links">
+                <li class="header--dropdown--title main-button header--nav-item dropdown without-border-content"> Київ
+                </li>
+                <li class="header--dropdown--body small-body" uk-dropdown="mode: click">
+                    <ul>
+                        <li>
+
+                            <a href="#"> Київ </a>
+                        </li>
+                        <li>
+
+                            <a href="#"> Харків </a>
+                        </li>
+                        <li>
+
+                            <a href="#"> Львів </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header--app-status"> Online</li>
                 <li class="header--nav-item">Про нас</li>
-                <li class="header--dropdown--title main-button header--nav-item dropdown">Курси</li>
+                <li class="header--dropdown--title main-button header--nav-item dropdown btn-violet">Курси</li>
                 <li class="header--dropdown--body" uk-dropdown="mode: click">
                     <ul>
                         <li>
@@ -129,28 +149,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class="header--nav-item">Соціальна освіта</li>
                 <li class="header--nav-item">Контакти</li>
-                <li class="header--dropdown--title main-button header--nav-item dropdown without-border-content"> Київ
-                </li>
-                <li class="header--dropdown--body small-body" uk-dropdown="mode: click">
-                    <ul>
-                        <li>
-
-                            <a href="#"> Київ </a>
-                        </li>
-                        <li>
-
-                            <a href="#"> Харків </a>
-                        </li>
-                        <li>
-
-                            <a href="#"> Львів </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="header--app-status"> Online</li>
-                <li class="header--dropdown--title main-button header--nav-item dropdown other"> Укр</li>
+                <li class="main-button header--nav-item dropdown other"> Укр</li>
                 <li class="header--dropdown--body small-body" uk-dropdown="mode: click">
                     <ul>
                         <li>
@@ -210,7 +210,6 @@
                     </div>
                 </li>
             </ul>
-            <a class="mobile-menu--content--simple--link" href="#"> Соціальна освіта </a>
             <a class="mobile-menu--content--simple--link" href="#"> Контакти </a>
         </div>
         <div class="mobile-menu--footer">

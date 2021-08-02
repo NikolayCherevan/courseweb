@@ -2,14 +2,19 @@
 $main-color: #2B2E30;
 $main-color-white:#FFFFFF;
 $main-color-orange: #FF8110;
+$main-color-violet: #6633CC;
+$secondary-color-violet: #6633CC1A;
 //font-size
 $main-font-mobile: 14px;
 //bg
 $base-bg-orange: #FF8110;
 $base-bg-white:#FFFFFF;
-$base-bg-secondary:#EFEEEB;
+$base-bg-secondary:#F9F7FE;
 $secondary-bg-gray: #2B2E30;
-$secondary-bg-white: #F9F9F9;
+$secondary-bg-white: #F9F7FE;
+$base-bg-violet: #6633CC;
+$secondary-violet-bg: #6633CC1A;
+$base-violet-lite-bg: #F0EBFA;
 //breakpoints
 $more_than_galaxy_fold: 340px;
 $more_than_iphone5: 375px;
@@ -21,7 +26,7 @@ $full4k: 2560px;
 @mixin base-btn {
     display: inline-block;
     padding: 15px 35px;
-    background-color: $main-color-orange;
+    background-color: $base-bg-violet;
     color: $main-color-white;
     border-radius: 50px;
     a {

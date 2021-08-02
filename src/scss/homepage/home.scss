@@ -1,5 +1,5 @@
 #hero {
-    background-color: #EDECEA;
+    background-color: $base-violet-lite-bg;
     position: relative;
     top: -80px;
     z-index: -1;
@@ -19,7 +19,7 @@
     }
     box-sizing: border-box;
     @media (min-width: $large_desk) {
-        top: -101px;
+        top: -110px;
         .uk-container {
             margin-top: 40px;
         }
@@ -74,7 +74,7 @@
             .owl-item {
                 text-align: center;
                 img {
-                    width: 241px;
+                    width: auto;
                     height: 211px;
                     margin: 0 auto;
                     object-fit: cover;
@@ -96,7 +96,7 @@
                     font-size: $main-font-mobile;
                     line-height: 24px;
                     top: 80%;
-                    background-color: $base-bg-orange;
+                    background-color: $base-bg-violet;
                     color: $main-color-white;
                     border-radius: 40px;
                     min-width: 260px;
@@ -215,10 +215,10 @@
 section {
     margin-top: 60px;
     h2 {
-        font-size: 25px;
+        font-size: 28px;
         font-weight: bold;
         margin-bottom: 20px;
-        line-height: 34px;
+        line-height: 38px;
         @media (min-width: $tablet) {
             font-size: 30px;
             line-height: 40px;
@@ -263,6 +263,8 @@ section {
     }
     p {
         line-height: 24px;
+        font-size: 14px;
+        font-weight: bold;
         max-width: 489px;
         margin-left: auto;
         @media (min-width: $tablet) {
@@ -505,7 +507,7 @@ section {
             &.active-title {
                 padding: 15px 35px;
                 border-radius: 40px;
-                background-color: $base-bg-orange;
+                background-color: $base-bg-violet;
                 a {
                     border: none;
                     color: $main-color-white;
@@ -689,11 +691,11 @@ section {
                 transition: all 1.2s;
                 transition-delay: 1s;
             }
-            .teammate--name {
-                display: block;
-            }
+            .teammate--name,
             .teammate--rank {
                 display: block;
+                font-weight: bold;
+                color: $main-color;
             }
         }
         .owl-item {
@@ -751,7 +753,6 @@ section {
         }
         .teammate--name {
             margin: 15px 0 10px 0;
-            font-weight: 600;
             font-size: $main-font-mobile;
             text-align: center;
         }
@@ -835,6 +836,7 @@ section {
             max-width: 490px;
             margin: 56px auto 24px auto;
             color: $main-color;
+            font-weight: bold;
             @media (min-width: $tablet) {
                 margin: 40px auto 40px auto;
                 font-size: 16px;
@@ -847,6 +849,7 @@ section {
             .team--action {
                 display: inline-block;
                 text-decoration: none;
+                border-color: $main-color;
                 &:hover {
                     color: $main-color;
                 }
@@ -856,7 +859,7 @@ section {
     .team--background-overlay {
         position: absolute;
         top: 46%;
-        background-color: #EFEEEB;
+        background-color: $base-violet-lite-bg;
         left: 0;
         z-index: -1;
         width: 100%;
@@ -868,7 +871,7 @@ section {
 #registration {
     margin-top: 0;
     padding-top: 60px;
-    background-color: $secondary-bg-gray;
+    background-color: $base-bg-violet;
     @media (min-width: $tablet) {
         padding-top: 120px;
     }
@@ -877,7 +880,7 @@ section {
         margin-bottom: 40px;
         color: $main-color-white;
         text-align: center;
-        line-height: 34px;
+        line-height: 35px;
         max-width: 500px;
         margin-left: auto;
         margin-right: auto;
@@ -900,7 +903,7 @@ section {
         font-weight: 600;
         width: 100%;
         display: inline-block;
-        padding: 24px 0 24px 35px;
+        padding: 31px 0 31px 35px;
         .current {
             position: relative;
             top: -20px;
@@ -930,10 +933,11 @@ section {
         align-items: center;
     }
     .registration--registration-on-course {
-        padding: 16px 0;
-        background-color: $base-bg-white;
+        padding: 22px 0;
+        background-color: transparent;
         border: none;
-        color: $main-color;
+        color: $main-color-white;
+        border: 2px solid $main-color-orange;
         font-weight: 600;
         font-size: $main-font-mobile;
         width: 100%;

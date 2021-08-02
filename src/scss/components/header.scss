@@ -38,9 +38,34 @@ body {
                 }
             }
             .header--logo {
+                display: flex;
+                position: relative;
+                z-index: 111111;
+                height: 49.69px;
+                &>span {
+                    display: none;
+                    position: relative;
+                    top: -2px;
+                    @media (min-width: $large_desk) {
+                        display: flex;
+                        margin-left: 14px;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        span {
+                            font-weight: 700;
+                            font-size: 19px;
+                            color: $main-color-violet;
+                        }
+                    }
+                }
                 img {
                     min-width: 52px;
                     min-height: 48px;
+                    position: relative;
+                    top: -1px;
+                    @media (min-width: $large_desk) {
+                        top: 3px;
+                    }
                 }
             }
             .header--lang {
@@ -114,30 +139,34 @@ body {
         @media (min-width: $large_desk) {
             display: flex;
             left: initial;
-            width: max-content;
+            width: 100%;
             position: absolute;
             top: 38.5px;
             transform: none;
-            right: 42px;
+            right: 0;
+            justify-content: flex-end;
+            padding-right: 42px;
             ul.header--main-links {
                 display: flex;
                 align-items: center;
                 &>li {
                     cursor: pointer;
                 }
-                li {
+                &>li {
                     a {
                         cursor: pointer;
                     }
                     &:nth-last-child(2) {
                         margin-right: 0;
-                        padding-right: 0;
+                        padding: 19px 12px;
+                        background-color: $secondary-violet-bg;
                     }
                 }
                 .header--app-status {
                     font-size: $main-font-mobile;
                     font-weight: 600;
                     color: $main-color-orange;
+                    margin-right: auto;
                 }
                 .header--nav-item {
                     margin: 0 15px;
@@ -146,11 +175,10 @@ body {
                     color: $main-color;
                     &.other {
                         border: none;
-                        background-color: transparent !important;
                         color: $main-color;
                     }
                     &.without-border-content {
-                        margin-left: 80px;
+                        margin-left: 295px;
                         margin-right: 20px;
                     }
                 }
@@ -160,6 +188,9 @@ body {
             position: relative;
             top: 0;
             animation: slidefromTopMenuDeskClose 0.4s forwards;
+            width: 100%;
+            right: 0;
+            justify-content: flex-end;
         }
         &.sticky {
             position: fixed;

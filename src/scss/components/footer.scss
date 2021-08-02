@@ -1,6 +1,6 @@
 #footer {
     section {
-        background-color: $secondary-bg-gray;
+        background-color: $base-bg-violet;
         color: $main-color-white;
         margin-top: 0;
         padding-top: 50px;
@@ -34,6 +34,9 @@
             .footer--logo {
                 min-width: 52px;
                 min-height: 48px;
+                padding: 28px 26px;
+                border-radius: 50%;
+                background-color: $base-bg-orange;
                 @media (min-width: $tablet) {
                     margin-right: 50px;
                 }
