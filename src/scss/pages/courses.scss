@@ -29,6 +29,7 @@
             height: 28px;
             box-sizing: border-box;
             border-radius: 3px;
+            line-height: normal;
             background-color: $base-bg-violet;
         }
     }
@@ -47,19 +48,10 @@
         color: $main-color-white;
         font-weight: bold;
         border-radius: 30px 30px 0 0;
-        @media (min-width: $more_than_iphone5) {
-            padding: 25px 70px;
-        }
-        @media (min-width: $tablet) {
-            padding: 25px 98px;
-        }
-        &.hided-on-mobile {
-            display: none;
-        }
     }
     section h2 {
-        margin-bottom: 25px;
-        line-height: 40px;
+        margin-bottom: 20px;
+        line-height: 32px;
         @media (min-width: $tablet) {
             margin-bottom: 40px;
         }
@@ -76,10 +68,7 @@
         color: $main-color-white;
     }
     section p {
-        font-size: $main-font-mobile;
-        @media (min-width: $note_desk) {
-            font-size: 16px;
-        }
+        font-size: 16px;
         line-height: 24px;
         margin-left: auto;
         // max-width: 590px;
@@ -135,12 +124,15 @@
                     //    background-color: $base-bg-white;
                     left: 0;
                     @media (min-width: $note_desk) {
-                        margin-bottom: 27px;
+                        margin-bottom: 0;
+                        padding-bottom: 20px;
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-weight: bold;
                     }
                 }
                 .hero--courses-mark {
-                    background-color: transparent;
-                    font-size: 20px;
+                    font-size: 14px;
                     font-weight: 600;
                     line-height: 28px;
                     opacity: 1;
@@ -155,12 +147,11 @@
                         position: relative;
                         left: 0;
                         padding-left: 0;
-                        padding-top: 23px;
+                        padding-top: 26px;
                     }
                     .hero--regisration-gray-bg {
                         border-radius: 30px 0px 0 30px;
-                        padding: 41px 42px;
-                        padding-right: 86px;
+                        padding: 45px 86px 45px 42px;
                     }
                     .hero--left-side--regisration {
                         max-width: initial;
@@ -187,10 +178,13 @@
             }
         }
         .hero--site-slogan {
-            font-size: 40px;
+            font-size: 32px;
             color: $main-color-white;
             line-height: 38px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            @media (min-width: $tablet) {
+                margin-bottom: 5px;
+            }
             &.hided-on-mobile {
                 display: none;
             }
@@ -205,9 +199,9 @@
         }
         .hero--description {
             font-weight: 600;
-            line-height: 28px;
+            line-height: 24px;
             color: $main-color-white;
-            margin-bottom: 30px;
+            margin-bottom: 42.25px;
             font-size: 16px;
         }
         .hero--right-side {
@@ -231,7 +225,7 @@
             color: $main-color;
             .hero--regisration-gray-bg {
                 background-color: $base-bg-secondary;
-                padding: 30px 20px 20px;
+                padding: 34px 20px 16px;
                 border-radius: 15px 15px 0 0;
             }
             .registration--footer {
@@ -293,7 +287,7 @@
             }
             .hero--post-description {
                 display: flex;
-                padding: 15px 20px;
+                padding: 30px 20px 42px 20px;
                 max-width: 351px;
                 margin: 0 auto;
                 .hero--post-description--attention {
@@ -304,6 +298,9 @@
                 p {
                     font-size: $main-font-mobile;
                     line-height: 24px;
+                    @media (min-width: $note_desk) {
+                        font-size: 16px;
+                    }
                     span {
                         color: $main-color-orange;
                     }
@@ -311,15 +308,14 @@
             }
         }
         .hero--courses-mark {
-            min-width: 33px;
-            min-height: 28px;
+            width: 32px;
+            height: 22px;
             font-size: $main-font-mobile;
             text-transform: uppercase;
             font-weight: 600;
-            color: $main-color;
+            color: $main-color-white;
             border-radius: 3px;
-            opacity: 0.8;
-            background-color: #F9F9F9;
+            background-color: $base-bg-violet;
             position: relative;
             margin-bottom: 10px;
             display: inline-block;
@@ -327,6 +323,7 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
+                line-height: normal;
                 transform: translate(-50%, -50%);
             }
         }
@@ -366,9 +363,11 @@
     }
     #course-for {
         @media (min-width: $note_desk) {
-            margin-top: 120px;
+            margin-top: 80px;
             p {
                 margin-right: 67px;
+                font-size: 18px;
+                line-height: 32px;
             }
         }
         p {
@@ -387,11 +386,13 @@
             }
             @media (min-width: $note_desk) {
                 grid-gap: 100px;
+                margin-top: 20px;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
             }
             .numbers-achievement--wrapper-description {
                 max-width: 181px;
                 line-height: 24px;
+                text-align: left;
                 margin: 0 auto;
                 @media (min-width: $more_than_galaxy_fold) {
                     margin: 0;
@@ -408,6 +409,7 @@
                     line-height: 70px;
                     font-weight: bold;
                     margin-bottom: 10px;
+                    text-align: left;
                     @media (min-width: $note_desk) {
                         margin-bottom: 20px;
                         position: relative;
@@ -443,7 +445,7 @@
         @media (min-width: $note_desk) {
             margin-top: 80px;
             &::after {
-                background-color: $base-bg-secondary;
+                background-color: $base-violet-lite-bg;
                 content: "";
                 height: 35%;
                 left: 0;
@@ -454,17 +456,27 @@
         }
         p {
             margin-left: 0;
+            font-size: 16px;
+            font-weight: 400;
             max-width: 691px;
+            @media (min-width: $note_desk) {
+                font-size: 18px;
+                line-height: 32px;
+            }
         }
         h2 {
             margin-left: 0;
+            line-height: 38px;
             @media (min-width: $note_desk) {
                 margin-left: auto;
+                margin-bottom: 40px;
             }
-            max-width: 280px;
         }
         .video-iframe {
-            max-width: 1196px;
+            max-width: 306px;
+            @media (min-width: $note_desk) {
+                max-width: 1196px;
+            }
             margin: 0 auto;
             padding: 0 15px;
             @media (min-width: $note_desk) {
@@ -472,10 +484,9 @@
             }
             .video-iframe--banner {
                 .video-iframe--content {
-                    margin-top: 35px;
+                    margin-top: 40px;
                     min-width: auto;
                     @media (min-width: $note_desk) {
-                        margin-top: 70px;
                         margin-bottom: 0;
                         max-height: 644px;
                     }
@@ -483,8 +494,12 @@
                         font-size: 0;
                         img {
                             top: 0;
-                            width: 30vw;
-                            height: 30vw;
+                            height: 45.28px;
+                            width: 45.28px;
+                            @media (min-width: $note_desk) {
+                                width: 111px;
+                                height: 111px;
+                            }
                         }
                         span {
                             font-size: 16px;
@@ -496,11 +511,12 @@
                         align-items: center;
                         text-decoration: none;
                         span {
-                            display: none;
-                            margin-top: 20px;
+                            margin-top: 11px;
+                            font-weight: bold;
                             color: $main-color-white;
                             @media (min-width: $note_desk) {
                                 display: inline-block;
+                                margin-top: 20px;
                             }
                         }
                     }
@@ -514,7 +530,7 @@
     #course-program {
         background-color: $base-violet-lite-bg;
         padding: 60px 0;
-        margin-top: 60px;
+        margin-top: 64.4px;
         @media (min-width: $note_desk) {
             padding: 120px 0;
             margin-top: 0;
@@ -524,10 +540,13 @@
             }
         }
         h2 {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
         .uk-accordion>:nth-child(n+2) {
-            margin-top: 30px;
+            margin-top: 40px;
+            @media (min-width: $note_desk) {
+                margin-top: 35px;
+            }
         }
         .uk-container {
             max-width: 792px;
@@ -582,14 +601,17 @@
         }
     }
     #course-technology {
-        padding-bottom: 50px;
-        margin-top: 57px;
+        padding-bottom: 60px;
+        margin-top: 64px;
         @media (min-width: $note_desk) {
-            margin-top: 110px;
-            padding-bottom: 112px;
+            margin-top: 120px;
+            padding-bottom: 120px;
         }
         .course-technology--title {
-            margin-bottom: 40px;
+            margin-bottom: 27px;
+            @media (min-width: $note_desk) {
+                margin-bottom: 40px;
+            }
         }
         .course-technology--grid {
             grid-template-columns: 1fr 1fr;
@@ -654,7 +676,7 @@
             }
         }
         .course-technology--follow-us {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             font-size: 16px;
             line-height: 24px;
             font-weight: 600;
@@ -685,21 +707,23 @@
     #course-price {
         margin: 0;
         h2 {
-            margin-bottom: 39px;
+            margin-bottom: 40px;
+            text-align: center !important;
             @media (min-width: $note_desk) {
                 text-align: left !important;
-                margin-bottom: 40px;
+                margin-bottom: 42px;
             }
         }
         .course-price--price-wrapper {
             background-color: $secondary-bg-white;
             border-radius: 15px;
-            padding-bottom: 133px;
+            padding-bottom: 115px;
             margin-bottom: 50px;
             position: relative;
             @media (min-width: $note_desk) {
                 position: relative;
                 margin-bottom: 0;
+                padding-bottom: 33px;
                 .price-wrapper--main-price-wrapper {
                     position: absolute;
                     top: 0;
@@ -715,7 +739,7 @@
                 position: relative;
                 top: -15px;
                 @media (min-width: $note_desk) {
-                    right: 103px;
+                    right: 115px;
                     margin-right: 0;
                 }
                 &::before {
@@ -756,14 +780,14 @@
             }
         }
         .course-price--course-description {
-            display: grid;
+            display: initial;
             margin-top: 40px;
-            grid-template-columns: 1fr 4fr;
+            // grid-template-columns: 1fr 4fr;
             @media (min-width: $note_desk) {
                 padding-bottom: 33px;
                 padding-top: 30px;
                 margin-top: 0;
-                grid-template-columns: 1fr 4fr 1fr;
+                // grid-template-columns: 1fr 4fr 1fr;
                 .main-button-action {
                     max-height: 68px;
                     box-sizing: border-box;
@@ -787,7 +811,13 @@
                 font-weight: bold;
                 font-size: 20px;
                 line-height: 28px;
-                margin-bottom: 20px;
+                margin-bottom: 40px;
+                display: flex;
+                gap: 20px;
+                @media (min-width: $note_desk) {
+                    font-size: 24px;
+                    margin-bottom: 24px;
+                }
             }
             ul li {
                 margin-bottom: 15px;
@@ -797,16 +827,26 @@
                     color: $main-color-orange;
                 }
                 &:last-child {
-                    margin-bottom: 34px;
+                    margin-bottom: 0;
                     @media (min-width: $note_desk) {
                         margin-bottom: 0;
                     }
                 }
             }
+            .course-price--course-description-wrapper {
+                padding: 40px 20px 20px;
+                @media (min-width: $note_desk) {
+                    padding: 35px 28px 0;
+                }
+            }
         }
         @media (min-width: $note_desk) {
             .main-button-action {
-                display: none;
+                left: initial;
+                max-width: 319px;
+                right: 40px;
+                transform: none;
+                padding: 40px 0;
             }
         }
     }
@@ -824,7 +864,8 @@
             -moz-transition: background-position 3s ease;
             -o-transition: background-position 3s ease;
             transition: background-position 3s ease;
-            margin-top: 127px;
+            margin-top: 122px;
+            padding-bottom: 140px;
         }
         &::before {
             content: '';
@@ -841,6 +882,9 @@
         .students-review--counter {
             text-align: center;
             margin-top: 22px;
+            @media (min-width: $tablet) {
+                margin-top: 27px;
+            }
             span {
                 font-size: 20px;
                 display: inline-block;
@@ -868,9 +912,9 @@
             display: flex;
             justify-content: center;
             text-decoration: none;
-            display: none;
             @media (min-width: $tablet) {
                 display: flex;
+                margin-top: 42px;
             }
             .students-review--plus-wrapper {
                 margin-left: 30px;
@@ -880,6 +924,19 @@
         }
         .students-review--title {
             color: $main-color;
+            display: none;
+            line-height: 38px;
+            @media (min-width: $note_desk) {
+                display: block;
+                &.title-onlymobile {
+                    display: none;
+                }
+            }
+            &.title-onlymobile {
+                @media (max-width: $note_desk) {
+                    display: block;
+                }
+            }
         }
         .owl-carousel {
             .owl-dots {
@@ -911,6 +968,7 @@
                     padding: 20px;
                     box-sizing: border-box;
                     border-radius: 15px;
+                    padding: 20px 13px 30.5px;
                     @media (min-width: $tablet) {
                         width: initial;
                         padding: 30px;
@@ -944,7 +1002,7 @@
                     .owl-card--body {
                         line-height: 28px;
                         color: $main-color;
-                        margin-bottom: 34px;
+                        margin-bottom: 25px;
                         .hided {
                             display: none;
                         }
@@ -954,13 +1012,24 @@
                         }
                     }
                     .owl-card--footer--wrapper {
+                        flex-direction: column;
+                        align-items: start;
                         display: flex;
+                        @media (min-width: $tablet) {
+                            flex-direction: row;
+                            align-items: center;
+                        }
                         .owl-card--footer--wrapper-profession {
-                            font-size: $main-font-mobile;
+                            font-size: 18px;
                             color: $main-color;
                             font-weight: bold;
-                            margin-left: 20px;
                             max-width: 200px;
+                            margin-top: 10.5px;
+                            @media (min-width: $tablet) {
+                                margin-top: 0;
+                                margin-left: 20px;
+                            }
+                            line-height: 24px;
                         }
                     }
                 }
@@ -1127,10 +1196,86 @@
             display: none;
         }
     }
-}
-
-.courses {
+    #mobile-navigation {
+        margin-top: 0;
+        .mobile-navigation-wrapper {
+            padding: 30px 25px;
+            border: 2px solid $base-violet-lite-bg;
+            border-radius: 15px;
+            .header--burger {
+                margin-bottom: 31px;
+                display: flex;
+                #menu-toggle {
+                    height: 18px;
+                    margin-right: 16.43px;
+                    margin-left: 0;
+                }
+                span {
+                    font-size: 20px;
+                    line-height: 12px;
+                    font-weight: bold;
+                    color: $main-color;
+                    display: inline-block;
+                    line-height: 23px;
+                }
+                #hamburger {
+                    flex-direction: column-reverse;
+                    align-items: flex-start;
+                    span:nth-child(3) {
+                        width: 13px;
+                    }
+                    span:nth-child(2) {
+                        width: 19px;
+                    }
+                    span:nth-child(1) {
+                        width: 22px;
+                    }
+                }
+            }
+            .mobile-navigation--list {
+                li {
+                    margin-bottom: 27px;
+                    position: relative;
+                    &:before {
+                        content: '';
+                        width: 9px;
+                        height: 9px;
+                        background-color: $base-violet-lite-bg;
+                        display: inline-block;
+                        border-radius: 50%;
+                        margin-right: 25px;
+                    }
+                    &:after {
+                        background-color: $base-violet-lite-bg;
+                        content: "";
+                        display: inline-block;
+                        height: 1px;
+                        margin-right: 25px;
+                        width: 15px;
+                        position: absolute;
+                        left: -3px;
+                        top: 30px;
+                        transform: rotate( 90deg);
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                        &:after {
+                            display: none;
+                        }
+                    }
+                    a {
+                        font-size: 14px;
+                        color: $main-color;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        @media (min-width: $note_desk) {
+            display: none;
+        }
+    }
     #footer section {
-        padding-bottom: 100px;
+        padding-bottom: 47.62px;
     }
 }

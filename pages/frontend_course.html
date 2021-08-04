@@ -249,8 +249,7 @@
         <div class="uk-container uk-container-small ">
             <div class="hero--left-side">
                 <span class="hero--courses-mark"> <span>IT</span> </span>
-                <h1 class="hero--site-slogan uk-text-left  hided-on-mobile"><span class="hero--site-slogan-padding">Профeсія Front-End</span> програміст</h1>
-                <h1 class="hero--site-slogan uk-text-left hided-on-pc">Frontend</h1>
+                <h1 class="hero--site-slogan uk-text-left "><span class="hero--site-slogan-padding">Профeсія Front-End</span> програміст</h1>
                 <p class="hero--description">Ми вчимо вас на власному досвіді. Наші курси зосереджені на цінних навичках і перевірених процесах, які поліпшать вашу роботу, вразять ваших клієнтів.</p>
                 <div class="hero--left-side--regisration ">
                     <div class="hero--regisration-gray-bg">
@@ -287,7 +286,41 @@
 
             </div>
         </div>
+    </section>
+    <section id="mobile-navigation">
+        <div class="uk-container uk-container-small ">
+            <div class="mobile-navigation-wrapper">
+                <div class="header--burger">
+                    <div id="menu-toggle" class="burger--btn">
+                        <div id="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <span>Навігація</span>
+                </div>
+                <ul class="mobile-navigation--list">
+                    <li>
+                        <a href="#course-for"> Для кого курс </a>
+                    </li>
+                    <li>
+                        <a href="#video-represent"> Навіщо курс </a>
+                    </li>
+                    <li>
+                        <a href="#course-program"> Програма  </a>
+                    </li>
 
+                    <li>
+                        <a href="#course-price"> Ціна </a>
+                    </li>
+                    <li>
+                        <a href="#students-review"> Відгуки </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
     </section>
     <section id="course-for">
         <div class="uk-container uk-container-small ">
@@ -445,10 +478,11 @@
                     </p>
                 </div>
                 <div class="course-price--course-description">
-                    <div><span class="course-category uk-text-center "><span>IT</span></span>
-                    </div>
-                    <div>
-                        <h3 class="course-price--vacancies">Професія Front-End програміст</h3>
+
+                    <div class="course-price--course-description-wrapper">
+                        <h3 class="course-price--vacancies">
+                            <div><span class="course-category uk-text-center "><span>IT</span></span>
+                            </div>Професія Front-End програміст</h3>
                         <ul>
                             <li><span> 5 </span>занять</li>
                             <li><span> 48 </span>годин практики</li>
@@ -456,13 +490,13 @@
                             <li>+380 97 123 33 44</li>
                         </ul>
                     </div>
-                    <a href="#" class="main-button-action hided-on-mobile"> Реєструйся </a>
                 </div>
                 <a href="#" class="main-button-action "> Реєструйся </a>
             </div>
         </div>
     </section>
     <section id="students-review">
+        <h2 class="uk-text-center students-review--title title-onlymobile">Що про нас кажуть</h2>
         <h2 class="uk-text-center students-review--title">Про нас кажуть</h2>
         <div class="owl-carousel students-review--owl">
             <div class="slides" data-count='1'>
@@ -584,6 +618,8 @@
                 </span></span> </a>
     </section>
     <section id="registration">
+        <a class="footer--logo" href="#"><img class="footer--logo-rotate" width="52" height="48" src="../img/logo_nav.svg" alt="logo">
+        </a>
         <div class="uk-container uk-container-small ">
             <h2 class="registration--description"> Реєструйся на онлайн навчання та отримай <span>15%</span> знижку!
             </h2>

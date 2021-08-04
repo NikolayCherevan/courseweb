@@ -36,6 +36,9 @@ body {
                 @media (min-width: $large_desk) {
                     animation: slidefromTopDesk .3s forwards;
                 }
+                &~.header--desk-menu.header--dropdown.sticky {
+                    width: initial;
+                }
             }
             .header--logo {
                 display: flex;

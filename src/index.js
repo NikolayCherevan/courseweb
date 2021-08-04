@@ -19,6 +19,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let homePage = document.querySelector('html').classList.contains('homepage');
     let coursesPage = document.querySelector('html').classList.contains('courses');
     let root = document.documentElement;
+    const rotateElement = document.querySelector(".footer--logo-rotate");
+
     const marq1 = document.querySelector(".marquee");
 
     //TweenMax lib init
@@ -429,7 +431,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         })
     }
     if (viewportWidth >= 992) {
-
+        rotateFooterLogo();
         destroyUiKitSlider();
         $('.owl-carousel--team').trigger('destroy.owl.carousel');
         if (homePage) {
@@ -452,6 +454,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     window.addEventListener('resize', function() {
         viewportWidth = window.innerWidth || document.documentElement.clientWidth;
         if (viewportWidth >= 992) {
+            rotateFooterLogo();
             destroyUiKitSlider();
             $('.owl-carousel--team').trigger('destroy.owl.carousel');
             if (homePage) {
@@ -774,5 +777,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
         //         swiper.slideTo(0)
         //     }
         // })
+
+    }
+
+    function getCenter(element) {
+        const { left, top, width, height } = element.getBoundingClientRect();
+        return { x: left + width / 2, y: top + height / 2 }
+    }
+    const arrowCenter = getCenter(rotateElement);
+
+    function rotateFooterLogo() {
+        addEventListener("mousemove", ({ clientX, clientY }) => {
+            const angle = Math.atan2(clientY - arrowCenter.y, clientX - arrowCenter.x);
+            rotateElement.style.transform = `rotate(${angle}rad)`;
+        });
     }
 });

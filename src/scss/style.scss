@@ -83,3 +83,9 @@ a {
         text-decoration: none;
     }
 }
+
+.title-onlymobile {
+    @media (min-width: $note_desk) {
+        display: none;
+    }
+}
