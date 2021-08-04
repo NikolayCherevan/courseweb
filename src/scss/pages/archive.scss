@@ -1,0 +1,214 @@
+.news {
+    .uk-container-small {
+        @media (min-width: $tablet) {
+            max-width: 1196px !important;
+        }
+    }
+
+    #news-wrapper {
+        font-size: 17px;
+        line-height: 26px;
+
+        * {
+            color: $main-color;
+        }
+
+        .news-wrapper-main-title {
+            font-size: 32px;
+            line-height: 38px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 30px;
+
+            @media (min-width: $tablet) {
+                font-size: 45px;
+                line-height: 50px;
+                margin-bottom: 60px;
+            }
+        }
+
+        .news-wrapper-post-title {
+            font-size: 28px;
+            line-height: 38px;
+            text-align: left;
+            font-weight: bold;
+            margin-bottom: 20px;
+
+        }
+
+        .posts-wrapper--post {
+            display: inline-block;
+            margin-bottom: 60px;
+
+            @media (min-width: $tablet) {
+                &:hover {
+                    .post--figure {
+                        &__overlay {
+                            opacity: 1;
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            transition: opacity .3s;
+                        }
+                    }
+                }
+            }
+
+            @media (min-width: $tablet) {
+                display: flex;
+                gap: 16px;
+            }
+
+            .post--figure {
+                border-radius: 15px;
+                margin-bottom: 14px;
+                position: relative;
+                overflow: hidden;
+                max-height: 177px;
+
+                @media (min-width: $tablet) {
+                    max-height: 306px;
+                }
+
+                &__overlay {
+                    opacity: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: opacity .3s;
+
+                    &::before {
+                        content: '';
+                        display: inline-block;
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        opacity: 0.69;
+                        background: $secondary-bg-gray 0% 0% no-repeat padding-box;
+                    }
+
+                    .main-button {
+                        background-color: $base-bg-orange;
+                        z-index: 11;
+                        color: $main-color-white;
+                        min-width: 208px;
+                        text-align: center;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 15px;
+                }
+
+                @media (min-width: $tablet) {
+                    width: 50%;
+                    margin-bottom: 0;
+                }
+            }
+
+            .post-description {
+                .post-description--category-date {
+                    display: flex;
+                    margin-bottom: 20px;
+                    align-items: center;
+
+                    .post-description--category {
+                        background-color: $base-violet-lite-bg;
+                        border-radius: 3px;
+                        padding: 3.5px 10px;
+                        display: flex;
+                        align-items: center;
+                        margin-right: 20px;
+                        line-height: normal;
+
+                        span {
+                            font-size: 12px;
+                            font-weight: bold;
+                        }
+                    }
+
+                    .post-description--date {
+                        font-size: 12px;
+                    }
+                }
+
+                .post-description--title {
+                    font-size: 28px;
+                    line-height: 38px;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+
+                    @media (min-width: $tablet) {
+                        font-size: 40px;
+
+                        &.top-article {
+                            color: $main-color-violet;
+                        }
+
+                        line-height: 50px;
+                    }
+                }
+
+                .post-description--short-content {
+                    font-weight: 300;
+                    line-height: 38px;
+
+                }
+
+                @media (min-width: $tablet) {
+                    width: 50%;
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        .news-wrapper--pagination {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 51px;
+
+            @media (min-width: $tablet) {
+                margin-bottom: 142px;
+            }
+
+            .news-wrapper-count {
+                width: 37px;
+                height: 37px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+                font-size: 20px;
+                font-weight: bold;
+                margin: 0 9px;
+
+                span {
+                    line-height: 28px;
+                }
+
+                &.active {
+                    border-radius: 50%;
+                    background-color: $main-color-violet;
+
+                    span {
+                        color: $main-color-white;
+                    }
+                }
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}

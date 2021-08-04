@@ -4,7 +4,10 @@ body {
         position: relative;
         @media (min-width: $large_desk) {
             padding: 36px 42px 15px 42px;
-            // top: -80px;
+            max-width: 1196px;
+            margin: 0 auto;
+            padding-left: 0;
+            padding-right: 0;
         }
         .header {
             color: $main-color;
@@ -38,6 +41,7 @@ body {
                 }
                 &~.header--desk-menu.header--dropdown.sticky {
                     width: initial;
+                    padding-right: 42px;
                 }
             }
             .header--logo {
@@ -148,7 +152,6 @@ body {
             transform: none;
             right: 0;
             justify-content: flex-end;
-            padding-right: 42px;
             ul.header--main-links {
                 display: flex;
                 align-items: center;
@@ -181,7 +184,7 @@ body {
                         color: $main-color;
                     }
                     &.without-border-content {
-                        margin-left: 295px;
+                        margin-left: 278px;
                         margin-right: 20px;
                     }
                 }

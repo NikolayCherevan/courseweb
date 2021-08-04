@@ -9,6 +9,8 @@
 @import './components/footer.scss';
 @import './homepage/home.scss';
 @import './pages/courses.scss';
+@import './pages/archive.scss';
+
 html {
     scroll-behavior: smooth;
 }
@@ -16,6 +18,7 @@ html {
 body {
     z-index: -1;
     position: relative;
+
     * {
         font-family: 'Montserrat', sans-serif;
         -webkit-font-smoothing: subpixel-antialiased;
@@ -47,6 +50,7 @@ body {
     font-weight: 600;
     line-height: 12px;
     color: $main-color;
+
     @media (min-width: $more_than_iphone5) {
         padding: 16px 35px;
     }
@@ -55,16 +59,19 @@ body {
 .btn-violet {
     background-color: $base-bg-violet;
     border-color: $main-color-violet;
-    color: $main-color-white!important;
+    color: $main-color-white !important;
+
     &::after {
-        background-image: url('./img/arrow_down_white.svg')!important;
+        background-image: url('./img/arrow_down_white.svg') !important;
     }
+
     &[aria-expanded="true"] {
-        background-color: $base-bg-white!important;
-        border-color: $main-color-violet!important;
-        color: $main-color-violet!important;
+        background-color: $base-bg-white !important;
+        border-color: $main-color-violet !important;
+        color: $main-color-violet !important;
+
         &::after {
-            background-image: url('./img/arrow_down_violet.svg')!important;
+            background-image: url('./img/arrow_down_violet.svg') !important;
         }
     }
 }
@@ -87,5 +94,12 @@ a {
 .title-onlymobile {
     @media (min-width: $note_desk) {
         display: none;
+    }
+}
+@media (min-width: $note_desk) {
+    .uk-container {
+        box-sizing: border-box;
+        max-width: 994px !important;
+        padding: 0!important;
     }
 }

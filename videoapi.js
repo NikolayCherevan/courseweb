@@ -5,6 +5,7 @@ let trailer = document.querySelector(".trailer");
 tag.src = 'https://www.youtube.com/player_api';
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+let newsPage = document.querySelector('html').classList.contains('news');
 
 var videoId = null;
 
@@ -18,9 +19,12 @@ switch (true) {
 }
 var tv,
     playerDefaults = { autoplay: 1, border: 0, autohide: 1, modestbranding: 0, rel: 0, showinfo: 0, controls: 1, disablekb: 0, enablejsapi: 0, iv_load_policy: 3, host: 'https://www.youtube.com' };
+
+
+
 var vid = [
-        { 'videoId': videoId, 'startSeconds': 0, 'endSeconds': 105, 'suggestedQuality': 'hd720' }
-    ],
+    { 'videoId': videoId, 'startSeconds': 0, 'endSeconds': 105, 'suggestedQuality': 'hd720' }
+],
     randomvid = Math.floor(Math.random() * (vid.length - 1 + 1));
 
 function onYouTubePlayerAPIReady() {
@@ -36,26 +40,28 @@ function onPlayerReady() {
 function stopVideo() {
     tv.stopVideo();
 }
-
-window.onload = function() {
-    if (tv) {
-        document.querySelector('.video__button').addEventListener('click', function(event) {
-            event.preventDefault();
-            toggle()
-            bgOverlay.classList.add('active');
-            bgOverlay.classList.add('video')
-            onPlayerReady();
-            trailer.classList.add("active");
-        });
-        document.querySelector('.video-iframe--banner').addEventListener('click', function(event) {
-            event.preventDefault();
-            bgOverlay.classList.add('active');
-            bgOverlay.classList.add('video')
-            onPlayerReady();
-            trailer.classList.add("active");
-        });
+if (!newsPage) {
+    window.onload = function () {
+        if (tv) {
+            document.querySelector('.video__button').addEventListener('click', function (event) {
+                event.preventDefault();
+                toggle()
+                bgOverlay.classList.add('active');
+                bgOverlay.classList.add('video')
+                onPlayerReady();
+                trailer.classList.add("active");
+            });
+            document.querySelector('.video-iframe--banner').addEventListener('click', function (event) {
+                event.preventDefault();
+                bgOverlay.classList.add('active');
+                bgOverlay.classList.add('video')
+                onPlayerReady();
+                trailer.classList.add("active");
+            });
+        }
     }
 }
+
 
 function onPlayerStateChange(e) {
     if (e.data === 1) {
