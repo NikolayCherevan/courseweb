@@ -1,0 +1,140 @@
+#registration-section {
+    font-size: 14px;
+    line-height: 12px;
+    color: $main-color;
+
+    .main-title {
+        margin: 20px 0 32px 0;
+        text-align: left;
+
+        .course-name {
+            margin-top: 20px;
+            color: $main-color-violet;
+        }
+    }
+
+    form {
+        .registration-inputs-wrapper {
+            margin-bottom: 26px;
+            max-width: 710px;
+            display: grid;
+            grid-gap: 30px;
+            grid-template-columns: 1fr;
+
+            @media (min-width: $tablet) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .field {
+                display: flex;
+                flex-direction: column;
+
+                select+.nice-select {
+                    border: 2px solid $main-color;
+                    border-radius: 50px;
+                    min-height: 62px;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 33px;
+
+                    &::after {
+                        right: 25px;
+                        border-bottom: 2px solid $main-color;
+                        border-right: 2px solid $main-color;
+                    }
+
+                    .current {
+                        color: $main-color;
+                        font-weight: bold;
+                    }
+                }
+
+                label {
+                    margin-bottom: 10px;
+                    font-weight: bold;
+                    line-height: 28px;
+                    opacity: 0.8;
+                }
+
+                &.required {
+                    label {
+                        &::after {
+                            content: "*";
+                            display: inline-block;
+                            opacity: 0.8;
+                            color: $main-color-orange;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .newsletter-subscribe {
+
+            margin-bottom: 30px;
+
+            label {
+                position: relative;
+                display: flex;
+                align-items: center;
+
+                span {
+                    border: 2px solid #EFEFEF;
+                    width: 31px;
+                    height: 31px;
+                    display: inline-block;
+                    border-radius: 50%;
+                    margin-right: 25px;
+                    flex-shrink: 0;
+                }
+
+                p {
+                    line-height: 28px;
+                    font-weight: bold;
+                }
+
+                input {
+                    position: absolute;
+                    left: -99999px;
+
+                    &:checked {
+                        &+span::before {
+                            content: '';
+                            display: inline-block;
+                            width: 21px;
+                            height: 21px;
+                            background-color: $main-color-violet;
+                            border-radius: 50%;
+                            position: relative;
+                            top: 50%;
+                            transform: translateY(-53%);
+                            left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .main-button {
+            padding: 0 35px;
+            min-height: 62px;
+            width: 100%;
+            max-width: 332px;
+            border-color: $main-color-violet;
+            background-color: $base-bg-violet;
+            color: $main-color-white;
+            margin-bottom: 110px;
+        }
+        .agb {
+            font-size: 12px;
+            font-weight: bold;
+            color: $main-color;
+            opacity: .8;
+            line-height: 20px;
+            margin-bottom: 41px;
+            a {
+                color: $main-color-orange;
+            }
+        }
+    }
+}

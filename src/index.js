@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
     let homePage = document.querySelector('html').classList.contains('homepage');
     let coursesPage = document.querySelector('html').classList.contains('courses');
-    let newsPage = document.querySelector('html').classList.contains('news');
+    let registrationPage = document.querySelector('html').classList.contains('registration');
     let root = document.documentElement;
     const rotateElement = document.querySelector(".footer--logo-rotate");
 
@@ -430,7 +430,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             slider.$destroy();
         })
     }
-    if (viewportWidth >= 992) {
+    if (viewportWidth >= 992 && !registrationPage) {
         rotateFooterLogo();
         destroyUiKitSlider();
         $('.owl-carousel--team').trigger('destroy.owl.carousel');
@@ -453,7 +453,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
     window.addEventListener('resize', function () {
         viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-        if (viewportWidth >= 992) {
+        if (viewportWidth >= 992 && !registrationPage) {
             rotateFooterLogo();
             destroyUiKitSlider();
             $('.owl-carousel--team').trigger('destroy.owl.carousel');
@@ -780,13 +780,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     }
 
+
+    function rotateFooterLogo() {
+
     function getCenter(element) {
         const { left, top, width, height } = element.getBoundingClientRect();
         return { x: left + width / 2, y: top + height / 2 }
     }
     const arrowCenter = getCenter(rotateElement);
-
-    function rotateFooterLogo() {
         addEventListener("mousemove", ({ clientX, clientY }) => {
             const angle = Math.atan2(clientY - arrowCenter.y, clientX - arrowCenter.x);
             rotateElement.style.transform = `rotate(${angle}rad)`;

@@ -6,7 +6,7 @@ tag.src = 'https://www.youtube.com/player_api';
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 let newsPage = document.querySelector('html').classList.contains('news');
-
+let registrationPage = document.querySelector('html').classList.contains('registration');
 var videoId = null;
 
 switch (true) {
@@ -40,7 +40,7 @@ function onPlayerReady() {
 function stopVideo() {
     tv.stopVideo();
 }
-if (!newsPage) {
+if (!newsPage && !registrationPage) {
     window.onload = function () {
         if (tv) {
             document.querySelector('.video__button').addEventListener('click', function (event) {

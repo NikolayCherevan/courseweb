@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="news front">
+<html lang="en" class="registration front">
 
 <head>
     <meta charset="utf-8">
@@ -20,6 +20,7 @@
 </head>
 
 <body>
+
     <a class="skip-link" href="#maincontent">Skip to main</a>
     <div class="header-padding"> </div>
     <div class="header-wrapper">
@@ -248,137 +249,57 @@
     </div>
     <div class="menu-bg"> </div>
 
+    <section id="registration-section">
+        <div class="uk-container">
+            <div class="small-description"> <span>Деталі курсу</span></div>
+            <h1 class="main-title"> Реєстрація на курс <div class="course-name">Frontend</div>
+            </h1>
+            <form id="registration-form" action="">
+                <fieldset class="registration-inputs-wrapper">
 
+                    <div class="field required">
 
-
-
-
-    <section id="news-wrapper">
-        <div class="uk-container uk-container-small">
-            <h1 class="news-wrapper-main-title main-title">Новини</h1>
-            <div class="news-wrapper--posts-wrapper">
-                <div class="posts-wrapper--post">
-                    <div class="post--figure">
-                        <img src="../img/posts/first-post-image.png" alt="">
-                        <div class="post--figure__overlay">
-                            <a class="main-button" href="#">Детальніше</a>
-                        </div>
+                        <label for="city">Обери місто</label>
+                        <select id="city">
+                            <option>Київ</option>
+                            <option>Пункт 2</option>
+                            <option>Пункт 3</option>
+                        </select>
                     </div>
-                    <div class="post-description">
-                        <div class="post-description--category-date">
-                            <div class="post-description--category small-description"><span>Бізнес процеси</span></div>
-                            <div class="post-description--date">9 липня 2021, 16:58</div>
-                        </div>
-                        <a href="#" class="post-description--title top-article">Через що Tesla може розоритися: сильні та слабкі сторони
-                            компанії</a>
-                        <div class="post-description--short-content">Tesla - інноваційна компанія: вона розвиває
-                            технологію автопілота, штучного інтелекту, ставить рекордні ...</div>
+                    <div class="field required">
+                        <label for="course">Обери курс</label>
+                        <select id="course">
+                            <option>Frontend</option>
+                            <option>Пункт 2</option>
+                            <option>Пункт 3</option>
+                        </select>
                     </div>
+                    <div class="field required">
+                        <label for="email">Email</label>
+
+                        <input type="email" placeholder="Hello@school.com" name="email" id="email" required>
+                    </div>
+                    <div class="field required">
+                        <label for="phone">Телефон</label>
+                        <input type="text" placeholder="(093) 763 77 22" name="phone" id="phone" class="required" >
+                    </div>
+                </fieldset>
+                <div class="newsletter-subscribe">
+                    <label for="newsletter"><input type="checkbox" name="newsletter" id="newsletter">
+                        <span></span>
+                        <p>Отримувати корисні матеріали та новини від креативної школи економіки</p>
+                    </label>
+
                 </div>
-                <div class="posts-wrapper--post">
-                    <div class="post--figure">
-                        <img src="../img/posts/first-post-image.png" alt="">
-                        <div class="post--figure__overlay">
-                            <a class="main-button" href="#">Детальніше</a>
-                        </div>
-                    </div>
-                    <div class="post-description">
-                        <div class="post-description--category-date">
-                            <div class="post-description--category small-description"><span>Бізнес процеси</span></div>
-                            <div class="post-description--date">9 липня 2021, 16:58</div>
-                        </div>
-                        <a href="#" class="post-description--title">Tesla може!</a>
-                        <div class="post-description--short-content">Tesla - інноваційна компанія: вона розвиває технологію автопілота, штучного інтелекту, ставить рекордні показники електрокарів і продає свої авто не в салонах, а через сайт...</div>
-                    </div>
-                </div>
-                <div class="posts-wrapper--post">
-                    <div class="post--figure">
-                        <img src="../img/posts/first-post-image.png" alt="">
-                        <div class="post--figure__overlay">
-                            <a class="main-button" href="#">Детальніше</a>
-                        </div>
-                    </div>
-                    <div class="post-description">
-                        <div class="post-description--category-date">
-                            <div class="post-description--category small-description"><span>Бізнес процеси</span></div>
-                            <div class="post-description--date">9 липня 2021, 16:58</div>
-                        </div>
-                        <a href="#" class="post-description--title">Через що Tesla може розоритися: сильні та слабкі сторони
-                            компанії</a>
-                        <div class="post-description--short-content">Tesla - інноваційна компанія: вона розвиває
-                            технологію автопілота, штучного інтелекту, ставить рекордні ...</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="news-wrapper--pagination">
-            <a href="#" class="news-wrapper-count active"><span>1</span> </a>
-            <a href="#" class="news-wrapper-count"><span>2</span> </a>
-            <a href="#" class="news-wrapper-count"><span>3</span> </a>
-        </div>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section id="registration">
-        <a class="footer--logo" href="#"><img class="footer--logo-rotate" width="52" height="48"
-                src="../img/logo_nav.svg" alt="logo">
-        </a>
-        <div class="uk-container uk-container-small ">
-            <h2 class="registration--description"> Реєструйся на онлайн навчання та отримай <span>15%</span> знижку!
-            </h2>
-            <form>
-                <select class="nice-select wide">
-                    <option value="1">Вибери курс</option>
-                    <option value="2">Another option</option>
-                    <option value="3">A disabled option</option>
-                    <option value="4">Potato</option>
-                </select>
-                <button class="registration--registration-on-course" type="submit">Зареєструйся</button>
+                <button class="main-button" type="submit">Хочу навчатися</button>
+                <p class="agb">Реєструючись, я погоджуюсь з <a href="#">Умовами використання </a> та <a
+                        href="#">Політикою
+                        конфіденційності </a> Школи креативної економіки</p>
             </form>
         </div>
     </section>
-    <footer id="footer">
-        <section>
-            <div class="uk-container">
-                <div class="footer--logo-links-wrapper">
-                    <a class="footer--logo" href="#"><img width="52" height="48" src="../img/logo_nav.svg" alt="logo">
-                    </a>
-                    <ul class="footer--links">
-                        <li><a href="#"> Договір оферти</a></li>
-                        <li><a href="#"> Умови користування</a></li>
-                        <li><a href="#"> Політика конфіденційності</a></li>
-                        <li><a href="#"> Політика cookies</a></li>
-                    </ul>
-                </div>
-                <ul class="footer--socials">
-                    <li>
-                        <a href="#"> <img width="25" height="25" src="../img/Instagram.svg" alt="Instagram"> </a>
-                    </li>
-                    <li>
-                        <a href="#"><img width="25" height="25" src="../img/Twitter.svg" alt="Twitter"> </a>
-                    </li>
-                    <li>
-                        <a href="#"><img width="13" height="25" src="../img/Facebook.svg" alt="Facebook"> </a>
-                    </li>
-                </ul>
 
-            </div>
-        </section>
 
-    </footer>
     <div id="bg-overlay">
         <div class="bg-overlay--VideoHead-popup-video-exit">
             <div class="bg-overlay--VideoHead-popup-video-exit line-1"></div>
@@ -405,6 +326,23 @@
     <script async type="text/javascript" src="../videoapi.js"></script>
     <script defer src="../owlcarousel/owl.carousel.min.js"></script>
     <script defer src="../jquery.nice-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"
+        crossorigin=" anonymous"></script>
+    <script>
+        window.onload = () => {
+            $('#city').niceSelect();
+            $('#course').niceSelect();
+            $.validator.addMethod('customphone', function (value, element) {
+                return this.optional(element) || /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(value);
+            }, "Please enter a valid phone number");
+            $("#registration-form").validate({
+                    rules: {
+                        phone: 'customphone'
+                    }
+                });
+            $("#registration-form").validate();
+        }
+    </script>
     <script defer type="text/javascript" src="../dist/main.js"></script>
 </body>
 

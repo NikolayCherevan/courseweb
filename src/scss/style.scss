@@ -10,6 +10,7 @@
 @import './homepage/home.scss';
 @import './pages/courses.scss';
 @import './pages/archive.scss';
+@import './pages/registration.scss';
 
 html {
     scroll-behavior: smooth;
@@ -102,4 +103,53 @@ a {
         max-width: 994px !important;
         padding: 0!important;
     }
+}
+
+.small-description {
+    max-width: fit-content;
+    background-color: $base-violet-lite-bg;
+    border-radius: 3px;
+    padding: 3.5px 10px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    line-height: normal;
+
+    span {
+        font-size: 12px;
+        font-weight: bold;
+        color: $main-color;
+    }
+}
+.main-title {
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+    * {
+        line-height: 38px;
+    }
+    @media (min-width: $tablet) {
+        font-size: 45px;
+        line-height: 50px;
+        margin-bottom: 60px;
+        * {
+            line-height: 38px;
+        }
+    }
+}
+input {
+    outline: none;
+    border: none;
+    min-height: 68px;
+    border-radius: 50px;    
+    border: 2px solid #EFEEEB;
+    padding: 0 33px;
+    &::placeholder {
+        color: $main-color;
+        opacity: 0.2;
+        font-weight: bold;
+        font-size: 14px;
+      }
 }

@@ -13,19 +13,7 @@
             color: $main-color;
         }
 
-        .news-wrapper-main-title {
-            font-size: 32px;
-            line-height: 38px;
-            text-align: center;
-            font-weight: bold;
-            margin-bottom: 30px;
-
-            @media (min-width: $tablet) {
-                font-size: 45px;
-                line-height: 50px;
-                margin-bottom: 60px;
-            }
-        }
+        
 
         .news-wrapper-post-title {
             font-size: 28px;
@@ -118,20 +106,7 @@
                     margin-bottom: 20px;
                     align-items: center;
 
-                    .post-description--category {
-                        background-color: $base-violet-lite-bg;
-                        border-radius: 3px;
-                        padding: 3.5px 10px;
-                        display: flex;
-                        align-items: center;
-                        margin-right: 20px;
-                        line-height: normal;
-
-                        span {
-                            font-size: 12px;
-                            font-weight: bold;
-                        }
-                    }
+                    
 
                     .post-description--date {
                         font-size: 12px;
