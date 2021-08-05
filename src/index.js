@@ -19,8 +19,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let homePage = document.querySelector('html').classList.contains('homepage');
     let coursesPage = document.querySelector('html').classList.contains('courses');
     let registrationPage = document.querySelector('html').classList.contains('registration');
+    let newsPage = document.querySelector('html').classList.contains('news');
     let root = document.documentElement;
     const rotateElement = document.querySelector(".footer--logo-rotate");
+    let contactsPage = document.querySelector('html').classList.contains('contacts');
 
     const marq1 = document.querySelector(".marquee");
 
@@ -98,6 +100,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     //fixed  dropdown while scrolling
     window.addEventListener("scroll", () => {
+        if (isElementInViewport(rotateElement) && viewportWidth >= 992) {
+            rotateFooterLogo();
+        }
         if (!coursesPage) {
             doHeaderDropdownFixed(modileMenuDropdown)
             doHeaderDropdownFixed(header)
@@ -118,7 +123,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     //add overlay function
     function addOverlay(elem) {
-        elem.addEventListener('click', function () {
+        elem.addEventListener('click', function() {
             bgOverlay.classList.toggle('active')
         })
 
@@ -131,7 +136,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     //burger logic
-    burger.addEventListener('click', function () {
+    burger.addEventListener('click', function() {
         this.classList.toggle('open');
         body.classList.toggle('__nav-open');
         if (!header.classList.contains('sticky')) {
@@ -196,7 +201,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         })
 
         let arrayOfElement = centerCoordinatesOfItem.slice()
-        onmousemove = function (e) {
+        onmousemove = function(e) {
             let x = window.innerWidth;
 
             e.clientX - window.innerWidth / 2 > 0 ? x = e.clientX - 100 : x = e.clientX - 200
@@ -255,21 +260,24 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
 
+    if (!contactsPage && !registrationPage && !newsPage) {
+        //bgoverlayclick
+        bgOverlay.addEventListener('click', function() {
 
-    //bgoverlayclick
-    bgOverlay.addEventListener('click', function () {
-        stopVideo();
-        trailer.classList.remove("active");
-        bgOverlay.classList.remove('active');
-        bgOverlay.classList.remove('video')
-        document.querySelector('.video-iframe--banner').style.cssText = "display: block";
-    });
+            stopVideo();
+
+            trailer.classList.remove("active");
+            bgOverlay.classList.remove('active');
+            bgOverlay.classList.remove('video')
+            document.querySelector('.video-iframe--banner').style.cssText = "display: block";
+        });
+    }
 
     //tabs logic
 
     document.querySelectorAll('.courses--tabs--title').forEach((item, index) => {
 
-        item.addEventListener('click', function (event) {
+        item.addEventListener('click', function(event) {
             document.querySelectorAll('.courses--tabs--title').forEach((item) => {
                 item.classList.remove('active-title')
             })
@@ -283,8 +291,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     //tabs contains items
     var prevEl = null;
-    $(".courses--tabs--title").each(function (index) {
-        $(this).on('click', function () {
+    $(".courses--tabs--title").each(function(index) {
+        $(this).on('click', function() {
             if (index === 0) {
                 $(".uk-tab-bottom").animate({ scrollLeft: '-1000' }, 300);
                 return
@@ -340,7 +348,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             z: transform[2]
         };
     }
-    $('.owl-carousel--team').on('changed.owl.carousel', function (e) {
+    $('.owl-carousel--team').on('changed.owl.carousel', function(e) {
         if (!getMatrix) return
         $('.owl-carousel--team').css('background-position-x', getMatrix(document.querySelector(".owl-carousel--team .owl-stage")).x / 6);
 
@@ -430,8 +438,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
             slider.$destroy();
         })
     }
-    if (viewportWidth >= 992 && !registrationPage) {
-        rotateFooterLogo();
+    if (viewportWidth >= 992 && !registrationPage && !contactsPage) {
+
         destroyUiKitSlider();
         $('.owl-carousel--team').trigger('destroy.owl.carousel');
         if (homePage) {
@@ -451,10 +459,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
             }
         }
     }
-    window.addEventListener('resize', function () {
+    window.addEventListener('resize', function() {
         viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-        if (viewportWidth >= 992 && !registrationPage) {
-            rotateFooterLogo();
+        if (viewportWidth >= 992 && !registrationPage && !contactsPage) {
+
             destroyUiKitSlider();
             $('.owl-carousel--team').trigger('destroy.owl.carousel');
             if (homePage) {
@@ -485,22 +493,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
     //passive events seo
 
     jQuery.event.special.touchstart = {
-        setup: function (_, ns, handle) {
+        setup: function(_, ns, handle) {
             this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
         }
     };
     jQuery.event.special.touchmove = {
-        setup: function (_, ns, handle) {
+        setup: function(_, ns, handle) {
             this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
         }
     };
     jQuery.event.special.wheel = {
-        setup: function (_, ns, handle) {
+        setup: function(_, ns, handle) {
             this.addEventListener("wheel", handle, { passive: true });
         }
     };
     jQuery.event.special.mousewheel = {
-        setup: function (_, ns, handle) {
+        setup: function(_, ns, handle) {
             this.addEventListener("mousewheel", handle, { passive: true });
         }
     };
@@ -509,14 +517,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     function addDotButtonText() {
-        $('.owl-dot').each(function () {
+        $('.owl-dot').each(function() {
             $(this).find('.offscreen').remove();
             let idx = $(this).index() + 1;
             $(this).append('<span class="offscreen">Go to slide ' + idx + '</span>');
         });
     }
 
+    function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
 
+        return rect.bottom > 0 &&
+            rect.right > 0 &&
+            rect.left < (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */ &&
+            rect.top < (window.innerHeight || document.documentElement.clientHeight) /* or $(window).height() */ ;
+    }
 
     //courses page 
     function addStickyscrollToTop() {
@@ -525,6 +540,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         let lastScroll = 0;
 
         window.addEventListener("scroll", () => {
+
             if (viewportWidth <= 1400) return
             const currentScroll = window.pageYOffset;
             if (currentScroll <= 0) {
@@ -592,16 +608,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
         addMarquee(marq1)
         coursesAnchors.forEach(item => {
-            item.addEventListener('click', function (event) {
-                $('.desk-menu-courses--anchors li a').removeClass('focus')
-                event.target.classList.add('focus')
+                item.addEventListener('click', function(event) {
+                    $('.desk-menu-courses--anchors li a').removeClass('focus')
+                    event.target.classList.add('focus')
+                })
             })
-        })
-        // doFooterDropdownFixed(mySwiper)
+            // doFooterDropdownFixed(mySwiper)
         doFooterDropdownFixed(deskMenuFooter)
         const scrollUp = "sticky";
         addStickyscrollToTop()
-        window.addEventListener('resize', function () {
+        window.addEventListener('resize', function() {
             // swiperShow()
             addMarquee(marq1)
             header.classList.remove(scrollUp);
@@ -650,7 +666,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             let showMore = document.querySelectorAll('.show-more');
             addDotButtonText();
             showMore.forEach(item => {
-                item.addEventListener('click', function (event) {
+                item.addEventListener('click', function(event) {
                     event.target.classList.add('hided');
                     event.target.nextElementSibling.classList.remove('hided')
                 })
@@ -677,7 +693,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
 
         let end_date_str = `${courseEnd.dataset.years}-${courseEnd.dataset.month}-${courseEnd.dataset.days}T${courseEnd.dataset.hours}:${courseEnd.dataset.minutes}:${courseEnd.dataset.seconds}`;
-        let timer = setInterval(function () {
+        let timer = setInterval(function() {
             let now = new Date();
             let date = new Date(end_date_str);
             let ms_left = diffSubtract(now, date);
@@ -757,7 +773,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             }
 
         }, 1000)
-        $('.students-review--owl').on('changed.owl.carousel', function (e) {
+        $('.students-review--owl').on('changed.owl.carousel', function(e) {
             if (!getMatrix) return
             $('#students-review').css('background-position-x', getMatrix(document.querySelector(".students-review--owl .owl-stage")).x / 6);
 
@@ -783,11 +799,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     function rotateFooterLogo() {
 
-    function getCenter(element) {
-        const { left, top, width, height } = element.getBoundingClientRect();
-        return { x: left + width / 2, y: top + height / 2 }
-    }
-    const arrowCenter = getCenter(rotateElement);
+        function getCenter(element) {
+            const { left, top, width, height } = element.getBoundingClientRect();
+            return { x: left + width / 2, y: top + height / 2 }
+        }
+        const arrowCenter = getCenter(rotateElement);
         addEventListener("mousemove", ({ clientX, clientY }) => {
             const angle = Math.atan2(clientY - arrowCenter.y, clientX - arrowCenter.x);
             rotateElement.style.transform = `rotate(${angle}rad)`;

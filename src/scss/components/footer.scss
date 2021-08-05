@@ -77,32 +77,6 @@
                     }
                 }
             }
-            .footer--socials {
-                display: flex;
-                align-items: center;
-                @media (min-width: $tablet) {
-                    flex-direction: row;
-                    margin-bottom: 0;
-                }
-                li {
-                    margin: 0 23px;
-                    a {
-                        img {
-                            height: 24px;
-                            object-fit: contain;
-                            min-width: 24px;
-                            @media (min-width: $tablet) {
-                                min-height: 16px;
-                                height: 16px;
-                                width: 16px;
-                            }
-                        }
-                    }
-                    &:last-child {
-                        margin-right: 0;
-                    }
-                }
-            }
         }
     }
 }

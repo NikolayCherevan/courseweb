@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="registration front">
+<html lang="en" class="contacts front">
 
 <head>
     <meta charset="utf-8">
@@ -147,7 +147,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="header--nav-item hided-menu"><a href="pages/contacts.html"> Контакти </a></li>
+                <!-- <li class="header--nav-item hided-menu"><a href="pages/contacts.html"> Контакти </a></li> -->
 
                 <li class="main-button header--nav-item dropdown other"> Укр</li>
                 <li class="header--dropdown--body small-body" uk-dropdown="mode: click">
@@ -209,7 +209,7 @@
                     </div>
                 </li>
             </ul>
-            <a class="mobile-menu--content--simple--link" href="pages/contacts.html"> Контакти </a>
+            <!-- <a class="mobile-menu--content--simple--link" href="pages/contacts.html"> Контакти </a> -->
         </div>
         <div class="mobile-menu--footer">
             <div>
@@ -243,64 +243,103 @@
     </div>
     <div class="menu-bg"> </div>
 
-    <section id="registration-section">
+
+    <section id="contacts-section">
         <div class="uk-container">
-            <div class="small-description"> <a href="#">Деталі курсу</a></div>
-            <h1 class="main-title"> Реєстрація на курс
-                <div class="course-name">Frontend</div>
-            </h1>
-            <form id="registration-form" action="">
-                <fieldset class="registration-inputs-wrapper">
-
-                    <div class="field required">
-                        <label>Обери місто</label>
-                        <select name="city" id="city">
-                            <option value="">Обери серед доступних</option>
-                            <option>Київ</option>
-                            <option>Пункт 2</option>
-                            <option>Пункт 3</option>
-                        </select>
-                        <!-- input element for validate prev element select  -->
-                        <input type="text" name="simple1" class="for_city" required>
-
-                    </div>
-                    <div class="field required">
-                        <label>Обери курс</label>
-                        <select name="course" id="course">
-                            <option value="">Обери курс</option>
-                            <option>Frontend</option>
-                            <option>Пункт 2</option>
-                            <option>Пункт 3</option>
-                        </select>
-                        <!-- input element for validate prev element select  -->
-                        <input type="text" name="simple2" class="for_course" required>
-
-                    </div>
-                    <div class="field required">
-                        <label for="email">Email</label>
-
-                        <input type="email" placeholder="Hello@school.com" name="email" id="email" required>
-                    </div>
-                    <div class="field required">
-                        <label for="phone">Телефон</label>
-                        <input type="text" placeholder="(093) 763 77 22" name="phone" id="phone" class="required">
-                    </div>
-                </fieldset>
-                <div class="newsletter-subscribe">
-                    <label for="newsletter"><input type="checkbox" name="newsletter" id="newsletter" checked>
-                        <span></span>
-                        <p>Отримувати корисні матеріали та новини від креативної школи економіки</p>
-                    </label>
-
+            <h1 class="main-title"> Контакти</h1>
+            <div class="contacts-wrapper">
+                <div class="contacts__address">
+                    <div class="contacts-label">Адреса</div>
+                    <div class="contacts__address--description">01004, Украина, г. Киев ул. Дорогожицька, 3</div>
                 </div>
-                <button class="main-button" type="submit">Хочу навчатися</button>
-                <p class="agb">Реєструючись, я погоджуюсь з <a href="#">Умовами використання </a> та <a href="#">Політикою
-                        конфіденційності </a> Школи креативної економіки</p>
+            </div>
+            <div class="contacts-wrapper">
+                <div class="contacts__email col-2-lg">
+                    <div class="contacts__email__left-col">
+                        <div class="contacts-label">Підтримка</div>
+                        <a href="mailto:support@sh.ua">support@sh.ua</a>
+                    </div>
+                    <div class="contacts__email__right-col">
+                        <div class="contacts-label">Запитання</div>
+                        <a href="mailto:support@sh.ua">requst@sh.ua</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contacts-wrapper">
+                <div class="contacts__phone col-2-lg">
+                    <div class="contacts__phone__left-col">
+                        <div class="contacts-label">Телефон</div>
+                        <a href="tel:+38097123-44-11">+380 (97) 123-44-11</a>
+                        <a href="tel:+38097123-44-11">+380 (97) 123-44-11</a>
+
+                    </div>
+                    <div class="contacts__phone__right-col">
+                        <a href="tel:+38097123-44-11">+380 (97) 123-44-11</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contacts-wrapper">
+                <div class="contacts-label">Ми в соц. мережах</div>
+                <ul class="socials">
+                    <li>
+                        <a href="#"> <img width="25" height="25" src="../img/Instagram-black.svg" alt="Instagram"> </a>
+                    </li>
+                    <li>
+                        <a href="#"><img width="25" height="25" src="../img/Twitter-black.svg" alt="Twitter"> </a>
+                    </li>
+                    <li>
+                        <a href="#"><img width="13" height="25" src="../img/Facebook-black.svg" alt="Facebook"> </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="registration">
+        <a class="footer--logo" href="#"><img class="footer--logo-rotate" width="52" height="48" src="../img/logo_nav.svg" alt="logo">
+        </a>
+        <div class="uk-container uk-container-small ">
+            <h2 class="registration--description"> Реєструйся на онлайн навчання та отримай <span>15%</span> знижку!
+            </h2>
+            <form>
+                <select class="nice-select wide">
+                    <option value="1">Вибери курс</option>
+                    <option value="2">Another option</option>
+                    <option value="3">A disabled option</option>
+                    <option value="4">Potato</option>
+                </select>
+                <button class="registration--registration-on-course" type="submit">Зареєструйся</button>
             </form>
         </div>
     </section>
+    <footer id="footer">
+        <section>
+            <div class="uk-container">
+                <div class="footer--logo-links-wrapper">
+                    <a class="footer--logo" href="#"><img width="52" height="48" src="../img/logo_nav.svg" alt="logo">
+                    </a>
+                    <ul class="footer--links">
+                        <li><a href="#"> Договір оферти</a></li>
+                        <li><a href="#"> Умови користування</a></li>
+                        <li><a href="#"> Політика конфіденційності</a></li>
+                        <li><a href="#"> Політика cookies</a></li>
+                    </ul>
+                </div>
+                <ul class="socials">
+                    <li>
+                        <a href="#"> <img width="25" height="25" src="../img/Instagram.svg" alt="Instagram"> </a>
+                    </li>
+                    <li>
+                        <a href="#"><img width="25" height="25" src="../img/Twitter.svg" alt="Twitter"> </a>
+                    </li>
+                    <li>
+                        <a href="#"><img width="13" height="25" src="../img/Facebook.svg" alt="Facebook"> </a>
+                    </li>
+                </ul>
 
+            </div>
+        </section>
 
+    </footer>
     <div id="bg-overlay">
         <div class="bg-overlay--VideoHead-popup-video-exit">
             <div class="bg-overlay--VideoHead-popup-video-exit line-1"></div>
@@ -319,66 +358,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=" anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script src="../lazy.min.js" async=""></script>
     <script async src="../uikit.min.js"></script>
+
     <script defer src="../owlcarousel/owl.carousel.min.js"></script>
     <script defer src="../jquery.nice-select.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js" crossorigin=" anonymous"></script>
-    <script>
-        function checkSelect() {
-            $('select option:selected').each(function() {
-                if ($(this).val().length == 0) {
-                    $(this).parent().addClass('empty')
-                } else {
-                    $(this).parent().removeClass('empty')
-                }
-            })
-        }
-        window.onload = () => {
-            checkSelect()
-            $('#city').niceSelect();
-            $('#course').niceSelect();
-            $.validator.addMethod('customphone', function(value, element) {
-                return this.optional(element) || /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(value);
-            }, "Please enter a valid phone number");
-
-            $("#registration-form").validate({
-                rules: {
-                    phone: 'customphone',
-                },
-                messages: {
-                    phone: "Введіть коректний номер",
-                    email: "Введіть коректний Email",
-                    simple2: "Оберіть курс з доступних",
-                    simple1: "Оберіть місто з доступних",
-                },
-                debug: true
-            });
-            $('#city').on('change', function() {
-                checkSelect()
-                if ($(this).val().length !== 0) {
-                    $('.for_city').val('ok')
-                    return
-                }
-                $('.for_city').val('')
-            })
-            $('#course').on('change', function() {
-                checkSelect()
-                if ($(this).val().length !== 0) {
-                    $('.for_course').val('ok')
-                    return
-                }
-                $('.for_course').val('')
-            })
-            $('#registration-form').submit(function() {
-                if ($(this).valid()) {
-                    alert('form sending');
-
-                }
-            });
-
-        }
-    </script>
     <script defer type="text/javascript" src="../dist/main.js"></script>
 </body>
 
