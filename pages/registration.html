@@ -60,7 +60,7 @@
                 <ul>
                     <li>
                         <small>ІТ-курси </small>
-                        <a href="#">Front-End-Developer </a>
+                        <a href="./frontend_course.html">Front-End-Developer </a>
                         <a href="#">Fullstack Вечерний </a>
                     </li>
                     <li>
@@ -110,7 +110,7 @@
                     <ul>
                         <li>
                             <small>ІТ-курси </small>
-                            <a href="#">Front-End-Developer </a>
+                            <a href="./frontend_course.html">Front-End-Developer </a>
                             <a href="#">Fullstack Вечерний </a>
                         </li>
                         <li>
@@ -182,7 +182,7 @@
                         <ul>
                             <li>
                                 <small>ІТ-курси </small>
-                                <a href="#">Front-End-Developer </a>
+                                <a href="./frontend_course.html">Front-End-Developer </a>
                                 <a href="#">Fullstack Вечерний </a>
                             </li>
                             <li>
@@ -251,28 +251,35 @@
 
     <section id="registration-section">
         <div class="uk-container">
-            <div class="small-description"> <span>Деталі курсу</span></div>
+            <div class="small-description"> <a href="#">Деталі курсу</a></div>
             <h1 class="main-title"> Реєстрація на курс <div class="course-name">Frontend</div>
             </h1>
             <form id="registration-form" action="">
                 <fieldset class="registration-inputs-wrapper">
 
                     <div class="field required">
-
-                        <label for="city">Обери місто</label>
-                        <select id="city">
+                        <label>Обери місто</label>
+                        <select name="city" id="city">
+                            <option value="">Обери серед доступних</option>
                             <option>Київ</option>
                             <option>Пункт 2</option>
                             <option>Пункт 3</option>
                         </select>
+                        <!-- input element for validate prev element select  -->
+                        <input type="text" name="simple1" class="for_city" required>
+
                     </div>
                     <div class="field required">
-                        <label for="course">Обери курс</label>
-                        <select id="course">
+                        <label>Обери курс</label>
+                        <select name="course" id="course">
+                            <option value="">Обери курс</option>
                             <option>Frontend</option>
                             <option>Пункт 2</option>
                             <option>Пункт 3</option>
                         </select>
+                         <!-- input element for validate prev element select  -->
+                        <input type="text" name="simple2" class="for_course" required>
+
                     </div>
                     <div class="field required">
                         <label for="email">Email</label>
@@ -281,11 +288,11 @@
                     </div>
                     <div class="field required">
                         <label for="phone">Телефон</label>
-                        <input type="text" placeholder="(093) 763 77 22" name="phone" id="phone" class="required" >
+                        <input type="text" placeholder="(093) 763 77 22" name="phone" id="phone" class="required">
                     </div>
                 </fieldset>
                 <div class="newsletter-subscribe">
-                    <label for="newsletter"><input type="checkbox" name="newsletter" id="newsletter">
+                    <label for="newsletter"><input type="checkbox" name="newsletter" id="newsletter" checked>
                         <span></span>
                         <p>Отримувати корисні матеріали та новини від креативної школи економіки</p>
                     </label>
@@ -329,18 +336,59 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"
         crossorigin=" anonymous"></script>
     <script>
+        function checkSelect() {
+            $('select option:selected').each(function() {
+                if( $(this).val().length == 0) {
+                    $(this).parent().addClass('empty')
+                }
+                else {
+                    $(this).parent().removeClass('empty')
+                }
+            })
+        }
         window.onload = () => {
+            checkSelect()
             $('#city').niceSelect();
             $('#course').niceSelect();
             $.validator.addMethod('customphone', function (value, element) {
                 return this.optional(element) || /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(value);
             }, "Please enter a valid phone number");
+
             $("#registration-form").validate({
-                    rules: {
-                        phone: 'customphone'
-                    }
-                });
-            $("#registration-form").validate();
+                rules: {
+                    phone: 'customphone',
+                },
+                messages: {
+                    phone: "Введіть коректний номер",
+                    email: "Введіть коректний Email",
+                    simple2: "Оберіть курс з доступних",
+                    simple1: "Оберіть місто з доступних",
+                },
+                debug: true
+            });
+            $('#city').on('change', function () {
+                checkSelect()
+                if ($(this).val().length !== 0) {
+                    $('.for_city').val('ok')
+                    return
+                }
+                $('.for_city').val('')
+            })
+            $('#course').on('change', function () {
+                checkSelect()
+                if ($(this).val().length !== 0) {
+                    $('.for_course').val('ok')
+                    return
+                }
+                $('.for_course').val('')
+            })
+            $('#registration-form').submit(function () {
+                if ($(this).valid()) {
+                    alert('form sending');
+ 
+                }
+            });
+
         }
     </script>
     <script defer type="text/javascript" src="../dist/main.js"></script>

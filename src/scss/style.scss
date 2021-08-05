@@ -97,7 +97,7 @@ a {
         display: none;
     }
 }
-@media (min-width: $note_desk) {
+@media (min-width: $xl) {
     .uk-container {
         box-sizing: border-box;
         max-width: 994px !important;
@@ -115,7 +115,7 @@ a {
     margin-right: 20px;
     line-height: normal;
 
-    span {
+    span,a {
         font-size: 12px;
         font-weight: bold;
         color: $main-color;
@@ -151,5 +151,10 @@ input {
         opacity: 0.2;
         font-weight: bold;
         font-size: 14px;
+      }
+      &+.error {
+        color: $main-color-orange;
+        font-size: 12px;
+        margin-left: 20px;
       }
 }
