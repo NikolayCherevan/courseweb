@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let root = document.documentElement;
     const rotateElement = document.querySelector(".footer--logo-rotate");
     let contactsPage = document.querySelector('html').classList.contains('contacts');
-
+    let postPage = document.querySelector('html').classList.contains('post');
     const marq1 = document.querySelector(".marquee");
 
     //TweenMax lib init
@@ -260,7 +260,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
 
-    if (!contactsPage && !registrationPage && !newsPage) {
+    if (!contactsPage && !registrationPage && !newsPage && !postPage) {
         //bgoverlayclick
         bgOverlay.addEventListener('click', function() {
 
@@ -438,7 +438,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             slider.$destroy();
         })
     }
-    if (viewportWidth >= 992 && !registrationPage && !contactsPage) {
+    if (viewportWidth >= 992 && !registrationPage && !contactsPage && !postPage) {
 
         destroyUiKitSlider();
         $('.owl-carousel--team').trigger('destroy.owl.carousel');
@@ -461,7 +461,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
     window.addEventListener('resize', function() {
         viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-        if (viewportWidth >= 992 && !registrationPage && !contactsPage) {
+        if (viewportWidth >= 992 && !registrationPage && !contactsPage &&!postPage) {
 
             destroyUiKitSlider();
             $('.owl-carousel--team').trigger('destroy.owl.carousel');

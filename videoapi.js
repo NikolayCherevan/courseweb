@@ -8,6 +8,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 let newsPage = document.querySelector('html').classList.contains('news');
 let registrationPage = document.querySelector('html').classList.contains('registration');
 let contactsPage = document.querySelector('html').classList.contains('contacts');
+let postPage = document.querySelector('html').classList.contains('post');
 var videoId = null;
 
 switch (true) {
@@ -37,11 +38,11 @@ function onPlayerReady() {
         tv.loadVideoById(vid[randomvid]);
     }
 }
-if (!contactsPage && !registrationPage && !newsPage) {
+if (!contactsPage && !registrationPage && !newsPage && !postPage) {
     function stopVideo() {
         tv.stopVideo();
     }
-}
+
 
 window.onload = function() {
     if (tv) {
@@ -62,7 +63,7 @@ window.onload = function() {
         });
     }
 }
-
+}
 
 function onPlayerStateChange(e) {
     if (e.data === 1) {

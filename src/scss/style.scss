@@ -12,6 +12,7 @@
 @import './pages/archive.scss';
 @import './pages/registration.scss';
 @import './pages/contacts.scss';
+@import './pages/post.scss';
 html {
     scroll-behavior: smooth;
 }
@@ -109,6 +110,9 @@ a {
     display: flex;
     align-items: center;
     margin-right: 20px;
+    @media (min-width: $tablet) {
+        margin-right: 31px;
+    }
     line-height: normal;
     span,
     a {
