@@ -106,19 +106,25 @@ a {
     max-width: fit-content;
     background-color: $base-violet-lite-bg;
     border-radius: 3px;
-    padding: 3.5px 10px;
+    padding: 3px 10px;
     display: flex;
     align-items: center;
     margin-right: 20px;
-    @media (min-width: $tablet) {
-        margin-right: 31px;
-    }
+    min-height: 21px;
+    box-sizing: border-box;
     line-height: normal;
     span,
     a {
         font-size: 12px;
         font-weight: bold;
         color: $main-color;
+    }
+    @media (min-width: $tablet) {
+        margin-right: 31px;
+        span,
+        a {
+            font-size: 14px;
+        }
     }
 }
 
@@ -171,13 +177,23 @@ input {
         flex-direction: row;
         margin-bottom: 0;
     }
+    a {
+        display: inline-block;
+        margin: 0 15px;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
     li {
         margin: 0 15px;
         a {
             img {
-                height: 24px;
+                height: 21px;
                 object-fit: contain;
-                min-width: 24px;
+                min-width: 21px;
                 @media (min-width: $tablet) {
                     min-height: 16px;
                     height: 16px;
@@ -191,5 +207,40 @@ input {
         &:first-child {
             margin-left: 0;
         }
+        &.linkedin {
+            img {
+                height: max-content!important;
+            }
+        }
+    }
+}
+
+.container-xl {
+    padding: 0 15px;
+    @media (min-width: $note_desk) {
+        max-width: 1196px!important;
+        margin: 0 auto;
+    }
+}
+
+.slider-title {
+    font-size: 28px;
+    line-height: 38px;
+    color: $main-color;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    @media (min-width: $note_desk) {
+        font-size: 40px;
+        margin-bottom: 42px;
+        line-height: 70px;
+    }
+}
+
+.info__date {
+    font-size: 12px;
+    font-weight: 300;
+    @media (min-width: $tablet) {
+        font-size: 14px;
     }
 }
