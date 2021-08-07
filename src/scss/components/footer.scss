@@ -8,7 +8,7 @@
         position: relative;
         @media (min-width: $tablet) {
             padding: 60px 42px 51px 42px;
-            // top: -80px;
+            padding-bottom: 54px;
         }
         font-weight: 600;
         div {
@@ -42,7 +42,7 @@
                 }
             }
             .footer--links {
-                margin: 35px 0 62px 0;
+                margin: 35px 0 60px 0;
                 display: flex;
                 flex-direction: column;
                 flex-wrap: wrap;
@@ -54,7 +54,7 @@
                     margin-bottom: 25px;
                     text-align: center;
                     @media (min-width: $tablet) {
-                        margin: 0 15px;
+                        margin: 0 23px;
                         margin-bottom: 10px;
                         &:last-child {
                             margin-bottom: 10px;
@@ -91,6 +91,10 @@
     padding: 28px 26px;
     border-radius: 50%;
     display: none;
+    img {
+        width: 61px;
+        height: 56px;
+    }
     @media (min-width: $note_desk) {
         display: flex;
     }
@@ -104,5 +108,9 @@
     transform: translate(-50%, -50%);
     @media (min-width: $tablet) {
         margin-right: 50px;
+    }
+    .footer--logo-rotate {
+        width: 61px;
+        height: 56px;
     }
 }

@@ -86,6 +86,7 @@
         top: 0;
         padding-top: 0;
         min-height: initial;
+        margin-top: 16px;
         .uk-container {
             padding: 0;
             top: 0;
@@ -377,7 +378,6 @@
         @media (min-width: $note_desk) {
             margin-top: 80px;
             p {
-                margin-right: 67px;
                 font-size: 18px;
                 line-height: 32px;
             }
@@ -488,6 +488,7 @@
             max-width: 306px;
             margin: 0 auto;
             padding: 0 15px;
+            max-width: 1196px!important;
             @media (min-width: $note_desk) {
                 padding: 0;
             }
@@ -727,7 +728,7 @@
             background-color: $base-violet-lite-bg;
             border-radius: 15px;
             padding-bottom: 115px;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
             position: relative;
             @media (min-width: $note_desk) {
                 position: relative;
@@ -829,7 +830,7 @@
                 }
             }
             ul li {
-                margin-bottom: 15px;
+                margin-bottom: 20px;
                 font-weight: 600;
                 color: $main-color;
                 span {
@@ -944,6 +945,7 @@
             &.title-onlymobile {
                 @media (max-width: $note_desk) {
                     display: block;
+                    margin-bottom: 29px;
                 }
             }
         }

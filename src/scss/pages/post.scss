@@ -9,6 +9,7 @@ html.post {
     .secondary-title {
         font-size: 24px;
         line-height: 32px;
+        margin-bottom: 30px;
         @media (min-width: $tablet) {
             margin-bottom: 50px;
             font-size: 28px;
@@ -43,11 +44,12 @@ html.post {
         color: $main-color;
         .main-title {
             text-align: left;
-            margin-top: 20.63px;
+            margin-top: 20px;
             margin-bottom: 80.72px;
             max-width: 400px;
             @media (min-width: $tablet) {
                 max-width: initial;
+                margin-top: 15px;
             }
         }
         .post-info {
@@ -184,7 +186,7 @@ html.post {
                             font-size: 18px;
                             padding: 0;
                             line-height: 32px;
-                            padding-bottom: 30px;
+                            padding-bottom: 40px;
                         }
                     }
                 }
@@ -200,11 +202,18 @@ html.post {
                         text-align: right;
                     }
                     margin-bottom: 40px;
+                    @media (min-width: $tablet) {
+                        margin-bottom: 50px;
+                    }
                 }
                 &--article {
                     margin-bottom: 40px;
                     p {
                         font-size: 16px;
+                        margin-bottom: 20px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
                     }
                     @media (min-width: $tablet) {
                         p {
@@ -217,7 +226,7 @@ html.post {
                         }
                     }
                     @media (min-width: $tablet) {
-                        margin-bottom: 51px;
+                        margin-bottom: 47px;
                     }
                 }
                 &--video {
@@ -239,12 +248,16 @@ html.post {
                     padding-bottom: 23px;
                     display: flex;
                     border-bottom: 1px solid hsla(204, 5%, 18%, .2);
-                    margin-bottom: 27px;
+                    margin-bottom: 26px;
                     .small-description {
                         margin-right: 30px;
                     }
+                    @media (min-width: $tablet) {
+                        margin-bottom: 23px;
+                        padding-bottom: 23px;
+                    }
                 }
-                margin-bottom: 81px;
+                margin-bottom: 83px;
             }
             &__other {
                 position: relative;
@@ -271,6 +284,10 @@ html.post {
                     .swiper-slide {
                         max-width: 792px;
                         width: 80%;
+                        img {
+                            max-height: 411px;
+                            height: 100%;
+                        }
                         .uk-overlay {
                             padding-top: 0;
                             @media (min-width: $more_than_iphone5) {
@@ -282,7 +299,7 @@ html.post {
                                 top: auto;
                             }
                             .post-info {
-                                margin-bottom: 20px;
+                                margin-bottom: 18px;
                                 .small-description {
                                     background-color: $base-bg-orange;
                                     span {

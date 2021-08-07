@@ -182,9 +182,10 @@ body {
                     &.other {
                         border: none;
                         color: $main-color;
+                        margin-right: 0;
                     }
                     &.without-border-content {
-                        margin-left: 278px;
+                        margin-left: 195px;
                         margin-right: 20px;
                     }
                 }
@@ -287,8 +288,4 @@ body {
     to {
         top: -10px;
     }
-}
-
-.fix-e {
-    font-family: Monstr!important;
 }
