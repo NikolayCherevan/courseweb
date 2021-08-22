@@ -104,6 +104,8 @@
                     left: 50%;
                     height: 78px;
                     transform: translate(-50%, 0);
+                    display: flex;
+                    align-items: center;
                     @media (min-width: $note_desk) {
                         padding: 0;
                         width: 0;
