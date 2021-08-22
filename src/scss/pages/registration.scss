@@ -60,7 +60,7 @@
                         }
                         .current {
                             color: $main-color;
-                            font-weight: bold;
+                            font-weight: 500;
                         }
                     }
                     &.empty {
@@ -71,7 +71,7 @@
                 }
                 label {
                     margin-bottom: 10px;
-                    font-weight: bold;
+                    font-weight: 500;
                     line-height: 28px;
                     opacity: 0.8;
                 }
@@ -108,7 +108,7 @@
                 }
                 p {
                     line-height: 28px;
-                    font-weight: bold;
+                    font-weight: 500;
                 }
                 input {
                     position: absolute;
@@ -142,7 +142,7 @@
         }
         .agb {
             font-size: 12px;
-            font-weight: bold;
+            font-weight: 500;
             color: $main-color;
             opacity: .8;
             line-height: 20px;

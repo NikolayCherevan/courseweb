@@ -29,7 +29,7 @@
         span {
             font-size: $main-font-mobile;
             color: $main-color-white;
-            font-weight: 600;
+            font-weight: 500;
             display: inline-block;
             padding: 6px 11px;
             width: 33px;
@@ -53,7 +53,7 @@
         font-size: 22px;
         line-height: 12px;
         color: $main-color-white;
-        font-weight: bold;
+        font-weight: 500;
         border-radius: 30px 30px 0 0;
     }
     section h2 {
@@ -122,7 +122,7 @@
                 }
                 .hero--description {
                     font-size: $main-font-mobile;
-                    font-weight: 400;
+                    font-weight: 500;
                     max-width: 388px;
                     margin-left: 0;
                     position: relative;
@@ -136,12 +136,12 @@
                         padding-bottom: 20px;
                         font-size: 16px;
                         line-height: 24px;
-                        font-weight: bold;
+                        font-weight: 500;
                     }
                 }
                 .hero--courses-mark {
                     font-size: 14px;
-                    font-weight: 600;
+                    font-weight: 500;
                     line-height: 28px;
                     opacity: 1;
                     position: relative;
@@ -193,7 +193,7 @@
             margin-bottom: 20px;
             @media (min-width: $tablet) {
                 margin-bottom: 5px;
-                font-weight: bold;
+                font-weight: 500;
             }
             &.hided-on-mobile {
                 display: none;
@@ -208,7 +208,7 @@
             }
         }
         .hero--description {
-            font-weight: 600;
+            font-weight: 500;
             line-height: 24px;
             color: $main-color-white;
             margin-bottom: 42.25px;
@@ -231,7 +231,7 @@
             padding: 0 15px;
             padding-top: 30px;
             line-height: 23px;
-            font-weight: 600;
+            font-weight: 500;
             color: $main-color;
             .hero--regisration-gray-bg {
                 background-color: $base-bg-secondary;
@@ -322,7 +322,7 @@
             height: 22px;
             font-size: $main-font-mobile;
             text-transform: uppercase;
-            font-weight: 600;
+            font-weight: 500;
             color: $main-color-white;
             border-radius: 3px;
             background-color: $base-bg-violet;
@@ -414,12 +414,12 @@
                 color: $main-color;
                 font-size: $main-font-mobile;
                 line-height: 22px;
-                font-weight: 600;
+                font-weight: 500;
                 .numbers-achievement--wrapper-number {
                     color: $main-color-orange;
                     font-size: 50px;
                     line-height: 70px;
-                    font-weight: bold;
+                    font-weight: 500;
                     margin-bottom: 10px;
                     text-align: left;
                     @media (min-width: $note_desk) {
@@ -469,7 +469,7 @@
         p {
             margin-left: 0;
             font-size: 16px;
-            font-weight: 400;
+            font-weight: 500;
             max-width: 691px;
             @media (min-width: $note_desk) {
                 font-size: 18px;
@@ -522,7 +522,7 @@
                         text-decoration: none;
                         span {
                             margin-top: 11px;
-                            font-weight: bold;
+                            font-weight: 500;
                             color: $main-color-white;
                             @media (min-width: $note_desk) {
                                 display: inline-block;
@@ -589,7 +589,7 @@
                 background-color: $base-bg-white;
                 font-size: $main-font-mobile;
                 padding: 25px 30px;
-                font-weight: 600;
+                font-weight: 500;
                 text-transform: initial;
                 &:hover {
                     color: $main-color;
@@ -604,7 +604,7 @@
             }
             .uk-accordion-content {
                 p {
-                    font-weight: 600;
+                    font-weight: 500;
                     padding: 0 30px;
                 }
             }
@@ -675,7 +675,7 @@
                     opacity: 0.8;
                     font-size: 16px;
                     line-height: 21px;
-                    font-weight: bold;
+                    font-weight: 500;
                     margin-top: 15px;
                 }
             }
@@ -689,7 +689,7 @@
             margin-bottom: 25px;
             font-size: 16px;
             line-height: 24px;
-            font-weight: 600;
+            font-weight: 500;
             @media (min-width: $note_desk) {
                 display: none;
             }
@@ -699,14 +699,14 @@
             align-items: center;
             font-size: $main-font-mobile;
             color: $main-color;
-            font-weight: 600;
+            font-weight: 500;
             justify-content: center;
             text-decoration: none;
             @media (min-width: $note_desk) {
                 display: none;
             }
             span {
-                font-weight: 400;
+                font-weight: 500;
                 font-size: 28px;
             }
             .orange-attention {
@@ -776,7 +776,7 @@
                 }
                 span {
                     line-height: 70px;
-                    font-weight: bold;
+                    font-weight: 500;
                     top: 20px;
                     position: relative;
                     color: $main-color-white;
@@ -818,7 +818,7 @@
                 }
             }
             .course-price--vacancies {
-                font-weight: bold;
+                font-weight: 500;
                 font-size: 20px;
                 line-height: 28px;
                 margin-bottom: 40px;
@@ -831,7 +831,7 @@
             }
             ul li {
                 margin-bottom: 20px;
-                font-weight: 600;
+                font-weight: 500;
                 color: $main-color;
                 span {
                     color: $main-color-orange;
@@ -899,7 +899,7 @@
                 font-size: 20px;
                 display: inline-block;
                 line-height: 28px;
-                font-weight: 600;
+                font-weight: 500;
                 color: $main-color-white;
                 min-width: 15px;
                 position: relative;
@@ -929,7 +929,7 @@
             .students-review--plus-wrapper {
                 margin-left: 30px;
                 font-size: 28px;
-                font-weight: 400;
+                font-weight: 500;
             }
         }
         .students-review--title {
@@ -999,7 +999,7 @@
                         .owl-card--header-student {
                             font-size: 18px;
                             line-height: 24px;
-                            font-weight: bold;
+                            font-weight: 500;
                             color: $main-color;
                             opacity: 0.8;
                         }
@@ -1033,7 +1033,7 @@
                         .owl-card--footer--wrapper-profession {
                             font-size: 18px;
                             color: $main-color;
-                            font-weight: bold;
+                            font-weight: 500;
                             max-width: 200px;
                             margin-top: 10.5px;
                             @media (min-width: $tablet) {
@@ -1101,7 +1101,7 @@
         a {
             font-size: $main-font-mobile;
             color: $main-color;
-            font-weight: 600;
+            font-weight: 500;
         }
         [aria-label="1 / 2"] {
             display: flex !important;
@@ -1168,7 +1168,7 @@
                         color: $main-color;
                         font-size: $main-font-mobile;
                         padding: 0 15px;
-                        font-weight: 600;
+                        font-weight: 500;
                         display: inline-block;
                         line-height: 16px;
                         &.focus {
@@ -1181,7 +1181,7 @@
                 @include base-btn;
                 a {
                     font-size: $main-font-mobile;
-                    font-weight: 600;
+                    font-weight: 500;
                 }
             }
             .desk-menu-courses--content-fs {
@@ -1194,7 +1194,7 @@
                 marquee {
                     overflow: hidden;
                     padding: 5px;
-                    font-weight: bold;
+                    font-weight: 500;
                 }
             }
         }
@@ -1224,7 +1224,7 @@
                 span {
                     font-size: 20px;
                     line-height: 12px;
-                    font-weight: bold;
+                    font-weight: 500;
                     color: $main-color;
                     display: inline-block;
                     line-height: 23px;
@@ -1277,7 +1277,7 @@
                     a {
                         font-size: 14px;
                         color: $main-color;
-                        font-weight: bold;
+                        font-weight: 500;
                     }
                 }
             }

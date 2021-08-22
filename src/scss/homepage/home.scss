@@ -30,7 +30,7 @@
             font-size: 30px;
         }
         font-size: 26px;
-        font-weight: bold;
+        font-weight: 500;
         line-height: 38px;
         margin-bottom: 32px;
         @media (min-width: $large_desk) {
@@ -221,7 +221,7 @@ section {
     margin-top: 60px;
     h2 {
         font-size: 28px;
-        font-weight: bold;
+        font-weight: 500;
         margin-bottom: 30px;
         line-height: 38px;
         @media (min-width: $tablet) {
@@ -271,7 +271,7 @@ section {
     p {
         line-height: 24px;
         font-size: 14px;
-        font-weight: bold;
+        font-weight: 500;
         max-width: 489px;
         margin-left: auto;
         @media (min-width: $tablet) {
@@ -536,7 +536,7 @@ section {
             padding: 15px 35px;
             a {
                 color: $main-color;
-                font-weight: 600;
+                font-weight: 500;
                 font-size: 16px;
                 text-transform: initial;
                 padding: 0;
@@ -657,7 +657,7 @@ section {
                     margin-top: 20px;
                     align-self: flex-end;
                     margin: 20px 20px 0 20px;
-                    font-weight: 600;
+                    font-weight: 500;
                     font-size: $main-font-mobile;
                     width: inherit;
                     display: flex;
@@ -739,7 +739,7 @@ section {
             .teammate--name,
             .teammate--rank {
                 display: block;
-                font-weight: bold;
+                font-weight: 500;
                 color: $main-color;
             }
         }
@@ -881,7 +881,7 @@ section {
             max-width: 510px;
             margin: 51px auto 20px auto;
             color: $main-color;
-            font-weight: bold;
+            font-weight: 500;
             @media (min-width: $tablet) {
                 margin: 40px auto 46px auto;
                 font-size: 16px;
@@ -946,7 +946,7 @@ section {
         font-size: $main-font-mobile;
         border: none;
         border-radius: 40px;
-        font-weight: 600;
+        font-weight: 500;
         width: 100%;
         display: inline-block;
         padding: 31px 0 31px 35px;
@@ -984,7 +984,7 @@ section {
         border: none;
         color: $main-color-white;
         border: 2px solid $main-color-orange;
-        font-weight: 600;
+        font-weight: 500;
         font-size: $main-font-mobile;
         width: 100%;
         border-radius: 40px;

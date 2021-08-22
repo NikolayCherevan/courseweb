@@ -18,7 +18,7 @@ html.post {
     }
     .main-point {
         font-size: 20px;
-        font-weight: bold;
+        font-family: 'Codec Pro';
         margin-bottom: 30px;
         @media (min-width: $tablet) {
             font-size: 24px;
@@ -81,7 +81,7 @@ html.post {
                 .card-title {
                     font-size: 20px;
                     line-height: 28px;
-                    font-weight: bold;
+                    font-family: 'Codec Pro';
                     color: $main-color;
                     margin-bottom: 16px;
                 }
@@ -179,7 +179,7 @@ html.post {
                 }
                 &--main-description {
                     p {
-                        font-weight: bold;
+                        font-family: 'Codec Pro';
                         padding: 40px 0;
                         font-size: 16px;
                         @media (min-width: $tablet) {
@@ -313,7 +313,7 @@ html.post {
                             p {
                                 color: $main-color-white;
                                 opacity: 0.8;
-                                font-weight: bold;
+                                font-family: 'Codec Pro';
                                 max-width: 603px;
                                 line-height: 24px;
                                 @media (min-width: $tablet) {
@@ -343,7 +343,7 @@ html.post {
                     margin-top: 20px;
                     position: relative;
                     span {
-                        font-weight: 600;
+                        font-weight: 500;
                         font-size: 20px;
                         line-height: 28px;
                         color: $main-color-white;

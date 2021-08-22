@@ -17,7 +17,7 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-weight: 600;
+            font-weight: 500;
             top: -50px;
 
             a {
@@ -70,7 +70,7 @@ body {
                         justify-content: space-between;
 
                         span {
-                            font-weight: 700;
+                                font-weight: 500;
                             font-size: 19px;
                             color: $main-color-violet;
                         }
@@ -199,14 +199,14 @@ body {
 
                 .header--app-status {
                     font-size: $main-font-mobile;
-                    font-weight: 600;
+                    font-weight: 500;
                     color: $main-color-orange;
                     margin-right: auto;
                 }
 
                 .header--nav-item {
                     margin: 0 15px;
-                    font-weight: 600;
+                    font-weight: 500;
                     font-size: $main-font-mobile;
                     color: $main-color;
 
@@ -371,7 +371,7 @@ body {
         span {
             font-size: 14px;
             color: $main-color;
-            font-weight: bold;
+            font-weight: 500;
         }
 
         @media (max-width:$tablet) {

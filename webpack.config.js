@@ -53,7 +53,8 @@ module.exports = {
                 use: [{
                     loader: "url-loader?limit=1000000&mimetype=image/svg+xml",
                     options: {
-                        publicPath: 'dist/img',
+                        publicPath: 'src/scss/fonts',
+destination: 'src/scss/fonts'
                     },
                 }, ]
             }

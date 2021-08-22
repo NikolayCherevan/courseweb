@@ -1,3 +1,4 @@
+@import './fonts/fonts.scss';
 @import './uikit.scss';
 @import './nice-select.scss';
 @import './variables.scss';
@@ -13,6 +14,7 @@
 @import './pages/registration.scss';
 @import './pages/contacts.scss';
 @import './pages/post.scss';
+
 html {
     scroll-behavior: smooth;
 }
@@ -21,7 +23,8 @@ body {
     z-index: -1;
     position: relative;
     * {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Codec Pro', sans-serif;
+font-weight: 500;
         -webkit-font-smoothing: subpixel-antialiased;
         text-rendering: optimizeLegibility;
         -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -48,7 +51,7 @@ body {
     border: 2px solid $secondary-color-violet;
     border-radius: 40px;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 12px;
     color: $main-color;
     @media (min-width: $more_than_iphone5) {
@@ -116,7 +119,7 @@ a {
     span,
     a {
         font-size: 12px;
-        font-weight: bold;
+        font-weight: 500;
         color: $main-color;
     }
     @media (min-width: $tablet) {
@@ -132,7 +135,7 @@ a {
     font-size: 32px;
     line-height: 38px;
     text-align: center;
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 30px;
     @media (min-width: $tablet) {
         margin-bottom: 70px;
@@ -160,7 +163,7 @@ input {
     &::placeholder {
         color: $main-color;
         opacity: 0.2;
-        font-weight: bold;
+        font-weight: 500;
         font-size: 14px;
     }
     &+.error {
@@ -227,7 +230,7 @@ input {
     font-size: 28px;
     line-height: 38px;
     color: $main-color;
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 30px;
     text-align: center;
     @media (min-width: $note_desk) {
