@@ -121,8 +121,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     })
 
     document.addEventListener('click', function(e) {
-      var target = e.target;
+        var target = e.target;
         var targetMenu = target.classList.contains('header--main-links');
+        console.log(target.classList)
         dropdowns.forEach((item) => {
             if (target.classList.contains('dropdown') || target.classList.contains('current')) {
                 item.style.pointerEvents = "none"
@@ -275,18 +276,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
 
-    if (!contactsPage && !registrationPage && !newsPage && !postPage) {
-        //bgoverlayclick
-        bgOverlay.addEventListener('click', function() {
 
+    //bgoverlayclick
+    bgOverlay.addEventListener('click', function() {
+        if (!contactsPage && !registrationPage && !newsPage && !postPage) {
             stopVideo();
-
             trailer.classList.remove("active");
-            bgOverlay.classList.remove('active');
-            bgOverlay.classList.remove('video')
             document.querySelector('.video-iframe--banner').style.cssText = "display: block";
-        });
-    }
+        }
+
+
+        bgOverlay.classList.remove('active');
+        bgOverlay.classList.remove('video')
+
+    });
 
     //tabs logic
 
