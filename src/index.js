@@ -120,7 +120,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
         addOverlay(item)
     })
 
-
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+        var targetMenu = target.classList.contains('header--main-links');
+        dropdowns.forEach((item) => {
+            if (target.classList.contains('dropdown') || target.classList.contains('current')) {
+                item.style.pointerEvents = "none"
+                target.style.pointerEvents = "auto";
+            }
+            if (!bgOverlay.classList.contains('active')) {
+                item.style.pointerEvents = "auto"
+            }
+        })
+        if (targetMenu) {
+            bgOverlay.classList.remove('active')
+        }
+    });
     //add overlay function
     function addOverlay(elem) {
         elem.addEventListener('click', function() {
@@ -294,15 +309,23 @@ window.addEventListener('DOMContentLoaded', (event) => {
     $(".courses--tabs--title").each(function(index) {
         $(this).on('click', function() {
             if (index === 0) {
-                $(".uk-tab-bottom").animate({ scrollLeft: '-1000' }, 300);
+                $(".uk-tab-bottom").animate({
+                    scrollLeft: '-1000'
+                }, 300);
                 return
             }
             if (prevEl < index) {
-                $(".uk-tab-bottom").animate({ scrollLeft: '+=130' }, 300);
+                $(".uk-tab-bottom").animate({
+                    scrollLeft: '+=130'
+                }, 300);
             } else if (prevEl - 1 < index) {
-                $(".uk-tab-bottom").animate({ scrollLeft: '+=170' }, 300);
+                $(".uk-tab-bottom").animate({
+                    scrollLeft: '+=170'
+                }, 300);
             } else {
-                $(".uk-tab-bottom").animate({ scrollLeft: '-=150' }, 300);
+                $(".uk-tab-bottom").animate({
+                    scrollLeft: '-=150'
+                }, 300);
             }
             prevEl = index;
         })
@@ -461,7 +484,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
     window.addEventListener('resize', function() {
         viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-        if (viewportWidth >= 992 && !registrationPage && !contactsPage &&!postPage) {
+        if (viewportWidth >= 992 && !registrationPage && !contactsPage && !postPage) {
 
             destroyUiKitSlider();
             $('.owl-carousel--team').trigger('destroy.owl.carousel');
@@ -494,22 +517,30 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     jQuery.event.special.touchstart = {
         setup: function(_, ns, handle) {
-            this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
+            this.addEventListener("touchstart", handle, {
+                passive: !ns.includes("noPreventDefault")
+            });
         }
     };
     jQuery.event.special.touchmove = {
         setup: function(_, ns, handle) {
-            this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
+            this.addEventListener("touchmove", handle, {
+                passive: !ns.includes("noPreventDefault")
+            });
         }
     };
     jQuery.event.special.wheel = {
         setup: function(_, ns, handle) {
-            this.addEventListener("wheel", handle, { passive: true });
+            this.addEventListener("wheel", handle, {
+                passive: true
+            });
         }
     };
     jQuery.event.special.mousewheel = {
         setup: function(_, ns, handle) {
-            this.addEventListener("mousewheel", handle, { passive: true });
+            this.addEventListener("mousewheel", handle, {
+                passive: true
+            });
         }
     };
 
@@ -608,12 +639,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
         addMarquee(marq1)
         coursesAnchors.forEach(item => {
-                item.addEventListener('click', function(event) {
-                    $('.desk-menu-courses--anchors li a').removeClass('focus')
-                    event.target.classList.add('focus')
-                })
+            item.addEventListener('click', function(event) {
+                $('.desk-menu-courses--anchors li a').removeClass('focus')
+                event.target.classList.add('focus')
             })
-            // doFooterDropdownFixed(mySwiper)
+        })
+        // doFooterDropdownFixed(mySwiper)
         doFooterDropdownFixed(deskMenuFooter)
         const scrollUp = "sticky";
         addStickyscrollToTop()
@@ -800,11 +831,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
     function rotateFooterLogo() {
 
         function getCenter(element) {
-            const { left, top, width, height } = element.getBoundingClientRect();
-            return { x: left + width / 2, y: top + height / 2 }
+            const {
+                left,
+                top,
+                width,
+                height
+            } = element.getBoundingClientRect();
+            return {
+                x: left + width / 2,
+                y: top + height / 2
+            }
         }
         const arrowCenter = getCenter(rotateElement);
-        addEventListener("mousemove", ({ clientX, clientY }) => {
+        addEventListener("mousemove", ({
+            clientX,
+            clientY
+        }) => {
             const angle = Math.atan2(clientY - arrowCenter.y, clientX - arrowCenter.x);
             rotateElement.style.transform = `rotate(${angle}rad)`;
         });
