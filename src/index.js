@@ -123,7 +123,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     document.addEventListener('click', function(e) {
         var target = e.target;
         var targetMenu = target.classList.contains('header--main-links');
-        console.log(target.classList)
         dropdowns.forEach((item) => {
             if (target.classList.contains('dropdown') || target.classList.contains('current')) {
                 item.style.pointerEvents = "none"

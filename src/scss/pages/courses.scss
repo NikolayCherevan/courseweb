@@ -442,6 +442,8 @@
                 @media (max-width: $note_desk) {
                     margin-top: 180px;
                 }
+
+                font-weight: 300;
             }
         }
     }
@@ -453,12 +455,13 @@
             p {
                 font-size: 18px;
                 line-height: 32px;
-                font-weight: 300;
+
             }
         }
 
         p {
             max-width: 590px;
+            font-weight: 300;
         }
 
         .course-for--numbers-achievement {
@@ -563,7 +566,7 @@
             font-size: 16px;
             font-weight: 300;
             max-width: 691px;
-            
+
             @media (min-width: $note_desk) {
                 font-size: 18px;
                 line-height: 32px;
