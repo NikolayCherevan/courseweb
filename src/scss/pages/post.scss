@@ -1,83 +1,104 @@
 html.post {
     position: relative;
+
     #registration {
         padding-top: 0;
+
         @media (min-width: $tablet) {
             padding-top: 120px;
         }
     }
+
     .secondary-title {
         font-size: 24px;
         line-height: 32px;
         margin-bottom: 30px;
+
         @media (min-width: $tablet) {
             margin-bottom: 50px;
             font-size: 28px;
             line-height: 40px;
         }
     }
+
     .main-point {
         font-size: 20px;
         font-family: 'Codec Pro';
         margin-bottom: 30px;
+
         @media (min-width: $tablet) {
             font-size: 24px;
             font-size: 32px;
         }
     }
+
     &::before {
         position: absolute;
         content: '';
         background-color: $base-violet-lite-bg;
         min-height: 375px;
+
         @media (min-width: $tablet) {
             min-height: 308px;
         }
+
         width: 100%;
         z-index: -1;
         border-radius: 0px 0px 30px 0px;
     }
+
     #post-content {
         font-size: 16px;
         line-height: 24px;
         margin-top: 26px;
         color: $main-color;
+
         .main-title {
             text-align: left;
             margin-top: 20px;
             margin-bottom: 80.72px;
             max-width: 400px;
+            font-weight: 400;
+
             @media (min-width: $tablet) {
                 max-width: initial;
                 margin-top: 15px;
             }
         }
+
         .post-info {
             display: flex;
             align-items: center;
+
             &__category {
                 background-color: $base-bg-white;
             }
         }
+
         .sidebar-left {
             display: none;
+
             @media (min-width: $tablet) {
                 display: block;
                 min-width: 270px;
             }
+
             .uk-card-default {
                 padding: 20px 20px 27px;
                 box-shadow: none;
                 background-color: $secondary-bg-card;
                 border-radius: 15px;
+
                 img {
                     border-radius: 15px;
                     display: block;
                     margin-bottom: 15px;
                 }
             }
+
             .uk-card-body {
                 padding: 0;
+
                 .card-title {
                     font-size: 20px;
                     line-height: 28px;
@@ -85,6 +106,7 @@ html.post {
                     color: $main-color;
                     margin-bottom: 16px;
                 }
+
                 .main-button {
                     display: block;
                     text-align: center;
@@ -96,20 +118,25 @@ html.post {
                 }
             }
         }
+
         .sidebar-right {
             .socials {
                 display: none;
             }
+
             @media (min-width: $tablet) {
                 .socials {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
+
                     * {
                         margin: 0;
                     }
+
                     li {
                         margin-bottom: 30px;
+
                         img {
                             height: 25px;
                         }
@@ -117,10 +144,12 @@ html.post {
                 }
             }
         }
+
         .article {
             @media (min-width: $tablet) {
                 max-width: 590px;
             }
+
             .socials {
                 a {
                     box-sizing: border-box;
@@ -130,6 +159,7 @@ html.post {
                     position: relative;
                     width: 21px;
                     height: 21px;
+
                     &::before {
                         content: '';
                         height: 37px;
@@ -143,25 +173,32 @@ html.post {
                         border-radius: 50%;
                         background-color: #EFEEEB;
                     }
+
                     &:hover {
                         &::before {
                             display: block;
                         }
                     }
+
                     &.facebook {
                         background-image: url('./img/Facebook-black.svg');
+
                         &:hover {
                             background-image: url('./img/Facebook-orange.svg');
                         }
                     }
+
                     &.linkedin {
                         background-image: url('./img/linkedin-black.svg');
+
                         &:hover {
                             background-image: url('./img/linkedin-orange.svg');
                         }
                     }
+
                     &.twitter {
                         background-image: url('./img/Twitter-black.svg');
+
                         &:hover {
                             background-image: url('./img/Twitter-orange.svg');
                         }
@@ -169,19 +206,23 @@ html.post {
                 }
             }
         }
+
         .post-content {
             &__grid {
                 display: grid;
                 grid-template-columns: 1fr;
+
                 @media (min-width: $tablet) {
                     grid-template-columns: 1fr 3fr 1fr;
                     grid-gap: 33px;
                 }
+
                 &--main-description {
                     p {
                         font-family: 'Codec Pro';
                         padding: 40px 0;
                         font-size: 16px;
+
                         @media (min-width: $tablet) {
                             font-size: 18px;
                             padding: 0;
@@ -190,81 +231,104 @@ html.post {
                         }
                     }
                 }
+
                 &--main-picture {
                     img {
                         width: 100%;
                         height: 100%;
                         border-radius: 15px;
                     }
+
                     .main-picture--source {
                         font-size: 12px;
                         opacity: 0.4;
                         text-align: right;
                     }
+
                     margin-bottom: 40px;
+
                     @media (min-width: $tablet) {
                         margin-bottom: 50px;
                     }
                 }
+
                 &--article {
                     margin-bottom: 40px;
+
                     p {
+                        font-weight: 300;
                         font-size: 16px;
                         margin-bottom: 20px;
+
                         &:last-child {
                             margin-bottom: 0;
                         }
                     }
+
                     @media (min-width: $tablet) {
                         p {
                             margin-bottom: 40px;
                             font-size: 18px;
                             line-height: 32px;
+
                             &:last-child {
                                 margin-bottom: 0;
                             }
                         }
                     }
+
                     @media (min-width: $tablet) {
                         margin-bottom: 47px;
                     }
                 }
+
                 &--video {
                     margin-bottom: 40px;
+
                     iframe {
                         min-height: 194px;
+
                         @media (min-width: $tablet) {
                             min-height: 334px;
                         }
                     }
                 }
+
                 &--article-details {
                     margin-bottom: 30px;
+
                     @media (min-width: $tablet) {
                         margin-bottom: 48px;
                     }
                 }
+
                 &--categories {
                     padding-bottom: 23px;
                     display: flex;
                     border-bottom: 1px solid hsla(204, 5%, 18%, .2);
                     margin-bottom: 26px;
+
                     .small-description {
                         margin-right: 30px;
                     }
+
                     @media (min-width: $tablet) {
                         margin-bottom: 23px;
                         padding-bottom: 23px;
                     }
                 }
+
                 margin-bottom: 83px;
             }
+
             &__other {
                 position: relative;
                 padding-bottom: 86px;
+
                 @media (min-width: $tablet) {
                     padding-bottom: 140px;
                 }
+
                 &::before {
                     bottom: 0;
                     content: "";
@@ -276,78 +340,97 @@ html.post {
                     width: 100%;
                     background-color: $base-bg-violet;
                 }
+
                 .swiper-container {
                     margin-left: 15px;
+
                     @media (min-width: $tablet) {
                         margin-left: 20vw;
                     }
+
                     .swiper-slide {
                         max-width: 792px;
                         width: 80%;
+
                         img {
                             max-height: 411px;
                             height: 100%;
                         }
+
                         .uk-overlay {
                             padding-top: 0;
+
                             @media (min-width: $more_than_iphone5) {
                                 padding-top: 25px;
                             }
+
                             @media (min-width: $tablet) {
                                 bottom: 30px;
                                 left: 30px;
                                 top: auto;
                             }
+
                             .post-info {
                                 margin-bottom: 18px;
+
                                 .small-description {
                                     background-color: $base-bg-orange;
+
                                     span {
                                         color: $main-color-white;
                                     }
                                 }
+
                                 .info__date {
                                     color: hsla(0, 0%, 100%, .8)
                                 }
                             }
+
                             p {
                                 color: $main-color-white;
                                 opacity: 0.8;
                                 font-family: 'Codec Pro';
                                 max-width: 603px;
                                 line-height: 24px;
+
                                 @media (min-width: $tablet) {
                                     font-size: 24px;
                                     line-height: 32px;
                                 }
                             }
                         }
+
                         .uk-overlay-default {
                             border-radius: 15px;
                             background: hsla(260, 60%, 50%, .69);
                         }
+
                         img {
                             display: block;
                             width: 100%;
                             min-height: 174px;
                             object-fit: cover;
                             border-radius: 15px;
+
                             @media (min-width: $tablet) {
                                 min-height: 411px;
                             }
                         }
                     }
                 }
+
                 .swiper-pagination {
                     bottom: 0;
                     margin-top: 20px;
                     position: relative;
+
                     span {
                         font-weight: 500;
                         font-size: 20px;
                         line-height: 28px;
                         color: $main-color-white;
                     }
+
                     .line {
                         display: inline-block;
                         margin: 0 16px;
