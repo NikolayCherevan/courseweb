@@ -784,8 +784,12 @@
         padding: 22px;
         border-radius: 15px;
         background-color: $base-bg-secondary;
-
-        height: 108px;
+    max-height: 142px;
+    box-sizing: border-box;
+        @media (min-width: $note_desk) {
+          max-height: 108px;
+          box-sizing: border-box;
+        }
         img {
           object-fit: contain;
           margin: 0 auto;
