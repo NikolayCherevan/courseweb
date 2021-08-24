@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="homepage">
 
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="description" content="Courses site">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,148 +16,149 @@
     <link rel='stylesheet' href="dist/main.css">
 
 
-</head>
+  </head>
 
-<body>
+  <body>
     <a class="skip-link" href="#maincontent">Skip to main</a>
     <div class="header-padding"> </div>
     <div class="header-wrapper">
-        <header class="header">
-            <div>
-                <a href="../index.html" class="header--logo"> <img width="52" height="48" src="img/logo.svg" alt="logo"> <span> <span>школа</span> <span>креативної</span> <span>економіки</span></span>
-                </a>
-                <a href="#" class="header--logo__nav-active"> <img width="52" height="48" src="./img/logo_nav.svg" alt="logo"> </a>
-            </div>
+      <header class="header">
+        <div>
+          <a href="../index.html" class="header--logo"> <img width="52" height="48" src="img/logo.svg" alt="logo"> <span> <span>школа</span> <span>креативної</span> <span>економіки</span></span>
+          </a>
+          <a href="#" class="header--logo__nav-active"> <img width="52" height="48" src="./img/logo_nav.svg" alt="logo"> </a>
+        </div>
 
-            <!-- <ul class="header--lang">
+        <!-- <ul class="header--lang">
                 <li class="header--lang__active"><a href="#"> Ua </a></li>
                 <li><a href="#"> Ru</a></li>
                 <li><a href="#"> En</a></li>
             </ul> -->
-<li class="lang-switcher header--lang">
-<form method="POST" action="http://127.0.0.1:8000" accept-charset="UTF-8"><input name="_session_key" type="hidden" value="hjr1HW3LCTYH78bgfhMZ8wnMHLSSm8oyGRI99AXU"><input name="_token" type="hidden" value="irVqtv4cDRNHdpQuiQWg6WOSCpN3NTZsSnFlQIc0">
-    <select  name="locale" data-request="onSwitchLocale" class="form-control dropdown nice-select other right ">
-                    <option value="en">EN</option>
-                    <option value="ua" selected="">Укр</option>
+        <li class="lang-switcher header--lang">
+          <form method="POST" action="http://127.0.0.1:8000" accept-charset="UTF-8"><input name="_session_key" type="hidden" value="hjr1HW3LCTYH78bgfhMZ8wnMHLSSm8oyGRI99AXU"><input name="_token" type="hidden" value="irVqtv4cDRNHdpQuiQWg6WOSCpN3NTZsSnFlQIc0">
+            <select name="locale" data-request="onSwitchLocale" class="form-control dropdown nice-select other right ">
+              <option value="en">EN</option>
+              <option value="ua" selected="">Укр</option>
             </select>
-</form></li>
-            <div class="header--burger">
-                <div id="menu-toggle" class="burger--btn">
-                    <div class="header--burger-text">Меню</div>
-                    <div id="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div id="cross">
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
+          </form>
+        </li>
+        <div class="header--burger">
+          <div id="menu-toggle" class="burger--btn">
+            <div class="header--burger-text">Меню</div>
+            <div id="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-
-        </header>
-        <div class="header--dropdown header--dropdown--modile">
-            <a class="header--dropdown--title main-button dropdown">Курси</a>
-            <div class="header--dropdown--body" uk-dropdown="pos: bottom-justify;mode: click">
-                <ul>
-                    <li>
-                        <small>ІТ-курси </small>
-                        <a href="pages/frontend_course.html">Front-End-Developer </a>
-                        <a href="#">Fullstack Вечерний </a>
-                    </li>
-                    <li>
-                        <small>Підприємництво </small>
-                        <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
-                        <a href="#">Back-End-Developer </a>
-                    </li>
-                    <li>
-                        <small>Soft skills </small>
-                        <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
-                        <a href="#">Back-End-Developer </a>
-                    </li>
-                    <li>
-                        <small>Online </small>
-                        <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
-                        <a href="#">Back-End-Developer </a>
-                    </li>
-                </ul>
-
-
+            <div id="cross">
+              <span></span>
+              <span></span>
             </div>
+          </div>
         </div>
-        <div class="header--desk-menu header--dropdown">
-            <ul class="header--main-links">
-                <li class="header--dropdown--title main-button header--nav-item dropdown without-border-content"> Київ
-                </li>
-                <li class="header--dropdown--body small-body" uk-dropdown="mode: click">
-                    <ul>
-                        <li>
 
-                            <a href="#"> Київ </a>
-                        </li>
-                        <li>
-
-                            <a href="#"> Харків </a>
-                        </li>
-                        <li>
-
-                            <a href="#"> Львів </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="header--app-status"> Online</li>
-                <li class="header--nav-item">Про нас</li>
-                <li class="header--dropdown--title main-button header--nav-item dropdown btn-violet">Курси</li>
-                <li class="header--dropdown--body" uk-dropdown="mode: click">
-                    <ul>
-                        <li>
-                            <small>ІТ-курси </small>
-                            <a href="pages/frontend_course.html">Front-End-Developer </a>
-                            <a href="#">Fullstack Вечерний </a>
-                        </li>
-                        <li>
-                            <small>Підприємництво </small>
-                            <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
-                            <a href="#">Back-End-Developer </a>
-                        </li>
-                        <li>
-                            <small>Soft skills </small>
-                            <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
-                            <a href="#">Back-End-Developer </a>
-                        </li>
-                        <li>
-                            <small>Online </small>
-                            <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
-                            <a href="#">Back-End-Developer </a>
-                        </li>
-                    </ul>
+      </header>
+      <div class="header--dropdown header--dropdown--modile">
+        <a class="header--dropdown--title main-button dropdown">Курси</a>
+        <div class="header--dropdown--body" uk-dropdown="pos: bottom-justify;mode: click">
+          <ul>
+            <li>
+              <small>ІТ-курси </small>
+              <a href="pages/frontend_course.html">Front-End-Developer </a>
+              <a href="#">Fullstack Вечерний </a>
+            </li>
+            <li>
+              <small>Підприємництво </small>
+              <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
+              <a href="#">Back-End-Developer </a>
+            </li>
+            <li>
+              <small>Soft skills </small>
+              <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
+              <a href="#">Back-End-Developer </a>
+            </li>
+            <li>
+              <small>Online </small>
+              <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
+              <a href="#">Back-End-Developer </a>
+            </li>
+          </ul>
 
 
-                </li>
-                <li class="header--dropdown--title main-button header--nav-item dropdown other">Кар’єрні можливості</li>
-                <li class="header--dropdown--body" uk-dropdown="mode: click">
-                    <ul>
-                        <li>
+        </div>
+      </div>
+      <div class="header--desk-menu header--dropdown">
+        <ul class="header--main-links">
+          <li class="header--dropdown--title main-button header--nav-item dropdown without-border-content"> Київ
+          </li>
+          <li class="header--dropdown--body small-body" uk-dropdown="mode: click">
+            <ul>
+              <li>
 
-                            <a href="#"> Вакансії </a>
-                        </li>
-                        <li>
+                <a href="#"> Київ </a>
+              </li>
+              <li>
 
-                            <a href="#"> Стажування </a>
-                        </li>
-                        <li>
+                <a href="#"> Харків </a>
+              </li>
+              <li>
 
-                            <a href="#"> Професійне тестування </a>
-                        </li>
-                        <li>
-                            <a href="#"> Корисні матеріали </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="header--nav-item"><a href="pages/contacts.html"> Контакти </a></li>
-                <!-- <li class="main-button header--nav-item dropdown other"> Укр</li> -->
-                <!-- <li class="header--dropdown--body small-body" uk-dropdown="mode: click">
+                <a href="#"> Львів </a>
+              </li>
+            </ul>
+          </li>
+          <li class="header--app-status"> Online</li>
+          <li class="header--nav-item">Про нас</li>
+          <li class="header--dropdown--title main-button header--nav-item dropdown btn-violet">Курси</li>
+          <li class="header--dropdown--body" uk-dropdown="mode: click">
+            <ul>
+              <li>
+                <small>ІТ-курси </small>
+                <a href="pages/frontend_course.html">Front-End-Developer </a>
+                <a href="#">Fullstack Вечерний </a>
+              </li>
+              <li>
+                <small>Підприємництво </small>
+                <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
+                <a href="#">Back-End-Developer </a>
+              </li>
+              <li>
+                <small>Soft skills </small>
+                <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
+                <a href="#">Back-End-Developer </a>
+              </li>
+              <li>
+                <small>Online </small>
+                <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
+                <a href="#">Back-End-Developer </a>
+              </li>
+            </ul>
+
+
+          </li>
+          <li class="header--dropdown--title main-button header--nav-item dropdown other">Кар’єрні можливості</li>
+          <li class="header--dropdown--body" uk-dropdown="mode: click">
+            <ul>
+              <li>
+
+                <a href="#"> Вакансії </a>
+              </li>
+              <li>
+
+                <a href="#"> Стажування </a>
+              </li>
+              <li>
+
+                <a href="#"> Професійне тестування </a>
+              </li>
+              <li>
+                <a href="#"> Корисні матеріали </a>
+              </li>
+            </ul>
+          </li>
+          <li class="header--nav-item"><a href="pages/contacts.html"> Контакти </a></li>
+          <!-- <li class="main-button header--nav-item dropdown other"> Укр</li> -->
+          <!-- <li class="header--dropdown--body small-body" uk-dropdown="mode: click">
                     <ul>
                         <li>
 
@@ -170,986 +171,1049 @@
 
                     </ul>
                 </li> -->
-<li class="lang-switcher dropdown">
-<form method="POST" action="http://127.0.0.1:8000" accept-charset="UTF-8"><input name="_session_key" type="hidden" value="hjr1HW3LCTYH78bgfhMZ8wnMHLSSm8oyGRI99AXU"><input name="_token" type="hidden" value="irVqtv4cDRNHdpQuiQWg6WOSCpN3NTZsSnFlQIc0">
-    <select  name="locale" data-request="onSwitchLocale" class="form-control dropdown nice-select other right ">
-                    <option value="en">EN</option>
-                    <option value="ua" selected="">Укр</option>
-            </select>
-</form></li>
+          <li class="lang-switcher dropdown">
+            <form method="POST" action="http://127.0.0.1:8000" accept-charset="UTF-8"><input name="_session_key" type="hidden" value="hjr1HW3LCTYH78bgfhMZ8wnMHLSSm8oyGRI99AXU"><input name="_token" type="hidden" value="irVqtv4cDRNHdpQuiQWg6WOSCpN3NTZsSnFlQIc0">
+              <select name="locale" data-request="onSwitchLocale" class="form-control dropdown nice-select other right ">
+                <option value="en">EN</option>
+                <option value="ua" selected="">Укр</option>
+              </select>
+            </form>
+          </li>
 
-            </ul>
-        </div>
+        </ul>
+      </div>
     </div>
     <div class="mobile-menu">
-        <div class="mobile-menu--content">
-            <a class="mobile-menu--content--simple--link" href="#"> Про нас </a>
-            <ul uk-accordion="multiple: true">
+      <div class="mobile-menu--content">
+        <a class="mobile-menu--content--simple--link" href="#"> Про нас </a>
+        <ul uk-accordion="multiple: true">
+          <li>
+            <a class="uk-accordion-title" href="#">Курси</a>
+            <div class="uk-accordion-content courses">
+              <ul>
                 <li>
-                    <a class="uk-accordion-title" href="#">Курси</a>
-                    <div class="uk-accordion-content courses">
-                        <ul>
-                            <li>
-                                <small>ІТ-курси </small>
-                                <a href="pages/frontend_course.html">Front-End-Developer </a>
-                                <a href="#">Fullstack Вечерний </a>
-                            </li>
-                            <li>
-                                <small>Підприємництво </small>
-                                <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
-                                <a href="#">Back-End-Developer </a>
-                            </li>
-                            <li>
-                                <small>Soft skills </small>
-                                <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
-                                <a href="#">Back-End-Developer </a>
-                            </li>
-                            <li>
-                                <small>Online </small>
-                                <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
-                                <a href="#">Back-End-Developer </a>
-                            </li>
-                        </ul>
-                    </div>
+                  <small>ІТ-курси </small>
+                  <a href="pages/frontend_course.html">Front-End-Developer </a>
+                  <a href="#">Fullstack Вечерний </a>
                 </li>
                 <li>
-                    <a class="uk-accordion-title" href="#">Кар’єрні можливості</a>
-                    <div class="uk-accordion-content vacancies">
-                        <ul>
-                            <li> <a href="#">Вакансії</a> </li>
-                            <li> <a href="#">Стажування</a> </li>
-                            <li> <a href="#">Професійне тестування</a> </li>
-                            <li> <a href="#">Корисні матеріали</a> </li>
-                        </ul>
-                    </div>
+                  <small>Підприємництво </small>
+                  <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
+                  <a href="#">Back-End-Developer </a>
                 </li>
-            </ul>
-            <a class="mobile-menu--content--simple--link" href="pages/contacts.html"> Контакти </a>
-        </div>
-        <div class="mobile-menu--footer">
-            <div>
-                <p>Виберіть місто</p>
-                <div class="mobile-menu--footer--dropdown">
-                    <a class="footer--dropdown--title">Київ</a>
-                    <div uk-dropdown="mode: click" class="footer--dropdown--content">
-                        <ul>
-                            <li> <a href="#"> Харків </a></li>
-                            <li> <a href="#">Львів </a></li>
-                        </ul>
-                    </div>
-                </div>
+                <li>
+                  <small>Soft skills </small>
+                  <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
+                  <a href="#">Back-End-Developer </a>
+                </li>
+                <li>
+                  <small>Online </small>
+                  <a href="#">Бізнес в аграрній сфері Grow up: Agro </a>
+                  <a href="#">Back-End-Developer </a>
+                </li>
+              </ul>
             </div>
-            <div>
-                <p>Ми в соц. мережах</p>
-                <ul class="mobile-menu--footer--social">
-                    <li>
-                        <a href="#"> <img width="25" height="25" src="./img/Instagram.svg" alt="Instagram"> </a>
-                    </li>
-                    <li>
-                        <a href="#"><img width="25" height="25" src="./img/Twitter.svg" alt="Twitter"> </a>
-                    </li>
-                    <li>
-                        <a href="#"><img width="13" height="25" src="./img/Facebook.svg" alt="Facebook"> </a>
-                    </li>
-                </ul>
+          </li>
+          <li>
+            <a class="uk-accordion-title" href="#">Кар’єрні можливості</a>
+            <div class="uk-accordion-content vacancies">
+              <ul>
+                <li> <a href="#">Вакансії</a> </li>
+                <li> <a href="#">Стажування</a> </li>
+                <li> <a href="#">Професійне тестування</a> </li>
+                <li> <a href="#">Корисні матеріали</a> </li>
+              </ul>
             </div>
+          </li>
+        </ul>
+        <a class="mobile-menu--content--simple--link" href="pages/contacts.html"> Контакти </a>
+      </div>
+      <div class="mobile-menu--footer">
+        <div>
+          <p>Виберіть місто</p>
+          <div class="mobile-menu--footer--dropdown">
+            <a class="footer--dropdown--title">Київ</a>
+            <div uk-dropdown="mode: click" class="footer--dropdown--content">
+              <ul>
+                <li> <a href="#"> Харків </a></li>
+                <li> <a href="#">Львів </a></li>
+              </ul>
+            </div>
+          </div>
         </div>
+        <div>
+          <p>Ми в соц. мережах</p>
+          <ul class="mobile-menu--footer--social">
+            <li>
+              <a href="#"> <img width="25" height="25" src="./img/Instagram.svg" alt="Instagram"> </a>
+            </li>
+            <li>
+              <a href="#"><img width="25" height="25" src="./img/Twitter.svg" alt="Twitter"> </a>
+            </li>
+            <li>
+              <a href="#"><img width="13" height="25" src="./img/Facebook.svg" alt="Facebook"> </a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
     </div>
     <div class="menu-bg"> </div>
 
     <section id="hero">
-        <div class="uk-container">
-            <h1 class="hero--site-slogan uk-text-center">Навчимо заробляти інтелектом!</h1>
+      <div class="uk-container">
+        <h1 class="hero--site-slogan uk-text-center">Навчимо заробляти інтелектом!</h1>
+      </div>
+      <div class="owl-theme  owl-carousel owl-carousel--hero">
+        <div>
+          <picture>
+            <source srcset="img/courses1.webp" type="image/webp">
+            <img data-src="img/courses1.png" class="lazyload" alt="">
+          </picture>
+          <div class="hero--item-description">
+            <div class="hero--item-description-text"> Бізнес в аграрній сфері Grow up: Agro </div>
+          </div>
         </div>
-        <div class="owl-theme  owl-carousel owl-carousel--hero">
-            <div>
-                <picture>
-                    <source srcset="img/courses1.webp" type="image/webp">
-                    <img data-src="img/courses1.png" class="lazyload" alt="">
-                </picture>
-                <div class="hero--item-description">
-                    <div class="hero--item-description-text"> Бізнес в аграрній сфері Grow up: Agro </div>
-                </div>
-            </div>
-            <div>
-                <picture>
-                    <source srcset="img/courses2.webp" type="image/webp">
-                    <img data-src="img/courses2.png" class="lazyload" alt="">
-                </picture>
-                <div class="hero--item-description">
-                    <div class="hero--item-description-text"> Бізнес в аграрній сфері Grow up: Agro </div>
-                </div>
-            </div>
-            <div>
-                <picture>
-                    <source srcset="img/courses3.webp" type="image/webp">
-                    <img data-src="img/courses3.png" class="lazyload" alt="">
-                </picture>
-                <div class="hero--item-description">
-                    <div class="hero--item-description-text"> Бізнес в аграрній сфері Grow up: Agro </div>
-                </div>
-            </div>
-            <div>
-                <picture>
-                    <source srcset="img/courses1.webp" type="image/webp">
-                    <img data-src="img/courses1.png" class="lazyload" alt="">
-                </picture>
-                <div class="hero--item-description">
-                    <div class="hero--item-description-text"> Бізнес в аграрній сфері Grow up: Agro </div>
-                </div>
-            </div>
-            <div>
-                <picture>
-                    <source srcset="img/courses2.webp" type="image/webp">
-                    <img data-src="img/courses2.png" class="lazyload" alt="">
-                </picture>
-                <div class="hero--item-description">
-                    <div class="hero--item-description-text"> Бізнес в аграрній сфері Grow up: Agro </div>
-                </div>
-            </div>
-            <div>
-                <picture>
-                    <source srcset="img/courses3.webp" type="image/webp">
-                    <img data-src="img/courses3.png" class="lazyload" alt="">
-                </picture>
-                <div class="hero--item-description">
-                    <div class="hero--item-description-text"> Бізнес в аграрній сфері Grow up: Agro </div>
-                </div>
-            </div>
+        <div>
+          <picture>
+            <source srcset="img/courses2.webp" type="image/webp">
+            <img data-src="img/courses2.png" class="lazyload" alt="">
+          </picture>
+          <div class="hero--item-description">
+            <div class="hero--item-description-text"> Бізнес в аграрній сфері Grow up: Agro </div>
+          </div>
+        </div>
+        <div>
+          <picture>
+            <source srcset="img/courses3.webp" type="image/webp">
+            <img data-src="img/courses3.png" class="lazyload" alt="">
+          </picture>
+          <div class="hero--item-description">
+            <div class="hero--item-description-text"> Бізнес в аграрній сфері Grow up: Agro </div>
+          </div>
+        </div>
+        <div>
+          <picture>
+            <source srcset="img/courses1.webp" type="image/webp">
+            <img data-src="img/courses1.png" class="lazyload" alt="">
+          </picture>
+          <div class="hero--item-description">
+            <div class="hero--item-description-text"> Бізнес в аграрній сфері Grow up: Agro </div>
+          </div>
+        </div>
+        <div>
+          <picture>
+            <source srcset="img/courses2.webp" type="image/webp">
+            <img data-src="img/courses2.png" class="lazyload" alt="">
+          </picture>
+          <div class="hero--item-description">
+            <div class="hero--item-description-text"> Бізнес в аграрній сфері Grow up: Agro </div>
+          </div>
+        </div>
+        <div>
+          <picture>
+            <source srcset="img/courses3.webp" type="image/webp">
+            <img data-src="img/courses3.png" class="lazyload" alt="">
+          </picture>
+          <div class="hero--item-description">
+            <div class="hero--item-description-text"> Бізнес в аграрній сфері Grow up: Agro </div>
+          </div>
+        </div>
 
-        </div>
-        <div class="hero---scroll-to-courses">
-            <a href="#registration"><img data-src="./img/arrow_down.svg" class="lazyload" alt=""></a>
-        </div>
+      </div>
+      <div class="hero---scroll-to-courses">
+        <a href="#registration"><img data-src="./img/arrow_down.svg" class="lazyload" alt=""></a>
+      </div>
     </section>
     <section id="video-represent">
-        <div class="uk-container">
-            <h2>Трансформуйся! Вибери нову професію і ми тобі допоможемо</h2>
-            <p>Ми вчимо вас на власному досвіді. Наші курси зосереджені на цінних навичках і перевірених процесах, які поліпшать вашу роботу, вразять ваших клієнтів і допоможуть вам побудувати свій кар'єрний шлях.</p>
-            <div class="video-iframe container-xl">
-                <div class="video-iframe--banner">
-                    <div class="video-iframe--content">
-                        <div class="target">
-                            <a href="#" class="video__button text" uk-parallax="y: 60, -100"> Про курс<span> Про курс</span> <img
-                                    data-src="img/icon_video.svg" class="lazyload" uk-parallax="y: 60, -100"
-                                    alt="play video"> </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="trailer">
-                    <div class="cover">
-
-                        <div class="tv">
-                            <div class="screen" id="tv"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="video-iframe--logo-overlay" uk-parallax="y: -10, 30">
-                    <img data-src="./img/logo_nav.svg" class="lazyload" alt="logo over video">
-                </div>
+      <div class="uk-container">
+        <h2>Трансформуйся! Вибери нову професію і ми тобі допоможемо</h2>
+        <p>Ми вчимо вас на власному досвіді. Наші курси зосереджені на цінних навичках і перевірених процесах, які поліпшать вашу роботу, вразять ваших клієнтів і допоможуть вам побудувати свій кар'єрний шлях.</p>
+        <div class="video-iframe container-xl">
+          <div class="video-iframe--banner">
+            <div class="video-iframe--content">
+              <div class="target">
+                <a href="#" class="video__button text" uk-parallax="y: 60, -100"> Про курс<span> Про курс</span> <img data-src="img/icon_video.svg" class="lazyload" uk-parallax="y: 60, -100" alt="play video"> </a>
+              </div>
             </div>
+          </div>
+          <div class="trailer">
+            <div class="cover">
+
+              <div class="tv">
+                <div class="screen" id="tv"></div>
+              </div>
+            </div>
+          </div>
+          <div class="video-iframe--logo-overlay" uk-parallax="y: -10, 30">
+            <img data-src="./img/logo_nav.svg" class="lazyload" alt="logo over video">
+          </div>
+        </div>
 
 
     </section>
     <section id="courses">
-        <div class="uk-container">
-            <h2 class="uk-text-center">Навчальні курси</h2>
-            <div class="courses--tabs">
-                <ul class="uk-tab-bottom" uk-tab>
-                    <li class="uk-active courses--tabs--title"><a href="#">Всі курси</a>
-                    </li>
-                    <li class="courses--tabs--title"><a href="#">ІT</a>
-                    </li>
-                    <li class="courses--tabs--title"><a href="#">Підприємництво</a>
-                    </li>
-                    <li class="courses--tabs--title"><a href="#">Soft skills</a>
-                    </li>
-                    <li class="courses--tabs--title"><a href="#">Online</a>
-                    </li>
-                </ul>
-                <div class="courses--tabs--content active">
+      <div class="uk-container">
+        <h2 class="uk-text-center">Навчальні курси</h2>
+        <div class="courses--tabs">
+          <ul class="uk-tab-bottom" uk-tab>
+            <li class="uk-active courses--tabs--title"><a href="#">Всі курси</a>
+            </li>
+            <li class="courses--tabs--title"><a href="#">ІT</a>
+            </li>
+            <li class="courses--tabs--title"><a href="#">Підприємництво</a>
+            </li>
+            <li class="courses--tabs--title"><a href="#">Soft skills</a>
+            </li>
+            <li class="courses--tabs--title"><a href="#">Online</a>
+            </li>
+          </ul>
+          <div class="courses--tabs--content active">
 
 
-                    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
 
-                        <ul class="uk-slider-items uk-grid">
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses1.webp" type="image/webp">
-                                        <img data-src="img/courses1.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading1</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses2.webp" type="image/webp">
-                                        <img data-src="img/courses2.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading2</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses3.webp" type="image/webp">
-                                        <img data-src="img/courses3.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses1.webp" type="image/webp">
-                                        <img data-src="img/courses1.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading3</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses2.webp" type="image/webp">
-                                        <img data-src="img/courses2.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading4</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                        </ul>
-
-                        <ul class="uk-slider-nav uk-dotnav"></ul>
+              <ul class="uk-slider-items uk-grid">
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses1.webp" type="image/webp">
+                      <img data-src="img/courses1.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading1</h2>
 
                     </div>
-
-                </div>
-                <div class="courses--tabs--content">
-
-                    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
-
-                        <ul class="uk-slider-items uk-grid">
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses3.webp" type="image/webp">
-                                        <img data-src="img/courses3.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading5</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses1.webp" type="image/webp">
-                                        <img data-src="img/courses1.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading6</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses2.webp" type="image/webp">
-                                        <img data-src="img/courses2.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading7</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses3.webp" type="image/webp">
-                                        <img data-src="img/courses3.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading8</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses1.webp" type="image/webp">
-                                        <img data-src="img/courses1.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading9</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                        </ul>
-
-                        <ul class="uk-slider-nav uk-dotnav"></ul>
+                  </div>
+                </a>
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses2.webp" type="image/webp">
+                      <img data-src="img/courses2.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading2</h2>
 
                     </div>
-
-                </div>
-                <div class="courses--tabs--content">
-
-                    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
-
-                        <ul class="uk-slider-items uk-grid">
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses2.webp" type="image/webp">
-                                        <img data-src="img/courses2.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading10</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses3.webp" type="image/webp">
-                                        <img data-src="img/courses3.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading11</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses1.webp" type="image/webp">
-                                        <img data-src="img/courses1.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading12</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses2.webp" type="image/webp">
-                                        <img data-src="img/courses2.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading13</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses3.webp" type="image/webp">
-                                        <img data-src="img/courses3.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading14</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                        </ul>
-
-                        <ul class="uk-slider-nav uk-dotnav"></ul>
+                  </div>
+                </a>
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses3.webp" type="image/webp">
+                      <img data-src="img/courses3.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading</h2>
 
                     </div>
-                </div>
-                <div class="courses--tabs--content">
-                    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
-
-                        <ul class="uk-slider-items uk-grid">
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses1.webp" type="image/webp">
-                                        <img data-src="img/courses1.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading15</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses2.webp" type="image/webp">
-                                        <img data-src="img/courses2.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading16</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses3.webp" type="image/webp">
-                                        <img data-src="img/courses3.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading17</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses1.webp" type="image/webp">
-                                        <img data-src="img/courses1.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading18</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses2.webp" type="image/webp">
-                                        <img data-src="img/courses2.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading19</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                        </ul>
-
-                        <ul class="uk-slider-nav uk-dotnav"></ul>
+                  </div>
+                </a>
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses1.webp" type="image/webp">
+                      <img data-src="img/courses1.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading3</h2>
 
                     </div>
-
-                </div>
-                <div class="courses--tabs--content">
-                    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
-
-                        <ul class="uk-slider-items uk-grid">
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses1.webp" type="image/webp">
-                                        <img data-src="img/courses1.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading15</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses2.webp" type="image/webp">
-                                        <img data-src="img/courses2.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading16</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses3.webp" type="image/webp">
-                                        <img data-src="img/courses3.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading17</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses1.webp" type="image/webp">
-                                        <img data-src="img/courses1.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading18</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="uk-width-4-5" href="#">
-                                <div class="uk-panel">
-                                    <div class="uk-panel--card-overlay"> </div>
-                                    <picture>
-                                        <source srcset="img/courses2.webp" type="image/webp">
-                                        <img data-src="img/courses2.png" class="lazyload" alt="">
-                                    </picture>
-                                    <div class="uk-position-center uk-text-center">
-                                        <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
-                                            <span class="courses--free-space">Вільних місць: 10<span>
-                                        </p>
-                                        <h2 uk-slider-parallax="x: 100,-100">Heading19</h2>
-
-                                    </div>
-                                </div>
-                            </a>
-                        </ul>
-
-                        <ul class="uk-slider-nav uk-dotnav"></ul>
+                  </div>
+                </a>
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses2.webp" type="image/webp">
+                      <img data-src="img/courses2.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading4</h2>
 
                     </div>
+                  </div>
+                </a>
+              </ul>
 
-                </div>
+              <ul class="uk-slider-nav uk-dotnav"></ul>
+
             </div>
+
+          </div>
+          <div class="courses--tabs--content">
+
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+              <ul class="uk-slider-items uk-grid">
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses3.webp" type="image/webp">
+                      <img data-src="img/courses3.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading5</h2>
+
+                    </div>
+                  </div>
+                </a>
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses1.webp" type="image/webp">
+                      <img data-src="img/courses1.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading6</h2>
+
+                    </div>
+                  </div>
+                </a>
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses2.webp" type="image/webp">
+                      <img data-src="img/courses2.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading7</h2>
+
+                    </div>
+                  </div>
+                </a>
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses3.webp" type="image/webp">
+                      <img data-src="img/courses3.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading8</h2>
+
+                    </div>
+                  </div>
+                </a>
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses1.webp" type="image/webp">
+                      <img data-src="img/courses1.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading9</h2>
+
+                    </div>
+                  </div>
+                </a>
+              </ul>
+
+              <ul class="uk-slider-nav uk-dotnav"></ul>
+
+            </div>
+
+          </div>
+          <div class="courses--tabs--content">
+
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+              <ul class="uk-slider-items uk-grid">
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses2.webp" type="image/webp">
+                      <img data-src="img/courses2.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading10</h2>
+
+                    </div>
+                  </div>
+                </a>
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses3.webp" type="image/webp">
+                      <img data-src="img/courses3.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading11</h2>
+
+                    </div>
+                  </div>
+                </a>
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses1.webp" type="image/webp">
+                      <img data-src="img/courses1.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading12</h2>
+
+                    </div>
+                  </div>
+                </a>
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses2.webp" type="image/webp">
+                      <img data-src="img/courses2.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading13</h2>
+
+                    </div>
+                  </div>
+                </a>
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses3.webp" type="image/webp">
+                      <img data-src="img/courses3.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading14</h2>
+
+                    </div>
+                  </div>
+                </a>
+              </ul>
+
+              <ul class="uk-slider-nav uk-dotnav"></ul>
+
+            </div>
+          </div>
+          <div class="courses--tabs--content">
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+              <ul class="uk-slider-items uk-grid">
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses1.webp" type="image/webp">
+                      <img data-src="img/courses1.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading15</h2>
+
+                    </div>
+                  </div>
+                </a>
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses2.webp" type="image/webp">
+                      <img data-src="img/courses2.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading16</h2>
+
+                    </div>
+                  </div>
+                </a>
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses3.webp" type="image/webp">
+                      <img data-src="img/courses3.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading17</h2>
+
+                    </div>
+                  </div>
+                </a>
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses1.webp" type="image/webp">
+                      <img data-src="img/courses1.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading18</h2>
+
+                    </div>
+                  </div>
+                </a>
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses2.webp" type="image/webp">
+                      <img data-src="img/courses2.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading19</h2>
+
+                    </div>
+                  </div>
+                </a>
+              </ul>
+
+              <ul class="uk-slider-nav uk-dotnav"></ul>
+
+            </div>
+
+          </div>
+          <div class="courses--tabs--content">
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+              <ul class="uk-slider-items uk-grid">
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses1.webp" type="image/webp">
+                      <img data-src="img/courses1.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading15</h2>
+
+                    </div>
+                  </div>
+                </a>
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses2.webp" type="image/webp">
+                      <img data-src="img/courses2.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading16</h2>
+
+                    </div>
+                  </div>
+                </a>
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses3.webp" type="image/webp">
+                      <img data-src="img/courses3.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading17</h2>
+
+                    </div>
+                  </div>
+                </a>
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses1.webp" type="image/webp">
+                      <img data-src="img/courses1.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading18</h2>
+
+                    </div>
+                  </div>
+                </a>
+                <a class="uk-width-4-5" href="#">
+                  <div class="uk-panel">
+                    <div class="uk-panel--card-overlay"> </div>
+                    <picture>
+                      <source srcset="img/courses2.webp" type="image/webp">
+                      <img data-src="img/courses2.png" class="lazyload" alt="">
+                    </picture>
+                    <div class="uk-position-center uk-text-center">
+                      <p uk-slider-parallax="x: 200,-200"><span class="courses--type"> IT </span>
+                        <span class="courses--free-space">Вільних місць: 10<span>
+                      </p>
+                      <h2 uk-slider-parallax="x: 100,-100">Heading19</h2>
+
+                    </div>
+                  </div>
+                </a>
+              </ul>
+
+              <ul class="uk-slider-nav uk-dotnav"></ul>
+
+            </div>
+
+          </div>
         </div>
+      </div>
+    </section>
+    <section id="related-posts">
+      <div class="uk-container">
+        <h2 class="uk-text-center">Пости</h2>
+        <div class="posts-wrapper">
+          <a href="#" class="post-wrapper__item overlayShow">
+            <div class="uk-panel--card-overlay"> </div>
+            <picture>
+              <source srcset="img/courses3.webp" type="image/webp">
+              <img data-src="img/courses3.png" class="lazyload" alt="">
+            </picture>
+            <div class="uk-overlay uk-position-top uk-dark">
+              <div class="post-info">
+                <div class="small-description post-info__category">
+                  <span href="#">Бізнес процеси</span>
+                </div>
+                <span class="info__date">9 липня
+                  2021, 16:58
+                </span>
+              </div>
+              <p>
+                Маркетингова стратегія, яка працює. Інструкція по збірці.</p>
+            </div>
+          </a>
+          <a href="#" class="post-wrapper__item overlayShow">
+            <div class="uk-panel--card-overlay"> </div>
+            <picture>
+              <source srcset="img/courses3.webp" type="image/webp">
+              <img data-src="img/courses3.png" class="lazyload" alt="">
+            </picture>
+            <div class="uk-overlay uk-position-top uk-dark">
+              <div class="post-info">
+                <div class="small-description post-info__category">
+                  <span href="#">Бізнес процеси</span>
+                </div>
+                <span class="info__date">9 липня
+                  2021, 16:58
+                </span>
+              </div>
+              <p>
+                Маркетингова стратегія, яка працює. Інструкція по збірці.</p>
+            </div>
+          </a>
+          <a href="#" class="post-wrapper__item overlayShow">
+            <div class="uk-panel--card-overlay"> </div>
+            <picture>
+              <source srcset="img/courses3.webp" type="image/webp">
+              <img data-src="img/courses3.png" class="lazyload" alt="">
+            </picture>
+            <div class="uk-overlay uk-position-top uk-dark">
+              <div class="post-info">
+                <div class="small-description post-info__category">
+                  <span href="#">Бізнес процеси</span>
+                </div>
+                <span class="info__date">9 липня
+                  2021, 16:58
+                </span>
+              </div>
+              <p>
+                Маркетингова стратегія, яка працює. Інструкція по збірці.</p>
+            </div>
+          </a>
+        </div>
+      </div>
     </section>
     <section id="team">
-        <div class="uk-container">
-            <h2 class="uk-text-center">Познайомся з нашою командою</h2>
+      <div class="uk-container">
+        <h2 class="uk-text-center">Познайомся з нашою командою</h2>
+      </div>
+      <div class="owl-carousel--team  owl-carousel  owl-theme">
+        <div class="item">
+          <div class="picture-wrapper">
+            <picture>
+              <source srcset="./img/team/team1.webp" type="image/webp">
+              <img data-src="./img/team/team1.png" class="lazyload" alt="">
+            </picture>
+          </div>
+          <div class="team--role">
+            <h3 class="teammate--name">Юлия Житник</h3>
+            <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
+          </div>
         </div>
-        <div class="owl-carousel--team  owl-carousel  owl-theme">
-            <div class="item">
-                <div class="picture-wrapper">
-                    <picture>
-                        <source srcset="./img/team/team1.webp" type="image/webp">
-                        <img data-src="./img/team/team1.png" class="lazyload" alt="">
-                    </picture>
-                </div>
-                <div class="team--role">
-                    <h3 class="teammate--name">Юлия Житник</h3>
-                    <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
-                </div>
-            </div>
 
-            <div class="item">
-                <div class="picture-wrapper">
-                    <picture>
-                        <source srcset="./img/team/team2.webp" type="image/webp">
-                        <img data-src="./img/team/team2.png" class="lazyload" alt="">
-                    </picture>
-                </div>
-                <div class="team--role">
-                    <h3 class="teammate--name">Юлия Житник</h3>
-                    <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="picture-wrapper">
-                    <picture>
-                        <source srcset="./img/team/team3.webp" type="image/webp">
-                        <img data-src="./img/team/team3.png" class="lazyload" alt="">
-                    </picture>
-                </div>
-                <div class="team--role">
-                    <h3 class="teammate--name">Юлия Житник</h3>
-                    <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="picture-wrapper">
-                    <picture>
-                        <source srcset="./img/team/team4.webp" type="image/webp">
-                        <img data-src="./img/team/team4.png" class="lazyload" alt="">
-                    </picture>
-                </div>
-                <div class="team--role">
-                    <h3 class="teammate--name">Юлия Житник</h3>
-                    <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="picture-wrapper">
-                    <picture>
-                        <source srcset="./img/team/team5.webp" type="image/webp">
-                        <img data-src="./img/team/team5.png" class="lazyload" alt="">
-                    </picture>
-                </div>
-                <div class="team--role">
-                    <h3 class="teammate--name">Юлия Житник</h3>
-                    <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="picture-wrapper">
-                    <picture>
-                        <source srcset="./img/team/team6.webp" type="image/webp">
-                        <img data-src="./img/team/team6.png" class="lazyload" alt="">
-                    </picture>
-                </div>
-                <div class="team--role">
-                    <h3 class="teammate--name">Юлия Житник</h3>
-                    <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="picture-wrapper">
-                    <picture>
-                        <source srcset="./img/team/team7.webp" type="image/webp">
-                        <img data-src="./img/team/team7.png" class="lazyload" alt="">
-                    </picture>
-                </div>
-                <div class="team--role">
-                    <h3 class="teammate--name">Юлия Житник</h3>
-                    <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="picture-wrapper">
-                    <picture>
-                        <source srcset="./img/team/team8.webp" type="image/webp">
-                        <img data-src="./img/team/team8.png" class="lazyload" alt="">
-                    </picture>
-                </div>
-                <div class="team--role">
-                    <h3 class="teammate--name">Юлия Житник</h3>
-                    <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="picture-wrapper">
-                    <picture>
-                        <source srcset="./img/team/team9.webp" type="image/webp">
-                        <img data-src="./img/team/team9.png" class="lazyload" alt="">
-                    </picture>
-                </div>
-                <div class="team--role">
-                    <h3 class="teammate--name">Юлия Житник</h3>
-                    <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="picture-wrapper">
-                    <picture>
-                        <source srcset="./img/team/team10.webp" type="image/webp">
-                        <img data-src="./img/team/team10.png" class="lazyload" alt="">
-                    </picture>
-                </div>
-                <div class="team--role">
-                    <h3 class="teammate--name">Юлия Житник</h3>
-                    <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
-                </div>
-            </div>
+        <div class="item">
+          <div class="picture-wrapper">
+            <picture>
+              <source srcset="./img/team/team2.webp" type="image/webp">
+              <img data-src="./img/team/team2.png" class="lazyload" alt="">
+            </picture>
+          </div>
+          <div class="team--role">
+            <h3 class="teammate--name">Юлия Житник</h3>
+            <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="picture-wrapper">
+            <picture>
+              <source srcset="./img/team/team3.webp" type="image/webp">
+              <img data-src="./img/team/team3.png" class="lazyload" alt="">
+            </picture>
+          </div>
+          <div class="team--role">
+            <h3 class="teammate--name">Юлия Житник</h3>
+            <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="picture-wrapper">
+            <picture>
+              <source srcset="./img/team/team4.webp" type="image/webp">
+              <img data-src="./img/team/team4.png" class="lazyload" alt="">
+            </picture>
+          </div>
+          <div class="team--role">
+            <h3 class="teammate--name">Юлия Житник</h3>
+            <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="picture-wrapper">
+            <picture>
+              <source srcset="./img/team/team5.webp" type="image/webp">
+              <img data-src="./img/team/team5.png" class="lazyload" alt="">
+            </picture>
+          </div>
+          <div class="team--role">
+            <h3 class="teammate--name">Юлия Житник</h3>
+            <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="picture-wrapper">
+            <picture>
+              <source srcset="./img/team/team6.webp" type="image/webp">
+              <img data-src="./img/team/team6.png" class="lazyload" alt="">
+            </picture>
+          </div>
+          <div class="team--role">
+            <h3 class="teammate--name">Юлия Житник</h3>
+            <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="picture-wrapper">
+            <picture>
+              <source srcset="./img/team/team7.webp" type="image/webp">
+              <img data-src="./img/team/team7.png" class="lazyload" alt="">
+            </picture>
+          </div>
+          <div class="team--role">
+            <h3 class="teammate--name">Юлия Житник</h3>
+            <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="picture-wrapper">
+            <picture>
+              <source srcset="./img/team/team8.webp" type="image/webp">
+              <img data-src="./img/team/team8.png" class="lazyload" alt="">
+            </picture>
+          </div>
+          <div class="team--role">
+            <h3 class="teammate--name">Юлия Житник</h3>
+            <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="picture-wrapper">
+            <picture>
+              <source srcset="./img/team/team9.webp" type="image/webp">
+              <img data-src="./img/team/team9.png" class="lazyload" alt="">
+            </picture>
+          </div>
+          <div class="team--role">
+            <h3 class="teammate--name">Юлия Житник</h3>
+            <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="picture-wrapper">
+            <picture>
+              <source srcset="./img/team/team10.webp" type="image/webp">
+              <img data-src="./img/team/team10.png" class="lazyload" alt="">
+            </picture>
+          </div>
+          <div class="team--role">
+            <h3 class="teammate--name">Юлия Житник</h3>
+            <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
+          </div>
+        </div>
 
+      </div>
+      <div class="team__desk-custom" uk-parallax="bgx: -600">
+        <div class="item item-coords">
+          <div class="picture-wrapper">
+            <picture>
+              <source srcset="./img/team/team1.webp" type="image/webp">
+              <img data-src="./img/team/team1.png" class="lazyload" alt="">
+            </picture>
+          </div>
+          <div class="team--role">
+            <h3 class="teammate--name">Юлия Житник</h3>
+            <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
+          </div>
         </div>
-        <div class="team__desk-custom" uk-parallax="bgx: -600">
-            <div class="item item-coords">
-                <div class="picture-wrapper">
-                    <picture>
-                        <source srcset="./img/team/team1.webp" type="image/webp">
-                        <img data-src="./img/team/team1.png" class="lazyload" alt="">
-                    </picture>
-                </div>
-                <div class="team--role">
-                    <h3 class="teammate--name">Юлия Житник</h3>
-                    <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
-                </div>
-            </div>
 
-            <div class="item item-coords">
-                <div class="picture-wrapper">
-                    <picture>
-                        <source srcset="./img/team/team2.webp" type="image/webp">
-                        <img data-src="./img/team/team2.png" class="lazyload" alt="">
-                    </picture>
-                </div>
-                <div class="team--role">
-                    <h3 class="teammate--name">Юлия Житник</h3>
-                    <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
-                </div>
-            </div>
-            <div class="item item-coords">
-                <div class="picture-wrapper">
-                    <picture>
-                        <source srcset="./img/team/team3.webp" type="image/webp">
-                        <img data-src="./img/team/team3.png" class="lazyload" alt="">
-                    </picture>
-                </div>
-                <div class="team--role">
-                    <h3 class="teammate--name">Юлия Житник</h3>
-                    <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
-                </div>
-            </div>
-            <div class="item item-coords">
-                <div class="picture-wrapper">
-                    <picture>
-                        <source srcset="./img/team/team4.webp" type="image/webp">
-                        <img data-src="./img/team/team4.png" class="lazyload" alt="">
-                    </picture>
-                </div>
-                <div class="team--role">
-                    <h3 class="teammate--name">Юлия Житник</h3>
-                    <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
-                </div>
-            </div>
-            <div class="item item-coords">
-                <div class="picture-wrapper">
-                    <picture>
-                        <source srcset="./img/team/team5.webp" type="image/webp">
-                        <img data-src="./img/team/team5.png" class="lazyload" alt="">
-                    </picture>
-                </div>
-                <div class="team--role">
-                    <h3 class="teammate--name">Юлия Житник</h3>
-                    <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
-                </div>
-            </div>
-            <div class="item item-coords">
-                <div class="picture-wrapper">
-                    <picture>
-                        <source srcset="./img/team/team6.webp" type="image/webp">
-                        <img data-src="./img/team/team6.png" class="lazyload" alt="">
-                    </picture>
-                </div>
-                <div class="team--role">
-                    <h3 class="teammate--name">Юлия Житник</h3>
-                    <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
-                </div>
-            </div>
-            <div class="item item-coords">
-                <div class="picture-wrapper">
-                    <picture>
-                        <source srcset="./img/team/team7.webp" type="image/webp">
-                        <img data-src="./img/team/team7.png" class="lazyload" alt="">
-                    </picture>
-                </div>
-                <div class="team--role">
-                    <h3 class="teammate--name">Юлия Житник</h3>
-                    <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
-                </div>
-            </div>
-            <div class="item item-coords">
-                <div class="picture-wrapper">
-                    <picture>
-                        <source srcset="./img/team/team8.webp" type="image/webp">
-                        <img data-src="./img/team/team8.png" class="lazyload" alt="">
-                    </picture>
-                </div>
-                <div class="team--role">
-                    <h3 class="teammate--name">Юлия Житник</h3>
-                    <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
-                </div>
-            </div>
-            <div class="item item-coords">
-                <div class="picture-wrapper">
-                    <picture>
-                        <source srcset="./img/team/team9.webp" type="image/webp">
-                        <img data-src="./img/team/team9.png" class="lazyload" alt="">
-                    </picture>
-                </div>
-                <div class="team--role">
-                    <h3 class="teammate--name">Юлия Житник</h3>
-                    <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
-                </div>
-            </div>
-            <div class="item item-coords">
-                <div class="picture-wrapper">
-                    <picture>
-                        <source srcset="./img/team/team10.webp" type="image/webp">
-                        <img data-src="./img/team/team10.png" class="lazyload" alt="">
-                    </picture>
-                </div>
-                <div class="team--role">
-                    <h3 class="teammate--name">Юлия Житник</h3>
-                    <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
-                </div>
-            </div>
+        <div class="item item-coords">
+          <div class="picture-wrapper">
+            <picture>
+              <source srcset="./img/team/team2.webp" type="image/webp">
+              <img data-src="./img/team/team2.png" class="lazyload" alt="">
+            </picture>
+          </div>
+          <div class="team--role">
+            <h3 class="teammate--name">Юлия Житник</h3>
+            <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
+          </div>
+        </div>
+        <div class="item item-coords">
+          <div class="picture-wrapper">
+            <picture>
+              <source srcset="./img/team/team3.webp" type="image/webp">
+              <img data-src="./img/team/team3.png" class="lazyload" alt="">
+            </picture>
+          </div>
+          <div class="team--role">
+            <h3 class="teammate--name">Юлия Житник</h3>
+            <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
+          </div>
+        </div>
+        <div class="item item-coords">
+          <div class="picture-wrapper">
+            <picture>
+              <source srcset="./img/team/team4.webp" type="image/webp">
+              <img data-src="./img/team/team4.png" class="lazyload" alt="">
+            </picture>
+          </div>
+          <div class="team--role">
+            <h3 class="teammate--name">Юлия Житник</h3>
+            <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
+          </div>
+        </div>
+        <div class="item item-coords">
+          <div class="picture-wrapper">
+            <picture>
+              <source srcset="./img/team/team5.webp" type="image/webp">
+              <img data-src="./img/team/team5.png" class="lazyload" alt="">
+            </picture>
+          </div>
+          <div class="team--role">
+            <h3 class="teammate--name">Юлия Житник</h3>
+            <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
+          </div>
+        </div>
+        <div class="item item-coords">
+          <div class="picture-wrapper">
+            <picture>
+              <source srcset="./img/team/team6.webp" type="image/webp">
+              <img data-src="./img/team/team6.png" class="lazyload" alt="">
+            </picture>
+          </div>
+          <div class="team--role">
+            <h3 class="teammate--name">Юлия Житник</h3>
+            <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
+          </div>
+        </div>
+        <div class="item item-coords">
+          <div class="picture-wrapper">
+            <picture>
+              <source srcset="./img/team/team7.webp" type="image/webp">
+              <img data-src="./img/team/team7.png" class="lazyload" alt="">
+            </picture>
+          </div>
+          <div class="team--role">
+            <h3 class="teammate--name">Юлия Житник</h3>
+            <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
+          </div>
+        </div>
+        <div class="item item-coords">
+          <div class="picture-wrapper">
+            <picture>
+              <source srcset="./img/team/team8.webp" type="image/webp">
+              <img data-src="./img/team/team8.png" class="lazyload" alt="">
+            </picture>
+          </div>
+          <div class="team--role">
+            <h3 class="teammate--name">Юлия Житник</h3>
+            <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
+          </div>
+        </div>
+        <div class="item item-coords">
+          <div class="picture-wrapper">
+            <picture>
+              <source srcset="./img/team/team9.webp" type="image/webp">
+              <img data-src="./img/team/team9.png" class="lazyload" alt="">
+            </picture>
+          </div>
+          <div class="team--role">
+            <h3 class="teammate--name">Юлия Житник</h3>
+            <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
+          </div>
+        </div>
+        <div class="item item-coords">
+          <div class="picture-wrapper">
+            <picture>
+              <source srcset="./img/team/team10.webp" type="image/webp">
+              <img data-src="./img/team/team10.png" class="lazyload" alt="">
+            </picture>
+          </div>
+          <div class="team--role">
+            <h3 class="teammate--name">Юлия Житник</h3>
+            <p class="teammate--rank">CEO, Co-founder, ex-Googler</p>
+          </div>
+        </div>
 
-        </div>
-        </div>
-        <div class="uk-container">
-            <p class="team--description">Ми вчимо вас на власному досвіді. Наші курси зосереджені на цінних навичках і
-                перевірених процесах, які
-                поліпшать вашу роботу, вразять ваших клієнтів і допоможуть вам побудувати свій кар'єрний шлях. </p>
-            <div class="team--watch-all-team"> <a class="main-button  team--action" href="#">Всі викладачі</a></div>
-        </div>
-        </div>
-        <div class="team--background-overlay"> </div>
+      </div>
+      </div>
+      <div class="uk-container">
+        <p class="team--description">Ми вчимо вас на власному досвіді. Наші курси зосереджені на цінних навичках і
+          перевірених процесах, які
+          поліпшать вашу роботу, вразять ваших клієнтів і допоможуть вам побудувати свій кар'єрний шлях. </p>
+        <div class="team--watch-all-team"> <a class="main-button  team--action" href="#">Всі викладачі</a></div>
+      </div>
+      </div>
+      <div class="team--background-overlay"> </div>
     </section>
     <section id="registration">
-          <a class="footer--logo" href="#"><img width="52" height="48" class="footer--logo-rotate" src="./img/logo_nav.svg" alt="logo">
-                    </a>
-        <div class="uk-container">
-            <h2 class="registration--description"> Реєструйся на онлайн навчання та отримай <span>15%</span> знижку!
-                                            </h2>
-                                            <form>
-                                                <select class="nice-select wide">
-                    <option value="1">Вибери курс</option>
-                    <option value="2">Another option</option>
-                    <option value="3">A disabled option</option>
-                    <option value="4">Potato</option>
-                </select>
+      <a class="footer--logo" href="#"><img width="52" height="48" class="footer--logo-rotate" src="./img/logo_nav.svg" alt="logo">
+      </a>
+      <div class="uk-container">
+        <h2 class="registration--description"> Реєструйся на онлайн навчання та отримай <span>15%</span> знижку!
+        </h2>
+        <form>
+          <select class="nice-select wide">
+            <option value="1">Вибери курс</option>
+            <option value="2">Another option</option>
+            <option value="3">A disabled option</option>
+            <option value="4">Potato</option>
+          </select>
 
-                                                <button class="registration--registration-on-course" type="submit">Зареєструйся</button>
-                                            </form>
-                                    </div>
+          <button class="registration--registration-on-course" type="submit">Зареєструйся</button>
+        </form>
+      </div>
     </section>
     <div id="bg-overlay">
-        <div class="bg-overlay--VideoHead-popup-video-exit">
-            <div class="bg-overlay--VideoHead-popup-video-exit line-1"></div>
-            <div class="bg-overlay--VideoHead-popup-video-exit line-2"></div>
-        </div>
+      <div class="bg-overlay--VideoHead-popup-video-exit">
+        <div class="bg-overlay--VideoHead-popup-video-exit line-1"></div>
+        <div class="bg-overlay--VideoHead-popup-video-exit line-2"></div>
+      </div>
     </div>
 
     <footer id="footer">
-        <section>
-            <div class="uk-container">
-                <div class="footer--logo-links-wrapper">
-                    <a class="footer--logo" href="#"><img width="52" height="48" src="./img/logo_nav.svg" alt="logo">
-                    </a>
-                    <ul class="footer--links">
-                        <li><a href="#"> Договір оферти</a></li>
-                        <li><a href="#"> Умови користування</a></li>
-                        <li><a href="#"> Політика конфіденційності</a></li>
-                        <li><a href="#"> Політика cookies</a></li>
-                    </ul>
-                </div>
-                <ul class="socials">
-                    <li>
-                        <a href="#"> <img width="25" height="25" src="./img/Instagram.svg" alt="Instagram"> </a>
-                    </li>
-                    <li>
-                        <a href="#"><img width="25" height="25" src="./img/Twitter.svg" alt="Twitter"> </a>
-                    </li>
-                    <li>
-                        <a href="#"><img width="13" height="25" src="./img/Facebook.svg" alt="Facebook"> </a>
-                    </li>
-                </ul>
+      <section>
+        <div class="uk-container">
+          <div class="footer--logo-links-wrapper">
+            <a class="footer--logo" href="#"><img width="52" height="48" src="./img/logo_nav.svg" alt="logo">
+            </a>
+            <ul class="footer--links">
+              <li><a href="#"> Договір оферти</a></li>
+              <li><a href="#"> Умови користування</a></li>
+              <li><a href="#"> Політика конфіденційності</a></li>
+              <li><a href="#"> Політика cookies</a></li>
+            </ul>
+          </div>
+          <ul class="socials">
+            <li>
+              <a href="#"> <img width="25" height="25" src="./img/Instagram.svg" alt="Instagram"> </a>
+            </li>
+            <li>
+              <a href="#"><img width="25" height="25" src="./img/Twitter.svg" alt="Twitter"> </a>
+            </li>
+            <li>
+              <a href="#"><img width="13" height="25" src="./img/Facebook.svg" alt="Facebook"> </a>
+            </li>
+          </ul>
 
-            </div>
-        </section>
+        </div>
+      </section>
 
     </footer>
     <div class="customer-support">
-        <div class="customer--overlay">
-            <div class="customer--line"></div>
-        </div>
-        <div class="customer--element"></div>
+      <div class="customer--overlay">
+        <div class="customer--line"></div>
+      </div>
+      <div class="customer--element"></div>
     </div>
     </div>
     <div class="cursor"></div>
@@ -1165,6 +1229,6 @@
     <script defer src="owlcarousel/owl.carousel.min.js"></script>
     <script defer src="jquery.nice-select.min.js"></script>
     <script defer type="text/javascript" src="dist/main.js"></script>
-</body>
+  </body>
 
 </html>
